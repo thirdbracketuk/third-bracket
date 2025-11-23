@@ -32,16 +32,14 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
             <h1 className="text-[2.80rem]/[1.1]    md:text-5xl/[1.2] lg:text-[3.25rem]/[1.1] xl:text-6xl/[1.1]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-extrabold tracking-tight">
-              Fast sites. Minimal design.&nbsp;
+              Custom Websistes, SEO & &nbsp;
               <span className=" bg-gradient-to-r from-primary-900 via-primary-800 to-accent-700 dark:from-primary-100 dark:via-primary-200 dark:to-accent-200 text-transparent bg-clip-text">
-                Better engineered.
+                Branding
               </span>
             </h1>
             <p className=" text-primary-500  text-base/8  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
-              We build high-speed, minimal websites engineered for efficiency, navigating the two
-              worlds of WordPress and Next.js. With{' '}
-              <span className="text-primary-900 dark:text-primary-100">Third Bracket</span>,
-              WordPress runs faster, Next.js deploys cheaper.
+              We create fast, reliable websites, improve SEO rankings, and build standout brands
+              across UK.
             </p>
 
             <div className="flex flex-wrap sm:justify-center gap-4 md:gap-6 backdrop-blur-[2px]">

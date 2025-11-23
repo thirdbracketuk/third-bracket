@@ -21,7 +21,7 @@ const baseUrl = Settings.metadataBase
 export const metadata: Metadata = {
   title: {
     template: `%s | ${Settings.title}`,
-    default: `${Settings.title}`,
+    default: `Web Design & Development Agency Manchester | ${Settings.title}`,
   },
 
   metadataBase: new URL(baseUrl),
@@ -179,7 +179,7 @@ const websiteJsonLd = {
     },
 
     description:
-      'Third Bracket is a UK based fully remote digital agency offering affordable web development, UI/UX design, and digital marketing services to clients worldwide.',
+      'Third Bracket delivers custom website design, development, SEO, branding, and creative solutions for UK businesses.',
     email: 'hello@thirdbracket.co.uk',
     telephone: '+44-7425-694261',
   },

@@ -64,43 +64,128 @@ export const mainNavItems: NavlinkItem[] = [
 
 // Services section
 export const webDevelopmentItems: NavlinkItem[] = [
-  { label: 'Next.js Development', href: '/services/web-development#nextjs-development', isDropdownItem: true },
-  { label: 'WordPress Development', href: '/services/web-development#wordpress-development', isDropdownItem: true },
-  { label: 'E-commerce Development', href: '/services/web-development#e-commerce-development', isDropdownItem: true },
-  { label: 'Custom Admin Panel', href: '/services/web-development#custom-admin-panel', isDropdownItem: true },
-  { label: 'CRM Integration', href: '/services/web-development#crm-integration', isDropdownItem: true },
-  { label: 'Analytics & Tracking Integration', href: '/services/web-development#analytics-tracking-integration', isDropdownItem: true },
-  { label: 'VPS Setup', href: '/services/web-development#vps-setup', isDropdownItem: true },
+  {
+    label: 'Next.js Development',
+    href: '/services/web-development#nextjs-development',
+    isDropdownItem: true,
+  },
+  {
+    label: 'WordPress Development',
+    href: '/services/web-development#wordpress-development',
+    isDropdownItem: true,
+  },
+  {
+    label: 'E-commerce Development',
+    href: '/services/web-development#e-commerce-development',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Bespoke Web Design',
+    href: '/services/web-development#custom-admin-panel',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Bespoke Web Development',
+    href: '/services/web-development#crm-integration',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Website Redesign',
+    href: '/services/web-development#analytics-tracking-integration',
+    isDropdownItem: true,
+  },
+  { label: 'Website Repair', href: '/services/web-development#vps-setup', isDropdownItem: true },
 
-  { label: 'Performance Optimization', href: '/services/web-development#performance-optimization', isDropdownItem: true },
-  { label: 'Migration & Modernization', href: '/services/web-development#migration-modernization', isDropdownItem: true },
-  { label: 'Blog Development', href: '/services/web-development#blog-development', isDropdownItem: true },
+  {
+    label: 'Website Optimisation',
+    href: '/services/web-development#performance-optimization',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Website Migration',
+    href: '/services/web-development#migration-modernization',
+    isDropdownItem: true,
+  },
 ]
 
 export const uiUxDesignItems: NavlinkItem[] = [
-  { label: 'UI/UX Design', href: '/services/ui-ux-design#ui-ux-design', isDropdownItem: true },
-  { label: 'Website Design', href: '/services/ui-ux-design#website-design', isDropdownItem: true },
-  { label: 'Website Redesign', href: '/services/ui-ux-design#website-redesign', isDropdownItem: true },
-  { label: 'Social Media Design', href: '/services/ui-ux-design#social-media-design', isDropdownItem: true },
-  { label: 'Branding', href: '/services/ui-ux-design#branding', isDropdownItem: true },
-  { label: 'Design System Development', href: '/services/ui-ux-design#design-system-development', isDropdownItem: true },
-  { label: 'Graphic Design', href: '/services/ui-ux-design#graphic-design', isDropdownItem: true },
-  { label: 'Elementor Template Design', href: '/services/ui-ux-design#elementor-template-design', isDropdownItem: true },
-  { label: 'Printable Design', href: '/services/ui-ux-design#printable-design', isDropdownItem: true },
-  { label: 'Wireframe & Prototype', href: '/services/ui-ux-design#wireframe-prototype', isDropdownItem: true },
+  { label: 'Full SEO', href: '/services/ui-ux-design#ui-ux-design', isDropdownItem: true },
+  { label: 'Local SEO', href: '/services/ui-ux-design#website-design', isDropdownItem: true },
+  {
+    label: 'Technical SEO',
+    href: '/services/ui-ux-design#website-redesign',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Content Marketing',
+    href: '/services/ui-ux-design#social-media-design',
+    isDropdownItem: true,
+  },
+  { label: 'Copywriting', href: '/services/ui-ux-design#branding', isDropdownItem: true },
+  {
+    label: 'Link Building',
+    href: '/services/ui-ux-design#design-system-development',
+    isDropdownItem: true,
+  },
+  { label: 'Email Marketing', href: '/services/ui-ux-design#graphic-design', isDropdownItem: true },
+  {
+    label: 'Paid Advertising',
+    href: '/services/ui-ux-design#elementor-template-design',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Social Media Marketing',
+    href: '/services/ui-ux-design#printable-design',
+    isDropdownItem: true,
+  },
 ]
 
 export const digitalMarketingItems: NavlinkItem[] = [
-  { label: 'Search Engine Optimisation', href: '/services/digital-marketing#search-engine-optimisation', isDropdownItem: true },
-  { label: 'Search Engine Marketing', href: '/services/digital-marketing#search-engine-marketing', isDropdownItem: true },
-  { label: 'Content Marketing', href: '/services/digital-marketing#content-marketing', isDropdownItem: true },
-  { label: ' Affiliate Marketing', href: '/services/digital-marketing#affiliate-marketing', isDropdownItem: true },
-  { label: 'Email Marketing', href: '/services/digital-marketing#email-marketing', isDropdownItem: true },
-  { label: 'Social Media Marketing', href: '/services/digital-marketing#social-media-marketing', isDropdownItem: true },
-  { label: 'Conversational Marketing', href: '/services/digital-marketing#conversational-marketing', isDropdownItem: true },
-  { label: 'PPC & Advertising', href: '/services/digital-marketing#ppc-advertising', isDropdownItem: true },
-  { label: 'Marketing Analytics & Audit', href: '/services/digital-marketing#marketing-analytics-audit', isDropdownItem: true },
-  { label: 'Marketing Strategy & Planning', href: '/services/digital-marketing#marketing-strategy-planning', isDropdownItem: true },
+  {
+    label: 'Brand Strategy',
+    href: '/services/digital-marketing#search-engine-optimisation',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Brand Identity',
+    href: '/services/digital-marketing#search-engine-marketing',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Graphic Design',
+    href: '/services/digital-marketing#content-marketing',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Print Design',
+    href: '/services/digital-marketing#affiliate-marketing',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Business Listing',
+    href: '/services/digital-marketing#email-marketing',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Website Creative',
+    href: '/services/digital-marketing#social-media-marketing',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Social Media',
+    href: '/services/digital-marketing#conversational-marketing',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Brand Guidelines',
+    href: '/services/digital-marketing#ppc-advertising',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Brand Audit',
+    href: '/services/digital-marketing#marketing-analytics-audit',
+    isDropdownItem: true,
+  },
 ]
 
 export const servicesItems: (NavlinkItem | MegamenuItem)[] = [
@@ -139,42 +224,135 @@ export const infrastructureSolutionsItems: NavlinkItem[] = [
 
 // Solutions megamenu items
 export const nextjsSolutionsItems: NavlinkItem[] = [
-  { label: 'Multi-Tenant SaaS', href: '/solutions/nextjs-solutions#multi-tenant-saas', isDropdownItem: true },
-  { label: 'Headless CMS', href: '/solutions/nextjs-solutions#headless-cms', isDropdownItem: true },
-  { label: 'Headless E-Commerce', href: '/solutions/nextjs-solutions#headless-e-commerce', isDropdownItem: true },
-  { label: 'Admin Panel/Dashboard', href: '/solutions/nextjs-solutions#admin-panel-dashboard', isDropdownItem: true },
-  { label: 'LMS Solution', href: '/solutions/nextjs-solutions#lms-solution', isDropdownItem: true },
-  { label: 'Blog/Publishing System', href: '/solutions/nextjs-solutions#blog-publishing-system', isDropdownItem: true },
-  { label: 'Migration', href: '/solutions/nextjs-solutions#migration', isDropdownItem: true },
-  { label: 'Notion Development', href: '/solutions/nextjs-solutions#notion-development', isDropdownItem: true },
-  { label: 'Digital Asset Management', href: '/solutions/nextjs-solutions#digital-asset-management', isDropdownItem: true },
-  { label: 'Project Management Tool', href: '/solutions/nextjs-solutions#project-management-tool', isDropdownItem: true },
+  {
+    label: 'BracketUI',
+    href: '/solutions/nextjs-solutions#multi-tenant-saas',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Elementor Templates',
+    href: '/solutions/nextjs-solutions#headless-cms',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Tailwindcss Templates',
+    href: '/solutions/nextjs-solutions#headless-e-commerce',
+    isDropdownItem: true,
+  },
+  {
+    label: 'HTML5 Templates',
+    href: '/solutions/nextjs-solutions#admin-panel-dashboard',
+    isDropdownItem: true,
+  },
+  { label: 'Hugo Theme', href: '/solutions/nextjs-solutions#lms-solution', isDropdownItem: true },
+  {
+    label: 'Icon Packs',
+    href: '/solutions/nextjs-solutions#blog-publishing-system',
+    isDropdownItem: true,
+  },
+  {
+    label: 'SVG Illustrations',
+    href: '/solutions/nextjs-solutions#migration',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Starter Kit',
+    href: '/solutions/nextjs-solutions#notion-development',
+    isDropdownItem: true,
+  },
+  {
+    label: 'UI Kits',
+    href: '/solutions/nextjs-solutions#digital-asset-management',
+    isDropdownItem: true,
+  },
 ]
 
 export const wordpressSolutionsItems: NavlinkItem[] = [
-  { label: 'Rapid Fast WordPress', href: '/solutions/wordpress-solutions#rapid-fast-wordpress', isDropdownItem: true },
-  { label: 'Cloud Migration', href: '/solutions/wordpress-solutions#cloud-migration', isDropdownItem: true },
-  { label: 'Headless WordPress', href: '/solutions/wordpress-solutions#headless-wordpress', isDropdownItem: true },
-  { label: 'Performant WooCommerce', href: '/solutions/wordpress-solutions#performant-woocommerce', isDropdownItem: true },
-  { label: 'ACM', href: '/solutions/wordpress-solutions#acm', isDropdownItem: true },
-  { label: 'Elementor Templates', href: '/solutions/wordpress-solutions#elementor-templates', isDropdownItem: true },
-  { label: 'Enterprise Wordpress', href: '/solutions/wordpress-solutions#enterprise-wordpress', isDropdownItem: true },
-  { label: 'Wordpress Multisite', href: '/solutions/wordpress-solutions#wordpress-multisite', isDropdownItem: true },
-  { label: 'LMS Solution', href: '/solutions/wordpress-solutions#lms-solution', isDropdownItem: true },
-  { label: 'Listing Platform', href: '/solutions/wordpress-solutions#listing-platform', isDropdownItem: true },
-  { label: 'Revamp Wordpress', href: '/solutions/wordpress-solutions#revamp-wordpress', isDropdownItem: true },
+  {
+    label: 'Next.js Starter',
+    href: '/solutions/wordpress-solutions#rapid-fast-wordpress',
+    isDropdownItem: true,
+  },
+  {
+    label: 'PayloadCMS Starter',
+    href: '/solutions/wordpress-solutions#cloud-migration',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Notion Blog',
+    href: '/solutions/wordpress-solutions#headless-wordpress',
+    isDropdownItem: true,
+  },
+  {
+    label: 'CMS Integration',
+    href: '/solutions/wordpress-solutions#performant-woocommerce',
+    isDropdownItem: true,
+  },
+  { label: 'Geo Redirect', href: '/solutions/wordpress-solutions#acm', isDropdownItem: true },
+  {
+    label: 'Admin Panel',
+    href: '/solutions/wordpress-solutions#elementor-templates',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Internationalization',
+    href: '/solutions/wordpress-solutions#enterprise-wordpress',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Asset Management',
+    href: '/solutions/wordpress-solutions#wordpress-multisite',
+    isDropdownItem: true,
+  },
+  {
+    label: 'VPS Setup',
+    href: '/solutions/wordpress-solutions#lms-solution',
+    isDropdownItem: true,
+  },
 ]
 
 export const openSourceSolutionsItems: NavlinkItem[] = [
-  { label: 'BracketUI', href: '/solutions/open-source-solutions#bracketui', isDropdownItem: true },
-  { label: 'Tailwind Template', href: '/solutions/open-source-solutions#tailwind-template', isDropdownItem: true },
-  { label: 'Blog Template', href: '/solutions/open-source-solutions#blog-template', isDropdownItem: true },
-  { label: 'Jamstack Theme', href: '/solutions/open-source-solutions#jamstack-theme', isDropdownItem: true },
-  { label: 'Hugo Theme', href: '/solutions/open-source-solutions#hugo-theme', isDropdownItem: true },
-  { label: 'Next.js Theme', href: '/solutions/open-source-solutions#nextjs-theme', isDropdownItem: true },
-  { label: 'Html Template', href: '/solutions/open-source-solutions#html-template', isDropdownItem: true },
-  { label: 'Flowbite Starter', href: '/solutions/open-source-solutions#flowbite-starter', isDropdownItem: true },
-  { label: 'Automation Script', href: '/solutions/open-source-solutions#automation-script', isDropdownItem: true },
+  { label: 'Restaurent', href: '/solutions/open-source-solutions#bracketui', isDropdownItem: true },
+  {
+    label: 'Real Estate',
+    href: '/solutions/open-source-solutions#tailwind-template',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Blog',
+    href: '/solutions/open-source-solutions#blog-template',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Landing Page',
+    href: '/solutions/open-source-solutions#jamstack-theme',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Portfolio',
+    href: '/solutions/open-source-solutions#hugo-theme',
+    isDropdownItem: true,
+  },
+  {
+    label: 'LMS',
+    href: '/solutions/open-source-solutions#nextjs-theme',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Directory Listing',
+    href: '/solutions/open-source-solutions#html-template',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Booking & Reservation',
+    href: '/solutions/open-source-solutions#flowbite-starter',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Membership',
+    href: '/solutions/open-source-solutions#automation-script',
+    isDropdownItem: true,
+  },
 ]
 
 export const automationIntegrationItems: NavlinkItem[] = [

@@ -117,7 +117,7 @@ const Header: FC = () => {
             }}
           >
             <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[280px_repeat(3,1fr)_220px] grid-cols-[280px_repeat(3,1fr)] pb-1">
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full mr-3">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     All Services
@@ -136,12 +136,11 @@ const Header: FC = () => {
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-medium">Development</span>
+                        <span className="font-medium">Website & Ecommerce</span>
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
-                        Next.js, WordPress, Custom Solutions, Full Stack Development, Front-end
-                        Development, Backend Development
+                        Bespoke websites and ecommerce development services for businesses.
                       </div>
                     </div>
                   </Navlink>
@@ -157,11 +156,11 @@ const Header: FC = () => {
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-medium">Design</span>
+                        <span className="font-medium">SEO & Growth</span>
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
-                        UI/UX, Branding, Web Design, Website Redesign, Tailwindcss, React, Miniml UI
+                        SEO and digital marketing to boost rankings, traffic, and leads.
                       </div>
                     </div>
                   </Navlink>
@@ -177,12 +176,11 @@ const Header: FC = () => {
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-medium">Marketing</span>
+                        <span className="font-medium">Branding & Creative</span>
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
-                        SEO, Content, Digital Campaigns, Social Media Marketing, Google Analytics,
-                        Paid Advertising
+                        Brand strategy and creative design for website, social media and print.
                       </div>
                     </div>
                   </Navlink>
@@ -191,7 +189,7 @@ const Header: FC = () => {
               <div className="flex flex-col h-full">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
-                    Web Development
+                    Web
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
@@ -223,7 +221,7 @@ const Header: FC = () => {
                 </div> */}
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
-                    UI/UX Design
+                    SEO
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
@@ -255,11 +253,11 @@ const Header: FC = () => {
                 </div> */}
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
-                    Marketing
+                    Branding
                   </h3>
                 </div>
 
-                <div className="flex flex-col space-y-[2px]">
+                <div className="flex flex-col space-y-[2px] ">
                   {digitalMarketingItems.map((item) => renderNavlink(item))}
                 </div>
 
@@ -334,7 +332,7 @@ const Header: FC = () => {
             }}
           >
             <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[280px_repeat(3,1fr)_220px] grid-cols-[280px_repeat(3,1fr)] pb-1">
-              <div className="flex flex-col h-full">
+              <div className="flex flex-col h-full mr-3">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500">
                     Our Solutions
@@ -353,12 +351,11 @@ const Header: FC = () => {
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-medium">Next.js Solutions</span>
+                        <span className="font-medium">Design Solutions</span>
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
-                        Next.js, Payload CMS, Coolify, Hetzner, Postgres, Resend, Cloudflare, Vercel
-                        Multi-Tenant
+                        UI kits, templates, icons, and design systems for websites.
                       </div>
                     </div>
                   </Navlink>
@@ -374,12 +371,11 @@ const Header: FC = () => {
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-medium">WordPress Solutions</span>
+                        <span className="font-medium">Platform & Tools</span>
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
-                        Ubuntu VPS, OpenLiteSpeed/Nginx, Redis, Cloudflare, S3, Elementor, ACF,
-                        WooCommerce
+                        Starter kits, CMS, and tools for scalable web development projects.
                       </div>
                     </div>
                   </Navlink>
@@ -395,11 +391,11 @@ const Header: FC = () => {
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-medium">Open Source Solutions</span>
+                        <span className="font-medium">Industry Solutions</span>
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
-                        BracketUI, TailwindCSS, Next.js, Payload, WordPress Headless Integrations
+                        Prebuild web systems for restaurents, estates, blogs, and web portals.
                       </div>
                     </div>
                   </Navlink>
@@ -408,7 +404,7 @@ const Header: FC = () => {
               <div className="flex flex-col h-full">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
-                    Next.js Solutions
+                    Design
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
@@ -418,7 +414,7 @@ const Header: FC = () => {
               <div className="flex flex-col h-full">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
-                    WordPress Solutions
+                    Tools
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
@@ -428,7 +424,7 @@ const Header: FC = () => {
               <div className="flex flex-col h-full">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500">
-                    Open Source Solutions
+                    Industry
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
@@ -504,7 +500,7 @@ const Header: FC = () => {
             >
               <div className="space-y-2 py-1.5">
                 <Megamenu
-                  label="Web Development"
+                  label="Website & Ecommerce"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
@@ -517,7 +513,7 @@ const Header: FC = () => {
                 </Megamenu>
 
                 <Megamenu
-                  label="UI/UX Design"
+                  label="Seo & Growth"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
@@ -530,7 +526,7 @@ const Header: FC = () => {
                 </Megamenu>
 
                 <Megamenu
-                  label="Digital Marketing"
+                  label="Branding & Creative"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
@@ -554,7 +550,7 @@ const Header: FC = () => {
             >
               <div className="space-y-2 py-1.5">
                 <Megamenu
-                  label="Next.js Solutions"
+                  label="Design Solutions"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
@@ -567,7 +563,7 @@ const Header: FC = () => {
                 </Megamenu>
 
                 <Megamenu
-                  label="WordPress Solutions"
+                  label="Plaform & Tools"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
@@ -580,7 +576,7 @@ const Header: FC = () => {
                 </Megamenu>
 
                 <Megamenu
-                  label="Open Source Solutions"
+                  label="Industry Solutions"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
