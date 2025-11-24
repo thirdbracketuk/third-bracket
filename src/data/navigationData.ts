@@ -81,24 +81,28 @@ export const webDevelopmentItems: NavlinkItem[] = [
   },
   {
     label: 'Bespoke Web Design',
-    href: '/services/web-development#custom-admin-panel',
+    href: '/services/web-development#bespoke-web-design',
     isDropdownItem: true,
   },
   {
     label: 'Bespoke Web Development',
-    href: '/services/web-development#crm-integration',
+    href: '/services/web-development#bespoke-web-development',
     isDropdownItem: true,
   },
   {
     label: 'Website Redesign',
-    href: '/services/web-development#analytics-tracking-integration',
+    href: '/services/web-development#website-redesign',
     isDropdownItem: true,
   },
-  { label: 'Website Repair', href: '/services/web-development#vps-setup', isDropdownItem: true },
+  {
+    label: 'Website Repair',
+    href: '/services/web-development#website-repair',
+    isDropdownItem: true,
+  },
 
   {
     label: 'Website Optimisation',
-    href: '/services/web-development#performance-optimization',
+    href: '/services/web-development#website-optimization',
     isDropdownItem: true,
   },
   {
@@ -109,32 +113,32 @@ export const webDevelopmentItems: NavlinkItem[] = [
 ]
 
 export const uiUxDesignItems: NavlinkItem[] = [
-  { label: 'Full SEO', href: '/services/ui-ux-design#ui-ux-design', isDropdownItem: true },
-  { label: 'Local SEO', href: '/services/ui-ux-design#website-design', isDropdownItem: true },
+  { label: 'Brand Strategy', href: '/services/ui-ux-design#ui-ux-design', isDropdownItem: true },
+  { label: 'Brand Identity', href: '/services/ui-ux-design#website-design', isDropdownItem: true },
   {
-    label: 'Technical SEO',
+    label: 'Graphic Design',
     href: '/services/ui-ux-design#website-redesign',
     isDropdownItem: true,
   },
   {
-    label: 'Content Marketing',
+    label: 'Print Design',
     href: '/services/ui-ux-design#social-media-design',
     isDropdownItem: true,
   },
-  { label: 'Copywriting', href: '/services/ui-ux-design#branding', isDropdownItem: true },
+  { label: 'Business Listing', href: '/services/ui-ux-design#branding', isDropdownItem: true },
   {
-    label: 'Link Building',
+    label: 'Website Creative',
     href: '/services/ui-ux-design#design-system-development',
     isDropdownItem: true,
   },
-  { label: 'Email Marketing', href: '/services/ui-ux-design#graphic-design', isDropdownItem: true },
+  { label: 'Social Media', href: '/services/ui-ux-design#graphic-design', isDropdownItem: true },
   {
-    label: 'Paid Advertising',
+    label: 'Brand Guidelines',
     href: '/services/ui-ux-design#elementor-template-design',
     isDropdownItem: true,
   },
   {
-    label: 'Social Media Marketing',
+    label: 'Brand Audit',
     href: '/services/ui-ux-design#printable-design',
     isDropdownItem: true,
   },
@@ -142,47 +146,47 @@ export const uiUxDesignItems: NavlinkItem[] = [
 
 export const digitalMarketingItems: NavlinkItem[] = [
   {
-    label: 'Brand Strategy',
+    label: 'Full SEO',
     href: '/services/digital-marketing#search-engine-optimisation',
     isDropdownItem: true,
   },
   {
-    label: 'Brand Identity',
+    label: 'Local SEO',
     href: '/services/digital-marketing#search-engine-marketing',
     isDropdownItem: true,
   },
   {
-    label: 'Graphic Design',
+    label: 'Technical SEO',
     href: '/services/digital-marketing#content-marketing',
     isDropdownItem: true,
   },
   {
-    label: 'Print Design',
+    label: 'Content Marketing',
     href: '/services/digital-marketing#affiliate-marketing',
     isDropdownItem: true,
   },
   {
-    label: 'Business Listing',
+    label: 'Copywriting',
     href: '/services/digital-marketing#email-marketing',
     isDropdownItem: true,
   },
   {
-    label: 'Website Creative',
+    label: 'Link Building',
     href: '/services/digital-marketing#social-media-marketing',
     isDropdownItem: true,
   },
   {
-    label: 'Social Media',
+    label: 'Email Marketing',
     href: '/services/digital-marketing#conversational-marketing',
     isDropdownItem: true,
   },
   {
-    label: 'Brand Guidelines',
+    label: 'Paid Advertising',
     href: '/services/digital-marketing#ppc-advertising',
     isDropdownItem: true,
   },
   {
-    label: 'Brand Audit',
+    label: 'Social Media Marketing',
     href: '/services/digital-marketing#marketing-analytics-audit',
     isDropdownItem: true,
   },

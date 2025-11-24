@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
             <h1 className="text-[2.80rem]/[1.1]    md:text-5xl/[1.2] lg:text-[3.25rem]/[1.1] xl:text-6xl/[1.1]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-extrabold tracking-tight">
-              Custom Websistes, SEO & &nbsp;
+              Bespoke Websistes, SEO & &nbsp;
               <span className=" bg-gradient-to-r from-primary-900 via-primary-800 to-accent-700 dark:from-primary-100 dark:via-primary-200 dark:to-accent-200 text-transparent bg-clip-text">
                 Branding
               </span>

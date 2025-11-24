@@ -18,33 +18,6 @@ const cards = [
   },
 
   {
-    name: 'design',
-    props: {
-      header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Code First
-        </span>
-      ),
-
-      children:
-        'We deliver well-organized, fully documentated code so any team can pick up right where we left off.',
-    },
-  },
-  {
-    name: 'seo',
-    props: {
-      header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          SEO Optimization
-        </span>
-      ),
-
-      children:
-        'Every website we build is SEO-ready with structured data, speed optimization, and best practices baked in.',
-    },
-  },
-
-  {
     name: 'cost',
     props: {
       header: (
@@ -71,6 +44,32 @@ const cards = [
 
       children:
         'Our design philosophy emphasizes whitespace, clarity, and strong visual hierarchy that enhances brand perception.',
+    },
+  },
+  {
+    name: 'design',
+    props: {
+      header: (
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+          Code First
+        </span>
+      ),
+
+      children:
+        'We deliver well-organized, fully documentated code so any team can pick up right where we left off.',
+    },
+  },
+  {
+    name: 'seo',
+    props: {
+      header: (
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+          SEO Optimization
+        </span>
+      ),
+
+      children:
+        'Every website we build is SEO-ready with structured data, speed optimization, and best practices baked in.',
     },
   },
 

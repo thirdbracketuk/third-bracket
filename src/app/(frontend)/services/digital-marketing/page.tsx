@@ -18,9 +18,21 @@ import {
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
 import TechStack from '../TechStack'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SEO and Digital Marketing Services Manchester',
+  description:
+    'Third Bracket offers SEO and digital marketing services in Manchester, including local SEO, content marketing, email campaigns, social media, and PPC for business growth.',
+  openGraph: {
+    title: 'SEO & Digital Marketing Services for Manchester Businesses',
+    description:
+      'Boost your business online with Third Bracket’s SEO, local SEO, content marketing, email campaigns, social media, and PPC services tailored for Manchester.',
+  },
+}
 
 const digitalMarketingCategory = {
-  title: 'Digital Marketing',
+  title: 'Search Engine Optimization',
   description:
     'We implement data-driven digital marketing strategies to improve visibility, engagement, and conversion rates.',
   illustration: {
@@ -39,26 +51,24 @@ const digitalMarketingCategory = {
 
 function getServiceDescription(title: string): string {
   const descriptions: Record<string, string> = {
-    'Search Engine Optimisation':
+    'Full SEO':
       'Optimize website technical aspects for better search engine visibility and rankings.',
-    'Search Engine Marketing':
+    'Local SEO':
       'Drive targeted traffic through paid search campaigns and strategic keyword targeting.',
-    'Content Marketing':
+    'Technical SEO':
       'Create and distribute valuable content to attract and engage your target audience.',
-    ' Affiliate Marketing':
+    'Content Marketing':
       'Build strategic partnerships to expand reach and drive sales through affiliate networks.',
-    'Email Marketing':
+    Copywriting:
       'Develop targeted email campaigns to nurture leads and maintain customer relationships.',
-    'Social Media Marketing':
+    'Link Building':
       'Manage and grow your social media presence with strategic content and engagement.',
-    'Conversational Marketing':
+    'Email Marketing':
       'Implement chatbots and messaging strategies to engage customers in real-time.',
-    'PPC & Advertising':
+    'Paid Advertising':
       'Create and manage pay-per-click campaigns across multiple advertising platforms.',
-    'Marketing Analytics & Audit':
+    'Social Media Marketing':
       'Analyze marketing performance and provide actionable insights for optimization.',
-    'Marketing Strategy & Planning':
-      'Develop comprehensive marketing strategies aligned with your business goals.',
   }
   return (
     descriptions[title] || 'Professional digital marketing service to grow your online presence.'
@@ -67,24 +77,15 @@ function getServiceDescription(title: string): string {
 
 function getServiceFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
-    'Search Engine Optimisation': ['Technical SEO', 'On-Page Optimization', 'Link Building'],
-    'Search Engine Marketing': [
-      'Keyword Research',
-      'Ad Campaign Management',
-      'Conversion Tracking',
-    ],
-    'Content Marketing': ['Content Strategy', 'Blog Writing', 'Content Distribution'],
-    ' Affiliate Marketing': [
-      'Partner Recruitment',
-      'Commission Management',
-      'Performance Tracking',
-    ],
-    'Email Marketing': ['Campaign Design', 'List Management', 'Automation Setup'],
-    'Social Media Marketing': ['Content Calendar', 'Platform Strategy', 'Community Management'],
-    'Conversational Marketing': ['Chatbot Setup', 'Live Chat Integration', 'Customer Support'],
-    'PPC & Advertising': ['Campaign Setup', 'Bid Management', 'Performance Optimization'],
-    'Marketing Analytics & Audit': ['Performance Analysis', 'Competitive Research', 'ROI Tracking'],
-    'Marketing Strategy & Planning': ['Market Research', 'Goal Setting', 'Campaign Planning'],
+    'Full SEO': ['Technical SEO', 'On-Page Optimization', 'Link Building'],
+    'Local SEO': ['Keyword Research', 'Ad Campaign Management', 'Conversion Tracking'],
+    'Technical SEO': ['Content Strategy', 'Blog Writing', 'Content Distribution'],
+    'Content Marketing': ['Partner Recruitment', 'Commission Management', 'Performance Tracking'],
+    Copywriting: ['Campaign Design', 'List Management', 'Automation Setup'],
+    'Link Building': ['Content Calendar', 'Platform Strategy', 'Community Management'],
+    'Email Marketing': ['Chatbot Setup', 'Live Chat Integration', 'Customer Support'],
+    'Paid Advertising': ['Campaign Setup', 'Bid Management', 'Performance Optimization'],
+    'Social Media Marketing': ['Performance Analysis', 'Competitive Research', 'ROI Tracking'],
   }
   return features[title] || ['Strategy Development', 'Performance Tracking', 'ROI Optimization']
 }
@@ -99,8 +100,7 @@ function getServiceBadge(title: string): string {
     'Social Media Marketing': 'Social',
     'Conversational Marketing': 'Chat',
     'PPC & Advertising': 'PPC',
-    'Marketing Analytics & Audit': 'Analytics',
-    'Marketing Strategy & Planning': 'Strategy',
+    ' Social Media Marketing': 'Analytics',
   }
   return badges[title] || 'Marketing'
 }
@@ -127,8 +127,8 @@ export default function DigitalMarketingPage() {
       <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           <PageHeader
-            title="Digital Marketing Services"
-            description="Data-driven digital marketing strategies to improve visibility, engagement, and conversion rates."
+            title="SEO & Digital Marketing Services"
+            description="We create strategies that boost visibility, drive leads, and maximise ROI."
           />
 
           <Category {...digitalMarketingCategory} index={0} />

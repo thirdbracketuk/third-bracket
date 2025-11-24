@@ -12,18 +12,33 @@ import {
   FaCog,
   FaChartLine,
   FaBlog,
+  FaBug,
 } from 'react-icons/fa'
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
 import TechStack from '../TechStack'
+import { Metadata } from 'next'
+import { RiLayout5Line } from 'react-icons/ri'
+
+export const metadata: Metadata = {
+  title: 'Website Design, Development & Ecommerce Services',
+  description:
+    'Third Bracket’s website development services cover bespoke website design, WordPress, Next.js, ecommerce builds, website redesign services and performance optimisation.',
+  openGraph: {
+    title: 'Manchester Web Design & Ecommerce Services',
+    description:
+      'Discover Third Bracket’s website development services, including bespoke website design, WordPress, Next.js, ecommerce builds, website redesigns, and optimisation for fast, reliable websites.',
+  },
+}
 
 const webDevelopmentCategory = {
-  title: 'Web Development',
+  title: 'Fast Website, Delivered Efficiently',
   description:
-    'We build modern, high-performance web solutions using cutting-edge technologies with a focus on scalability and maintainability.',
+    'Modern web development solutions using cutting-edge technologies for scalable and maintainable applications.',
+
   illustration: {
     src: '/services/web.svg',
-    alt: 'Web Development Illustration',
+    alt: 'Website & Ecommerce by Third Bracket',
   },
   stackIcons: TechStack(['SiNextdotjs', 'SiReact', 'SiTypescript', 'SiNodedotjs', 'SiVercel']),
   services: webDevelopmentItems.map((item) => ({
@@ -41,18 +56,18 @@ function getServiceDescription(title: string): string {
       'Build modern web applications with React and server components for optimal performance.',
     'WordPress Development':
       'Custom WordPress solutions with modern development practices and optimizations.',
-    'E-commerce Development':
+    'Ecommerce Development':
       'Build powerful online stores with modern e-commerce platforms and payment integrations.',
-    'Custom Admin Panel': 'Create tailored admin dashboards for content and data management.',
-    'CRM Integration':
-      'Integrate customer relationship management systems with your web applications.',
-    'Analytics & Tracking Integration':
-      'Implement comprehensive analytics and tracking solutions for data-driven insights.',
-    'VPS Setup': 'Configure and optimize virtual private servers for your web applications.',
-    'Performance Optimization': 'Optimize web applications for speed, SEO, and user experience.',
-    'Migration & Modernization':
+    'Bespoke Web Design': 'Create fully custom website design tailored to your brand and audience.',
+    'Bespoke Web Development':
+      'Our custom full stack web development services are engineered for cost optimization and conversion.',
+    'Website Optimisation': 'Optimize web applications for speed, SEO, and user experience.',
+    'Website Redesign':
+      'Redesign your Next.js or WordPress websites right from your codebase efficiently.',
+    'Website Migration':
       'Upgrade legacy systems to modern technology stacks with minimal disruption.',
-    'Blog Development': 'Create engaging blog platforms with modern CMS and publishing workflows.',
+    'Website Repair':
+      'Fix WordPress & Next.js errors and bugs from the core with proper documentation.',
   }
   return descriptions[title] || 'Professional web development service tailored to your needs.'
 }
@@ -62,17 +77,13 @@ function getServiceFeatures(title: string): string[] {
     'Next.js Development': ['App Router', 'Server Components', 'Edge Runtime'],
     'WordPress Development': ['Custom Themes', 'Plugin Development', 'Performance Tuning'],
     'E-commerce Development': ['Payment Integration', 'Inventory Management', 'Order Processing'],
-    'Custom Admin Panel': ['User Management', 'Content Management', 'Analytics Dashboard'],
-    'CRM Integration': ['Lead Management', 'Customer Tracking', 'Sales Pipeline'],
-    'Analytics & Tracking Integration': [
-      'Google Analytics',
-      'Conversion Tracking',
-      'Performance Metrics',
-    ],
-    'VPS Setup': ['Server Configuration', 'Security Setup', 'Performance Optimization'],
-    'Performance Optimization': ['Core Web Vitals', 'Caching Strategy', 'Asset Optimization'],
-    'Migration & Modernization': ['Code Refactoring', 'Platform Migration', 'Tech Stack Updates'],
-    'Blog Development': ['Content Management', 'SEO Optimization', 'Social Integration'],
+    'Bespoke Web Design': ['Custom UI', 'TailwindCSS Component', 'Custom Elementor Design'],
+    'Bespoke Web Development': ['Admin Panel', 'Web Portal', 'CMS Integration'],
+
+    'Website Optimisation': ['Core Web Vitals', 'Caching Strategy', 'Asset Optimization'],
+    'Website Redesign': ['Clean Code', 'Code First', 'CI/CD'],
+    'Website Migration': ['Code Refactoring', 'Platform Migration', 'Tech Stack Updates'],
+    'Website Repair': ['WordPress Error', 'Elementor Error', 'Deployment Error'],
   }
   return features[title] || ['Custom Development', 'Best Practices', 'Quality Assurance']
 }
@@ -82,13 +93,12 @@ function getServiceBadge(title: string): string {
     'Next.js Development': 'Frontend',
     'WordPress Development': 'CMS',
     'E-commerce Development': 'E-commerce',
-    'Custom Admin Panel': 'Backend',
-    'CRM Integration': 'Integration',
-    'Analytics & Tracking Integration': 'Analytics',
-    'VPS Setup': 'Infrastructure',
-    'Performance Optimization': 'Performance',
-    'Migration & Modernization': 'Migration',
-    'Blog Development': 'Content',
+    'Bespoke Web Design': 'Backend',
+    'Bespoke Web Development': 'Integration',
+    'Website Optimisation': 'Analytics',
+    'Website Redesign': 'Infrastructure',
+    'Website Migration': 'Performance',
+    'Website Repair': 'Migration',
   }
   return badges[title] || 'Development'
 }
@@ -98,13 +108,12 @@ function getServiceIcon(title: string) {
     'Next.js Development': SiNextdotjs,
     'WordPress Development': SiWordpress,
     'E-commerce Development': FaShoppingCart,
-    'Custom Admin Panel': FaDatabase,
-    'CRM Integration': FaCog,
-    'Analytics & Tracking Integration': FaChartLine,
-    'VPS Setup': FaServer,
-    'Performance Optimization': FaTachometerAlt,
-    'Migration & Modernization': FaExchangeAlt,
-    'Blog Development': FaBlog,
+    'Bespoke Web Design': RiLayout5Line,
+    'Bespoke Web Development': FaCode,
+    'Website Optimisation': FaChartLine,
+    'Website Redesign': FaServer,
+    'Website Migration': FaTachometerAlt,
+    'Website Repair': FaBug,
   }
   return icons[title] || FaCode
 }
@@ -115,8 +124,8 @@ export default function WebDevelopmentPage() {
       <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           <PageHeader
-            title="Web Development Services"
-            description="Modern web development solutions using cutting-edge technologies for scalable and maintainable applications."
+            title="Website & Ecommerce Development"
+            description="Rapid website and ecommerce development for UK businesses. We offer WordPress, Next.js, website redesign services, optimisation, and full bespoke web solutions"
           />
 
           <Category {...webDevelopmentCategory} index={0} />

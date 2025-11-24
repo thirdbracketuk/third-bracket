@@ -1,0 +1,101 @@
+<svg width="600" height="350" version="1.1" viewBox="0 0 158.75 92.604" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><linearGradient id="e"><stop stop-color="#c65370" offset="0"/><stop stop-color="#8c95a1" offset="1"/></linearGradient><linearGradient id="a"><stop stop-color="#8c95a1" offset="0"/><stop stop-color="#c65370" offset="1"/></linearGradient>
+	
+	
+	
+	
+	
+	
+
+		
+		
+		
+		
+	
+			
+			
+		
+			
+			
+			
+		<path id="i" d="m379 135.87-139.34 57.686c-1.19 0.493-2.035 1.573-2.226 2.847l-16.269 108.26 138.83-9.718 24.033-155.12c0.439-2.83-2.387-5.05-5.032-3.955z"/><clipPath id="h"><rect width="380" height="338" fill="none"/></clipPath><linearGradient id="g" x1="-261.67" x2="-161.21" y1="362.9" y2="362.9" gradientTransform="translate(-4.505 -2.2525)" gradientUnits="userSpaceOnUse" xlink:href="#a"/><linearGradient id="f" x1="-247.7" x2="-188.85" y1="346.86" y2="346.86" gradientUnits="userSpaceOnUse" xlink:href="#e"/><linearGradient id="d" x1="-262.9" x2="-170.65" y1="330.05" y2="330.05" gradientUnits="userSpaceOnUse" xlink:href="#a"/><linearGradient id="c" x1="-262.24" x2="-173.25" y1="200.13" y2="200.13" gradientUnits="userSpaceOnUse" xlink:href="#e"/><linearGradient id="b" x1="-262.33" x2="-158.15" y1="182.54" y2="182.54" gradientUnits="userSpaceOnUse" xlink:href="#a"/></defs><g transform="matrix(.46985 0 0 .46985 134.47 -79.264)"><g transform="translate(-1.125e-6)"><g fill="#8c95a1"><rect transform="matrix(.97365 -.22805 -.14701 -.98914 0 0)" x="-240.61" y="-222.69" width=".79422" height="67.917" ry=".60514" style="font-variation-settings:'wght' 700;paint-order:markers fill stroke"/><rect transform="matrix(.41753 .90866 -.87115 .49101 0 0)" x="212.19" y="244.73" width=".79422" height="67.917" ry=".60514" style="font-variation-settings:'wght' 700;paint-order:markers fill stroke"/><rect transform="matrix(.41753 .90866 -.87115 .49101 0 0)" x="225.86" y="240.65" width=".79422" height="67.917" ry=".60514" style="font-variation-settings:'wght' 700;paint-order:markers fill stroke"/><rect transform="matrix(.97365 -.22805 -.14701 -.98914 0 0)" x="-192.4" y="-213.62" width=".79422" height="67.917" ry=".60514" style="font-variation-settings:'wght' 700;paint-order:markers fill stroke"/><rect transform="matrix(.41753 .90866 -.87115 .49101 0 0)" x="173.36" y="271.71" width=".79422" height="67.917" ry=".60514" style="font-variation-settings:'wght' 700;paint-order:markers fill stroke"/></g><g font-family="Roboto" font-size="7.5172px" letter-spacing="0px" stroke-dasharray="0.356506, 2.13904" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="20" stroke-width=".35651" word-spacing="0px"><text x="-266.60382" y="363.46811" fill="url(#g)" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 700;line-height:4.69828px;paint-order:markers fill stroke" xml:space="preserve"><tspan x="-266.60382" y="363.46811" fill="url(#g)" stroke-width=".35651">First Contrentfull Paint  &lt; 0.5S</tspan></text><text x="-247.97241" y="348.91147" fill="url(#f)" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 700;line-height:4.69828px;paint-order:markers fill stroke" xml:space="preserve"><tspan x="-247.97241" y="348.91147" fill="url(#f)">Speed Index  &lt; 1S</tspan></text><text x="-262.76218" y="184.62042" fill="url(#b)" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 700;line-height:4.69828px;paint-order:markers fill stroke" xml:space="preserve"><tspan x="-262.76218" y="184.62042" fill="url(#b)">Largest Contentful Paint &lt; 0.7S</tspan></text><text x="-263.23801" y="332.10233" fill="url(#d)" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 700;line-height:4.69828px;paint-order:markers fill stroke" xml:space="preserve"><tspan x="-263.23801" y="332.10233" fill="url(#d)">Cumulative Layout Shift  0S</tspan></text><text x="-262.42743" y="202.17267" fill="url(#c)" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variation-settings:'wght' 700;line-height:4.69828px;paint-order:markers fill stroke" xml:space="preserve"><tspan x="-262.42743" y="202.17267" fill="url(#c)">Total Blocking Time &lt; 0.1S</tspan></text></g></g><g transform="matrix(2.6865 -.16651 .31198 1.9535 166.78 -271.89)" stroke="#fff" stroke-linejoin="round" stroke-width=".26458"><path class="highcharts-point highcharts-color-0" d="m-138.31 228.79v69.85l-3.7042-2.3346v-65.181z" fill="#48515b" aria-label="FCP, 10." role="img" tabindex="-1"/><path class="highcharts-point highcharts-color-1" d="m-142.02 231.12v65.181l-3.7042-2.3346v-60.512z" fill="#5d6774" aria-label="Item 2SI, 10." role="img" tabindex="-1"/><path class="highcharts-point highcharts-color-2" d="m-145.72 233.46v60.512l-9.2604-5.8364v-48.839z" fill="#737e8c" aria-label="LCP, 25." role="img" tabindex="-1"/><path class="highcharts-point highcharts-color-3" d="m-154.98 239.3v48.839l-7.4083-4.6691v-39.501z" fill="#8c95a1" aria-label="TBT, 20." role="img" tabindex="-1"/><path class="highcharts-point highcharts-color-4" d="m-162.39 243.96v39.501l-9.2604-5.8364v-27.828z" fill="#a8afb8" aria-label="CLS, 25." role="img" tabindex="-1"/></g><g transform="matrix(-.71259 0 0 .71259 149.4 88.475)">
+	
+		
+	<g transform="translate(0 15.805)">
+		
+		<path d="m340.52 334.4s3.42 12.722 9.439 29.684c1.649 4.648 1.368 8.207-2.599 8.892-3.967 0.684-22.422 2.327-28.042 2.736-7.524 0.547-8.755 0.41-17.099-0.274-15.836-1.298-52.751-3.245-52.751-3.245v-0.896s44.151-0.2 51.246-0.783c9.986-0.821 12.448-4.241 13.406-7.66 0.958-3.42-1.915-13.269-5.608-26.811z" fill="#5e5f5e"/>
+		<path d="m338.15 333.38s3.42 12.722 9.439 29.684c1.649 4.648 1.368 8.207-2.599 8.892-3.967 0.684-22.422 2.327-28.042 2.736-7.524 0.547-8.755 0.41-17.099-0.274-15.836-1.298-50.476-3.146-50.476-3.146s38.986-0.957 48.972-1.778 12.448-4.241 13.406-7.66c0.957-3.42-1.915-13.269-5.608-26.811z" fill="#bdbcbc"/>
+		<path d="m306.14 335.03c0.958 3.514 1.859 6.772 2.654 9.741 10.302 0.245 24.277 2.216 35.19 7.754-3.756-11.413-5.835-19.136-5.835-19.136z" fill="#737473"/>
+		<path d="m388.23 128.85-146.34 65.574c-1.289 0.534-2.204 1.703-2.411 3.083l-26.207 134.87c0 1.071 3.525 4.025 5.957 4.025h139.22c6.388 0 8.921-2.099 9.582-5.844l30.202-194.32c0.071-0.461 0.176-0.76-0.325-1.094-2.58-1.72-8.018-5.604-9.678-6.293z" fill="#8e8e8d"/>
+		<path d="m385.33 128.89-150.89 62.469c-1.289 0.533-2.204 1.703-2.411 3.083l-20.186 134.33c-0.361 2.404 1.501 4.567 3.932 4.567h135.51c4.878 0 9.029-3.557 9.775-8.378l29.714-191.79c0.475-3.064-2.585-5.468-5.45-4.282z" fill="#dedede"/>
+		<path d="m385.33 128.89-150.89 62.469c-1.289 0.534-2.204 1.703-2.411 3.083l-17.618 117.24 150.34-10.524 26.026-167.98c0.475-3.063-2.585-5.467-5.45-4.281z" fill="#525251"/>
+		<path d="m379 135.87-139.34 57.686c-1.19 0.493-2.035 1.573-2.226 2.847l-16.269 108.26 138.83-9.718 24.033-155.12c0.439-2.83-2.387-5.05-5.032-3.955z" fill="#c4c9cf"/>
+		
+			
+			<clipPath id="j">
+				<use xlink:href="#i"/>
+			</clipPath>
+			<g clip-path="url(#j)">
+				<polygon points="387 131.78 232.87 195.59 231.97 201.77 385.46 141.72" fill="#48515b"/>
+				
+					<polygon points="239.76 209.44 276.43 196.45 277.28 190.1 240.62 204.67" fill="#53b0d6"/>
+					<polygon points="279.33 195.45 320.61 181.19 321.8 172.42 280.21 188.94" fill="#53b0d6"/><g fill="#eec4ce">
+					<polygon points="373.88 162.8 375.91 150.92 324.72 171.26 323.51 180.19"/>
+					<polygon points="226.48 300.83 287.6 295.88 290.32 275.32 229.41 282.02"/>
+					<polygon points="293.51 274.97 290.77 295.62 355.67 290.35 359.11 267.76"/>
+					<polygon points="360.04 261.39 366.18 218.13 306.01 232.5 300.72 268.93"/>
+					<polygon points="372.97 170.23 312.1 190.62 306.51 229.08 366.68 214.62"/>
+					</g><polygon points="229.37 278 297.22 269.38 308.63 191.78 239.23 215.02" fill="#53b0d6"/>
+				
+			</g>
+		
+		<path d="m385.33 128.89-124.23 51.434c14.792 55.174 50.051 94.588 106.2 104.43l23.484-151.58c0.475-3.064-2.585-5.468-5.45-4.282z" display="none" fill="#fff" opacity=".23"/>
+		
+		<g transform="translate(31.298 -9.8549)"><path d="m344.06 145.98-109.61 45.381c-1.289 0.533-2.204 1.703-2.411 3.083l-17.125 113.96 105.12-7.359z" fill="#405b67" opacity=".3"/>
+			<polygon points="338.97 133.38 191.69 194.36 175.11 304.67 313.94 294.95" fill="#fff"/>
+			<polygon points="190.83 200.25 337.5 142.88 338.97 133.38 191.69 194.36" fill="#48515b"/>
+			
+				<polygon points="185.52 276.66 192.8 223.39 324.46 178.26 312.08 262.12" fill="#eec4ce"/>
+				<polygon points="193.76 216.8 229.72 204.38 231.59 190.68 195.72 204.92" fill="#ddf1fd"/>
+				<polygon points="232.55 203.4 272.93 189.46 275.13 173.38 234.45 189.54" fill="#ddf1fd"/><g fill="#eec4ce">
+				<polygon points="277.99 172.24 275.77 188.48 325.03 171.47 328.06 152.35"/>
+				<polygon points="181.9 298.98 241.68 294.13 244.34 274.03 184.76 280.58"/>
+				<polygon points="308.26 288.73 311.63 266.64 247.46 273.69 244.78 293.88"/>
+			</g>
+		</g>
+		
+		<g transform="translate(62.378 -14.109)"><polygon points="175.11 304.67 268.5 298.13 290.94 153.26 191.69 194.36" fill="#405b67" opacity=".3"/>
+			<polygon points="264.9 294.95 289.93 133.38 142.65 194.36 142.65 194.36 126.07 304.67" fill="#fff"/>
+			<polygon points="142.65 194.36 141.79 200.25 288.46 142.88 289.93 133.38 142.65 194.36" fill="#48515b"/>
+			
+				<polygon points="146.68 204.92 145.85 209.59 181.71 196.88 182.55 190.68" fill="#ddf1fd"/>
+				<polygon points="185.41 189.54 184.55 195.9 224.93 181.96 226.09 173.38" fill="#ddf1fd"/>
+				<polygon points="279.02 152.35 228.95 172.24 227.77 180.98 277.03 163.97" fill="#eec4ce"/>
+				<polygon points="135.72 280.58 132.86 298.98 192.63 294.13 195.3 274.03" fill="#ddf1fd"/><g fill="#eec4ce">
+				<polygon points="262.59 266.64 198.42 273.69 195.74 293.88 259.22 288.73"/>
+				<polygon points="205.48 267.78 263.5 260.4 269.5 218.09 210.65 232.15"/>
+				<polygon points="216.6 191.17 211.14 228.8 269.99 214.66 276.15 171.23"/>
+				</g><polygon points="145.32 215.05 135.68 276.65 202.04 268.21 213.21 192.31" fill="#ddf1fd"/>
+			
+		</g>
+		
+		<g transform="translate(92.825 -20.793)"><polygon points="126.06 304.67 221.99 297.95 244.58 152.15 142.64 194.36" fill="#405b67" opacity=".3"/>
+			<polygon points="215.86 294.95 240.89 133.38 93.606 194.36 93.605 194.36 77.028 304.67" fill="#fff"/>
+			<polygon points="239.42 142.88 240.89 133.38 93.605 194.36 92.746 200.25" fill="#48515b"/>
+			<g transform="matrix(-.36872 .043707 .043707 .36872 217.82 178.37)" font-family="Roboto" font-size="12px"><g class="highcharts-pane-group" aria-hidden="true" data-z-index="0"><path class="highcharts-pane" d="m63.532 216a136.47 136.47 0 0 1 272.93-0.13647l-50.277 0.0503a86.19 86.19 0 0 0-172.38 0.08617z" fill="#f2f2f2"/></g><g class="highcharts-plot-bands-0" aria-hidden="true" data-z-index="0"><path class="highcharts-plot-band" d="m63.532 216a136.47 136.47 0 0 1 272.86-4.423l-50.251 1.6295a86.19 86.19 0 0 0-172.33 2.7934z" fill="#ac3956"/></g><g class="highcharts-grid highcharts-yaxis-grid highcharts-radial-axis-grid" fill="none" aria-hidden="true" data-z-index="1"><path class="highcharts-minor-grid-line" d="m116.21 216h-48.878"/><path class="highcharts-minor-grid-line" d="m117.24 202.89-48.276-7.6461"/><path class="highcharts-minor-grid-line" d="m120.31 190.11-46.485-15.104"/><path class="highcharts-minor-grid-line" d="m125.34 177.96-43.55-22.19"/><path class="highcharts-minor-grid-line" d="m132.21 166.75-39.543-28.729"/><path class="highcharts-minor-grid-line" d="m140.75 156.75-34.562-34.562"/><path class="highcharts-minor-grid-line" d="m150.75 148.21-28.729-39.543"/><path class="highcharts-minor-grid-line" d="m161.96 141.34-22.19-43.55"/><path class="highcharts-minor-grid-line" d="m174.11 136.31-15.104-46.485"/><path class="highcharts-minor-grid-line" d="m186.89 133.24-7.6461-48.276"/><path class="highcharts-minor-grid-line" d="m200 132.21v-48.878"/><path class="highcharts-minor-grid-line" d="m213.11 133.24 7.6461-48.276"/><path class="highcharts-minor-grid-line" d="m225.89 136.31 15.104-46.485"/><path class="highcharts-minor-grid-line" d="m238.04 141.34 22.19-43.55"/><path class="highcharts-minor-grid-line" d="m249.25 148.21 28.729-39.543"/><path class="highcharts-minor-grid-line" d="m259.25 156.75 34.562-34.562"/><path class="highcharts-minor-grid-line" d="m267.79 166.75 39.543-28.729"/><path class="highcharts-minor-grid-line" d="m274.66 177.96 43.55-22.19"/><path class="highcharts-minor-grid-line" d="m279.69 190.11 46.485-15.104"/><path class="highcharts-minor-grid-line" d="m282.76 202.89 48.276-7.6461"/><path class="highcharts-minor-grid-line" d="m283.79 216h48.878"/><path class="highcharts-grid-line" d="m116.21 216h-48.878" data-z-index="1"/><path class="highcharts-grid-line" d="m140.75 156.75-34.562-34.562" data-z-index="1"/><path class="highcharts-grid-line" d="m200 132.21v-48.878" data-z-index="1"/><path class="highcharts-grid-line" d="m259.25 156.75 34.562-34.562" data-z-index="1"/><path class="highcharts-grid-line" d="m283.79 216h48.878" data-z-index="1"/></g><g class="highcharts-axis highcharts-yaxis highcharts-radial-axis" fill="none" aria-hidden="true" data-z-index="2"><g stroke="#9e9e9e"><g><path class="highcharts-minor-tick" d="m60.35 216h-3"/><path class="highcharts-minor-tick" d="m62.069 194.15-2.9631-0.46931"/><path class="highcharts-minor-tick" d="m67.185 172.85-2.8532-0.92705"/><path class="highcharts-minor-tick" d="m75.571 152.6-2.673-1.362"/><path class="highcharts-minor-tick" d="m87.021 133.92-2.4271-1.7634"/><path class="highcharts-minor-tick" d="m101.25 117.25-2.1213-2.1213"/><path class="highcharts-minor-tick" d="m117.92 103.02-1.7634-2.427"/><path class="highcharts-minor-tick" d="m136.6 91.571-1.362-2.673"/><path class="highcharts-minor-tick" d="m156.85 83.185-0.92705-2.8532"/><path class="highcharts-minor-tick" d="m178.15 78.069-0.46931-2.9631"/><path class="highcharts-minor-tick" d="m200 76.35v-3"/><path class="highcharts-minor-tick" d="m221.85 78.069 0.46931-2.9631"/><path class="highcharts-minor-tick" d="m243.15 83.185 0.92705-2.8532"/><path class="highcharts-minor-tick" d="m263.4 91.571 1.362-2.673"/><path class="highcharts-minor-tick" d="m282.08 103.02 1.7634-2.427"/><path class="highcharts-minor-tick" d="m298.75 117.25 2.1213-2.1213"/><path class="highcharts-minor-tick" d="m312.98 133.92 2.427-1.7634"/><path class="highcharts-minor-tick" d="m324.43 152.6 2.673-1.362"/><path class="highcharts-minor-tick" d="m332.82 172.85 2.8532-0.92705"/><path class="highcharts-minor-tick" d="m337.93 194.15 2.9631-0.46931"/><path class="highcharts-minor-tick" d="m339.65 216h3"/></g><g stroke-width="2"><path class="highcharts-tick" d="m60.35 216h-10"/><path class="highcharts-tick" d="m101.25 117.25-7.0711-7.0711"/><path class="highcharts-tick" d="m200 76.35v-10"/><path class="highcharts-tick" d="m298.75 117.25 7.0711-7.0711"/><path class="highcharts-tick" d="m339.65 216h10"/></g></g><path class="highcharts-axis-line" d="m60.35 216a139.65 139.65 0 0 1 279.3-0.13965" data-z-index="7"/></g><g class="highcharts-series-group" aria-hidden="false" data-z-index="3"><g class="highcharts-series highcharts-series-0 highcharts-gauge-series highcharts-color-0" transform="translate(10,47)" clip-path="url(#h)" aria-hidden="false" data-z-index="0.1"><path class="highcharts-dial" transform="rotate(-1.8 5474 -5962.9)" d="m0-4h1.1492l113.77 2.5v3l-113.77 2.5h-1.1492z" fill="#666" aria-label="99 %. Value." data-z-index="1" role="img" tabindex="-1"/><circle class="highcharts-pivot" transform="translate(190,169)" r="10" fill="#fff" stroke="#666" stroke-width="3" data-z-index="2"/></g></g><g class="highcharts-axis-labels highcharts-yaxis-labels highcharts-radial-axis-labels" fill="#666666" font-size="12px" text-anchor="middle" aria-hidden="true" data-z-index="7"><text transform="rotate(-90,35.35,216)" x="35.349998" y="216" color="#666666">0</text><text transform="rotate(-45 83.575 99.575)" x="83.574867" y="99.574867" color="#666666">25</text><text x="200" y="51.349998" color="#666666">50</text><text transform="rotate(45 316.43 99.575)" x="316.42514" y="99.574867" color="#666666">75</text><text transform="rotate(90,364.65,216)" x="364.64999" y="216" color="#666666">100</text></g></g><g fill="#eec4ce">
+				
+				<polygon points="97.643 204.92 95.675 216.8 131.63 204.38 133.51 190.68"/>
+				<polygon points="136.37 189.54 134.47 203.4 174.85 189.46 177.05 173.38"/>
+				<polygon points="229.97 152.35 179.91 172.24 177.69 188.48 226.95 171.47"/>
+				
+				<polygon points="213.55 266.64 149.38 273.69 146.7 293.88 210.18 288.73"/>
+			<polygon points="86.682 280.58 83.814 298.98 143.59 294.13 146.26 274.03"/></g>
+			
+				<path d="m97.306 196.38c-0.115 0.804-0.797 1.371-1.524 1.267s-1.224-0.84-1.109-1.643c0.115-0.804 0.797-1.371 1.525-1.267 0.726 0.103 1.223 0.839 1.108 1.643z" fill="#e30613"/>
+				<path d="m101.37 194.7c-0.115 0.804-0.797 1.371-1.525 1.267-0.727-0.104-1.224-0.84-1.109-1.643 0.115-0.804 0.797-1.371 1.524-1.267 0.728 0.104 1.225 0.84 1.11 1.643z" fill="#ffed00"/>
+				<path d="m105.36 193.3c-0.115 0.804-0.797 1.371-1.525 1.267-0.727-0.104-1.224-0.84-1.109-1.643 0.115-0.804 0.797-1.371 1.525-1.267s1.224 0.84 1.109 1.643z" fill="#cdd500"/>
+			
+		</g>
+		<path d="m284.81 320.45c-0.313 4.178-2.684 7.407-5.296 7.211s-4.475-3.741-4.162-7.92c0.313-4.178 2.684-7.407 5.296-7.211 2.611 0.196 4.475 3.742 4.162 7.92z" fill="#9d9e9e"/>
+		
+	</g>
+</g></g></svg>

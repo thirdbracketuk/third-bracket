@@ -16,11 +16,23 @@ import {
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
 import TechStack from '../TechStack'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Branding & Creative Design Services Manchester',
+  description:
+    'Third Bracket delivers bespoke brand strategy, logo and graphic design, print, social media, and website creative for Manchester businesses seeking standout identity.',
+  openGraph: {
+    title: 'Branding & Creative Design Services for Manchester Businesses',
+    description:
+      'Boost your brand with Third Bracket’s bespoke logo, graphic, print, social media, and website creative services. Tailored strategies for Manchester businesses.',
+  },
+}
 
 const uiUxDesignCategory = {
-  title: 'UI/UX Design',
+  title: 'Brand Strategy that Converts',
   description:
-    'We create intuitive and engaging user interfaces that balance aesthetic appeal with functional design principles.',
+    'We create intuitive and engaging brand creatives that balance aesthetic appeal with functional design principles.',
   illustration: {
     src: '/services/ui.svg',
     alt: 'UI/UX Design Illustration',
@@ -37,42 +49,33 @@ const uiUxDesignCategory = {
 
 function getServiceDescription(title: string): string {
   const descriptions: Record<string, string> = {
-    'UI/UX Design': 'Create user-centered designs that enhance usability and drive engagement.',
-    'Website Design': 'Design modern, responsive websites that reflect your brand identity.',
-    'Website Redesign':
+    'Brand Strategy': 'Create user-centered designs that enhance usability and drive engagement.',
+    'Brand Identity': 'Design modern, responsive websites that reflect your brand identity.',
+    'Graphic Design':
       'Modernize existing websites with contemporary design patterns and best practices.',
-    'Social Media Design':
-      'Create engaging visual content for social media platforms and campaigns.',
-    Branding:
+    'Print Design': 'Create engaging visual content for social media platforms and campaigns.',
+    'Business Listing':
       'Develop comprehensive brand identities including logos, colors, and visual guidelines.',
-    'Design System Development':
-      'Build scalable design systems with reusable components and patterns.',
-    'Graphic Design': 'Create compelling visual designs for print and digital media.',
-    'Elementor Template Design': 'Design custom Elementor templates for WordPress websites.',
-    'Printable Design':
+    'Website Creative': 'Build scalable design systems with reusable components and patterns.',
+    'Social Media': 'Create compelling visual designs for print and digital media.',
+    'Brand Guidelines': 'Design custom Elementor templates for WordPress websites.',
+    'Brand Audit':
       'Design materials for print including brochures, business cards, and marketing materials.',
-    'Wireframe & Prototype':
-      'Create detailed wireframes and interactive prototypes for user testing.',
   }
   return descriptions[title] || 'Professional design service tailored to your brand needs.'
 }
 
 function getServiceFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
-    'UI/UX Design': ['User Research', 'Interface Design', 'Usability Testing'],
-    'Website Design': ['Responsive Design', 'Brand Integration', 'User Experience'],
-    'Website Redesign': ['UI Modernization', 'UX Enhancement', 'Visual Refresh'],
-    'Social Media Design': ['Platform Optimization', 'Brand Consistency', 'Engagement Focus'],
-    Branding: ['Logo Design', 'Brand Guidelines', 'Visual Identity'],
-    'Design System Development': ['Component Library', 'Style Guide', 'Design Tokens'],
-    'Graphic Design': ['Visual Communication', 'Brand Alignment', 'Creative Solutions'],
-    'Elementor Template Design': [
-      'WordPress Integration',
-      'Responsive Templates',
-      'Custom Layouts',
-    ],
-    'Printable Design': ['Print Optimization', 'High Resolution', 'Brand Consistency'],
-    'Wireframe & Prototype': ['User Flow', 'Interactive Prototypes', 'Design Validation'],
+    'Brand Strategy': ['User Research', 'Interface Design', 'Usability Testing'],
+    'Brand Identity': ['Responsive Design', 'Brand Integration', 'User Experience'],
+    'Graphic Design': ['UI Modernization', 'UX Enhancement', 'Visual Refresh'],
+    'Print Design': ['Platform Optimization', 'Brand Consistency', 'Engagement Focus'],
+    'Business Listing': ['Logo Design', 'Brand Guidelines', 'Visual Identity'],
+    'Website Creative': ['Component Library', 'Style Guide', 'Design Tokens'],
+    'Social Media': ['Visual Communication', 'Brand Alignment', 'Creative Solutions'],
+    'Brand Guidelines': ['WordPress Integration', 'Responsive Templates', 'Custom Layouts'],
+    'Brand Audit': ['Print Optimization', 'High Resolution', 'Brand Consistency'],
   }
   return features[title] || ['Creative Design', 'Brand Focus', 'User-Centered']
 }
@@ -115,8 +118,8 @@ export default function UIUXDesignPage() {
       <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           <PageHeader
-            title="UI/UX Design Services"
-            description="Create intuitive and engaging user interfaces that balance aesthetic appeal with functional design principles."
+            title="Branding & Creative Design Services"
+            description="Third Bracket cprovides branding solutions, including brand strategy, graphic design, print materials, social media, and website creative."
           />
 
           <Category {...uiUxDesignCategory} index={0} />

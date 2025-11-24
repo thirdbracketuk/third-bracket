@@ -150,7 +150,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/services/ui-ux-design"
+                    href="/services/digital-marketing"
                     as={Link}
                     isDropdownItem
                   >
@@ -170,7 +170,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/services/digital-marketing"
+                    href="/services/ui-ux-design"
                     as={Link}
                     isDropdownItem
                   >
@@ -225,7 +225,7 @@ const Header: FC = () => {
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
-                  {uiUxDesignItems.map((item) => renderNavlink(item))}
+                  {digitalMarketingItems.map((item) => renderNavlink(item))}
                 </div>
 
                 {/* <div className="mt-6">
@@ -258,7 +258,7 @@ const Header: FC = () => {
                 </div>
 
                 <div className="flex flex-col space-y-[2px] ">
-                  {digitalMarketingItems.map((item) => renderNavlink(item))}
+                  {uiUxDesignItems.map((item) => renderNavlink(item))}
                 </div>
 
                 {/* <div className="mt-6">
