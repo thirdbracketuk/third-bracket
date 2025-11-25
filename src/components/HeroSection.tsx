@@ -47,7 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                 size="md"
                 onClick={() => setIsFormOpen(true)}
                 theme={{
-                  background: 'bg-gradient-text dark:bg-gradient-text-dark',
+                  background: 'bg-gradient-text dark:bg-gradient-text-dark ',
                   hoverBackground: '[@media(hover:hover)]:hover:opacity-95',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   text: 'text-primary-50 dark:text-primary-950 ',
