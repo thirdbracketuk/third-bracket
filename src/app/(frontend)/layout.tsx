@@ -51,7 +51,6 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: baseUrl,
     languages: {
       'en-GB': baseUrl,
     },
