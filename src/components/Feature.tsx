@@ -125,7 +125,7 @@ export default function CardGrid() {
           <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-3 lg:gap-4  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto ">
             <h2 className="  text-[1.75rem]/[1.4] lg:text-3xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right tracking-tight">
               {/* Looking for Fast & Affordable Web Development in the UK? */}
-              What Makes Us Different?
+              What Makes Third Bracket Different?
             </h2>
             <p className="text-base/7  lg:text-[1.15rem]/8   text-primary-500 text-left sm:text-center lg:text-left">
               Every decition, from design to development, is engineered for performance and cost.

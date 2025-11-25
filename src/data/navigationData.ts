@@ -192,6 +192,139 @@ export const digitalMarketingItems: NavlinkItem[] = [
   },
 ]
 
+// Solution section
+export const designSolutionsItems: NavlinkItem[] = [
+  {
+    label: 'BracketUI',
+    href: '/solutions/design-solutions#bracketui',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Elementor Templates',
+    href: '/solutions/design-solutions#elementor-template',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Tailwindcss Templates',
+    href: '/solutions/design-solutions#tailwindcss-templates',
+    isDropdownItem: true,
+  },
+  {
+    label: 'HTML5 Templates',
+    href: '/solutions/design-solutions#html5-templates',
+    isDropdownItem: true,
+  },
+  { label: 'Hugo Theme', href: '/solutions/design-solutions#hugo-themes', isDropdownItem: true },
+  {
+    label: 'Icon Packs',
+    href: '/solutions/design-solutions#icon-packs',
+    isDropdownItem: true,
+  },
+  {
+    label: 'SVG Illustrations',
+    href: '/solutions/design-solutions#svg-illustration',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Starter Kit',
+    href: '/solutions/design-solutions#starter-kit',
+    isDropdownItem: true,
+  },
+  {
+    label: 'UI Kits',
+    href: '/solutions/design-solutions#ui-kits',
+    isDropdownItem: true,
+  },
+]
+
+export const platformToolItems: NavlinkItem[] = [
+  {
+    label: 'Next.js Starter',
+    href: '/solutions/platform-tools#nextjs-starter',
+    isDropdownItem: true,
+  },
+  {
+    label: 'PayloadCMS Starter',
+    href: '/solutions/platform-tools#payloadcms-starter',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Notion Blog',
+    href: '/solutions/platform-tools#notion-blog',
+    isDropdownItem: true,
+  },
+  {
+    label: 'CMS Integration',
+    href: '/solutions/platform-tools#cms-integration',
+    isDropdownItem: true,
+  },
+  { label: 'Geo Redirect', href: '/solutions/platform-tools#geo-redirect', isDropdownItem: true },
+  {
+    label: 'Admin Panel',
+    href: '/solutions/platform-tools#admin-panel',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Internationalization',
+    href: '/solutions/platform-tools#internationalization',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Asset Management',
+    href: '/solutions/platform-tools#asset-management',
+    isDropdownItem: true,
+  },
+  {
+    label: 'VPS Setup',
+    href: '/solutions/platform-tools#vps-setup',
+    isDropdownItem: true,
+  },
+]
+
+export const industrySolutionsItems: NavlinkItem[] = [
+  { label: 'Restaurent', href: '/solutions/industry-solutions#bracketui', isDropdownItem: true },
+  {
+    label: 'Real Estate',
+    href: '/solutions/industry-solutions#real-estate',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Blog',
+    href: '/solutions/industry-solutions#blog',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Landing Page',
+    href: '/solutions/industry-solutions#landing-page',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Portfolio',
+    href: '/solutions/industry-solutions#portfolio',
+    isDropdownItem: true,
+  },
+  {
+    label: 'LMS',
+    href: '/solutions/industry-solutions#lms',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Directory Listing',
+    href: '/solutions/industry-solutions#directory-listing',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Booking & Reservation',
+    href: '/solutions/industry-solutions#booking',
+    isDropdownItem: true,
+  },
+  {
+    label: 'Membership',
+    href: '/solutions/industry-solutions#membership',
+    isDropdownItem: true,
+  },
+]
+
 export const servicesItems: (NavlinkItem | MegamenuItem)[] = [
   { label: 'Web Development', href: '/services', cto: true },
   { label: 'UI/UX Design', href: '/services', cto: true },

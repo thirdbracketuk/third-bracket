@@ -14,6 +14,17 @@ import CTASection from '@/components/CTASection'
 export const dynamic = 'force-static'
 export const revalidate = false
 
+export const metadata: Metadata = {
+  title: 'Web Design, Development and Marketing Blog',
+  description:
+    'Read practical articles from Third Bracket covering web design, development, SEO and digital marketing insights for growing businesses in the UK.',
+  openGraph: {
+    title: 'Insights, Tips and Articles on Web and Marketing',
+    description:
+      'Browse expert posts covering web development, design, SEO strategies, Next.js tips and practical digital marketing advice for real business growth.',
+  },
+}
+
 export default async function Page() {
   const payload = await getPayload({ config: configPromise })
 
@@ -36,7 +47,10 @@ export default async function Page() {
     <Bracket fluid centered padding="small">
       <div className="md:max-w-screen-xl mx-auto">
         <PageClient />
-        <PageHeader title="Blog" description="Insights and updates from our team" />
+        <PageHeader
+          title="Insights, Articles and Practical Guides"
+          description="Explore articles, tips and practical guides on web development, SEO and digital marketing."
+        />
         <div className="py-8 sm:py-12 md:py-16">
           <div className="container mb-8">
             <PageRange
@@ -77,10 +91,4 @@ export default async function Page() {
       </div>
     </Bracket>
   )
-}
-
-export function generateMetadata(): Metadata {
-  return {
-    title: `Blog - Web Development & Digital Marketing`,
-  }
 }

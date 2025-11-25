@@ -11,6 +11,17 @@ import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
 import CTASection from '@/components/CTASection'
 
+export const metadata: Metadata = {
+  title: 'Work and Case Studies, Real Projects and Results',
+  description:
+    'Explore real client projects by Third Bracket, including web design, ecommerce, SEO, branding and platform builds, showing real business results.',
+  openGraph: {
+    title: 'Real Work, Case Studies and Proven Results',
+    description:
+      'Browse completed website, ecommerce, marketing and platform projects with real outcomes, real builds and practical solutions for UK businesses.',
+  },
+}
+
 export const dynamic = 'force-static'
 export const revalidate = false
 
@@ -43,10 +54,10 @@ export default async function Page() {
       <div className="md:max-w-screen-xl mx-auto">
         <PageClient />
         <PageHeader
-          title="Our Work"
-          description="Showcasing our latest projects and achievements"
+          title="Our Work and Real World Results"
+          description="Explore a growing archive of completed projects, case studies and real world projects"
         />
-        <div className="py-8 sm:py-12 md:py-16">
+        <div className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]">
           <div className="container mb-8">
             <PageRange
               collection="work"
@@ -57,6 +68,12 @@ export default async function Page() {
           </div>
 
           <CollectionArchive posts={works.docs} relationTo="work" />
+
+          <div className="container">
+            {works.totalPages > 1 && works.page && (
+              <Pagination page={works.page} totalPages={works.totalPages} />
+            )}
+          </div>
 
           <CTASection
             cover={{
@@ -76,20 +93,8 @@ export default async function Page() {
               href: '/solutions',
             }}
           />
-
-          <div className="container">
-            {works.totalPages > 1 && works.page && (
-              <Pagination page={works.page} totalPages={works.totalPages} />
-            )}
-          </div>
         </div>
       </div>
     </Bracket>
   )
-}
-
-export function generateMetadata(): Metadata {
-  return {
-    title: `Our Work - Web Development & Digital Marketing Projects`,
-  }
 }

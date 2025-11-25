@@ -85,8 +85,8 @@ export function WhyChooseUsSection() {
               What We Build & Deliver
             </h2>
             <p className=" text-primary-500  text-base/7  lg:text-[1.15rem]/8  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
-              From modern websites to tailored systems, we help UK businesses thrive with reliable,
-              high-performance web development.
+              From modern websites to tailored systems, Third Bracket help UK businesses thrive with
+              reliable, high-performance web development.
             </p>
           </div>
 

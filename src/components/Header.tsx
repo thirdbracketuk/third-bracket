@@ -24,6 +24,9 @@ import {
   wordpressSolutionsItems,
   openSourceSolutionsItems,
   getNavlinkTheme,
+  designSolutionsItems,
+  platformToolItems,
+  industrySolutionsItems,
 } from '../data/navigationData'
 
 import { MegamenuProps } from '@thirdbracket/bracketui'
@@ -118,23 +121,12 @@ const Header: FC = () => {
           >
             <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[280px_repeat(3,1fr)_220px] grid-cols-[280px_repeat(3,1fr)] pb-1">
               <div className="flex flex-col h-full mr-3">
-                <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
-                    All Services
-                  </h3>
-                </div>
-                <div className="flex flex-col space-y-2">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
-                    }}
+                <div className="flex flex-col space-y-4">
+                  <Link
                     href="/services/web-development"
-                    as={Link}
-                    isDropdownItem
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
                   >
-                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg ">
                       <div className="flex items-center justify-between gap-2">
                         <span className="font-medium">Website & Ecommerce</span>
                         <BiChevronRight size={16} />
@@ -143,16 +135,11 @@ const Header: FC = () => {
                         Bespoke websites and ecommerce development services for businesses.
                       </div>
                     </div>
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
-                    }}
+                  </Link>
+
+                  <Link
                     href="/services/digital-marketing"
-                    as={Link}
-                    isDropdownItem
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
@@ -163,16 +150,11 @@ const Header: FC = () => {
                         SEO and digital marketing to boost rankings, traffic, and leads.
                       </div>
                     </div>
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
-                    }}
+                  </Link>
+
+                  <Link
                     href="/services/ui-ux-design"
-                    as={Link}
-                    isDropdownItem
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
@@ -183,7 +165,7 @@ const Header: FC = () => {
                         Brand strategy and creative design for website, social media and print.
                       </div>
                     </div>
-                  </Navlink>
+                  </Link>
                 </div>
               </div>
               <div className="flex flex-col h-full">
@@ -195,30 +177,8 @@ const Header: FC = () => {
                 <div className="flex flex-col space-y-[2px]">
                   {webDevelopmentItems.map((item) => renderNavlink(item))}
                 </div>
-
-                {/* <div className="mt-6">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div> */}
               </div>
               <div className="flex flex-col h-full">
-                {/* <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">UI/UX Design</h3>
-                </div> */}
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     SEO
@@ -227,30 +187,8 @@ const Header: FC = () => {
                 <div className="flex flex-col space-y-[2px]">
                   {digitalMarketingItems.map((item) => renderNavlink(item))}
                 </div>
-
-                {/* <div className="mt-6">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div> */}
               </div>
               <div className="flex flex-col h-full">
-                {/* <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Digital Marketing</h3>
-                </div> */}
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     Branding
@@ -260,25 +198,6 @@ const Header: FC = () => {
                 <div className="flex flex-col space-y-[2px] ">
                   {uiUxDesignItems.map((item) => renderNavlink(item))}
                 </div>
-
-                {/* <div className="mt-6">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div> */}
               </div>
               {/* Compact banner column */}
               <div className="hidden lg:flex flex-col justify-center h-full">
@@ -333,13 +252,52 @@ const Header: FC = () => {
           >
             <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[280px_repeat(3,1fr)_220px] grid-cols-[280px_repeat(3,1fr)] pb-1">
               <div className="flex flex-col h-full mr-3">
-                <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500">
-                    Our Solutions
-                  </h3>
-                </div>
-                <div className="flex flex-col space-y-2">
-                  <Navlink
+                <div className="flex flex-col space-y-4">
+                  <Link
+                    href="/solutions/design-solutions"
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
+                  >
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-medium">Design Solutions</span>
+                        <BiChevronRight size={16} />
+                      </div>
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
+                        UI kits, templates, icons, and design systems for websites.
+                      </div>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/solutions/platform-tools"
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
+                  >
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-medium">Platform & Tools</span>
+                        <BiChevronRight size={16} />
+                      </div>
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
+                        Starter kits, CMS, and tools for scalable web development projects.
+                      </div>
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="/solutions/industry-solutions"
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
+                  >
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-medium">Industry Solutions</span>
+                        <BiChevronRight size={16} />
+                      </div>
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
+                        Prebuild web systems for restaurents, estates, blogs, and web portals.
+                      </div>
+                    </div>
+                  </Link>
+                  {/* <Navlink
                     theme={{
                       text: 'text-primary-950 dark:text-primary-50',
                       states:
@@ -398,7 +356,7 @@ const Header: FC = () => {
                         Prebuild web systems for restaurents, estates, blogs, and web portals.
                       </div>
                     </div>
-                  </Navlink>
+                  </Navlink> */}
                 </div>
               </div>
               <div className="flex flex-col h-full">
@@ -408,7 +366,7 @@ const Header: FC = () => {
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
-                  {nextjsSolutionsItems.map((item) => renderNavlink(item))}
+                  {designSolutionsItems.map((item) => renderNavlink(item))}
                 </div>
               </div>
               <div className="flex flex-col h-full">
@@ -418,7 +376,7 @@ const Header: FC = () => {
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
-                  {wordpressSolutionsItems.map((item) => renderNavlink(item))}
+                  {platformToolItems.map((item) => renderNavlink(item))}
                 </div>
               </div>
               <div className="flex flex-col h-full">
@@ -428,7 +386,7 @@ const Header: FC = () => {
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
-                  {openSourceSolutionsItems.map((item) => renderNavlink(item))}
+                  {industrySolutionsItems.map((item) => renderNavlink(item))}
                 </div>
               </div>
               <div className="hidden lg:flex flex-col justify-center h-full">

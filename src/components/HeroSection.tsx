@@ -38,8 +38,8 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               </span>
             </h1>
             <p className=" text-primary-500  text-base/8  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
-              We create fast, reliable websites, improve SEO rankings, and build standout brands
-              across UK.
+              Third Bracket deliver fast, reliable websites, improve SEO rankings, and build
+              standout brands across UK.
             </p>
 
             <div className="flex flex-wrap sm:justify-center gap-4 md:gap-6 backdrop-blur-[2px]">

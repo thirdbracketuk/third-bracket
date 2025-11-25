@@ -11,21 +11,13 @@ import { Settings } from '@/utilities/meta'
 
 export const metadata: Metadata = {
   // metadataBase: new URL(Settings.metadataBase),
-  title: 'Get In Touch',
+  title: 'Contact Third Bracket, Start Your Project Today',
   description:
-    'Get in touch for web design consultations, project quotes, or partnership opportunities. We’d love to hear from you.',
+    'Get in touch with Third Bracket to discuss your website, ecommerce or digital project.',
   openGraph: {
-    url: `${Settings.metadataBase}/contact`,
-    title: 'Contact Third Bracket',
-
-    images: [
-      {
-        url: '/og.svg', // Custom image for contact page
-        width: 1600, // Add this
-        height: 840,
-        alt: 'Contact Third Bracket',
-      },
-    ],
+    title: 'Contact Us, Start Your Project or Ask a Question',
+    description:
+      'Send a message to Third Bracket and tell us about your project, idea or challenge. A simple form to start clear, honest conversations.',
   },
 }
 
@@ -62,7 +54,10 @@ export default async function ContactPage() {
       <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           {/* Structured data now in layout.tsx */}
-          <PageHeader title="Contact Us" description="Get in touch with our team" />
+          <PageHeader
+            title="Contact Third Bracket"
+            description="Use the form below to tell us what you need help with."
+          />
           <div className="">
             <FormBlock form={fallbackForm} enableIntro={false} />
           </div>
