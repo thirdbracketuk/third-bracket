@@ -2,6 +2,16 @@ import Link from 'next/link'
 import React from 'react'
 
 import { Bracket, Button } from '@thirdbracket/bracketui'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Page Not Found, Lets Get You Back On Track',
+  description: 'Sorry, that was embarrasing. The page you are looking for is not available.',
+  openGraph: {
+    title: 'Page Not Found, Lets Get You Back On Track',
+    description: 'Sorry, that was embarrasing. The page you are looking for is not available.',
+  },
+}
 
 export default function NotFound() {
   return (
@@ -13,8 +23,19 @@ export default function NotFound() {
           </h1>
           <p className="mb-4">This page could not be found.</p>
 
-          <Button href="/" as={Link} variant="default">
-            Go home
+          <Button
+            size="md"
+            as={Link}
+            href="/"
+            theme={{
+              background: 'bg-gradient-text dark:bg-gradient-text-dark ',
+              hoverBackground: '[@media(hover:hover)]:hover:opacity-95',
+              focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
+              text: 'text-primary-50 dark:text-primary-950 ',
+            }}
+            className="no-underline"
+          >
+            Back to Home
           </Button>
         </div>
       </div>
