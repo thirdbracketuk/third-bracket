@@ -18,7 +18,7 @@ const featuredLogos = [
   { src: '/elementoricon.svg', alt: 'Elementor', width: 150, height: 24 },
 
   { src: '/bracketuii.svg', alt: 'Bracketui', width: 150, height: 24 },
-{ src: '/IMG_7978.png', alt: 'DesignRush', width: 150, height: 24 },
+{ src: '/IMG_7978.png', alt: 'DesignRush', width: 202, height: 214 },
 ]
 ]
 
