@@ -13,12 +13,18 @@ import { getClientSideURL } from '@/utilities/getURL'
 
 import { Bracket, Button } from '@thirdbracket/bracketui'
 
+type SubmissionData = {
+  field: string
+  value: any
+}
+
 export type FormBlockType = {
   blockName?: string
   blockType?: 'formBlock'
   enableIntro: boolean
   form: FormType
   introContent?: SerializedEditorState
+  recaptchaSiteKey?: string
 }
 
 export const FormBlock: React.FC<
@@ -31,6 +37,7 @@ export const FormBlock: React.FC<
     form: formFromProps,
     form: { id: formID, confirmationMessage, confirmationType, redirect, submitButtonLabel } = {},
     introContent,
+    recaptchaSiteKey,
   } = props
 
   const formMethods = useForm({
@@ -54,10 +61,31 @@ export const FormBlock: React.FC<
       const submitForm = async () => {
         setError(undefined)
 
-        const dataToSend = Object.entries(data).map(([name, value]) => ({
+        //recaptcha logic
+
+        if (!window.grecaptcha || !recaptchaSiteKey) {
+          //falback error if recaptcha has not loaded
+          setError({ message: 'reCAPTCHA failed to load. Please refresh.' })
+          return
+        }
+
+        //get recaptcha token
+        const gRecaptchaToken = await window.grecaptcha.execute(recaptchaSiteKey, {
+          action: 'submit_form',
+        })
+
+        // const dataToSend = Object.entries(data).map(([name, value]) => ({
+        //   field: name,
+        //   value,
+        // }));
+
+        const dataToSend: SubmissionData[] = Object.entries(data).map(([name, value]) => ({
           field: name,
           value,
         }))
+
+        //append the reCAPTCHA token to the submission data
+        dataToSend.push({ field: 'gRecaptchaToken', value: gRecaptchaToken })
 
         // delay loading indicator by 1s
         loadingTimerID = setTimeout(() => {
@@ -112,7 +140,7 @@ export const FormBlock: React.FC<
 
       void submitForm()
     },
-    [router, formID, redirect, confirmationType],
+    [router, formID, redirect, confirmationType, recaptchaSiteKey],
   )
 
   return (

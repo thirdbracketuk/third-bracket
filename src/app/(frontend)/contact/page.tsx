@@ -8,6 +8,7 @@ import { FormBlock } from '@/blocks/Form/Component'
 import { Metadata } from 'next'
 import { Bracket } from '@thirdbracket/bracketui'
 import { Settings } from '@/utilities/meta'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   // metadataBase: new URL(Settings.metadataBase),
@@ -51,6 +52,10 @@ export default async function ContactPage() {
 
   return (
     <section>
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+        strategy="beforeInteractive"
+      />
       <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           {/* Structured data now in layout.tsx */}
@@ -59,7 +64,11 @@ export default async function ContactPage() {
             description="Use the form below to tell us what you need help with."
           />
           <div className="">
-            <FormBlock form={fallbackForm} enableIntro={false} />
+            <FormBlock
+              form={fallbackForm}
+              enableIntro={false}
+              recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            />
           </div>
         </div>
       </Bracket>
