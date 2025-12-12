@@ -13,12 +13,24 @@ import Modal from './Modal'
 
 import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
 import { FormBlockMultiStep } from '@/blocks/Form/FormBlockMultiStep'
+import Script from 'next/script'
 
 const featuredLogos = [
-  { src: '/elementoricon.svg', alt: 'Elementor', width: 150, height: 24 },
+  {
+    src: '/elementor.svg',
+    alt: 'Elementor',
+    width: 210,
+    height: 210,
+    href: 'https://be.elementor.com/visit/?bta=229022&brand=elementor',
+  },
 
-  { src: '/bracketuii.svg', alt: 'Bracketui', width: 150, height: 24 },
-{ src: '/IMG_7978.png', alt: 'DesignRush', width: 202, height: 214 },
+  {
+    src: '/IMG_7978.png',
+    alt: 'DesignRush',
+    width: 202,
+    height: 214,
+    href: 'https://www.designrush.com/agency/website-design-development/uk/manchester?page=2',
+  },
 ]
 
 type HeroProps = {
@@ -29,6 +41,10 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
   const [isFormOpen, setIsFormOpen] = useState(false)
   return (
     <section className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]">
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+        strategy="beforeInteractive"
+      />
       <Bracket fluid centered padding="small">
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
@@ -84,13 +100,13 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
 
             <div className="px-0 sm:px-4 py-4 text-left sm:text-center lg:px-36">
               <span className="uppercase bg-gradient-secondary opacity-50 dark:opacity-45 dark:bg-gradient-secondary-dark text-transparent bg-clip-text font-medium backdrop-blur-sm">
-                OUR PARTNERS
+                PARTNERS & RECOGNITION
               </span>
-              <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 lg:gap-12 sm:items-center dark:text-primary-500/40 text-primary-600/50 justify-start sm:justify-between ">
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-4 lg:gap-8 sm:items-center dark:text-primary-500/40 text-primary-600/50 justify-start sm:justify-center ">
                 {featuredLogos.map((logo, idx) => (
                   <a
                     key={idx}
-                    href="#"
+                    href={logo.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="backdrop-blur-lg  transition duration-300"
@@ -103,7 +119,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                       fetchPriority="high"
                       priority
                       loading="eager"
-                      className="w-auto h-5 md:h-6 object-contain dark:invert  opacity-40 hover:opacity-100"
+                      className="w-8 h-auto md:w-9 object-contain  grayscale hover:grayscale-0"
                     />
                   </a>
                 ))}
@@ -120,7 +136,11 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
         {/* <FormBlock form={contactForm} enableIntro={false} /> */}{' '}
         {/* Using compact version for modal */}
         {/* <FormBlockCompact form={contactForm} enableIntro={false} /> */}
-        <FormBlockMultiStep form={contactForm} enableIntro={false} />
+        <FormBlockMultiStep
+          form={contactForm}
+          enableIntro={false}
+          recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+        />
       </Modal>
     </section>
   )

@@ -1,10 +1,55 @@
-<svg fill="none" version="1.1" viewBox="0 0 45 45" xmlns="http://www.w3.org/2000/svg">
- <g transform="scale(.1125)" clip-path="url(#clip0)">
-  <path d="m200 0c-110.47 0-200 89.532-200 200 0 110.43 89.532 200 200 200 110.47 0 200-89.532 200-200-0.036-110.47-89.569-200-200-200zm-49.991 283.31h-33.315v-166.65h33.315zm133.3 0h-99.982v-33.315h99.982zm0-66.667h-99.982v-33.315h99.982zm0-66.666h-99.982v-33.315h99.982z" fill="#92003b"/>
- </g>
- <defs>
-  <clipPath id="clip0">
-   <rect width="400" height="400" fill="#fff"/>
-  </clipPath>
- </defs>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   fill="none"
+   version="1.1"
+   viewBox="0 0 210 210"
+   id="svg1"
+   sodipodi:docname="elementor.svg"
+   width="210"
+   height="210"
+   inkscape:version="1.3 (1:1.3+202307231459+0e150ed6c4)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.1888889"
+     inkscape:cx="100.93458"
+     inkscape:cy="22.71028"
+     inkscape:window-width="1280"
+     inkscape:window-height="656"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     transform="scale(0.525)"
+     clip-path="url(#clip0)"
+     id="g1">
+    <path
+       d="M 200,0 C 89.53,0 0,89.532 0,200 0,310.43 89.532,400 200,400 310.47,400 400,310.468 400,200 399.964,89.53 310.431,0 200,0 Z M 150.009,283.31 H 116.694 V 116.66 h 33.315 z m 133.3,0 h -99.982 v -33.315 h 99.982 z m 0,-66.667 h -99.982 v -33.315 h 99.982 z m 0,-66.666 h -99.982 v -33.315 h 99.982 z"
+       fill="#92003b"
+       id="path1" />
+  </g>
+  <defs
+     id="defs1">
+    <clipPath
+       id="clip0">
+      <rect
+         width="400"
+         height="400"
+         fill="#ffffff"
+         id="rect1"
+         x="0"
+         y="0" />
+    </clipPath>
+  </defs>
 </svg>

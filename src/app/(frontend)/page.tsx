@@ -25,16 +25,16 @@ const faqJsonLd = {
   })),
 }
 
-async function getFormData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/2`, {
-    cache: 'force-cache',
-    next: { revalidate: 3600 },
-    // Ensures fresh data on each request
-  })
+// async function getFormData() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/2`, {
+//     cache: 'force-cache',
+//     next: { revalidate: 3600 },
+//     // Ensures fresh data on each request
+//   })
 
-  if (!res.ok) return null
-  return res.json()
-}
+//   if (!res.ok) return null
+//   return res.json()
+// }
 
 // Fetch contact form data for modal
 async function getContactFormData() {
@@ -53,7 +53,6 @@ async function getContactFormData() {
 }
 
 export default async function Home() {
-  const form = await getFormData()
   const contactForm = await getContactFormData()
 
   // Provide fallback contact form structure if API call fails
@@ -68,6 +67,10 @@ export default async function Home() {
 
   return (
     <>
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+        strategy="beforeInteractive"
+      />
       <Script
         id="faq-jsonld"
         type="application/ld+json"
