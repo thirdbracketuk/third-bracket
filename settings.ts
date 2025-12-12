@@ -4,7 +4,7 @@ export const url = 'https://www.thirdbracket.co.uk'
 export const gtm = 'GTM-5LLRMTFW'
 export const gtmconnected = true
 
-export const sitename = 'Third Bracket'
+export const sitename = 'Third Bracket Ltd'
 export const description =
   'Third Bracket delivers custom website design, development, SEO, branding, and creative solutions for UK businesses.'
 export const keywords = [
@@ -80,7 +80,7 @@ export const urlimage = '/og.svg'
 export const imagealt = 'Bespoke Web Design, SEO & Branding in Manchester | Third Bracket'
 export const twitterhandle = '@ThirdbracketStudio'
 
-export const companyname = 'Third Bracket'
+export const companyname = 'Third Bracket Ltd'
 export const companylink = 'https://www.thirdbracket.co.uk'
 
 export const socialLinks = {

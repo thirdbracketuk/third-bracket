@@ -64,18 +64,16 @@ const websiteJsonLd = {
 
   url: 'https://www.thirdbracket.co.uk',
 
-  name: 'Third Bracket',
+  name: 'Third Bracket Ltd',
 
   publisher: {
     '@type': 'Organization',
 
-    name: 'Third Bracket',
+    name: 'Third Bracket Ltd',
 
     url: 'https://www.thirdbracket.co.uk',
 
     sameAs: [
-      'https://www.thirdbracket.co.uk/about',
-
       'https://www.linkedin.com/company/thirdbracket/',
       'https://www.youtube.com/@thirdbracketuk',
 
