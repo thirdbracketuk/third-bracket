@@ -18,7 +18,7 @@ import {
   RiWhatsappLine,
   RiYoutubeLine,
 } from 'react-icons/ri'
-import { Logo } from './Logo/Logo'
+import { LogoNew } from './Logo/LogoNew'
 
 const SiteFooter = () => {
   return (
@@ -29,9 +29,9 @@ const SiteFooter = () => {
       }}
     >
       <FooterSection className="col-span-2 !py-4 md:py-0">
-        <FooterBrand logo={<Logo className="h-4 lg:h-5" />}>
+        <FooterBrand logo={<LogoNew className="h-4 lg:h-5" />}>
           <p className="text-primary-600 dark:text-primary-500 text-base ">
-            Making the web a better place with Third Bracket Solutions.
+            Making the web a better place with Third Bracket Ltd.
           </p>
           <p className="text-primary-600 dark:text-primary-500 text-base ">
             hello@thirdbracket.co.uk
@@ -228,7 +228,7 @@ const SiteFooter = () => {
       </FooterSection> */}
 
       <FooterBottom>
-        <FooterText>© 2025 Third Bracket.</FooterText>
+        <FooterText>© 2025 Third Bracket Ltd.</FooterText>
 
         <ThemeToggle />
         {/* <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">

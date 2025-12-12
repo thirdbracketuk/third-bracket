@@ -12,13 +12,13 @@ import { Bracket } from '@thirdbracket/bracketui'
 import { Settings } from '@/utilities/meta'
 
 export const metadata: Metadata = {
-  title: 'About Third Bracket Digital Agency in Manchester',
+  title: 'About Third Bracket Ltd Digital Agency in Manchester',
   description:
-    'Learn about Third Bracket, our team, values, open source work and journey, with a clear look at how we build, collaborate and grow with clients.',
+    'Learn about Third Bracket Ltd, our team, values, open source work and journey, with a clear look at how we build, collaborate and grow with clients.',
   openGraph: {
-    title: 'Learn About Third Bracket Web Development Company',
+    title: 'Learn About Third Bracket Ltd Web Development Company',
     description:
-      'Discover the story behind Third Bracket, our work culture, values, collaborations and open source mindset shaping how we build and grow digital projects.',
+      'Discover the story behind Third Bracket Ltd, our work culture, values, collaborations and open source mindset shaping how we build and grow digital projects.',
   },
 }
 
@@ -29,8 +29,8 @@ export default function AboutPage() {
         <div className="md:max-w-screen-xl mx-auto">
           {/* Structured data now in layout.tsx */}
           <PageHeader
-            title="About Third Bracket"
-            description="Get to know the people, values and thinking behind Third Bracket."
+            title="About Third Bracket Ltd"
+            description="Get to know the people, values and thinking behind Third Bracket Ltd."
           />
           <Company />
           <Team />

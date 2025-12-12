@@ -1,9 +1,15 @@
 {
-  "name": "Third Bracket Solutions",
+  "name": "Third Bracket Ltd",
   "short_name": "TB",
   "description": "We specialize in web development for agencies, startups, and vendors. Offering fast, SEO-friendly websites built with the power of Next.js.",
   "start_url": "/",
   "icons": [
+    {
+      "src": "/web-app-manifest-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/web-app-manifest-192x192.png",
       "sizes": "192x192",

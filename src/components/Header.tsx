@@ -12,7 +12,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { BiArrowToRight, BiChevronRight, BiRightArrow } from 'react-icons/bi'
 // import { MdSearch } from 'react-icons/md'
-import { Logo } from './Logo/Logo'
+import { LogoNew } from './Logo/LogoNew'
 import {
   NavlinkItem,
   MegamenuItem,
@@ -107,7 +107,7 @@ const Header: FC = () => {
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
-        <Navbrand logo={<Logo />} href="/"></Navbrand>
+        <Navbrand logo={<LogoNew />} href="/"></Navbrand>
 
         <NavItem>
           {/* Services Megamenu */}

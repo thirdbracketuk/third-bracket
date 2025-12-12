@@ -35,7 +35,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
   email: resendAdapter({
     defaultFromAddress: 'no-reply@thirdbracket.co.uk',
-    defaultFromName: 'Third Bracket',
+    defaultFromName: 'Third Bracket Ltd',
     apiKey: process.env.RESEND_API_KEY || '',
   }),
   admin: {
@@ -44,7 +44,7 @@ export default buildConfig({
     },
     meta: {
       titleSuffix: '- Admin Panel', // Adds a suffix to the default title
-      title: 'Third Bracket', // Overrides the entire title
+      title: 'Third Bracket Ltd', // Overrides the entire title
       description: 'This is the administration panel for my application.',
 
       icons: [

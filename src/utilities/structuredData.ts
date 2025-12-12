@@ -25,11 +25,11 @@ export const createBlogPostJsonLd = (post: {
     'image': post.image ? `${baseUrl}${post.image}` : undefined,
     'author': {
       '@type': 'Person',
-      'name': post.authorName || 'Third Bracket Team'
+      'name': post.authorName || 'Third Bracket Ltd Team'
     },
     'publisher': {
       '@type': 'Organization',
-      'name': 'Third Bracket',
+      'name': 'Third Bracket Ltd',
       'logo': {
         '@type': 'ImageObject',
         'url': `${baseUrl}logo.svg`
@@ -65,7 +65,7 @@ export const createWorkJsonLd = (work: {
     'image': work.image ? `${baseUrl}${work.image}` : undefined,
     'creator': {
       '@type': 'Organization',
-      'name': work.agencyName || 'Third Bracket'
+      'name': work.agencyName || 'Third Bracket Ltd'
     },
     'keywords': work.technologies?.join(', '),
     'url': work.liveUrl,

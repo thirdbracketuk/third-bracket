@@ -6,147 +6,65 @@ interface LogoProps {
 
 export const Logo: FC<LogoProps> = ({ className = '' }) => {
   return (
-    <div
+    <svg
       role="img"
-      aria-label="Third Bracket Logo"
-      className={`flex  gap-[5px] h-5 lg:h-6 w-auto   ${className}`}
+      aria-label="Third Bracket Ltd Logo"
+      className={`h-5 lg:h-6 w-auto ${className}`}
+      viewBox="0 0 95.25 10.58"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      {/* Logo SVG */}
-      <div className="flex-shrink-0 h-full aspect-square self-center">
-        {/* Light mode gradient */}
-        <svg
-          // width="24"
-          // height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="dark:hidden"
+      <defs>
+        <linearGradient
+          id="logoGrad1"
+          x1="135.56"
+          x2="54.956"
+          y1="69.655"
+          y2="69.723"
+          gradientTransform="matrix(0.07706582,0,0,0.07706582,2.5110869e-4,0.07003526)"
+          gradientUnits="userSpaceOnUse"
         >
-          <defs>
-            <linearGradient
-              id="a"
-              x1={135.56}
-              x2={54.956}
-              y1={69.655}
-              y2={69.723}
-              gradientTransform="translate(.002 .001) scale(.94486)"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset={0} />
-              <stop offset={0.359} stopColor="#0d0d0d" />
-              <stop offset={1} stopColor="#333b48" />
-            </linearGradient>
-            <linearGradient
-              id="b"
-              x1={0.001}
-              x2={120.22}
-              y1={67.733}
-              y2={67.733}
-              gradientTransform="translate(.002 .001) scale(.94486)"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset={0} />
-              <stop offset={0.185} stopColor="#0d0d0d" />
-              <stop offset={1} stopColor="#333b48" />
-            </linearGradient>
-          </defs>
-          {/* <g strokeMiterlimit={50} strokeWidth={0}> */}
-          <path
-            fill="url(#a)"
-            d="M127.47 113.08a18.904 18.904 0 0 0 .524-3.986v-90.19a18.904 18.904 0 0 0-.575-4.585L71.312 33.277l-.64 61.477z"
-            style={{
-              fontVariationSettings: '&quot',
-            }}
-            transform="scale(.18751)"
-          />
-          <path
-            fill="url(#b)"
-            d="M113.59.558A18.904 18.904 0 0 0 109.093 0h-90.19A18.904 18.904 0 0 0-.001 18.905v90.19A18.904 18.904 0 0 0 18.903 128h90.19a18.904 18.904 0 0 0 2.229-.293l-61.006-18.802-.318-86.832z"
-            style={{
-              fontVariationSettings: '&quot',
-            }}
-            transform="scale(.18751)"
-          />
-          <path
-            fill="none"
-            d="M113.59.558 49.999 22.072l.318 86.832 61.006 18.802a18.904 18.904 0 0 0 16.15-14.625L70.676 94.755l.64-61.477 56.106-18.958A18.904 18.904 0 0 0 113.592.557z"
-            style={{
-              fontVariationSettings: '&quot',
-            }}
-            transform="scale(.18751)"
-          />
-          {/* </g> */}
-        </svg>
-
-        {/* Dark mode gradient */}
-        <svg
-          // width="24"
-          // height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="hidden dark:block"
+          <stop offset="0" className="dark:stop-white stop-black" />
+          <stop offset=".35876" className="dark:stop-gray-200 stop-gray-800" />
+          <stop offset="1" className="dark:stop-gray-400 stop-gray-600" />
+        </linearGradient>
+        <linearGradient
+          id="logoGrad2"
+          x1="6e-4"
+          x2="120.22"
+          y1="67.733"
+          y2="67.733"
+          gradientTransform="matrix(0.07706582,0,0,0.07706582,2.5110869e-4,0.07003526)"
+          gradientUnits="userSpaceOnUse"
         >
-          <defs>
-            <linearGradient
-              id="c"
-              x1={135.56}
-              x2={54.956}
-              y1={69.655}
-              y2={69.723}
-              gradientTransform="translate(.002 .001) scale(.94486)"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset={0} stopColor="#fff" />
-              <stop offset={0.359} stopColor="#f2f2f2" />
-              <stop offset={1} stopColor="#c4c9cf" />
-            </linearGradient>
-            <linearGradient
-              id="d"
-              x1={0.001}
-              x2={120.22}
-              y1={67.733}
-              y2={67.733}
-              gradientTransform="translate(.002 .001) scale(.94486)"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset={0} stopColor="#fff" />
-              <stop offset={0.185} stopColor="#f2f2f2" />
-              <stop offset={1} stopColor="#c4c9cf" />
-            </linearGradient>
-          </defs>
-          {/* <g strokeMiterlimit={50} strokeWidth={0}> */}
-          <path
-            fill="url(#c)"
-            d="M127.47 113.08a18.904 18.904 0 0 0 .524-3.986v-90.19a18.904 18.904 0 0 0-.575-4.585L71.312 33.277l-.64 61.477z"
-            style={{
-              fontVariationSettings: '&quot',
-            }}
-            transform="scale(.18751)"
-          />
-          <path
-            fill="url(#d)"
-            d="M113.59.558A18.904 18.904 0 0 0 109.093 0h-90.19A18.904 18.904 0 0 0-.001 18.905v90.19A18.904 18.904 0 0 0 18.903 128h90.19a18.904 18.904 0 0 0 2.229-.293l-61.006-18.802-.318-86.832z"
-            style={{
-              fontVariationSettings: '&quot',
-            }}
-            transform="scale(.18751)"
-          />
-          <path
-            fill="none"
-            d="M113.59.558 49.999 22.072l.318 86.832 61.006 18.802a18.904 18.904 0 0 0 16.15-14.625L70.676 94.755l.64-61.477 56.106-18.958A18.904 18.904 0 0 0 113.592.557z"
-            style={{
-              fontVariationSettings: '&quot',
-            }}
-            transform="scale(.18751)"
-          />
-        </svg>
-      </div>
-
-      {/* Text */}
-      <span className=" text-xl lg:text-2xl tracking-tight bg-gradient-text self-center leading-none dark:bg-gradient-text-dark text-transparent bg-clip-text  uppercase">
-        <span className="font-light">Third</span>Bracket
-      </span>
-    </div>
+          <stop offset="0" className="dark:stop-white stop-black" />
+          <stop offset=".18503" className="dark:stop-gray-200 stop-gray-800" />
+          <stop offset="1" className="dark:stop-gray-400 stop-gray-600" />
+        </linearGradient>
+      </defs>
+      <g strokeMiterlimit="50" strokeWidth="0">
+        {/* THIRD BRACKET text */}
+        <path
+          d="M15.24.78V9.8h-.73V.78zm2.78 0v.66h-6.28V.78zm6.92 4.04v.66h-4.89v-.66zM20.21.78V9.8h-.73V.78zm5.34 0V9.8h-.74V.78zm3.08 0V9.8h-.73V.78zm2.32 0h2.66q.86 0 1.48.3.62.31.96.9.34.6.34 1.46 0 .64-.24 1.16-.24.52-.67.87-.42.34-1 .47l-.23.1h-2.8l-.02-.66h2.32q.64 0 1.06-.27.43-.27.64-.72.21-.44.21-.95 0-.62-.24-1.06-.22-.46-.68-.7-.46-.24-1.13-.24H31.7v8.37h-.74zm5.01 9.03-2.1-4.04h.79l2.09 3.96v.08zm4.66 0h-1.83v-.66h1.83q.88 0 1.5-.38t.96-1.08q.33-.71.33-1.69V4.57q0-.75-.19-1.33-.2-.58-.55-.98-.36-.4-.86-.6-.51-.22-1.15-.22h-1.91V.78h1.91q.77 0 1.4.26.64.25 1.11.75.47.49.71 1.2.25.7.25 1.6V6q0 .9-.25 1.6t-.72 1.2q-.46.5-1.1.75-.65.26-1.44.26zM39.12.78V9.8h-.74V.78z"
+          className="dark:fill-white fill-black"
+        />
+        <path
+          d="M48.58 5.59h-2.01l-.02-.97h1.85q.44 0 .77-.17.33-.18.52-.5t.19-.77q0-.5-.17-.8-.16-.32-.49-.46-.33-.15-.84-.15h-1.55V9.8h-1.18V.78h2.73q.64 0 1.12.14.5.14.85.43.35.3.53.75t.18 1.08q0 .56-.27 1.01-.26.45-.73.74t-1.1.36zm-.05 4.22H46.1l.67-.99h1.77q.5 0 .84-.2.35-.2.53-.56t.18-.85q0-.5-.16-.86-.15-.36-.48-.56t-.86-.2h-1.56l.01-.97h2.12l.26.35q.6.05 1 .37.42.31.63.8t.21 1.06q0 .84-.33 1.43-.34.57-.95.88-.6.3-1.44.3zM52.98.78h2.72q.94 0 1.57.3.65.32.98.92.33.6.33 1.49 0 .62-.22 1.14-.22.5-.64.86t-1.02.53l-.32.13H53.9l-.01-.98h1.82q.56 0 .94-.23t.56-.6q.2-.39.2-.85 0-.52-.18-.9-.17-.4-.55-.6-.37-.22-.98-.22h-1.54V9.8h-1.18zm4.7 9.03-1.95-4.1h1.23l1.99 4.02v.08zm5.58-8.21L60.6 9.8h-1.21L62.51.79h.76zm2.19 8.2-2.67-8.2-.02-.82h.77l3.13 9.03zm-.06-3.34v1h-4.64v-1zm7.3.47h1.18q-.06.9-.42 1.58t-1.03 1.05-1.67.37q-.73 0-1.32-.28-.58-.28-1-.8-.42-.51-.65-1.25-.22-.73-.22-1.63V4.62q0-.91.22-1.64.23-.73.66-1.25.42-.52 1.03-.8.62-.28 1.38-.28.94 0 1.6.37t1 1.04q.36.68.42 1.62h-1.18q-.06-.68-.27-1.13-.2-.45-.58-.68-.38-.22-1-.22-.53 0-.92.2t-.66.6q-.26.4-.39.94-.13.54-.13 1.21v1.37q0 .62.11 1.16.12.54.35.95.25.4.62.63.39.23.93.23.67 0 1.07-.21t.6-.67q.2-.45.27-1.13zM76.61.78V9.8h-1.18V.78zm4.9 0-3.36 4.21-1.93 2.2-.2-1.3 1.43-1.75L80.09.78zM80.34 9.8l-2.91-4.4.71-.96 3.61 5.36zM88 8.82v.99h-4.26v-.99zM83.96.78V9.8h-1.18V.78zm3.46 3.87v.99h-3.7v-.99zm.51-3.87v.99h-4.2v-1zm4.74 0V9.8H91.5V.78zm2.58 0v.99h-6.33v-1z"
+          className="dark:fill-white fill-gray-800"
+        />
+        {/* Icon paths */}
+        <path
+          d="m 10.396945,9.2930886 a 1.5418711,1.5418711 0 0 0 0.04277,-0.3250947 V 1.6118071 a 1.5418711,1.5418711 0 0 0 -0.04695,-0.3739918 l -4.5762671,1.5462755 -0.05217,5.0142621 z"
+          fill="url(#logoGrad1)"
+        />
+        <path
+          d="M 9.2648477,0.11539523 A 1.5418711,1.5418711 0 0 0 8.8980579,0.07003548 H 1.5418711 A 1.5418711,1.5418711 0 0 0 0,1.6119066 v 7.3561868 a 1.5418711,1.5418711 0 0 0 1.5418711,1.5418716 h 7.3561868 a 1.5418711,1.5418711 0 0 0 0.1817963,-0.02393 L 4.1040084,8.9524789 4.0780827,1.8701814 Z"
+          fill="url(#logoGrad2)"
+        />
+        <path
+          d="M 9.2648477,0.11539523 4.078161,1.8701463 4.1040867,8.9524439 9.0799325,10.485996 A 1.5418711,1.5418711 0 0 0 10.397178,9.2931334 L 5.7646323,7.7984059 5.8168026,2.7841438 10.39307,1.2378683 A 1.5418711,1.5418711 0 0 0 9.2649693,0.11531367 Z"
+          fill="#ffffff"
+        />
+      </g>
+    </svg>
   )
 }

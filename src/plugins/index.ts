@@ -16,7 +16,7 @@ import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
-  return doc?.title ? `${doc.title} | Enterprise Web Development & Marketing` : 'Third Bracket'
+  return doc?.title ? `${doc.title} | Enterprise Web Development & Marketing` : 'Third Bracket Ltd'
 }
 
 const generateURL: GenerateURL<Post | Page> = ({ doc }) => {
