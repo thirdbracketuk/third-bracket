@@ -12,6 +12,7 @@ import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
 import { verifyRecaptcha } from '@/hooks/verifyRecaptcha'
 import { adminOnly } from '@/access/adminOnly'
+import { anyone } from '@/access/anyone'
 
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
@@ -71,7 +72,7 @@ export const plugins: Plugin[] = [
       access: {
         create: adminOnly,
         delete: adminOnly,
-        read: adminOnly,
+        read: anyone, // Allow anyone to read forms (needed for frontend)
         update: adminOnly,
       },
       fields: ({ defaultFields }) => {
@@ -96,7 +97,7 @@ export const plugins: Plugin[] = [
     },
     formSubmissionOverrides: {
       access: {
-        create: adminOnly,
+        create: anyone, // Allow anyone to submit forms
         delete: adminOnly,
         read: adminOnly,
         update: adminOnly,
