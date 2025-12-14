@@ -31,7 +31,6 @@ export const plugins: Plugin[] = [
     collections: ['pages', 'posts', 'blog', 'work'],
     overrides: {
       access: {
-        admin: adminOnly,
         create: adminOnly,
         delete: adminOnly,
         read: adminOnly,
@@ -70,7 +69,6 @@ export const plugins: Plugin[] = [
     },
     formOverrides: {
       access: {
-        admin: adminOnly,
         create: adminOnly,
         delete: adminOnly,
         read: adminOnly,
@@ -98,7 +96,6 @@ export const plugins: Plugin[] = [
     },
     formSubmissionOverrides: {
       access: {
-        admin: adminOnly,
         create: adminOnly,
         delete: adminOnly,
         read: adminOnly,
@@ -116,7 +113,6 @@ export const plugins: Plugin[] = [
     beforeSync: beforeSyncWithSearch,
     searchOverrides: {
       access: {
-        admin: adminOnly,
         create: adminOnly,
         delete: adminOnly,
         read: adminOnly,

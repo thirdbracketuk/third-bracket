@@ -25,7 +25,6 @@ import {
 export const Pages: CollectionConfig<'pages'> = {
   slug: 'pages',
   access: {
-    admin: adminOnly,
     create: adminOnly,
     delete: adminOnly,
     read: authenticatedOrPublished,

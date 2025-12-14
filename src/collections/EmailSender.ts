@@ -18,7 +18,6 @@ import { adminOnly } from '../access/adminOnly'
 export const EmailSender: CollectionConfig = {
   slug: 'email-sender',
   access: {
-    admin: adminOnly,
     create: adminOnly,
     delete: adminOnly,
     read: adminOnly,
