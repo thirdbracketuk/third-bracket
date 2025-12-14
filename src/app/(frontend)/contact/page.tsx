@@ -47,7 +47,7 @@ export default async function ContactPage() {
     fields: [],
     submitButtonLabel: 'Send Message',
     confirmationType: 'message',
-    confirmationMessage: '<p>Thank you for your message. We will get back to you soon.</p>',
+    confirmationMessage: 'Thank you for your message. We will get back to you soon.',
   }
 
   return (

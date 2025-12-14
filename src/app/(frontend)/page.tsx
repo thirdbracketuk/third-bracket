@@ -40,7 +40,6 @@ const faqJsonLd = {
 async function getContactFormData() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/4`, {
-      cache: 'force-cache', // Temporarily disabled cache
       next: { revalidate: 3600 },
     })
 
@@ -61,8 +60,7 @@ export default async function Home() {
     fields: [],
     submitButtonLabel: 'Get Proposal',
     confirmationType: 'message',
-    confirmationMessage:
-      '<p>Thank you for your request. We will get back to you soon with your proposal.</p>',
+    confirmationMessage: 'Thank you for your request. We will get back to you soon with your proposal.',
   }
 
   return (
