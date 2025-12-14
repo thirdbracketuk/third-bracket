@@ -30,17 +30,11 @@ export default async function Page() {
 
   const blogs = await payload.find({
     collection: 'blog',
-    depth: 1,
+    depth: 2,
     limit: 12,
     overrideAccess: false,
     sort: '-publishedAt',
     page: 1,
-    select: {
-      title: true,
-      slug: true,
-      categories: true,
-      meta: true,
-    },
   })
 
   return (

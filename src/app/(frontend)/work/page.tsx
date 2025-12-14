@@ -30,23 +30,11 @@ export default async function Page() {
 
   const works = await payload.find({
     collection: 'work',
-    depth: 1,
+    depth: 2,
     limit: 12,
     overrideAccess: false,
     sort: '-completedAt',
     page: 1,
-    select: {
-      title: true,
-      slug: true,
-      categories: true,
-      technologies: true,
-      meta: true,
-      heroImage: true,
-      populatedAgency: true,
-      github: true,
-      behance: true,
-      liveWebsite: true,
-    },
   })
 
   return (

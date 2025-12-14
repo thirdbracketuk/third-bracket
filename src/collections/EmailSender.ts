@@ -13,14 +13,16 @@ interface EmailOptions {
 
 import { anyone } from '../access/anyone'
 import { authenticated } from '../access/authenticated'
+import { adminOnly } from '../access/adminOnly'
 
 export const EmailSender: CollectionConfig = {
   slug: 'email-sender',
   access: {
-    create: authenticated,
-    delete: authenticated,
-    read: authenticated,
-    update: authenticated,
+    admin: adminOnly,
+    create: adminOnly,
+    delete: adminOnly,
+    read: adminOnly,
+    update: adminOnly,
   },
   admin: {
     useAsTitle: 'subject',

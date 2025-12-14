@@ -193,6 +193,7 @@ import { Media } from '@/components/Media'
 import { Card } from '@thirdbracket/bracketui'
 import { FaGithub, FaBehance, FaExternalLinkAlt } from 'react-icons/fa'
 import { formatAuthors } from '@/utilities/formatAuthors'
+import { Avatar } from '@/components/Avatar'
 
 export type CardPostData = Pick<Post, 'slug' | 'categories' | 'meta' | 'title'> & {
   technologies?: any[]
@@ -317,9 +318,21 @@ export const PostCard: React.FC<{
         )}
         {hasAuthors && (
           <div className="mb-2">
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              {isWorkCollection ? 'Agency' : 'Author'}: {formatAuthors(authors)}
-            </p>
+            <div className="flex -space-x-2">
+              {authors.slice(0, 3).map((author, index) => (
+                <Avatar 
+                  key={author.id || index} 
+                  user={author} 
+                  size="sm" 
+                  className="border-2 border-white dark:border-gray-900"
+                />
+              ))}
+              {authors.length > 3 && (
+                <div className="w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-xs font-medium text-gray-600 dark:text-gray-300 border-2 border-white dark:border-gray-900">
+                  +{authors.length - 3}
+                </div>
+              )}
+            </div>
           </div>
         )}
         {description && <p className="text-sm mb-3">{sanitizedDescription}</p>}

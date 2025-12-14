@@ -10,17 +10,18 @@ export const populateAgency: CollectionAfterReadHook<Work> = async ({ doc, req }
           return agent
         }
 
-        if (typeof agent === 'string') {
+        if (typeof agent === 'string' || typeof agent === 'number') {
           try {
             const user = await req.payload.findByID({
               collection: 'users',
-              id: agent,
-              depth: 0,
+              id: agent.toString(),
+              depth: 1,
             })
 
             return {
               id: user.id,
               name: user.name,
+              avatar: user.avatar,
             }
           } catch (error) {
             req.payload.logger.error(`Error fetching user ${agent}:`, error)

@@ -93,6 +93,7 @@ const queryWorkBySlug = cache(async ({ slug }: { slug: string }) => {
 
   const result = await payload.find({
     collection: 'work',
+    depth: 2,
     draft,
     limit: 1,
     overrideAccess: draft,

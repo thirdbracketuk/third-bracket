@@ -11,6 +11,7 @@ import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/
 import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
 import { verifyRecaptcha } from '@/hooks/verifyRecaptcha'
+import { adminOnly } from '@/access/adminOnly'
 
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
@@ -29,6 +30,13 @@ export const plugins: Plugin[] = [
   redirectsPlugin({
     collections: ['pages', 'posts', 'blog', 'work'],
     overrides: {
+      access: {
+        admin: adminOnly,
+        create: adminOnly,
+        delete: adminOnly,
+        read: adminOnly,
+        update: adminOnly,
+      },
       // @ts-expect-error - This is a valid override, mapped fields don't resolve to the same type
       fields: ({ defaultFields }) => {
         return defaultFields.map((field) => {
@@ -61,6 +69,13 @@ export const plugins: Plugin[] = [
       payment: false,
     },
     formOverrides: {
+      access: {
+        admin: adminOnly,
+        create: adminOnly,
+        delete: adminOnly,
+        read: adminOnly,
+        update: adminOnly,
+      },
       fields: ({ defaultFields }) => {
         return defaultFields.map((field) => {
           if ('name' in field && field.name === 'confirmationMessage') {
@@ -82,6 +97,13 @@ export const plugins: Plugin[] = [
       },
     },
     formSubmissionOverrides: {
+      access: {
+        admin: adminOnly,
+        create: adminOnly,
+        delete: adminOnly,
+        read: adminOnly,
+        update: adminOnly,
+      },
       hooks: {
         beforeChange: [
           verifyRecaptcha, // <--- This will block the spam and the email!
@@ -93,6 +115,13 @@ export const plugins: Plugin[] = [
     collections: ['posts', 'blog', 'work'],
     beforeSync: beforeSyncWithSearch,
     searchOverrides: {
+      access: {
+        admin: adminOnly,
+        create: adminOnly,
+        delete: adminOnly,
+        read: adminOnly,
+        update: adminOnly,
+      },
       fields: ({ defaultFields }) => {
         return [...defaultFields, ...searchFields]
       },

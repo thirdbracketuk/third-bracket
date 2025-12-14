@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url'
 
 import { anyone } from '../access/anyone'
 import { authenticated } from '../access/authenticated'
+import { adminOrUploaded } from '../access/adminOrUploaded'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -18,11 +19,30 @@ export const Media: CollectionConfig = {
   slug: 'media',
   access: {
     create: authenticated,
-    delete: authenticated,
+    delete: adminOrUploaded,
     read: anyone,
-    update: authenticated,
+    update: adminOrUploaded,
   },
   fields: [
+    {
+      name: 'uploadedBy',
+      type: 'relationship',
+      relationTo: 'users',
+      admin: {
+        position: 'sidebar',
+        readOnly: true,
+      },
+      hooks: {
+        beforeChange: [
+          ({ req, value }) => {
+            if (!value && req.user) {
+              return req.user.id
+            }
+            return value
+          },
+        ],
+      },
+    },
     {
       name: 'alt',
       type: 'text',

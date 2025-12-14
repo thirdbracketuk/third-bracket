@@ -276,6 +276,7 @@ export interface Post {
  */
 export interface Media {
   id: number;
+  uploadedBy?: (number | null) | User;
   alt?: string | null;
   caption?: {
     root: {
@@ -364,6 +365,29 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "users".
+ */
+export interface User {
+  id: number;
+  name?: string | null;
+  /**
+   * Upload a square profile picture (ideal: 400x400px, min: 200x200px). Accepts JPG, PNG, WebP.
+   */
+  avatar?: (number | null) | Media;
+  role: 'admin' | 'publisher';
+  updatedAt: string;
+  createdAt: string;
+  email: string;
+  resetPasswordToken?: string | null;
+  resetPasswordExpiration?: string | null;
+  salt?: string | null;
+  hash?: string | null;
+  loginAttempts?: number | null;
+  lockUntil?: string | null;
+  password?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "categories".
  */
 export interface Category {
@@ -382,24 +406,6 @@ export interface Category {
     | null;
   updatedAt: string;
   createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "users".
- */
-export interface User {
-  id: number;
-  name?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  email: string;
-  resetPasswordToken?: string | null;
-  resetPasswordExpiration?: string | null;
-  salt?: string | null;
-  hash?: string | null;
-  loginAttempts?: number | null;
-  lockUntil?: string | null;
-  password?: string | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -1449,6 +1455,7 @@ export interface WorkSelect<T extends boolean = true> {
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
+  uploadedBy?: T;
   alt?: T;
   caption?: T;
   updatedAt?: T;
@@ -1572,6 +1579,8 @@ export interface TechnologiesSelect<T extends boolean = true> {
  */
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
+  avatar?: T;
+  role?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;

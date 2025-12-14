@@ -6,6 +6,7 @@ import { Media } from '@/components/Media'
 
 import { formatAuthors } from '@/utilities/formatAuthors'
 import { FaGithub, FaBehance, FaExternalLinkAlt } from 'react-icons/fa'
+import { Avatar } from '@/components/Avatar'
 
 export const PostHero: React.FC<{
   post: Post | Blog | Work
@@ -22,7 +23,7 @@ export const PostHero: React.FC<{
   const dateField =
     'publishedAt' in post ? post.publishedAt : 'completedAt' in post ? post.completedAt : null
   const dateLabel = 'publishedAt' in post ? 'Date Published' : 'Date Completed'
-  const authorLabel = 'populatedAuthors' in post ? 'Author' : 'Agency'
+  const authorLabel = 'populatedAuthors' in post ? (authors.length > 1 ? 'Authors' : 'Author') : 'Developers'
   const technologies = 'technologies' in post ? post.technologies : null
   const socialLinks =
     'github' in post
@@ -107,27 +108,40 @@ export const PostHero: React.FC<{
           {title}
         </h1>
       </div>
-      <div className="flex  flex-row gap-8 md:gap-16 mx-auto place-content-center mt-2 text-primary-800 dark:text-primary-200">
+      <div className="flex flex-col md:flex-row gap-4 md:gap-16 mx-auto place-content-center mt-2 text-primary-800 dark:text-primary-200">
         {hasAuthors && (
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-1">
-              <p className="text-xs md:text-sm">{authorLabel}</p>
-
-              <p>{formatAuthors(authors)}</p>
+          <div className="flex flex-col gap-2">
+            <p className="text-xs md:text-sm text-center md:text-left">{authorLabel}</p>
+            <div className="flex items-center justify-center gap-3">
+              <div className="flex -space-x-2">
+                {authors.slice(0, 3).map((author, index) => (
+                  <Avatar 
+                    key={author.id || index} 
+                    user={author} 
+                    size="md" 
+                    className="border-2 border-white dark:border-gray-900"
+                  />
+                ))}
+                {authors.length > 3 && (
+                  <div className="w-8 h-8 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-xs font-medium text-gray-600 dark:text-gray-300 border-2 border-white dark:border-gray-900">
+                    +{authors.length - 3}
+                  </div>
+                )}
+              </div>
+              <p className="text-sm hidden md:block">{formatAuthors(authors)}</p>
             </div>
           </div>
         )}
         {dateField && (
           <div className="flex flex-col gap-1">
-            <p className="text-xs md:text-sm">{dateLabel}</p>
-
-            <time dateTime={dateField}>{formatDateTime(dateField)}</time>
+            <p className="text-xs md:text-sm text-center md:text-left">{dateLabel}</p>
+            <time className="text-center" dateTime={dateField}>{formatDateTime(dateField)}</time>
           </div>
         )}
         {socialLinks && (
           <div className="flex flex-col gap-1">
-            <p className="text-xs md:text-sm">Links</p>
-            <div className="flex gap-3">
+            <p className="text-xs md:text-sm text-center md:text-left">Links</p>
+            <div className="flex gap-3 justify-center">
               {socialLinks.github && (
                 <a
                   href={socialLinks.github}

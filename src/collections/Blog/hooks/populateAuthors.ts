@@ -10,17 +10,18 @@ export const populateAuthors: CollectionAfterReadHook<Blog> = async ({ doc, req 
           return author
         }
 
-        if (typeof author === 'string') {
+        if (typeof author === 'string' || typeof author === 'number') {
           try {
             const user = await req.payload.findByID({
               collection: 'users',
-              id: author,
-              depth: 0,
+              id: author.toString(),
+              depth: 1,
             })
 
             return {
               id: user.id,
               name: user.name,
+              avatar: user.avatar,
             }
           } catch (error) {
             req.payload.logger.error(`Error fetching user ${author}:`, error)

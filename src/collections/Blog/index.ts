@@ -11,6 +11,8 @@ import {
 
 import { authenticated } from '../../access/authenticated'
 import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
+import { adminOrOwner } from '../../access/adminOrOwner'
+import { adminOrOwnerOrPublished } from '../../access/adminOrOwnerOrPublished'
 import { Banner } from '../../blocks/Banner/config'
 import { Code } from '../../blocks/Code/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
@@ -33,9 +35,9 @@ export const Blog: CollectionConfig<'blog'> = {
   slug: 'blog',
   access: {
     create: authenticated,
-    delete: authenticated,
-    read: authenticatedOrPublished,
-    update: authenticated,
+    delete: adminOrOwner,
+    read: adminOrOwnerOrPublished,
+    update: adminOrOwner,
   },
   defaultPopulate: {
     title: true,

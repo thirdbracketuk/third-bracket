@@ -11,6 +11,9 @@ import {
 
 import { anyone } from '../../access/anyone'
 import { authenticated } from '../../access/authenticated'
+import { adminOnly } from '../../access/adminOnly'
+import { adminOrAgency } from '../../access/adminOrAgency'
+import { adminOrAgencyOrPublic } from '../../access/adminOrAgencyOrPublic'
 import { Banner } from '../../blocks/Banner/config'
 import { Code } from '../../blocks/Code/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
@@ -35,10 +38,10 @@ import { Archive } from '../../blocks/ArchiveBlock/config'
 export const Work: CollectionConfig = {
   slug: 'work',
   access: {
-    create: authenticated,
-    delete: authenticated,
-    read: anyone,
-    update: authenticated,
+    create: adminOnly,
+    delete: adminOnly,
+    read: adminOrAgencyOrPublic,
+    update: adminOnly,
   },
   admin: {
     defaultColumns: ['title', 'slug', 'updatedAt'],
