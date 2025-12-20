@@ -27,7 +27,7 @@ const features = [
     header: 'Custom Web Development',
     href: '/services',
     description:
-      'Third Bracket offers custom web development with Next.js - built for speed and advanced functionalities.',
+      'Third Bracket Ltd offers custom web development with Next.js - built for speed and advanced functionalities.',
   },
   {
     icon: RiWordpressLine,
@@ -42,7 +42,7 @@ const features = [
     header: 'Tailwind UI Design',
     href: '/services',
     description:
-      'At Third Bracket, we craft clean, responsive UI designs with Tailwind CSS — focused on speed, clarity and modern patterns.',
+      'At Third Bracket Ltd, we craft clean, responsive UI designs with Tailwind CSS — focused on speed, clarity and modern patterns.',
   },
 
   {
@@ -85,8 +85,8 @@ export function WhyChooseUsSection() {
               What We Build & Deliver
             </h2>
             <p className=" text-primary-500  text-base/7  lg:text-[1.15rem]/8  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
-              From modern websites to tailored systems, Third Bracket help UK businesses thrive with
-              reliable, high-performance web development.
+              From modern websites to tailored systems, Third Bracket Ltd help UK businesses thrive
+              with reliable, high-performance web development.
             </p>
           </div>
 

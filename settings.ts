@@ -6,7 +6,7 @@ export const gtmconnected = true
 
 export const sitename = 'Third Bracket Ltd'
 export const description =
-  'Third Bracket delivers custom website design, development, SEO, branding, and creative solutions for UK businesses.'
+  'Third Bracket Ltd, a Manchester-based digital agency, helps businesses build strong brands and grow their digital presence.'
 export const keywords = [
   'email marketing agency',
   'seo marketing agency manchester',
@@ -84,9 +84,9 @@ export const companyname = 'Third Bracket Ltd'
 export const companylink = 'https://www.thirdbracket.co.uk'
 
 export const socialLinks = {
-  facebook: 'https://www.facebook.com/thirdbracketuk/',
+  facebook: 'https://www.facebook.com/thirdbracketltd',
   twitter: 'https://x.com/thirdbracketuk',
-  linkedin: 'https://www.linkedin.com/company/thirdbracket/',
+  linkedin: 'https://www.linkedin.com/company/thirdbracketltd',
   github: 'https://github.com/thirdbracketuk',
   googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
   instagram: 'https://www.instagram.com/thirdbracketuk',

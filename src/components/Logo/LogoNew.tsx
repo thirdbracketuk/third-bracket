@@ -45,7 +45,7 @@ export const LogoNew: FC<LogoProps> = ({ className = '' }) => {
             style={{ fontVariationSettings: "'wght' 500" }}
           />
         </svg>
-        
+
         {/* Dark mode icon */}
         <svg
           version="1.1"
@@ -89,7 +89,7 @@ export const LogoNew: FC<LogoProps> = ({ className = '' }) => {
         <span className="text-xl lg:text-2xl font-medium tracking-tight bg-gradient-text dark:bg-gradient-text-dark bg-clip-text text-transparent uppercase">
           Bracket
         </span>
-        <span className="text-sm font-normal ml-1 bg-gradient-to-r from-primary-800 via-secondary-700 to-secondary-600 dark:from-primary-200 dark:via-secondary-300 dark:to-secondary-400 bg-clip-text text-transparent uppercase">
+        <span className="text-xs font-normal ml-1 bg-gradient-to-r from-primary-800 via-secondary-700 to-secondary-600 dark:from-primary-200 dark:via-secondary-300 dark:to-secondary-400 bg-clip-text text-transparent uppercase inline-block">
           Ltd
         </span>
       </div>

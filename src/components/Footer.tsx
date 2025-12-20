@@ -40,12 +40,12 @@ const SiteFooter = () => {
 
         <div className="flex  gap-x-6 justify-start items-center">
           <FooterSocial
-            href="https://www.facebook.com/thirdbracketuk"
+            href="https://www.facebook.com/thirdbracketltd"
             icon={<RiFacebookLine size={20} />}
             label="Facebook"
           />
           <FooterSocial
-            href="https://www.linkedin.com/company/thirdbracket"
+            href="https://www.linkedin.com/company/thirdbracketltd"
             icon={<RiLinkedinLine size={20} />}
             label="LinkedIn"
           />

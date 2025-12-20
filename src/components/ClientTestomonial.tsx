@@ -12,16 +12,16 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    client: 'Nova Digital',
+    client: 'Ifty Warid',
     role: 'Founder',
-    quote: 'Thirdbracket delivered a blazing-fast site that exceeded expectations.',
-    logo: '/pob.svg',
+    quote: 'Third Bracket Ltd delivered a blazing-fast site that exceeded expectations.',
+    logo: '/jhungry.svg',
   },
   {
     client: 'InHouse Labs',
     role: 'Product Manager',
     quote: 'Incredible speed and professionalism. We loved the minimalist design approach.',
-    logo: '/tb.svg',
+    logo: '/jhungry.svg',
   },
   {
     client: 'Thirdbracket',
@@ -72,8 +72,8 @@ export const ClientTestimonials = () => {
                         <Image
                           src={item.logo}
                           alt={`${item.client} logo`}
-                          height={20}
-                          width={50}
+                          height={30}
+                          width={75}
                           className="object-cover  dark:invert grayscale   opacity-50 "
                         />
                       </div>

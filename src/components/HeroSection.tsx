@@ -55,8 +55,10 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               </span>
             </h1>
             <p className=" text-primary-500  text-base/8  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
-              Third Bracket deliver fast, reliable websites, improve SEO rankings, and build
-              standout brands across UK.
+              <strong>Third Bracket Ltd</strong> is a Manchester-based digital agency, helps
+              businesses build strong brands and grow their digital presence. Our remote-first
+              approach keeps us focused on outcomes over overhead, delivering smart strategy and
+              clean execution at speed.
             </p>
 
             <div className="flex flex-wrap sm:justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
