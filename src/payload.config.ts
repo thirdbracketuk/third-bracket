@@ -105,7 +105,8 @@ export default buildConfig({
       connectionString: process.env.POSTGRES_URL || '',
     },
     // Force schema sync in production to ensure all tables are created
-    push: process.env.NODE_ENV === 'production',
+    // push: process.env.NODE_ENV === 'production',
+    push: true,
   }),
   collections: [Pages, Posts, Blog, Work, Media, Categories, Technologies, Users, EmailSender],
   cors: [getServerSideURL()].filter(Boolean),
