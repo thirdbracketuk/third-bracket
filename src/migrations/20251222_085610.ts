@@ -2,11 +2,35 @@ import { MigrateUpArgs, MigrateDownArgs, sql } from '@payloadcms/db-vercel-postg
 
 export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   await db.execute(sql`
-   CREATE TYPE "public"."enum_blog_status" AS ENUM('draft', 'published');
-  CREATE TYPE "public"."enum__blog_v_version_status" AS ENUM('draft', 'published');
-  CREATE TYPE "public"."enum_work_status" AS ENUM('draft', 'published');
-  CREATE TYPE "public"."enum__work_v_version_status" AS ENUM('draft', 'published');
-  CREATE TYPE "public"."enum_users_role" AS ENUM('admin', 'publisher');
+   DO $$ BEGIN
+    CREATE TYPE "public"."enum_blog_status" AS ENUM('draft', 'published');
+   EXCEPTION
+    WHEN duplicate_object THEN null;
+   END $$;
+   
+   DO $$ BEGIN
+    CREATE TYPE "public"."enum__blog_v_version_status" AS ENUM('draft', 'published');
+   EXCEPTION
+    WHEN duplicate_object THEN null;
+   END $$;
+   
+   DO $$ BEGIN
+    CREATE TYPE "public"."enum_work_status" AS ENUM('draft', 'published');
+   EXCEPTION
+    WHEN duplicate_object THEN null;
+   END $$;
+   
+   DO $$ BEGIN
+    CREATE TYPE "public"."enum__work_v_version_status" AS ENUM('draft', 'published');
+   EXCEPTION
+    WHEN duplicate_object THEN null;
+   END $$;
+   
+   DO $$ BEGIN
+    CREATE TYPE "public"."enum_users_role" AS ENUM('admin', 'publisher');
+   EXCEPTION
+    WHEN duplicate_object THEN null;
+   END $$;
   ALTER TYPE "public"."enum_pages_blocks_archive_relation_to" ADD VALUE 'blog';
   ALTER TYPE "public"."enum_pages_blocks_archive_relation_to" ADD VALUE 'work';
   ALTER TYPE "public"."enum__pages_v_blocks_archive_relation_to" ADD VALUE 'blog';
