@@ -31,10 +31,8 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
    EXCEPTION
     WHEN duplicate_object THEN null;
    END $$;
-  ALTER TYPE "public"."enum_pages_blocks_archive_relation_to" ADD VALUE 'blog';
-  ALTER TYPE "public"."enum_pages_blocks_archive_relation_to" ADD VALUE 'work';
-  ALTER TYPE "public"."enum__pages_v_blocks_archive_relation_to" ADD VALUE 'blog';
-  ALTER TYPE "public"."enum__pages_v_blocks_archive_relation_to" ADD VALUE 'work';
+
+  -- Skip enum value additions since they already exist
   CREATE TABLE IF NOT EXISTS "blog_populated_authors" (
   	"_order" integer NOT NULL,
   	"_parent_id" integer NOT NULL,
@@ -194,24 +192,77 @@ export async function up({ db, payload, req }: MigrateUpArgs): Promise<void> {
   	"created_at" timestamp(3) with time zone DEFAULT now() NOT NULL
   );
   
-  ALTER TABLE "pages_rels" ADD COLUMN "blog_id" integer;
-  ALTER TABLE "pages_rels" ADD COLUMN "work_id" integer;
-  ALTER TABLE "_pages_v_rels" ADD COLUMN "blog_id" integer;
-  ALTER TABLE "_pages_v_rels" ADD COLUMN "work_id" integer;
-  ALTER TABLE "media" ADD COLUMN "uploaded_by_id" integer;
-  ALTER TABLE "users" ADD COLUMN "avatar_id" integer;
-  ALTER TABLE "users" ADD COLUMN "role" "enum_users_role" DEFAULT 'publisher' NOT NULL;
-  ALTER TABLE "redirects_rels" ADD COLUMN "blog_id" integer;
-  ALTER TABLE "redirects_rels" ADD COLUMN "work_id" integer;
-  ALTER TABLE "search_rels" ADD COLUMN "blog_id" integer;
-  ALTER TABLE "search_rels" ADD COLUMN "work_id" integer;
-  ALTER TABLE "payload_locked_documents_rels" ADD COLUMN "blog_id" integer;
-  ALTER TABLE "payload_locked_documents_rels" ADD COLUMN "work_id" integer;
-  ALTER TABLE "payload_locked_documents_rels" ADD COLUMN "technologies_id" integer;
-  ALTER TABLE "header_rels" ADD COLUMN "blog_id" integer;
-  ALTER TABLE "header_rels" ADD COLUMN "work_id" integer;
-  ALTER TABLE "footer_rels" ADD COLUMN "blog_id" integer;
-  ALTER TABLE "footer_rels" ADD COLUMN "work_id" integer;
+  -- Add columns only if they don't exist
+  DO $$ BEGIN
+    ALTER TABLE "media" ADD COLUMN "uploaded_by_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  DO $$ BEGIN
+    ALTER TABLE "redirects_rels" ADD COLUMN "blog_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "redirects_rels" ADD COLUMN "work_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "search_rels" ADD COLUMN "blog_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "search_rels" ADD COLUMN "work_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "payload_locked_documents_rels" ADD COLUMN "blog_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "payload_locked_documents_rels" ADD COLUMN "work_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "payload_locked_documents_rels" ADD COLUMN "technologies_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "header_rels" ADD COLUMN "blog_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "header_rels" ADD COLUMN "work_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "footer_rels" ADD COLUMN "blog_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
+  
+  DO $$ BEGIN
+    ALTER TABLE "footer_rels" ADD COLUMN "work_id" integer;
+  EXCEPTION
+    WHEN duplicate_column THEN null;
+  END $$;
   DO $$ BEGIN
    ALTER TABLE "blog_populated_authors" ADD CONSTRAINT "blog_populated_authors_parent_id_fk" FOREIGN KEY ("_parent_id") REFERENCES "public"."blog"("id") ON DELETE cascade ON UPDATE no action;
   EXCEPTION

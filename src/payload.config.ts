@@ -69,8 +69,8 @@ export default buildConfig({
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeDashboard` statement on line 15.
       // beforeDashboard: ['@/components/BeforeDashboard'],
       graphics: {
-        Icon: '/graphics/Icon/index.tsx#Icon',
-        Logo: '/graphics/Logo/index.tsx#Logo',
+        Icon: '/components/payload/Icon/index.tsx#Icon',
+        Logo: '/components/payload/Logo/index.tsx#Logo',
       },
     },
 
