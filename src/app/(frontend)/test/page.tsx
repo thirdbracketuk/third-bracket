@@ -7,6 +7,7 @@ import PageHeader from '@/components/PageHeader'
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
 import { Settings } from '@/utilities/meta'
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Third Bracket Ltd Digital Agency in Manchester',
@@ -21,42 +22,61 @@ export const metadata: Metadata = {
 
 export default function TestPage() {
   return (
-    <section className="space-y-8">
-      <div className="min-h-screen bg-gradient-to-b from-white to-cyan-50 flex flex-col">
+    <section className="space-y-8 bg-gradient-to-b from-white via-cyan-50  to-white">
+      <div className="min-h-screen  flex flex-col">
         {/* Main content */}
         <div className="flex-1  mx-auto w-full p-12">
-          <h1 className="text-4xl font-semibold text-gray-900 mb-6">Light Theme Design System</h1>
-
+          <h1 className="text-5xl font-semibold text-gray-900 mb-6">Light Theme Design System</h1>
+          <h2 className="text-4xl font-semibold text-gray-900 mb-6">Light Theme Design System</h2>
+          <h3 className="text-3xl font-semibold text-gray-900 mb-6">Light Theme Design System</h3>
+          <h4 className="text-2xl font-semibold text-gray-900 mb-6">Light Theme Design System</h4>
+          <h5 className="text-xl font-semibold text-gray-900 mb-6">Light Theme Design System</h5>
+          <h6 className="text-lg font-semibold text-gray-900 mb-6">Light Theme Design System</h6>
           <p className="text-xl text-gray-600 max-w-3xl mb-12">
             This section demonstrates the approved light theme for the project. Backgrounds, cards,
             borders, and CTA elements use the finalized color tokens.
           </p>
 
           {/* Feature grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-xl bg-white border border-gray-200 p-8">
-              <h2 className="text-xl font-medium text-gray-900 mb-4">Primary Background</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <Link
+              href="#"
+              className="rounded-xl bg-white  border border-gray-200 p-8  hover:backdrop-blur-2xl hover:bg-white/60 hover:border-gray-400  focus:outline-none focus:bg-white    "
+            >
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Primary</h2>
               <p className="text-gray-600 leading-relaxed">
-                The root background uses a gradient from white to cyan-50, providing a clean,
-                neutral canvas for all content.
+                This card demonstrates the secondary background and primary foreground, border and
+                focus colors.
               </p>
-            </div>
+            </Link>
 
-            <div className="rounded-xl bg-white border border-gray-200 p-8">
-              <h2 className="text-xl font-medium text-gray-900 mb-4">Card Background</h2>
+            <Link
+              href="#"
+              className="rounded-xl  border border-gray-200 p-8  backdrop-blur-2xl hover:bg-white/70 hover:border-gray-400  focus:outline-none focus:bg-white    "
+            >
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Secondary</h2>
               <p className="text-gray-600 leading-relaxed">
-                Cards use a white background with gray-200 borders to separate content without
-                competing with the root background.
+                This card demonstrates the primary background, foreground, border and focus colors.
               </p>
-            </div>
-
-            <div className="rounded-xl bg-white border border-gray-200 p-8">
-              <h2 className="text-xl font-medium text-gray-900 mb-4">Accent & Focus</h2>
+            </Link>
+            <Link
+              href="#"
+              className="rounded-xl  border border-gray-200 p-8 bg-gradient-to-br from-white to-cyan-50   hover:border-gray-400  focus:outline-none focus:bg-white    "
+            >
+              <h2 className="text-xl font-semibold text-gray-900 mb-4">Accent</h2>
               <p className="text-gray-600 leading-relaxed">
-                CTA elements use sky-500 → cyan-500 gradient backgrounds with white and sky-100
-                text. Focus rings are sky-500 to ensure accessibility.
+                This card demonstrates the primary background, foreground, border and focus colors.
               </p>
-            </div>
+            </Link>
+            <Link
+              href="#"
+              className="rounded-xl  border border-gray-200 p-8 bg-gradient-to-br from-gray-700 to-slate-700     focus:outline-none     "
+            >
+              <h2 className="text-xl font-semibold text-slate-50 mb-4">Theme</h2>
+              <p className="text-slate-200 leading-relaxed">
+                This card demonstrates the primary background, foreground, border and focus colors.
+              </p>
+            </Link>
           </div>
         </div>
 
@@ -79,7 +99,7 @@ export default function TestPage() {
           </div>
         </div>
       </div>
-      <div className="min-h-screen bg-gradient-to-b from-gray-950 to-zinc-900 flex flex-col">
+      <div className="min-h-screen  flex flex-col">
         {/* Main content */}
         <div className="flex-1  mx-auto w-full p-12">
           <h1 className="text-4xl font-semibold text-gray-50 mb-6">Dark Theme Design System</h1>
