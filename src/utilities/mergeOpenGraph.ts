@@ -6,7 +6,7 @@ const defaultOpenGraph: Metadata['openGraph'] = {
   description: 'Get Next.js website and full-stack ecosystem around it',
   images: [
     {
-      url: `${getServerSideURL()}/website-template-OG.webp`,
+      url: `${getServerSideURL()}/og.webp`,
     },
   ],
   siteName: 'Next.js Agency - Third Bracket Ltd',
