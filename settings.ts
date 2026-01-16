@@ -76,16 +76,16 @@ export const keywords = [
   'resolution image meaning',
   'website design for solicitors',
 ]
-export const urlimage = '/og.svg'
+export const urlimage = '/og.webp'
 export const imagealt = 'Bespoke Web Design, SEO & Branding in Manchester | Third Bracket'
-export const twitterhandle = '@ThirdbracketStudio'
+export const twitterhandle = '@thirdbracketltd'
 
 export const companyname = 'Third Bracket Ltd'
 export const companylink = 'https://www.thirdbracket.co.uk'
 
 export const socialLinks = {
   facebook: 'https://www.facebook.com/thirdbracketltd',
-  twitter: 'https://x.com/thirdbracketuk',
+  twitter: 'https://x.com/thirdbracketltd',
   linkedin: 'https://www.linkedin.com/company/thirdbracketltd',
   github: 'https://github.com/thirdbracketuk',
   googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
