@@ -7,13 +7,13 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Speed
+         Cloud First
         </span>
       ),
       cover: '/webspeed.svg',
 
       children:
-        'Every site we deliver loads within a second, wheather it is built on WordPress or Next.js, no exceptions.',
+        'We ignore shared hosting the same way your crush ignores you. We build every site on dedicated cloud resources instead of shared hosting.',
     },
   },
 
@@ -22,13 +22,13 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Cost Engineering
+          Infrastructure Engineering
         </span>
       ),
       cover: '/cost.svg',
 
       children:
-        'We engineer infrastructure from the root, using edge networks, serverless functions and smart caching to cut resource use.',
+        'Infrastructure is only as good as the engineering behind it. We engineer your infrastructure for both strength and flexibility.',
     },
   },
 
@@ -37,13 +37,13 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Minimal Aesthetics
+          Delivery & Distribution
         </span>
       ),
       cover: '/asthetic.svg',
 
       children:
-        'Our design philosophy emphasizes whitespace, clarity, and strong visual hierarchy that enhances brand perception.',
+        'Our content distribution and delivery includes a three‑layer setup to ensure your site loads almost instantly for every visitor.',
     },
   },
   {
@@ -51,12 +51,12 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Code First
+          Performance Optimization
         </span>
       ),
 
       children:
-        'We deliver well-organized, fully documentated code so any team can pick up right where we left off.',
+        'Performance goes beyond CMS. Our full‑stack acceleration strategy addresses every layer of your infrastructure and code.',
     },
   },
   {
@@ -64,12 +64,12 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          SEO Optimization
+          Modern Design
         </span>
       ),
 
       children:
-        'Every website we build is SEO-ready with structured data, speed optimization, and best practices baked in.',
+        'Design influences trust. Our experienced design team knows what is trending now, that is why we have our own component library Bracket UI.',
     },
   },
 
@@ -78,12 +78,12 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          DevOps Engineered
+         SEO Foundation
         </span>
       ),
 
       children:
-        'We streamline development with CI/CD pipelines, infrastructure as code, and collaborative workflows, ensuring seamless scalability.',
+        'All our website are shipped with optimized copy, meta tags, HTTPS, XML sitemaps and logical site architecture.',
     },
   },
   {
@@ -91,13 +91,13 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Faster Delivery
+          Transparency & Security
         </span>
       ),
       cover: '/delivery.svg',
 
       children:
-        'With our in-house UI components, elementor templates and a refined development stack, we ship projects by the time others pick a name.',
+        'Having a small budget doesn’t mean you should be vendor locked. We ensure you own your site with full admin, domain, hosting and licence access',
     },
   },
   {
@@ -105,12 +105,12 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          White-Label Friendly
+         Launch Ready
         </span>
       ),
 
       children:
-        'We’re agency-ready. Our systems and components are reusable, documented, and easily integrated into your workflows.',
+        'A website should work the moment it goes live. We don’t hand over half‑finished projects. Every site is shipped with features configured.',
     },
   },
 ]
