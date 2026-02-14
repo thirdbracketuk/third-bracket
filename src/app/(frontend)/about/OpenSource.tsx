@@ -68,7 +68,7 @@ export default function OpenSource() {
       <div className="text-center">
         <Button
           as="a"
-          href="https://github.com/thirdbracket"
+          href="https://github.com/thirdbracketuk?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           size="md"
