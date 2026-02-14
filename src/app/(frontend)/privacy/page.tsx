@@ -21,10 +21,10 @@ export default function PrivacyPolicy() {
           {/* Intro */}
           <div className="space-y-4">
             <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light">
-              This Privacy Notice for <strong>Third Bracket Ltd</strong> (&#39we&#39, &#39us&#39, or
-              &#39our&#39), describes how and why we might access, collect, store, use, and/or share
-              (&#39process&#39) your personal information when you use our services
-              (&#39Services&#39), including when you:
+              This Privacy Notice for <strong>Third Bracket Ltd</strong> (&apos;we&apos;,
+              &apos;us&apos;, or &apos;our&apos;), describes how and why we might access, collect,
+              store, use, and/or share (&apos;process&apos;) your personal information when you use
+              our services (&apos;Services&apos;), including when you:
             </p>
             <ul className="list-disc pl-5 space-y-2 text-base/[1.6] md:text-lg/[1.75rem] font-light">
               <li>
@@ -197,7 +197,7 @@ export default function PrivacyPolicy() {
                 promotional campaigns that are most relevant to you.
               </li>
               <li>
-                <strong>To save or protect an individual&#39s vital interest.</strong> We may
+                <strong>To save or protect an individual&apos;s vital interest.</strong> We may
                 process your information when necessary to save or protect an individual’s vital
                 interest, such as to prevent harm.
               </li>
@@ -363,9 +363,9 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light">
               Most web browsers and some mobile operating systems and mobile applications include a
-              Do-Not-Track (&#39DNT&#39) feature or setting you can activate to signal your privacy
-              preference not to have data about your online browsing activities monitored and
-              collected. At this stage, no uniform technology standard for recognising and
+              Do-Not-Track (&apos;DNT&apos;) feature or setting you can activate to signal your
+              privacy preference not to have data about your online browsing activities monitored
+              and collected. At this stage, no uniform technology standard for recognising and
               implementing DNT signals has been finalised. As such, we do not currently respond to
               DNT browser signals.
             </p>
@@ -399,8 +399,8 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light">
               <strong>Australia and New Zealand:</strong> We collect and process your personal
-              information under the obligations and conditions set by Australia&#39s Privacy Act
-              1988 and New Zealand&#39s Privacy Act 2020.
+              information under the obligations and conditions set by Australia&apos;s Privacy Act
+              1988 and New Zealand&apos;s Privacy Act 2020.
             </p>
             <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light">
               <strong>Republic of South Africa:</strong> At any time, you have the right to request
@@ -415,7 +415,7 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light">
               Yes, we will update this notice as necessary to stay compliant with relevant laws. The
-              updated version will be indicated by an updated &#39Revised&#39 date at the top of
+              updated version will be indicated by an updated &apos;Revised&apos; date at the top of
               this Privacy Notice.
             </p>
           </div>
