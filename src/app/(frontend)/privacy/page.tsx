@@ -3,7 +3,7 @@ import PageHeader from '@/components/PageHeader'
 import { Bracket } from '@thirdbracket/bracketui'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Third Bracket Ltd',
+  title: 'Privacy Policy',
   description:
     'Read our Privacy Policy to understand how Third Bracket Ltd collects, uses, and protects your personal data.',
 }
