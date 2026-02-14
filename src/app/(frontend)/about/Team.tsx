@@ -10,20 +10,20 @@ const team = [
     role: 'Founder & Director',
     bio: 'Founder of Third Bracket & Habiganj Properties Ltd',
     image: '/malik.svg',
-    //social: {
-      //linkedin: 'https://linkedin.com/',
-      //twitter: 'https://twitter.com/',
-    //},
+    social: {
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+    },
   },
   {
     name: 'Zakir Hussain',
     role: 'Co-Founder & Director of Operations',
     bio: 'Founder of Nicky Limited and 10+ other businessses in Manchester which includes Retail and Real Estate',
     image: '/zakir.svg',
-    //social: {
-      //linkedin: 'https://linkedin.com/',
-     // twitter: 'https://twitter.com/',
-    //},
+    social: {
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+    },
   },
   {
     name: 'Musabbir Sagar',
