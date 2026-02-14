@@ -127,34 +127,26 @@ const SiteFooter = () => {
 
       <FooterSection title="Partners">
         <FooterLink
+          target="_blank"
           theme={{
             text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="https://be.elementor.com/visit/?bta=229022&brand=elementor"
         >
-          Verify Property
+          Elementor
         </FooterLink>
         <FooterLink
+          target="_blank"
           theme={{
             text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="https://www.designrush.com/agency/website-design-development/uk/manchester"
         >
-          Products of Bd
-        </FooterLink>
-        <FooterLink
-          theme={{
-            text: 'text-primary-900 dark:text-primary-50',
-            states:
-              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-          }}
-          href="#"
-        >
-          Habiganj Properties
+          DesignRush
         </FooterLink>
       </FooterSection>
 
@@ -165,7 +157,7 @@ const SiteFooter = () => {
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="/privacy"
         >
           Privacy Policy
         </FooterLink>
@@ -175,41 +167,44 @@ const SiteFooter = () => {
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="/privacy"
         >
           Terms
         </FooterLink>
       </FooterSection>
       <FooterSection title="Bracket UI">
         <FooterLink
+          target="_blank"
           theme={{
             text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="https://www.npmjs.com/package/bracketui"
         >
-          Components
+          NPM Package
         </FooterLink>
         <FooterLink
+          target="_blank"
           theme={{
             text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="https://github.com/thirdbracketuk/bracketui"
         >
-          Blocks
+          Source Code
         </FooterLink>
         <FooterLink
+          target="_blank"
           theme={{
             text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="https://bracketui-web.vercel.app/"
         >
-          Pages
+          Showcase
         </FooterLink>
       </FooterSection>
       {/* <FooterSection title="Useful Links">
@@ -228,7 +223,10 @@ const SiteFooter = () => {
       </FooterSection> */}
 
       <FooterBottom>
-        <FooterText>© 2025 Third Bracket Ltd.</FooterText>
+        <FooterText>
+          {' '}
+          © {new Date().getFullYear()} Third Bracket Ltd. All rights reserved.
+        </FooterText>
 
         <ThemeToggle />
         {/* <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">

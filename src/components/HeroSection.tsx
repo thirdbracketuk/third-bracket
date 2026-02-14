@@ -29,7 +29,7 @@ const featuredLogos = [
     alt: 'DesignRush',
     width: 202,
     height: 214,
-    href: 'https://www.designrush.com/agency/website-design-development/uk/manchester?page=2',
+    href: 'https://www.designrush.com/agency/website-design-development/uk/manchester',
   },
 ]
 
@@ -54,7 +54,11 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                 Branding
               </span>
             </h1>
-            <p className=" text-primary-500  text-base/8  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
+            <p
+              // className=" text-primary-500  text-base/8  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6"
+
+              className="text-base/7  lg:text-[1.15rem]/8   text-primary-500 text-left sm:text-center"
+            >
               <strong>Third Bracket Ltd</strong> is a Manchester-based digital agency, helps
               businesses build strong brands and grow their digital presence. Our remote-first
               approach keeps us focused on outcomes over overhead, delivering smart strategy and
