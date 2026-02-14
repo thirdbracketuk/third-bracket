@@ -7,21 +7,21 @@ import { FaGithub } from 'react-icons/fa'
 const projects = [
   {
     name: 'BracketUI',
-    description: 'A modern React component library built with TailwindCSS',
+    description: 'A modern, lightweight React component library built with Tailwind CSS v4.',
     stars: 120,
-    url: 'https://github.com/thirdbracket/bracketui',
+    url: 'https://github.com/thirdbracketuk/bracketui',
   },
   {
-    name: 'Next.js Starter',
-    description: 'A production-ready Next.js starter template with TypeScript and TailwindCSS',
+    name: 'MyStoreo',
+    description: 'A modern ordering application developed by Third Bracket Ltd',
     stars: 85,
-    url: 'https://github.com/thirdbracket/nextjs-starter',
+    url: 'https://github.com/thirdbracketuk/MyStoreo',
   },
   {
-    name: 'SEO Toolkit',
-    description: 'A collection of tools for improving website SEO performance',
+    name: 'Bracket Home',
+    description: 'A modern media sharing application for local networks',
     stars: 64,
-    url: 'https://github.com/thirdbracket/seo-toolkit',
+    url: 'https://github.com/sagarmusabbir/bracket-home',
   },
 ]
 
