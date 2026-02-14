@@ -25,19 +25,6 @@ const team = [
       twitter: 'https://twitter.com/',
     },
   },
-
-  {
-    name: 'Naznin Hussain',
-    role: 'Director of Strategy and Communication',
-    bio: 'Co-Founder of Nicky Limited, Founder of NB Beauty Parlour & Bangla Bazar',
-    image: '/naznin.svg',
-    social: {
-      linkedin: 'https://linkedin.com/',
-
-      twitter: 'https://twitter.com/',
-    },
-  },
-
   {
     name: 'Musabbir Sagar',
     role: 'Chief Executive Officer',
