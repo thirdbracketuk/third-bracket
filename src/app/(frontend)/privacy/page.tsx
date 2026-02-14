@@ -30,12 +30,12 @@ export default function PrivacyPolicy() {
               <li>
                 Visit our website at{' '}
                 <a
-                  href="http://www.thirdbracket.co.uk"
+                  href="https://www.thirdbracket.co.uk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary-900 dark:text-primary-100 hover:underline"
                 >
-                  http://www.thirdbracket.co.uk
+                  https://www.thirdbracket.co.uk
                 </a>
                 , or any website of ours that links to this Privacy Notice
               </li>
