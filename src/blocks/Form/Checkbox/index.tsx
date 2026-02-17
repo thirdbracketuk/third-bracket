@@ -9,6 +9,7 @@ import React from 'react'
 
 import { Error } from '../Error'
 import { Width } from '../Width'
+import { FormLabel, FormSelect } from '@thirdbracket/bracketui'
 
 export const Checkbox: React.FC<
   CheckboxField & {
@@ -30,14 +31,14 @@ export const Checkbox: React.FC<
             setValue(props.name, checked)
           }}
         />
-        <Label htmlFor={name}>
+        <FormLabel htmlFor={name}>
           {required && (
             <span className="required">
               * <span className="sr-only">(required)</span>
             </span>
           )}
           {label}
-        </Label>
+        </FormLabel>
       </div>
       {errors[name] && <Error name={name} />}
     </Width>

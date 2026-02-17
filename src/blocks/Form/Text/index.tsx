@@ -9,6 +9,7 @@ import React from 'react'
 import { Error } from '../Error'
 import { Width } from '../Width'
 import { FormInput, FormLabel } from '@thirdbracket/bracketui'
+import { useFormContext } from 'react-hook-form'
 
 export const Text: React.FC<
   TextField & {
@@ -16,6 +17,8 @@ export const Text: React.FC<
     register: UseFormRegister<FieldValues>
   }
 > = ({ name, defaultValue, errors, label, register, required, width }) => {
+  const props = register(name, { required: required })
+  const { setValue } = useFormContext()
   return (
     <Width width={width}>
       <FormLabel htmlFor={name}>

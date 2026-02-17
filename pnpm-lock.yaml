@@ -98,6 +98,9 @@ importers:
       juice:
         specifier: ^11.0.3
         version: 11.0.3
+      libphonenumber-js:
+        specifier: ^1.12.37
+        version: 1.12.37
       lucide-react:
         specifier: ^0.555.0
         version: 0.555.0(react@19.1.0)
@@ -110,6 +113,9 @@ importers:
       payload:
         specifier: 3.38.0
         version: 3.38.0(bufferutil@4.0.9)(graphql@16.12.0)(typescript@5.8.3)(utf-8-validate@6.0.5)
+      payload-phone-number-plugin:
+        specifier: ^1.5.1
+        version: 1.5.1(payload@3.38.0(bufferutil@4.0.9)(graphql@16.12.0)(typescript@5.8.3)(utf-8-validate@6.0.5))
       prism-react-renderer:
         specifier: ^2.4.1
         version: 2.4.1(react@19.1.0)
@@ -4433,6 +4439,9 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
+  libphonenumber-js@1.12.37:
+    resolution: {integrity: sha512-rDU6bkpuMs8YRt/UpkuYEAsYSoNuDEbrE41I3KNvmXREGH6DGBJ8Wbak4by29wNOQ27zk4g4HL82zf0OGhwRuw==}
+
   lightningcss-android-arm64@1.30.2:
     resolution: {integrity: sha512-BH9sEdOCahSgmkVhBLeU7Hc9DWeZ1Eb6wNS6Da8igvUwAe0sqROHddIlvU06q3WyXVEOYDZ6ykBZQnjTbmo4+A==}
     engines: {node: '>= 12.0.0'}
@@ -4964,6 +4973,12 @@ packages:
 
   pathe@2.0.3:
     resolution: {integrity: sha512-WUjGcAqP1gQacoQe+OBJsFA7Ld4DyXuUIjZ5cc75cLHvJ7dtNsTugphxIADwspS+AraAUePCKrSVtPLFj/F88w==}
+
+  payload-phone-number-plugin@1.5.1:
+    resolution: {integrity: sha512-W40yWqWfRfu79gC7mZ3p3JJgQ9tCMOM3w7MTAjAMXgwiUVCpUS/yaoM4SrJoN/7Xe/fv+1p+S5TXNu/jkRB+7A==}
+    engines: {node: ^18.20.2 || >=20.9.0, pnpm: ^9 || ^10}
+    peerDependencies:
+      payload: ^3.0.0
 
   payload@3.38.0:
     resolution: {integrity: sha512-A+KpKyn05Y4vlWTH4uAxkMySfBw4rtES1GydzFtjYEN8gxht1yXiK6zhfldGPyJrFuwPkzVpYC/7Lvg20Np7EA==}
@@ -10858,6 +10873,8 @@ snapshots:
     dependencies:
       isomorphic.js: 0.2.5
 
+  libphonenumber-js@1.12.37: {}
+
   lightningcss-android-arm64@1.30.2:
     optional: true
 
@@ -11494,6 +11511,13 @@ snapshots:
   path-type@4.0.0: {}
 
   pathe@2.0.3: {}
+
+  payload-phone-number-plugin@1.5.1(payload@3.38.0(bufferutil@4.0.9)(graphql@16.12.0)(typescript@5.8.3)(utf-8-validate@6.0.5)):
+    dependencies:
+      '@payloadcms/translations': 3.38.0
+      clsx: 2.1.1
+      libphonenumber-js: 1.12.37
+      payload: 3.38.0(bufferutil@4.0.9)(graphql@16.12.0)(typescript@5.8.3)(utf-8-validate@6.0.5)
 
   payload@3.38.0(bufferutil@4.0.9)(graphql@16.12.0)(typescript@5.8.3)(utf-8-validate@6.0.5):
     dependencies:

@@ -8,6 +8,7 @@ import { Plugin } from 'payload'
 import { revalidateRedirects } from '@/hooks/revalidateRedirects'
 import { GenerateTitle, GenerateURL } from '@payloadcms/plugin-seo/types'
 import { FixedToolbarFeature, HeadingFeature, lexicalEditor } from '@payloadcms/richtext-lexical'
+import { phoneNumberPlugin } from 'payload-phone-number-plugin'
 import { searchFields } from '@/search/fieldOverrides'
 import { beforeSyncWithSearch } from '@/search/beforeSync'
 import { verifyRecaptcha } from '@/hooks/verifyRecaptcha'
@@ -16,6 +17,7 @@ import { anyone } from '@/access/anyone'
 
 import { Page, Post } from '@/payload-types'
 import { getServerSideURL } from '@/utilities/getURL'
+import { PhoneField } from '@/blocks/Form/Phone/config'
 
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
   return doc?.title ? `${doc.title} | Enterprise Web Development & Marketing` : 'Third Bracket Ltd'
@@ -64,9 +66,11 @@ export const plugins: Plugin[] = [
     generateTitle,
     generateURL,
   }),
+
   formBuilderPlugin({
     fields: {
       payment: false,
+      phone: PhoneField,
     },
     formOverrides: {
       access: {

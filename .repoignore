@@ -1,0 +1,7 @@
+.amazonq
+.next
+.vscode
+node_modules
+public
+pnpm-lock.yaml
+!.repignore

@@ -823,6 +823,7 @@ export interface Form {
             blockName?: string | null;
             blockType: 'textarea';
           }
+        | PhoneField
       )[]
     | null;
   submitButtonLabel?: string | null;
@@ -882,6 +883,21 @@ export interface Form {
     | null;
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PhoneField".
+ */
+export interface PhoneField {
+  name: string;
+  label: string;
+  placeholder?: string | null;
+  defaultCountry?: ('GB' | 'US' | 'BD' | 'INTL') | null;
+  required?: boolean | null;
+  width?: number | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'phone';
 }
 /**
  * Send emails from the admin panel
@@ -1734,6 +1750,7 @@ export interface FormsSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        phone?: T | PhoneFieldSelect<T>;
       };
   submitButtonLabel?: T;
   confirmationType?: T;
@@ -1757,6 +1774,20 @@ export interface FormsSelect<T extends boolean = true> {
       };
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "PhoneField_select".
+ */
+export interface PhoneFieldSelect<T extends boolean = true> {
+  name?: T;
+  label?: T;
+  placeholder?: T;
+  defaultCountry?: T;
+  required?: T;
+  width?: T;
+  id?: T;
+  blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
