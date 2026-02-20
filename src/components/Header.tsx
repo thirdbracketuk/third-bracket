@@ -32,6 +32,7 @@ import {
 import { MegamenuProps } from '@thirdbracket/bracketui'
 import { FaArrowRight } from 'react-icons/fa'
 import { RiArrowRightLine } from 'react-icons/ri'
+import { Logo } from './Logo/Logo'
 
 interface MyMegamenuProp extends Omit<MegamenuProps, 'label'> {
   label: React.ReactNode
@@ -107,7 +108,10 @@ const Header: FC = () => {
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
-        <Navbrand logo={<LogoNew />} href="/"></Navbrand>
+        <Navbrand
+          logo={<Logo className="text-primary-900 dark:text-primary-100 h-5 md:h-6" />}
+          href="/"
+        ></Navbrand>
 
         <NavItem>
           {/* Services Megamenu */}

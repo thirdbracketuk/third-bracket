@@ -41,3 +41,11 @@ body {
 .rich-text-content a {
   @apply text-accent-600 dark:text-accent-300 hover:underline;
 }
+
+@layer base {
+  input,
+  textarea,
+  select {
+    @apply text-base;
+  }
+}

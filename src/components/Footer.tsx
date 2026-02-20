@@ -19,6 +19,7 @@ import {
   RiYoutubeLine,
 } from 'react-icons/ri'
 import { LogoNew } from './Logo/LogoNew'
+import { Logo } from './Logo/Logo'
 
 const SiteFooter = () => {
   return (
@@ -29,7 +30,7 @@ const SiteFooter = () => {
       }}
     >
       <FooterSection className="col-span-2 !py-4 md:py-0">
-        <FooterBrand logo={<LogoNew className="h-4 lg:h-5" />}>
+        <FooterBrand logo={<Logo className=" text-primary-900 dark:text-primary-100 h-6 md:h-7" />}>
           <p className="text-primary-600 dark:text-primary-500 text-base ">
             Making the web a better place with Third Bracket Ltd.
           </p>
