@@ -2,19 +2,20 @@ import { FC } from 'react'
 
 interface LogoProps {
   className?: string
-  width?: number
+  height?: number
   label?: string
 }
 
-export const Logo: FC<LogoProps> = ({ className = '', width, label = 'Logo' }) => {
+export const Logo: FC<LogoProps> = ({ className = '', width, label = 'Thirdbracket Logo' }) => {
   return (
     <svg
       role="img"
       aria-label={label}
       xmlns="http://www.w3.org/2000/svg"
+      preserveAspectRatio="xMidYMid"
       viewBox="0 0 375 40"
       fill="none"
-      width={width}
+      height={height}
       className={`w-auto ${className}`}
     >
       <title>{label}</title>
