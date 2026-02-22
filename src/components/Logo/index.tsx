@@ -6,7 +6,7 @@ interface LogoProps {
   label?: string
 }
 
-export const Logo: FC<LogoProps> = ({ className = '', width, label = 'Thirdbracket Logo' }) => {
+export const Logo: FC<LogoProps> = ({ className = '', height, label = 'Thirdbracket Logo' }) => {
   return (
     <svg
       role="img"

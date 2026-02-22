@@ -32,7 +32,7 @@ import {
 import { MegamenuProps } from '@thirdbracket/bracketui'
 import { FaArrowRight } from 'react-icons/fa'
 import { RiArrowRightLine } from 'react-icons/ri'
-import Logo from './Logo'
+import { Logo } from '@/components/Logo'
 
 interface MyMegamenuProp extends Omit<MegamenuProps, 'label'> {
   label: React.ReactNode
@@ -109,7 +109,7 @@ const Header: FC = () => {
         }}
       >
         <Navbrand
-          logo={<Logo width={200} className="text-black dark:text-white" />}
+          logo={<Logo height={22} className="text-black dark:text-white" />}
           href="/"
         ></Navbrand>
 
