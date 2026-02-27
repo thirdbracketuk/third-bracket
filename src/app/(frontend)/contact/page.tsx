@@ -1,14 +1,13 @@
 import React from 'react'
+import { getPayload } from 'payload'
+import configPromise from '@payload-config'
 
-// Bracket is not used
-// import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
 import { FormBlock } from '@/blocks/Form/Component'
-// Structured data now in layout.tsx
 import { Metadata } from 'next'
 import { Bracket } from '@thirdbracket/bracketui'
-import { Settings } from '@/utilities/meta'
 import Script from 'next/script'
+import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
 
 export const metadata: Metadata = {
   // metadataBase: new URL(Settings.metadataBase),
@@ -24,12 +23,12 @@ export const metadata: Metadata = {
 
 async function getFormData() {
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/1`, {
-      next: { revalidate: 3600 },
+    const payload = await getPayload({ config: configPromise })
+    const form = await payload.findByID({
+      collection: 'forms',
+      id: '1',
     })
-
-    if (!res.ok) return null
-    return res.json()
+    return form
   } catch (error) {
     console.error('Error fetching form data:', error)
     return null
@@ -42,12 +41,42 @@ export default async function ContactPage() {
   const form = await getFormData()
 
   // Provide a fallback form structure if the API call fails
-  const fallbackForm = form || {
+  const fallbackForm: FormType = (form as unknown as FormType) || {
     id: '1',
+    title: 'Contact Form',
     fields: [],
     submitButtonLabel: 'Send Message',
     confirmationType: 'message',
-    confirmationMessage: 'Thank you for your message. We will get back to you soon.',
+    confirmationMessage: {
+      root: {
+        type: 'root',
+        format: '',
+        indent: 0,
+        version: 1,
+        children: [
+          {
+            type: 'paragraph',
+            format: '',
+            indent: 0,
+            version: 1,
+            children: [
+              {
+                mode: 'normal',
+                text: 'Thank you for your message. We will get back to you soon.',
+                type: 'text',
+                style: '',
+                detail: 0,
+                format: 0,
+                version: 1,
+              },
+            ],
+            direction: 'ltr',
+          },
+        ],
+        direction: 'ltr',
+      },
+    },
+    emails: [],
   }
 
   return (
@@ -75,5 +104,3 @@ export default async function ContactPage() {
     </section>
   )
 }
-
-//comment
