@@ -17,7 +17,7 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-roboto)'],
+        sans: ['var(--font-roboto)', 'var(--font-noto-bengali)'],
       },
       backgroundImage: {
         'gradient-gray': 'radial-gradient(125% 125% at 50% 90%, #e0e3e6b2 40%, #737e8cb2 100%)',

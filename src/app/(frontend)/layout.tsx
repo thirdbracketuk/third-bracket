@@ -6,7 +6,7 @@ import { Settings } from '../../utilities/meta'
 import { Metadata } from 'next'
 
 import GTM from '@/components/GTM'
-import { Inter } from 'next/font/google'
+import { Inter, Noto_Sans_Bengali } from 'next/font/google'
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-5LLRMTFW'
 const roboto = Inter({
@@ -15,6 +15,12 @@ const roboto = Inter({
   display: 'swap',
   preload: true,
   variable: '--font-roboto',
+})
+
+const notoBengali = Noto_Sans_Bengali({
+  subsets: ['bengali'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-noto-bengali',
 })
 
 const baseUrl = Settings.metadataBase
@@ -128,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${roboto.variable} antialiased scroll-smooth`}
+      className={`${roboto.variable} ${notoBengali.variable} antialiased scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
