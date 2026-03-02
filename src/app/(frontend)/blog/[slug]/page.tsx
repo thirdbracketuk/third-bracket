@@ -17,7 +17,7 @@ import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { Bracket } from '@thirdbracket/bracketui'
 
 export const dynamic = 'force-static'
-export const revalidate = false
+export const revalidate = 3600
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
