@@ -55,10 +55,20 @@ body {
   @apply text-accent-600 dark:text-accent-300 hover:underline;
 }
 
-@layer base {
-  input,
-  textarea,
-  select {
-    @apply text-base;
+/* Prevents iOS Safari from zooming on input focus.
+   !important overrides any text-sm utility applied by component libraries. */
+input,
+textarea,
+select {
+  font-size: 1rem !important;
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -59,7 +59,9 @@ export default function Team() {
               <Image src={member.image} alt={member.name} fill className="object-cover" />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
+              <h3 className="text-xl font-semibold mb-1 bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text">
+                {member.name}
+              </h3>
               <p className="text-primary-500 dark:text-primary-400 mb-3">{member.role}</p>
               <p className="text-primary-600 dark:text-primary-400 text-sm mb-4">{member.bio}</p>
               <div className="flex gap-3">

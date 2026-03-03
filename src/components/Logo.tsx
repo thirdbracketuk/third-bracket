@@ -236,20 +236,6 @@ export const Logo: FC<LogoProps> = ({ className = '', height, label = 'Thirdbrac
     >
       <title>{label}</title>
 
-      <defs>
-        <radialGradient
-          id="logo-gradient"
-          cx="71.269"
-          cy="561.26"
-          r="20"
-          gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(-51.171 -541.26)"
-        >
-          <stop stopColor="#d75d82" offset="0" />
-          <stop stopColor="#bc3a5b" offset="1" />
-        </radialGradient>
-      </defs>
-
       <g transform="translate(-51.171 -541.26)">
         {/* Wordmark — fill="currentColor" inherits from Tailwind text-* classes */}
         <path
@@ -259,7 +245,7 @@ export const Logo: FC<LogoProps> = ({ className = '', height, label = 'Thirdbrac
 
         {/* Icon — fixed red gradient, never changes */}
         <path
-          fill="url(#logo-gradient)"
+          fill="currentColor"
           d="m54.086 541.26c-1.5633 0.0145-2.8165 1.2777-2.8165 2.8444v34.311c0 1.5672 1.2556 2.8308 2.8194 2.8445h28.814l-16.767-8.036v-23.928l16.767-8.036zm37.181 2.8221-18.17 9.161 0.06679 16.109 18.106 9.0865v-34.286c-5.67e-4 -0.0232 0-0.0464 0-0.0695z"
         />
       </g>
