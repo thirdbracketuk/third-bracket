@@ -5,10 +5,42 @@
 :root {
   --font-roboto: 'Roboto', sans-serif;
   --font-noto-bengali: 'Noto Sans Bengali', sans-serif;
-}
 
+  --page-bg: theme('colors.white');
+}
+.dark {
+  --page-bg: theme('colors.gray.950'); /* match your dark mode bg */
+}
 body {
   font-family: var(--font-roboto), var(--font-noto-bengali);
+}
+
+/* Header underglow effect - fixed light source beneath header */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 320px;
+  z-index: 49;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 70% 100% at 50% 0%,
+    rgba(188, 58, 91, 0.11) 0%,
+    rgba(188, 58, 91, 0.04) 40%,
+    transparent 75%
+  );
+  transition: background 0.4s ease;
+}
+
+.dark body::before {
+  background: radial-gradient(
+    ellipse 65% 100% at 50% 0%,
+    rgba(215, 93, 130, 0.14) 0%,
+    rgba(215, 93, 130, 0.05) 45%,
+    transparent 75%
+  );
 }
 
 .rich-text-content {

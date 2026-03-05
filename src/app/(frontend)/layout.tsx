@@ -163,7 +163,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
 
         <Header />
-        <main className="bg-gradient-primary-dark dark:bg-gradient-primary py-[6rem] sm:py-[6.5rem]  lg:py-[8rem]  ">
+        <main className="bg-gradient-primary-dark dark:bg-gradient-primary py-[4rem] sm:py-[4.5rem]  lg:py-[4.5rem]  ">
           {children}
         </main>
         <SiteFooter />

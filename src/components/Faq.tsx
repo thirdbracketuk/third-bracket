@@ -13,10 +13,10 @@ export const FAQ = () => {
   }
 
   return (
-    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] ">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
       <Bracket fluid centered padding="small">
-        <div className="mx-auto md:max-w-screen-xl ">
-          <h2 className="text-[1.75rem]/[1.4] lg:text-3xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-14 lg:mb-20 tracking-tight">
+        <div className="mx-auto md:max-w-screen-xl">
+          <h2 className="text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-12 lg:mb-14">
             FAQs
           </h2>
 
@@ -24,30 +24,24 @@ export const FAQ = () => {
             {faqData.map((item, i) => (
               <div
                 key={i}
-                className="border border-primary-500/20 rounded-lg  bg-gradient-secondary-dark dark:bg-gradient-secondary"
+                className="border border-primary-500/20 rounded-lg bg-primary-50 dark:bg-primary-950 transition-all duration-300"
               >
                 <button
                   onClick={() => toggle(i)}
-                  className="w-full flex justify-between items-center px-6 py-4 font-medium text-left text-primary-900 dark:text-primary-100  focus:outline-none"
+                  className="w-full flex justify-between items-center px-6 py-4 font-medium text-left text-primary-900 dark:text-primary-100 focus:outline-none transition-colors duration-200"
                   aria-expanded={openIndex === i}
                   aria-controls={`faq-answer-${i}`}
                 >
                   <span>{item.question}</span>
-                  <span className="ml-4 bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text">
-                    {openIndex === i ? '-' : '+'}
+                  <span className="ml-4 text-xl font-bold text-primary-700 dark:text-primary-300 transition-transform duration-300" style={{ transform: openIndex === i ? 'rotate(45deg)' : 'rotate(0deg)' }}>
+                    +
                   </span>
                 </button>
-                {/* {openIndex === i && (
-                  <div className="px-6 pb-4 text-primary-800 dark:text-primary-200 text-sm leading-relaxed">
-                    {item.answer}
-                  </div>
-                )} */}
-                {/* ✅ Answer is always rendered into DOM */}
                 <div
                   id={`faq-answer-${i}`}
                   className={clsx(
-                    'px-6 pb-4 text-primary-800 dark:text-primary-200 text-sm leading-relaxed transition-all duration-300 overflow-hidden',
-                    openIndex === i ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0',
+                    'px-6 text-primary-800 dark:text-primary-200 text-sm leading-relaxed transition-all duration-300 ease-in-out overflow-hidden',
+                    openIndex === i ? 'max-h-[500px] opacity-100 pb-4' : 'max-h-0 opacity-0 pb-0',
                   )}
                   aria-hidden={openIndex !== i}
                 >

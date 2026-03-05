@@ -33,10 +33,10 @@ const testimonials: Testimonial[] = [
 
 export const ClientTestimonials = () => {
   return (
-    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]  ">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
-          <h2 className="text-[1.75rem]/[1.4] lg:text-3xl   font-extrabold  bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-14 tracking-tight">
+          <h2 className="text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-12 lg:mb-14">
             Trusted by Early-stage Startups
           </h2>
 

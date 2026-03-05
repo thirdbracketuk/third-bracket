@@ -6,9 +6,11 @@ import { FAQ } from '@/components/Faq'
 import CardGrid from '@/components/Feature'
 import { WhyChooseUsSection } from '@/components/FeatureTwo'
 import { Hero as _Hero } from '@/components/HeroSection'
-import { Bracket } from '@thirdbracket/bracketui'
-// Structured data now in layout.tsx
-
+// import { LatestBlogSection } from '@/components/LatestBlogSection'
+// import { LatestWorkSection } from '@/components/LatestWorkSection'
+// import { Bracket } from '@thirdbracket/bracketui'
+import configPromise from '@payload-config'
+import { getPayload } from 'payload'
 import Script from 'next/script'
 import { faqData } from 'settings'
 
@@ -52,7 +54,25 @@ async function getContactFormData() {
 }
 
 export default async function Home() {
+  const payload = await getPayload({ config: configPromise })
+
   const contactForm = await getContactFormData()
+
+  // Fetch latest blogs and works
+  const [latestBlogs, latestWorks] = await Promise.all([
+    payload.find({
+      collection: 'blog',
+      depth: 2,
+      limit: 4,
+      sort: '-publishedAt',
+    }),
+    payload.find({
+      collection: 'work',
+      depth: 2,
+      limit: 4,
+      sort: '-completedAt',
+    }),
+  ])
 
   // Provide fallback contact form structure if API call fails
   const fallbackContactForm = contactForm || {
@@ -60,7 +80,8 @@ export default async function Home() {
     fields: [],
     submitButtonLabel: 'Get Proposal',
     confirmationType: 'message',
-    confirmationMessage: 'Thank you for your request. We will get back to you soon with your proposal.',
+    confirmationMessage:
+      'Thank you for your request. We will get back to you soon with your proposal.',
   }
 
   return (
@@ -76,39 +97,36 @@ export default async function Home() {
       />
 
       <section>
-        {/* Structured data now in layout.tsx */}
-        {/* <HeroSection /> */}
-        {/* <Hero /> */}
         <DynamicHero contactForm={fallbackContactForm} />
-        {/* <FeatureOne /> */}
         <CardGrid />
-        {/* <FeatureShowcaseSection /> */}
         <WhyChooseUsSection />
-        {/* <FeatureTwo /> */}
-        <ClientTestimonials />
-        <FAQ />
-        {/* <Subscription /> */}
 
-        <Bracket fluid centered padding="small">
-          <CTASection
-            cover={{
-              src: '/buicover.svg',
-              alt: 'Bracket UI Cover',
-              width: 500,
-              height: 500,
-            }}
-            title="Explore Bracket UI"
-            description="Built with Tailwind CSS utilities and modern patterns, it balances flexibility with simplicity."
-            primary={{
-              label: 'Contact Us',
-              href: '/contact',
-            }}
-            secondary={{
-              label: 'Learn More',
-              href: '/about',
-            }}
-          />
-        </Bracket>
+        {/* Latest Work Section */}
+        {/* {latestWorks.docs && latestWorks.docs.length > 0 && (
+          <LatestWorkSection works={latestWorks.docs} />
+        )} */}
+
+        <ClientTestimonials />
+
+        {/* Latest Blog Section */}
+        {/* {latestBlogs.docs && latestBlogs.docs.length > 0 && (
+          <LatestBlogSection blogs={latestBlogs.docs} />
+        )} */}
+
+        <FAQ />
+
+        <CTASection
+          title="Ready to Start Your Project?"
+          description="Let's build something exceptional together. Get in touch and we'll craft a solution tailored to your needs."
+          primary={{
+            label: 'Contact Us',
+            href: '/contact',
+          }}
+          secondary={{
+            label: 'View Our Work',
+            href: '/work',
+          }}
+        />
       </section>
     </>
   )

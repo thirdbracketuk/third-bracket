@@ -117,18 +117,16 @@ const cards = [
 
 export default function CardGrid() {
   return (
-    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]  ">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
           {/* Header */}
-
-          <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-3 lg:gap-4  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto ">
-            <h2 className="  text-[1.75rem]/[1.4] lg:text-3xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right tracking-tight">
-              {/* Looking for Fast & Affordable Web Development in the UK? */}
+          <div className="mb-8 md:mb-10 lg:mb-12 grid gap-3 lg:gap-4 lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
+            <h2 className="text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
               What Makes Third Bracket Ltd Different?
             </h2>
-            <p className="text-base/7  lg:text-[1.15rem]/8   text-primary-500 text-left sm:text-center lg:text-left">
-              Every decition, from design to development, is engineered for performance and cost.
+            <p className="text-[1.0625rem] leading-[1.7] text-primary-500 dark:text-primary-400 text-left sm:text-center lg:text-left">
+              Every decision, from design to development, is engineered for performance and cost.
             </p>
           </div>
 

@@ -627,77 +627,77 @@ export function WhyChooseUsSection() {
         <div className="mx-auto md:max-w-screen-xl">
           {/* Heading & Description */}
           <div className="mb-10 lg:mb-12">
-            <h2 className="mb-4 text-[1.75rem]/[1.4] lg:text-3xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl tracking-tight">
+            <h2 className="mb-4 text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               What We Build & Deliver
             </h2>
-            <p className="text-primary-500 text-base/7 lg:text-[1.15rem]/8 text-left sm:mx-auto md:text-center max-w-lg md:max-w-2xl lg:max-w-5xl">
+
+            {/* Horizontal Scrollable Tabs */}
+            <div className="relative mb-8 lg:mb-10">
+              {/* Group labels — desktop only */}
+              <div className="hidden md:flex items-center justify-center gap-1 mb-3">
+                {(['Services', 'Solutions'] as const).map((group) => {
+                  const groupTabs = tabs.filter((t) => t.group === group)
+                  const isGroupActive = groupTabs.some((t) => t.id === activeTab)
+                  return (
+                    <span
+                      key={group}
+                      className={`text-xs font-medium px-3 py-0.5 rounded-full transition-colors duration-300 ${
+                        isGroupActive
+                          ? 'text-primary-700 dark:text-primary-300 bg-accent-200 dark:bg-accent-800'
+                          : 'text-primary-400 dark:text-primary-600'
+                      }`}
+                    >
+                      {group}
+                    </span>
+                  )
+                })}
+              </div>
+
+              {/* Tab bar */}
+              <div className="overflow-x-auto scrollbar-hide">
+                <div className="flex items-center gap-2 md:justify-center min-w-max mx-auto px-1 pb-1">
+                  {tabs.map((tab, i) => {
+                    const isActive = activeTab === tab.id
+                    const showDivider = i === 3
+
+                    return (
+                      <div key={tab.id} className="flex items-center gap-2">
+                        {showDivider && (
+                          <span className="hidden md:block w-px h-5 bg-primary-200 dark:bg-primary-800 mx-1 flex-shrink-0" />
+                        )}
+                        <button
+                          onClick={() => handleTabChange(tab.id)}
+                          className={`
+                          relative flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium
+                          transition-all duration-300 cursor-pointer outline-none
+                          focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2
+                          ${
+                            isActive
+                              ? 'bg-primary-950 dark:bg-primary-50 text-white dark:text-primary-950 shadow-sm'
+                              : 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950 border border-primary-200 dark:border-primary-800 [@media(hover:hover)]:hover:border-primary-400 dark:[@media(hover:hover)]:hover:border-primary-600 [@media(hover:hover)]:hover:text-primary-900 dark:[@media(hover:hover)]:hover:text-primary-100'
+                          }
+                        `}
+                        >
+                          {tab.label}
+                        </button>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Cards Grid */}
+            <p className="text-[1.0625rem] leading-[1.7] text-primary-500 dark:text-primary-400 text-left sm:mx-auto md:text-center max-w-lg md:max-w-2xl lg:max-w-5xl">
               From modern websites to tailored systems, Third Bracket Ltd help UK businesses thrive
               with reliable, high-performance web development.
             </p>
           </div>
-
-          {/* Horizontal Scrollable Tabs */}
-          <div className="relative mb-8 lg:mb-10">
-            {/* Group labels — desktop only */}
-            <div className="hidden md:flex items-center justify-center gap-1 mb-3">
-              {(['Services', 'Solutions'] as const).map((group) => {
-                const groupTabs = tabs.filter((t) => t.group === group)
-                const isGroupActive = groupTabs.some((t) => t.id === activeTab)
-                return (
-                  <span
-                    key={group}
-                    className={`text-xs font-medium px-3 py-0.5 rounded-full transition-colors ${
-                      isGroupActive
-                        ? 'text-primary-700 dark:text-primary-300 bg-primary-100 dark:bg-primary-900'
-                        : 'text-primary-400 dark:text-primary-600'
-                    }`}
-                  >
-                    {group}
-                  </span>
-                )
-              })}
-            </div>
-
-            {/* Tab bar */}
-            <div className="overflow-x-auto scrollbar-hide">
-              <div className="flex items-center gap-2 md:justify-center min-w-max mx-auto px-1 pb-1">
-                {tabs.map((tab, i) => {
-                  const isActive = activeTab === tab.id
-                  // Divider between services and solutions
-                  const showDivider = i === 3
-
-                  return (
-                    <div key={tab.id} className="flex items-center gap-2">
-                      {showDivider && (
-                        <span className="hidden md:block w-px h-5 bg-primary-200 dark:bg-primary-800 mx-1 flex-shrink-0" />
-                      )}
-                      <button
-                        onClick={() => handleTabChange(tab.id)}
-                        className={`
-                          relative flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium
-                          transition-all duration-200 cursor-pointer outline-none
-                          focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2
-                          ${
-                            isActive
-                              ? 'bg-gradient-text dark:bg-gradient-text-dark text-white dark:text-primary-950 shadow-sm'
-                              : 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950 border border-primary-200 dark:border-primary-800 [@media(hover:hover)]:hover:border-primary-400 dark:[@media(hover:hover)]:hover:border-primary-600 [@media(hover:hover)]:hover:text-primary-900 dark:[@media(hover:hover)]:hover:text-primary-100'
-                          }
-                        `}
-                      >
-                        {tab.label}
-                        {isActive && (
-                          <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary-500 dark:bg-primary-400" />
-                        )}
-                      </button>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* Cards Grid */}
-          <div className="space-y-6 sm:grid sm:grid-cols-2 gap-4 sm:space-y-0 lg:grid-cols-3">
+          <div
+            className={`space-y-6 sm:grid sm:grid-cols-2 gap-4 sm:space-y-0 lg:grid-cols-3 mb-6 transition-opacity duration-300 ${
+              visible ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
             {cards.map(({ icon: Icon, header, description, href }, index) => (
               <Card
                 key={`${activeTab}-${index}`}
@@ -706,7 +706,7 @@ export function WhyChooseUsSection() {
                 href={href}
                 isIcon
                 theme={{
-                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  background: 'bg-white dark:bg-secondary-950',
                   border:
                     'border-opacity-30 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
                   text: 'text-primary-500 leading-[1.45] font-normal last:max-w-3xl',
@@ -714,8 +714,8 @@ export function WhyChooseUsSection() {
                     '[@media(hover:hover)]:hover:border-opacity-50 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
                 }}
                 cover={
-                  <div className="w-16 h-16 mb-4 flex items-center justify-center border border-primary-100 dark:border-primary-900 rounded-xl bg-gradient-primary-dark dark:bg-gradient-primary">
-                    <Icon size={32} className="text-secondary-700 dark:text-secondary-300" />
+                  <div className="size-14 mb-4 flex items-center justify-center border border-primary-100 dark:border-primary-900 rounded-lg bg-gradient-secondary-dark dark:bg-gradient-secondary">
+                    <Icon size={24} className="text-secondary-700 dark:text-secondary-300" />
                   </div>
                 }
                 header={

@@ -41,8 +41,15 @@
 //         'overlay-radial': 'radial-gradient(#f1f2f4_1px,transparent_1px)',
 //         'overlay-radial-dark': 'radial-gradient(#0b0d0e_1px,transparent_1px)',
 
-//         'accent-radial': 'radial-gradient(circle at center,      #df9faf  , #eec4ce )',
-//         'accent-radial-dark': 'radial-gradient(circle at center,     #66192d, #3d0f1b )',
+//         // CTA light: accent-50 → accent-100 → accent-50 — barely-there blush that
+//         // signals the accent brand without overwhelming the neutral page
+//         'accent-radial':
+//           'radial-gradient(ellipse at 30% 0%, #fcf3f6 0%, #f5d5e1 55%, #fcf3f6 100%)',
+
+//         // CTA dark: accent-950 → accent-900 — deep wine, atmospheric not harsh;
+//         // clearly distinct from the #080808 page background
+//         'accent-radial-dark':
+//           'radial-gradient(ellipse at 30% 0%, #47101c 0%, #3a0e1a 55%, #47101c 100%)',
 //       },
 //       colors: {
 //         accent: {
@@ -114,19 +121,40 @@ const config = {
       fontFamily: {
         sans: ['var(--font-roboto)', 'var(--font-noto-bengali)'],
       },
+      boxShadow: {
+        // accent-600 = #bc3a5b = rgb(188,58,91)
+        'nav-glow':
+          '0 1px 0 0 rgba(188,58,91,0.25), 0 1px 40px 0 rgba(188,58,91,0.14), 0 4px 80px 0 rgba(188,58,91,0.08)',
+        'nav-glow-dark':
+          '0 1px 0 0 rgba(188,58,91,0.35), 0 1px 50px 0 rgba(188,58,91,0.22), 0 4px 100px 0 rgba(188,58,91,0.12)',
+      },
       backgroundImage: {
+        'hero-glow-light':
+          'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(188,58,91,0.07) 0%, transparent 70%)',
+        'hero-glow-dark':
+          'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(188,58,91,0.18) 0%, transparent 70%)',
         'gradient-gray': 'radial-gradient(125% 125% at 50% 90%, #e0e3e6b2 40%, #737e8cb2 100%)',
         'gradient-gray-dark':
           'radial-gradient(125% 125% at 50% 10%, #22283066 40%, #333b48b2 100%)',
+        // Light bg: pure white center fading to cool off-white edge — natural depth
         'gradient-primary-dark':
-          'conic-gradient(from 0deg at center, #fff, #f6f7f8, #f7f7f7, #f6f7f8,#f7f7f7, #fff  )',
+          'radial-gradient(ellipse 120% 100% at 50% 0%, #ffffff 0%, #f6f7f8 50%, #eef0f2 100%)',
+        // Dark bg: slightly lifted charcoal center fading to pure black edge — atmospheric depth
         'gradient-primary':
-          'conic-gradient(from 0deg at center, #000000, #050708, #080808,#050708, #080808  ,   #000000  )',
-        'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff,#f7f7f7, #f6f7f8  )',
-        'gradient-secondary': 'conic-gradient(at bottom left, #000, #080808, #0f1215 )',
+          'radial-gradient(ellipse 120% 100% at 50% 0%, #111316 0%, #080808 55%, #000000 100%)',
+        // gradient-secondary-dark = light mode card surface + dark mode text gradient
+        // → needs to be near-white: elevates above white bg AND reads as light text on dark
+        'gradient-secondary-dark': 'linear-gradient(160deg, #f6f8fa 0%, #edf1f5 100%)',
 
-        'gradient-text': 'conic-gradient(at bottom left, #3b3b3b, #333b48, #3b3b3b  )',
-        'gradient-text-dark': 'conic-gradient(at bottom left, #dbdbdb, #c4c4c4, #adadad )',
+        // gradient-secondary = dark mode card surface + light mode text gradient
+        // → needs to be near-black: elevates above black bg AND reads as dark text on white
+        'gradient-secondary': 'linear-gradient(160deg, #1c2028 0%, #13161b 100%)',
+
+        // Heading text gradient — linear works far better than conic for bg-clip-text
+        // Light: rich near-black → dark charcoal (crisp, high contrast)
+        'gradient-text': 'linear-gradient(135deg, #1a1a1a 0%, #3b3b3b 60%, #4a4a4a 100%)',
+        // Dark: pure white → light gray (crisp, no muddy middle tones)
+        'gradient-text-dark': 'linear-gradient(135deg, #ffffff 0%, #e0e0e0 60%, #c4c4c4 100%)',
 
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',
@@ -136,15 +164,13 @@ const config = {
         'overlay-radial': 'radial-gradient(#f1f2f4_1px,transparent_1px)',
         'overlay-radial-dark': 'radial-gradient(#0b0d0e_1px,transparent_1px)',
 
-        // CTA light: accent-50 → accent-100 → accent-50 — barely-there blush that
-        // signals the accent brand without overwhelming the neutral page
+        // CTA light: off-white center with the faintest blush tint — elegant not pink
         'accent-radial':
-          'radial-gradient(ellipse at 30% 0%, #fcf3f6 0%, #f5d5e1 55%, #fcf3f6 100%)',
+          'radial-gradient(ellipse 110% 100% at 30% 0%, #ffffff 0%, #fdf0f4 40%, #f9e8ee 100%)',
 
-        // CTA dark: accent-950 → accent-900 — deep wine, atmospheric not harsh;
-        // clearly distinct from the #080808 page background
+        // CTA dark: very dark wine center bleeding to near-black — moody not maroon
         'accent-radial-dark':
-          'radial-gradient(ellipse at 30% 0%, #47101c 0%, #3a0e1a 55%, #47101c 100%)',
+          'radial-gradient(ellipse 110% 100% at 30% 0%, #1e0a10 0%, #130608 50%, #080808 100%)',
       },
       colors: {
         accent: {

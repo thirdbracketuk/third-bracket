@@ -11,12 +11,12 @@ interface PageHeaderProps {
 }
 export default function PageHeader({ title, description }: PageHeaderProps) {
   return (
-    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]  text-center ">
+    <section className="pt-[104px] pb-[80px] bg-overlayDot-light dark:bg-overlayDot-dark [background-size:36px_36px] text-center">
       <Bracket fluid centered padding="medium">
-        <h1 className=" font-extrabold text-[2.55rem]/[1]  md:text-[2.95rem]/[1.1] lg:text-[3.45rem]/[1.1] bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-6">
+        <h1 className="text-[clamp(2.4rem,5vw,3.8rem)] font-bold leading-[1.1] tracking-tight text-primary-950 dark:text-primary-50 text-center mb-6">
           {title}
         </h1>
-        <p className="dark:text-primary-400 text-primary-600 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  font-light  mx-auto">
+        <p className="text-[1.0625rem] text-primary-500 dark:text-primary-400 leading-[1.7] max-w-[560px] mx-auto">
           {description}
         </p>
       </Bracket>
