@@ -16,7 +16,7 @@ export const FAQ = () => {
     <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
-          <h2 className="text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-12 lg:mb-14">
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-bold tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-12 lg:mb-14">
             FAQs
           </h2>
 
@@ -32,8 +32,13 @@ export const FAQ = () => {
                   aria-expanded={openIndex === i}
                   aria-controls={`faq-answer-${i}`}
                 >
-                  <span>{item.question}</span>
-                  <span className="ml-4 text-xl font-bold text-primary-700 dark:text-primary-300 transition-transform duration-300" style={{ transform: openIndex === i ? 'rotate(45deg)' : 'rotate(0deg)' }}>
+                  <span className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed">
+                    {item.question}
+                  </span>
+                  <span
+                    className="ml-4 text-xl font-bold text-primary-700 dark:text-primary-300 transition-transform duration-300"
+                    style={{ transform: openIndex === i ? 'rotate(45deg)' : 'rotate(0deg)' }}
+                  >
                     +
                   </span>
                 </button>
@@ -45,7 +50,7 @@ export const FAQ = () => {
                   )}
                   aria-hidden={openIndex !== i}
                 >
-                  <p>{item.answer}</p>
+                  <p className="text-[clamp(0.81rem,1vw,0.9rem)] leading-relaxed">{item.answer}</p>
                 </div>
               </div>
             ))}

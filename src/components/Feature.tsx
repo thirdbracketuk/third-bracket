@@ -7,7 +7,7 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-         Cloud First
+          Cloud First
         </span>
       ),
       cover: '/webspeed.svg',
@@ -78,7 +78,7 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-         SEO Foundation
+          SEO Foundation
         </span>
       ),
 
@@ -105,7 +105,7 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-         Launch Ready
+          Launch Ready
         </span>
       ),
 
@@ -122,10 +122,10 @@ export default function CardGrid() {
         <div className="mx-auto md:max-w-screen-xl">
           {/* Header */}
           <div className="mb-8 md:mb-10 lg:mb-12 grid gap-3 lg:gap-4 lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
-            <h2 className="text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
+            <h2 className=" text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-bold  tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
               What Makes Third Bracket Ltd Different?
             </h2>
-            <p className="text-[1.0625rem] leading-[1.7] text-primary-500 dark:text-primary-400 text-left sm:text-center lg:text-left">
+            <p className=" text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 text-left sm:text-center lg:text-left">
               Every decision, from design to development, is engineered for performance and cost.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function CardGrid() {
                       hover:
                         '[@media(hover:hover)]:hover:border-opacity-50    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
 
-                      text: 'text-primary-500   leading-[1.45] font-normal',
+                      text: 'text-primary-400 dark:text-primary-600    leading-[1.45] font-normal',
                     }}
                     className="!delay-50   motion-reduce:!transition-none motion-reduce:hover:!transform-none "
                     {...props}

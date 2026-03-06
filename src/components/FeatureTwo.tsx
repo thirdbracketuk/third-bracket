@@ -627,7 +627,7 @@ export function WhyChooseUsSection() {
         <div className="mx-auto md:max-w-screen-xl">
           {/* Heading & Description */}
           <div className="mb-10 lg:mb-12">
-            <h2 className="mb-4 text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <h2 className="mb-4  font-bold  text-[clamp(1.5rem,3vw,2.25rem)] leading-tight tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               What We Build & Deliver
             </h2>
 
@@ -641,7 +641,7 @@ export function WhyChooseUsSection() {
                   return (
                     <span
                       key={group}
-                      className={`text-xs font-medium px-3 py-0.5 rounded-full transition-colors duration-300 ${
+                      className={`text-[clamp(0.72rem,1.2vw,0.78rem)] leading-none font-medium px-3 py-1 rounded-full transition-colors duration-300 ${
                         isGroupActive
                           ? 'text-primary-700 dark:text-primary-300 bg-accent-200 dark:bg-accent-800'
                           : 'text-primary-400 dark:text-primary-600'
@@ -688,7 +688,7 @@ export function WhyChooseUsSection() {
             </div>
 
             {/* Cards Grid */}
-            <p className="text-[1.0625rem] leading-[1.7] text-primary-500 dark:text-primary-400 text-left sm:mx-auto md:text-center max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 text-left sm:mx-auto md:text-center max-w-lg md:max-w-2xl lg:max-w-5xl">
               From modern websites to tailored systems, Third Bracket Ltd help UK businesses thrive
               with reliable, high-performance web development.
             </p>
@@ -709,7 +709,7 @@ export function WhyChooseUsSection() {
                   background: 'bg-white dark:bg-secondary-950',
                   border:
                     'border-opacity-30 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
-                  text: 'text-primary-500 leading-[1.45] font-normal last:max-w-3xl',
+                  text: 'text-primary-500 dark:text-primary-600 leading-[1.45] font-normal last:max-w-3xl',
                   hover:
                     '[@media(hover:hover)]:hover:border-opacity-50 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
                 }}
@@ -719,7 +719,7 @@ export function WhyChooseUsSection() {
                   </div>
                 }
                 header={
-                  <span className="font-semibold bg-gradient-text tracking-tight dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2">
+                  <span className="font-semibold bg-gradient-text tracking-tight text-[clamp(1.2rem,2vw,1.4rem)] dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2">
                     {header}
                   </span>
                 }

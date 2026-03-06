@@ -203,18 +203,33 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center space-y-7 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[820px] px-2 sm:px-0">
             {/* Hero Badge */}
-            <div className="inline-flex items-center gap-2 bg-accent-50 dark:bg-accent-500/8 border border-accent-200 dark:border-accent-500/20 text-accent-700 dark:text-accent-400 text-[0.8rem] font-medium px-3 py-1 rounded-full mb-0">
+            <Link
+              href="https://www.thirdbracket.co.uk/blog/why-indian-exporters-getting-more-success-than-bangladeshi-exporters"
+              className="inline-flex items-center gap-2 bg-accent-50 dark:bg-secondary-950 border border-accent-100 dark:border-accent-900/20 text-secondary-700 dark:text-secondary-200 text-[clamp(0.72rem,1.5vw,0.8rem)] leading-none font-medium px-3 py-1.5 rounded-full mb-0 overflow-hidden line-clamp-1"
+            >
               <span className="w-[6px] h-[6px] bg-accent-500 rounded-full animate-pulse"></span>
-              Full-service digital agency
-            </div>
+              <span className="truncate"> Bangladeshi Exporters Branding Guides</span>
+              <svg
+                viewBox="0 0 8 12"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-[7px] h-[11px] animate-bounce-x"
+              >
+                <path d="M1 1l5 5-5 5" />
+              </svg>
+            </Link>
 
-            <h1 className="text-[clamp(2.4rem,5vw,3.8rem)] font-bold leading-[1.1] tracking-tight text-left sm:text-center text-primary-950 dark:text-primary-50 mb-0">
-              Build brands that
-              <br />
-              <em className="not-italic text-accent-600 dark:text-accent-400">earn attention</em>
+            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-bold leading-[1.15] tracking-tight text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
+              Build Brands That
+              <br className="hidden md:inline-flex" />
+              &nbsp;
+              <em className="not-italic text-accent-600 dark:text-accent-500  ">Earn Attention</em>
             </h1>
 
-            <p className="text-[1.0625rem] text-primary-500 dark:text-primary-400 leading-[1.7] max-w-[560px] text-left sm:text-center mx-auto mb-0">
+            <p className="text-[clamp(1rem,1.8vw,1.1875rem)] text-primary-500 dark:text-primary-400 leading-[1.75] max-w-[560px] text-left sm:text-center mx-auto mb-0">
               We design, develop, and grow digital products — from pixel-perfect websites to
               complete brand identities and SEO that compounds.
             </p>
@@ -262,24 +277,24 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
             </div>
 
             <div className="pt-6 w-full flex flex-col md:items-center gap-[18px]">
-              <span className="text-[0.78rem] text-primary-400 dark:text-primary-600 tracking-wider uppercase font-medium">
+              <span className="text-[clamp(0.72rem,1.2vw,0.78rem)] leading-none text-primary-400 dark:text-primary-600 tracking-wider uppercase font-medium">
                 Our Partners
               </span>
-              <div className="flex flex-wrap items-center gap-10 md:justify-center opacity-45 dark:opacity-30">
+              <div className="flex flex-wrap items-center gap-10 md:justify-center ">
                 {featuredLogos.map((logo, idx) => (
                   <a
                     key={idx}
                     href={logo.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-opacity hover:opacity-100"
+                    className="transition-all  duration-300 group"
                   >
                     <Image
                       src={logo.src}
                       alt={logo.alt}
                       width={logo.width}
                       height={logo.height}
-                      className="w-8 h-auto md:w-9 object-contain grayscale hover:grayscale-0"
+                      className="w-8 h-auto md:w-9 object-contain grayscale group-hover:grayscale-0 dark:invert group-hover:invert-0"
                     />
                   </a>
                 ))}

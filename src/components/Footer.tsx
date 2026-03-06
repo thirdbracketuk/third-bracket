@@ -29,11 +29,13 @@ const SiteFooter = () => {
       }}
     >
       <FooterSection className="col-span-2 !py-4 md:py-0">
-        <FooterBrand logo={<Logo height={32} className="text-black dark:text-white" />}>
-          <p className="text-primary-600 dark:text-primary-500 text-base ">
+        <FooterBrand
+          logo={<Logo height={24} className="text-secondary-900 dark:text-secondary-100 " />}
+        >
+          <p className="text-primary-600 dark:text-primary-500 text-[clamp(0.81rem,1vw,0.9rem)] leading-relaxed">
             Making the web a better place with Third Bracket Ltd.
           </p>
-          <p className="text-primary-600 dark:text-primary-500 text-base ">
+          <p className="text-primary-600 dark:text-primary-500 text-[clamp(0.81rem,1vw,0.9rem)] leading-relaxed ">
             hello@thirdbracket.co.uk
           </p>
         </FooterBrand>

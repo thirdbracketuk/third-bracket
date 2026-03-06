@@ -672,12 +672,12 @@ const Header: FC = () => {
         theme={{
           background: 'bg-white/88 dark:bg-black/90 backdrop-blur-md backdrop-saturate-[1.8]',
           border:
-            'border-transparent  shadow-[0_1px_0_0_rgba(188,58,91,0.18),0_1px_40px_0_rgba(188,58,91,0.10),0_4px_80px_0_rgba(188,58,91,0.06)] dark:shadow-[0_1px_0_0_rgba(215,93,130,0.22),0_1px_50px_0_rgba(215,93,130,0.12),0_4px_100px_0_rgba(215,93,130,0.07)]',
+            'border-black/[0.03] dark:border-white/[0.05] shadow-[0_1px_2px_rgba(0,0,0,0.05),0_0_0_1px_rgba(0,0,0,0.02)] dark:shadow-[inset_0_1px_0_0_rgba(215,93,130,0.25),0_10px_30px_-10px_rgba(215,93,130,0.15),0_0_0_1px_rgba(215,93,130,0.05)]',
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
         <Navbrand
-          logo={<Logo height={22} className="text-black dark:text-white " />}
+          logo={<Logo height={20} className="text-secondary-900 dark:text-secondary-100 " />}
           href="/"
         ></Navbrand>
 

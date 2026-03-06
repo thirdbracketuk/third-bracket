@@ -36,7 +36,7 @@ export const ClientTestimonials = () => {
     <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
-          <h2 className="text-[clamp(1.7rem,3.5vw,2.4rem)] font-bold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-12 lg:mb-14">
+          <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-bold  tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-12 lg:mb-14">
             Trusted by Early-stage Startups
           </h2>
 
@@ -58,7 +58,7 @@ export const ClientTestimonials = () => {
               >
                 <div className="flex-1  flex flex-col h-full  p-4">
                   <div className="mb-auto">
-                    <blockquote className="dark:bg-gradient-text-dark bg-gradient-text text-transparent bg-clip-text  font-medium text-lg  mb-12 ">
+                    <blockquote className="dark:bg-gradient-text-dark bg-gradient-text text-transparent bg-clip-text  font-normal text-[clamp(1.2rem,2vw,1.4rem)]  mb-12 ">
                       “{item.quote}”
                     </blockquote>
                   </div>

@@ -121,6 +121,15 @@ const config = {
       fontFamily: {
         sans: ['var(--font-roboto)', 'var(--font-noto-bengali)'],
       },
+      animation: {
+        'bounce-x': 'bounce-x 1s ease-in-out infinite',
+      },
+      keyframes: {
+        'bounce-x': {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(3px)' },
+        },
+      },
       boxShadow: {
         // accent-600 = #bc3a5b = rgb(188,58,91)
         'nav-glow':
