@@ -4,6 +4,9 @@ import { designSolutionsItems } from '@/data/navigationData'
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
 import { Metadata } from 'next'
+import { SiTailwindcss, SiElementor, SiHtml5, SiFigma, SiHugo } from 'react-icons/si'
+import { FaCubes, FaVectorSquare, FaBoxOpen, FaIcons, FaPalette } from 'react-icons/fa'
+import { IconType } from 'react-icons'
 
 export const metadata: Metadata = {
   title: 'Design Solutions for Modern Websites, UI Kits & Open Resources',
@@ -16,239 +19,164 @@ export const metadata: Metadata = {
   },
 }
 
+function getSolutionIcon(title: string): IconType {
+  const icons: Record<string, IconType> = {
+    BracketUI: FaCubes,
+    'Elementor Templates': SiElementor,
+    'Tailwindcss Templates': SiTailwindcss,
+    'HTML5 Templates': SiHtml5,
+    'Hugo Theme': SiHugo,
+    'Icon Packs': FaIcons,
+    'SVG Illustrations': FaVectorSquare,
+    'Starter Kit': FaBoxOpen,
+    'UI Kits': FaPalette,
+  }
+  return icons[title] || FaCubes
+}
+
+function getSolutionDescription(title: string): string {
+  const descriptions: Record<string, string> = {
+    BracketUI: 'Explore BracketUI components',
+    'Elementor Templates': 'Browse Elementor templates',
+    'Tailwindcss Templates': 'Browse Tailwind templates',
+    'HTML5 Templates': 'Browse HTML5 templates',
+    'Hugo Theme': 'Explore Hugo themes',
+    'Icon Packs': 'Browse icon packs',
+    'SVG Illustrations': 'Browse SVG illustrations',
+    'Starter Kit': 'Get a starter kit',
+    'UI Kits': 'Browse UI kits',
+  }
+  return descriptions[title] || 'Explore resources'
+}
+
+function getSolutionFeatures(title: string): string[] {
+  const features: Record<string, string[]> = {
+    BracketUI: [
+      'React & Next.js ready',
+      'Tailwind-based',
+      'Dark mode support',
+      'Accessible components',
+    ],
+    'Elementor Templates': [
+      'Drag & drop ready',
+      'Responsive layouts',
+      'WooCommerce compatible',
+      'One-click import',
+    ],
+    'Tailwindcss Templates': [
+      'Utility-first CSS',
+      'Responsive grids',
+      'Dark mode variants',
+      'Copy-paste components',
+    ],
+    'HTML5 Templates': [
+      'Zero dependencies',
+      'Semantic markup',
+      'Cross-browser tested',
+      'SEO optimised',
+    ],
+    'Hugo Theme': [
+      'Static site ready',
+      'Fast build times',
+      'Markdown content',
+      'Multilingual support',
+    ],
+    'Icon Packs': ['SVG format', 'Multiple sizes', 'Consistent style', 'Free to use'],
+    'SVG Illustrations': [
+      'Editable vectors',
+      'Multiple themes',
+      'High resolution',
+      'Commercial license',
+    ],
+    'Starter Kit': [
+      'Pre-configured tools',
+      'ESLint & Prettier',
+      'CI/CD ready',
+      'Deployment scripts',
+    ],
+    'UI Kits': ['Figma source files', 'Design tokens', 'Component library', 'Style guide'],
+  }
+  return features[title] || ['Open source', 'Well documented', 'Actively maintained']
+}
+
+function getSolutionTechnologies(title: string) {
+  const tech: Record<string, { title: string; cto: string }[]> = {
+    BracketUI: [
+      { title: 'Framework', cto: 'React' },
+      { title: 'Styling', cto: 'Tailwind' },
+      { title: 'Types', cto: 'TypeScript' },
+    ],
+    'Elementor Templates': [
+      { title: 'Platform', cto: 'WordPress' },
+      { title: 'Builder', cto: 'Elementor Pro' },
+    ],
+    'Tailwindcss Templates': [
+      { title: 'Styling', cto: 'Tailwind CSS' },
+      { title: 'Framework', cto: 'Next.js / HTML' },
+    ],
+    'HTML5 Templates': [
+      { title: 'Markup', cto: 'HTML5' },
+      { title: 'Styling', cto: 'CSS3' },
+      { title: 'Scripts', cto: 'Vanilla JS' },
+    ],
+    'Hugo Theme': [
+      { title: 'SSG', cto: 'Hugo' },
+      { title: 'Templating', cto: 'Go Templates' },
+    ],
+    'Icon Packs': [
+      { title: 'Format', cto: 'SVG' },
+      { title: 'License', cto: 'MIT' },
+    ],
+    'SVG Illustrations': [
+      { title: 'Format', cto: 'SVG' },
+      { title: 'Tool', cto: 'Figma / AI' },
+    ],
+    'Starter Kit': [
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'CI', cto: 'GitHub Actions' },
+    ],
+    'UI Kits': [
+      { title: 'Design', cto: 'Figma' },
+      { title: 'Tokens', cto: 'Style Dictionary' },
+    ],
+  }
+  return tech[title] || []
+}
+
 const designSolutionsCategory = {
   title: 'Built for Faster, Smarter Websites',
   description:
-    'Use BracketUI and pre built themes to create premium experiences without complex setup.',
+    'Use BracketUI and pre-built templates to create premium experiences without complex setup.',
   solutions: designSolutionsItems.map((item) => ({
     title: item.label,
     description: getSolutionDescription(item.label),
     features: getSolutionFeatures(item.label),
     technologies: getSolutionTechnologies(item.label),
-    image: getSolutionImage(item.label),
+    icon: getSolutionIcon(item.label),
   })),
 }
 
-function getSolutionDescription(title: string): string {
-  const descriptions: Record<string, string> = {
-    'Rapid Fast WordPress':
-      'Lightning-fast WordPress websites optimized for performance and user experience.',
-    'Cloud Migration':
-      'Migrate WordPress sites to cloud infrastructure for better performance and reliability.',
-    'Headless WordPress':
-      'Decouple WordPress backend from frontend for modern, flexible web applications.',
-    'Performant WooCommerce':
-      'High-performance e-commerce solutions built on optimized WooCommerce platforms.',
-    ACM: 'Advanced Content Management solutions with custom fields and flexible content structures.',
-    'Elementor Templates': 'Custom Elementor templates and page builder solutions for WordPress.',
-    'Enterprise Wordpress':
-      'Scalable WordPress solutions designed for enterprise-level requirements.',
-    'Wordpress Multisite':
-      'Multi-site WordPress networks for managing multiple websites from one dashboard.',
-    'LMS Solution':
-      'Learning Management Systems built on WordPress with course and student management.',
-    'Listing Platform':
-      'Directory and listing platforms with advanced search and filtering capabilities.',
-    'Revamp Wordpress':
-      'Modernize existing WordPress sites with performance optimization and design updates.',
-  }
-  return descriptions[title] || 'Custom WordPress solution tailored to your business needs.'
-}
-
-function getSolutionFeatures(title: string): string[] {
-  const features: Record<string, string[]> = {
-    'Rapid Fast WordPress': [
-      'Performance optimization',
-      'Caching setup',
-      'CDN integration',
-      'Image optimization',
-      'Core Web Vitals',
-    ],
-    'Cloud Migration': [
-      'Server migration',
-      'DNS management',
-      'SSL setup',
-      'Performance tuning',
-      'Backup solutions',
-    ],
-    'Headless WordPress': [
-      'REST API setup',
-      'Custom endpoints',
-      'Frontend flexibility',
-      'Performance benefits',
-      'Modern architecture',
-    ],
-    'Performant WooCommerce': [
-      'Speed optimization',
-      'Payment integration',
-      'Inventory management',
-      'Order processing',
-      'Mobile optimization',
-    ],
-    ACM: [
-      'Custom post types',
-      'Advanced custom fields',
-      'Content relationships',
-      'Flexible layouts',
-      'Admin customization',
-    ],
-    'Elementor Templates': [
-      'Custom widgets',
-      'Responsive design',
-      'Template library',
-      'Dynamic content',
-      'Performance optimization',
-    ],
-    'Enterprise Wordpress': [
-      'Scalable architecture',
-      'Security hardening',
-      'Multi-environment setup',
-      'Custom development',
-      'Support & maintenance',
-    ],
-    'Wordpress Multisite': [
-      'Network management',
-      'Shared resources',
-      'User management',
-      'Plugin management',
-      'Theme consistency',
-    ],
-    'LMS Solution': [
-      'Course creation',
-      'Student enrollment',
-      'Progress tracking',
-      'Certificates',
-      'Payment integration',
-    ],
-    'Listing Platform': [
-      'Advanced search',
-      'User submissions',
-      'Payment processing',
-      'Review system',
-      'Map integration',
-    ],
-    'Revamp Wordpress': [
-      'Design modernization',
-      'Performance upgrade',
-      'Security updates',
-      'Mobile optimization',
-      'SEO improvements',
-    ],
-  }
-  return (
-    features[title] || [
-      'Custom development',
-      'Performance optimization',
-      'Security hardening',
-      'Mobile responsive',
-      'SEO ready',
-    ]
-  )
-}
-
-function getSolutionTechnologies(title: string) {
-  const baseTech = [
-    { title: 'CMS', cto: 'WordPress' },
-    { title: 'Server', cto: 'Ubuntu VPS' },
-    { title: 'Web Server', cto: 'Nginx' },
-    { title: 'Database', cto: 'MySQL' },
-  ]
-
-  const specificTech: Record<string, any[]> = {
-    'Rapid Fast WordPress': [
-      ...baseTech,
-      { title: 'Cache', cto: 'Redis' },
-      { title: 'CDN', cto: 'Cloudflare' },
-    ],
-    'Cloud Migration': [
-      ...baseTech,
-      { title: 'Cloud', cto: 'AWS/DigitalOcean' },
-      { title: 'Backup', cto: 'UpdraftPlus' },
-    ],
-    'Headless WordPress': [
-      ...baseTech,
-      { title: 'Frontend', cto: 'Next.js' },
-      { title: 'API', cto: 'REST/GraphQL' },
-    ],
-    'Performant WooCommerce': [
-      ...baseTech,
-      { title: 'E-commerce', cto: 'WooCommerce' },
-      { title: 'Payments', cto: 'Stripe' },
-    ],
-    ACM: [...baseTech, { title: 'Fields', cto: 'ACF Pro' }, { title: 'Builder', cto: 'Gutenberg' }],
-    'Elementor Templates': [
-      ...baseTech,
-      { title: 'Builder', cto: 'Elementor Pro' },
-      { title: 'Templates', cto: 'Custom' },
-    ],
-    'Enterprise Wordpress': [
-      ...baseTech,
-      { title: 'Security', cto: 'Wordfence' },
-      { title: 'Monitoring', cto: 'New Relic' },
-    ],
-    'Wordpress Multisite': [
-      ...baseTech,
-      { title: 'Network', cto: 'Multisite' },
-      { title: 'Management', cto: 'MainWP' },
-    ],
-    'LMS Solution': [
-      ...baseTech,
-      { title: 'LMS', cto: 'LearnDash' },
-      { title: 'Video', cto: 'Vimeo' },
-    ],
-    'Listing Platform': [
-      ...baseTech,
-      { title: 'Listings', cto: 'Custom Post Types' },
-      { title: 'Maps', cto: 'Google Maps' },
-    ],
-    'Revamp Wordpress': [
-      ...baseTech,
-      { title: 'Optimization', cto: 'WP Rocket' },
-      { title: 'Security', cto: 'Sucuri' },
-    ],
-  }
-
-  return specificTech[title] || baseTech
-}
-
-function getSolutionImage(title: string): string {
-  const images: Record<string, string> = {
-    'Rapid Fast WordPress': '/solutions/dam.svg',
-    'Cloud Migration': '/solutions/dam.svg',
-    'Headless WordPress': '/solutions/dam.svg',
-    'Performant WooCommerce': '/solutions/dam.svg',
-    ACM: '/solutions/dam.svg',
-    'Elementor Templates': '/solutions/dam.svg',
-    'Enterprise Wordpress': '/solutions/dam.svg',
-    'Wordpress Multisite': '/solutions/dam.svg',
-    'LMS Solution': '/solutions/dam.svg',
-    'Listing Platform': '/solutions/dam.svg',
-    'Revamp Wordpress': '/solutions/dam.svg',
-  }
-  return images[title] || '/solutions/dam.svg'
-}
-
-export default function WordPressSolutionsPage() {
+export default function DesignSolutionsPage() {
   return (
     <section>
       <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           <PageHeader
             title="Design Solutions"
-            description="Explore open source UI templates, component libraries, SVG assets and ready to use design systems built to simplify bespoke web design and modern website development."
+            description="Explore open source UI templates, component libraries, SVG assets and ready-to-use design systems built to simplify bespoke web design and modern website development."
           />
 
           <CategorySection {...designSolutionsCategory} />
 
           <CTASection
             cover={{
-              src: '/wordpresscto.svg',
-              alt: 'Bracket UI Cover',
+              src: '/webdevcto.svg',
+              alt: 'Design Solutions Cover',
               width: 500,
               height: 500,
             }}
-            title="Ready to Optimize Your WordPress?"
-            description="Let's build a high-performance WordPress solution that delivers exceptional user experience."
+            title="Need a Custom Design System?"
+            description="Let's build a cohesive design foundation tailored to your brand, so your team ships consistent, beautiful interfaces faster."
             primary={{
               label: 'Contact Us',
               href: '/contact',

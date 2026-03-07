@@ -42,7 +42,7 @@ const CTASection = ({
 
             <div className="relative z-10 grid md:grid-cols-[1fr_auto] gap-12 items-center">
               <div>
-                <h2 className="text-[clamp(2.2rem,4.5vw,3.8rem)] tracking-tight leading-tight font-bold   text-primary-950 dark:text-primary-50 mb-3">
+                <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] leading-tightleading-tight font-bold   text-primary-950 dark:text-primary-50 mb-3">
                   {title}
                 </h2>
                 <p className="text-primary-500 dark:text-primary-400 text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed max-w-[460px]">

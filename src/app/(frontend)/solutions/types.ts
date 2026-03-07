@@ -13,6 +13,7 @@ export interface Solution {
   features: string[]
   technologies?: Technologies[]
   image?: string
+  href?: string
 }
 
 export interface SolutionCategory {

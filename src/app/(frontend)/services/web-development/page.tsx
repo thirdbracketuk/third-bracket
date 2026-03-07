@@ -4,30 +4,28 @@ import { webDevelopmentItems } from '@/data/navigationData'
 import { SiNextdotjs, SiWordpress } from 'react-icons/si'
 import {
   FaCode,
-  FaExchangeAlt,
   FaServer,
   FaTachometerAlt,
   FaDatabase,
   FaShoppingCart,
-  FaCog,
   FaChartLine,
-  FaBlog,
   FaBug,
+  FaExchangeAlt,
 } from 'react-icons/fa'
+import { RiLayout5Line } from 'react-icons/ri'
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
 import TechStack from '../TechStack'
 import { Metadata } from 'next'
-import { RiLayout5Line } from 'react-icons/ri'
 
 export const metadata: Metadata = {
   title: 'Website Design, Development & Ecommerce Services',
   description:
-    'Third Bracket’s website development services cover bespoke website design, WordPress, Next.js, ecommerce builds, website redesign services and performance optimisation.',
+    "Third Bracket's website development services cover bespoke website design, WordPress, Next.js, ecommerce builds, website redesign services and performance optimisation.",
   openGraph: {
     title: 'Manchester Web Design & Ecommerce Services',
     description:
-      'Discover Third Bracket’s website development services, including bespoke website design, WordPress, Next.js, ecommerce builds, website redesigns, and optimisation for fast, reliable websites.',
+      "Discover Third Bracket's website development services, including bespoke website design, WordPress, Next.js, ecommerce builds, website redesigns, and optimisation for fast, reliable websites.",
   },
 }
 
@@ -35,7 +33,6 @@ const webDevelopmentCategory = {
   title: 'Fast Website, Delivered Efficiently',
   description:
     'Modern web development solutions using cutting-edge technologies for scalable and maintainable applications.',
-
   illustration: {
     src: '/services/web.svg',
     alt: 'Website & Ecommerce by Third Bracket',
@@ -53,37 +50,38 @@ const webDevelopmentCategory = {
 function getServiceDescription(title: string): string {
   const descriptions: Record<string, string> = {
     'Next.js Development':
-      'Build modern web applications with React and server components for optimal performance.',
+      'Build fast, SEO-optimised web apps with Next.js App Router and React Server Components for top-tier performance.',
     'WordPress Development':
-      'Custom WordPress solutions with modern development practices and optimizations.',
-    'Ecommerce Development':
-      'Build powerful online stores with modern e-commerce platforms and payment integrations.',
-    'Bespoke Web Design': 'Create fully custom website design tailored to your brand and audience.',
+      'Custom WordPress solutions with clean code, bespoke themes, and performance tuning to match your brand and workflow.',
+    'E-commerce Development':
+      'Launch and scale online stores with modern e-commerce platforms, secure payments, and mobile-first design.',
+    'Bespoke Web Design':
+      'Fully custom website design crafted from scratch to reflect your brand, engage your audience, and convert visitors.',
     'Bespoke Web Development':
-      'Our custom full stack web development services are engineered for cost optimization and conversion.',
-    'Website Optimisation': 'Optimize web applications for speed, SEO, and user experience.',
+      'Full-stack custom development engineered for your specific use case — portals, admin panels, or complex web platforms.',
+    'Website Optimisation':
+      'Boost Core Web Vitals, fix performance bottlenecks, and improve SEO signals for a faster, higher-ranking website.',
     'Website Redesign':
-      'Redesign your Next.js or WordPress websites right from your codebase efficiently.',
+      'Modernise your existing Next.js or WordPress site with a clean code-first rebuild that improves UX and performance.',
     'Website Migration':
-      'Upgrade legacy systems to modern technology stacks with minimal disruption.',
+      'Migrate from legacy platforms to modern stacks with minimal disruption and full data integrity.',
     'Website Repair':
-      'Fix WordPress & Next.js errors and bugs from the core with proper documentation.',
+      'Diagnose and fix WordPress and Next.js bugs, broken builds, and deployment issues with clear documentation.',
   }
   return descriptions[title] || 'Professional web development service tailored to your needs.'
 }
 
 function getServiceFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
-    'Next.js Development': ['App Router', 'Server Components', 'Edge Runtime'],
-    'WordPress Development': ['Custom Themes', 'Plugin Development', 'Performance Tuning'],
-    'E-commerce Development': ['Payment Integration', 'Inventory Management', 'Order Processing'],
-    'Bespoke Web Design': ['Custom UI', 'TailwindCSS Component', 'Custom Elementor Design'],
-    'Bespoke Web Development': ['Admin Panel', 'Web Portal', 'CMS Integration'],
-
-    'Website Optimisation': ['Core Web Vitals', 'Caching Strategy', 'Asset Optimization'],
-    'Website Redesign': ['Clean Code', 'Code First', 'CI/CD'],
-    'Website Migration': ['Code Refactoring', 'Platform Migration', 'Tech Stack Updates'],
-    'Website Repair': ['WordPress Error', 'Elementor Error', 'Deployment Error'],
+    'Next.js Development': ['App Router', 'Server Components', 'Edge Runtime', 'ISR & SSG'],
+    'WordPress Development': ['Custom Themes', 'Plugin Development', 'ACF Integration', 'Performance Tuning'],
+    'E-commerce Development': ['Payment Integration', 'Inventory Management', 'WooCommerce', 'Checkout Optimisation'],
+    'Bespoke Web Design': ['Custom UI', 'Tailwind Components', 'Figma Handoff', 'Responsive Design'],
+    'Bespoke Web Development': ['Admin Panel', 'Web Portal', 'CMS Integration', 'REST API'],
+    'Website Optimisation': ['Core Web Vitals', 'Caching Strategy', 'Asset Optimisation', 'Lighthouse Scores'],
+    'Website Redesign': ['Clean Code', 'Code-First Approach', 'CI/CD Setup', 'Design System'],
+    'Website Migration': ['Platform Migration', 'Code Refactoring', 'Tech Stack Upgrade', 'Zero Downtime'],
+    'Website Repair': ['WordPress Errors', 'Deployment Fixes', 'Plugin Conflicts', 'Full Documentation'],
   }
   return features[title] || ['Custom Development', 'Best Practices', 'Quality Assurance']
 }
@@ -93,12 +91,12 @@ function getServiceBadge(title: string): string {
     'Next.js Development': 'Frontend',
     'WordPress Development': 'CMS',
     'E-commerce Development': 'E-commerce',
-    'Bespoke Web Design': 'Backend',
-    'Bespoke Web Development': 'Integration',
-    'Website Optimisation': 'Analytics',
-    'Website Redesign': 'Infrastructure',
-    'Website Migration': 'Performance',
-    'Website Repair': 'Migration',
+    'Bespoke Web Design': 'Design',
+    'Bespoke Web Development': 'Full-Stack',
+    'Website Optimisation': 'Performance',
+    'Website Redesign': 'Redesign',
+    'Website Migration': 'Migration',
+    'Website Repair': 'Support',
   }
   return badges[title] || 'Development'
 }
@@ -112,7 +110,7 @@ function getServiceIcon(title: string) {
     'Bespoke Web Development': FaCode,
     'Website Optimisation': FaChartLine,
     'Website Redesign': FaServer,
-    'Website Migration': FaTachometerAlt,
+    'Website Migration': FaExchangeAlt,
     'Website Repair': FaBug,
   }
   return icons[title] || FaCode

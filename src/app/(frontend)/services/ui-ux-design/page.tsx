@@ -2,16 +2,15 @@ import PageHeader from '@/components/PageHeader'
 import Category from '../Catagory'
 import { uiUxDesignItems } from '@/data/navigationData'
 import {
-  FaPaintBrush,
-  FaDesktop,
-  FaVectorSquare,
-  FaCubes,
-  FaSyncAlt,
-  FaLightbulb,
-  FaPalette,
-  FaMobile,
+  FaCompass,
+  FaFingerprint,
+  FaImages,
   FaPrint,
-  FaDrawPolygon,
+  FaMapMarkerAlt,
+  FaPaintBrush,
+  FaShare,
+  FaBook,
+  FaClipboardCheck,
 } from 'react-icons/fa'
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
@@ -25,17 +24,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Branding & Creative Design Services for Manchester Businesses',
     description:
-      'Boost your brand with Third Bracket’s bespoke logo, graphic, print, social media, and website creative services. Tailored strategies for Manchester businesses.',
+      "Boost your brand with Third Bracket's bespoke logo, graphic, print, social media, and website creative services. Tailored strategies for Manchester businesses.",
   },
 }
 
 const uiUxDesignCategory = {
-  title: 'Brand Strategy that Converts',
+  title: 'Brand & Creative That Sets You Apart',
   description:
-    'We create intuitive and engaging brand creatives that balance aesthetic appeal with functional design principles.',
+    'We create distinctive brand identities and compelling visuals that communicate your value and make a lasting impression across every touchpoint.',
   illustration: {
     src: '/services/ui.svg',
-    alt: 'UI/UX Design Illustration',
+    alt: 'Branding & Creative Illustration',
   },
   stackIcons: TechStack(['SiTailwindcss', 'SiFigma', 'SiAdobeillustrator', 'SiFramer']),
   services: uiUxDesignItems.map((item) => ({
@@ -49,90 +48,94 @@ const uiUxDesignCategory = {
 
 function getServiceDescription(title: string): string {
   const descriptions: Record<string, string> = {
-    'Brand Strategy': 'Create user-centered designs that enhance usability and drive engagement.',
-    'Brand Identity': 'Design modern, responsive websites that reflect your brand identity.',
+    'Brand Strategy':
+      'Define your brand positioning, audience, and messaging with a strategic framework that aligns your identity with your business goals.',
+    'Brand Identity':
+      'Create a cohesive visual identity — logo, colour palette, typography — that reflects who you are and resonates with your customers.',
     'Graphic Design':
-      'Modernize existing websites with contemporary design patterns and best practices.',
-    'Print Design': 'Create engaging visual content for social media platforms and campaigns.',
+      'Striking graphic design for digital and print that communicates clearly, looks professional, and reinforces your brand at every glance.',
+    'Print Design':
+      'Business cards, brochures, flyers, and printed materials designed to make an impact in the physical world.',
     'Business Listing':
-      'Develop comprehensive brand identities including logos, colors, and visual guidelines.',
-    'Website Creative': 'Build scalable design systems with reusable components and patterns.',
-    'Social Media': 'Create compelling visual designs for print and digital media.',
-    'Brand Guidelines': 'Design custom Elementor templates for WordPress websites.',
+      'Consistent, optimised profiles across Google, Bing, and industry directories to build trust and local visibility.',
+    'Website Creative':
+      'Bespoke website design and creative direction that brings your brand to life online with engaging layouts and visuals.',
+    'Social Media':
+      'On-brand social media graphics, templates, and content visuals that maintain consistency across all platforms.',
+    'Brand Guidelines':
+      'A comprehensive brand guidelines document that ensures your visual identity stays consistent no matter who uses it.',
     'Brand Audit':
-      'Design materials for print including brochures, business cards, and marketing materials.',
+      'Review your existing brand assets to identify inconsistencies, gaps, and opportunities to strengthen your visual presence.',
   }
-  return descriptions[title] || 'Professional design service tailored to your brand needs.'
+  return descriptions[title] || 'Professional creative design tailored to your brand needs.'
 }
 
 function getServiceFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
-    'Brand Strategy': ['User Research', 'Interface Design', 'Usability Testing'],
-    'Brand Identity': ['Responsive Design', 'Brand Integration', 'User Experience'],
-    'Graphic Design': ['UI Modernization', 'UX Enhancement', 'Visual Refresh'],
-    'Print Design': ['Platform Optimization', 'Brand Consistency', 'Engagement Focus'],
-    'Business Listing': ['Logo Design', 'Brand Guidelines', 'Visual Identity'],
-    'Website Creative': ['Component Library', 'Style Guide', 'Design Tokens'],
-    'Social Media': ['Visual Communication', 'Brand Alignment', 'Creative Solutions'],
-    'Brand Guidelines': ['WordPress Integration', 'Responsive Templates', 'Custom Layouts'],
-    'Brand Audit': ['Print Optimization', 'High Resolution', 'Brand Consistency'],
+    'Brand Strategy': ['Positioning Framework', 'Audience Research', 'Competitor Analysis', 'Brand Voice'],
+    'Brand Identity': ['Logo Design', 'Colour Palette', 'Typography System', 'Icon Set'],
+    'Graphic Design': ['Digital Assets', 'Campaign Visuals', 'Infographics', 'Illustrations'],
+    'Print Design': ['Business Cards', 'Brochures', 'Flyers', 'Signage'],
+    'Business Listing': ['Google Business', 'Bing Places', 'Directory Profiles', 'NAP Consistency'],
+    'Website Creative': ['UI Design', 'Wireframes', 'Visual Direction', 'Component Design'],
+    'Social Media': ['Post Templates', 'Story Designs', 'Banner Graphics', 'Profile Assets'],
+    'Brand Guidelines': ['Usage Rules', 'Colour Specs', 'Typography Guide', 'Logo Variations'],
+    'Brand Audit': ['Asset Review', 'Consistency Check', 'Gap Analysis', 'Recommendations'],
   }
-  return features[title] || ['Creative Design', 'Brand Focus', 'User-Centered']
+  return features[title] || ['Creative Design', 'Brand Consistency', 'Visual Communication']
 }
 
 function getServiceBadge(title: string): string {
   const badges: Record<string, string> = {
-    'UI/UX Design': 'UX',
-    'Website Design': 'Web Design',
-    'Website Redesign': 'Redesign',
-    'Social Media Design': 'Social',
-    Branding: 'Brand',
-    'Design System Development': 'System',
-    'Graphic Design': 'Graphics',
-    'Elementor Template Design': 'Template',
-    'Printable Design': 'Print',
-    'Wireframe & Prototype': 'Prototype',
+    'Brand Strategy': 'Strategy',
+    'Brand Identity': 'Identity',
+    'Graphic Design': 'Design',
+    'Print Design': 'Print',
+    'Business Listing': 'Listings',
+    'Website Creative': 'Web',
+    'Social Media': 'Social',
+    'Brand Guidelines': 'Guidelines',
+    'Brand Audit': 'Audit',
   }
-  return badges[title] || 'Design'
+  return badges[title] || 'Creative'
 }
 
 function getServiceIcon(title: string) {
   const icons: Record<string, any> = {
-    'UI/UX Design': FaLightbulb,
-    'Website Design': FaDesktop,
-    'Website Redesign': FaSyncAlt,
-    'Social Media Design': FaPalette,
-    Branding: FaPaintBrush,
-    'Design System Development': FaCubes,
-    'Graphic Design': FaVectorSquare,
-    'Elementor Template Design': FaMobile,
-    'Printable Design': FaPrint,
-    'Wireframe & Prototype': FaDrawPolygon,
+    'Brand Strategy': FaCompass,
+    'Brand Identity': FaFingerprint,
+    'Graphic Design': FaImages,
+    'Print Design': FaPrint,
+    'Business Listing': FaMapMarkerAlt,
+    'Website Creative': FaPaintBrush,
+    'Social Media': FaShare,
+    'Brand Guidelines': FaBook,
+    'Brand Audit': FaClipboardCheck,
   }
   return icons[title] || FaPaintBrush
 }
 
-export default function UIUXDesignPage() {
+export default function BrandingCreativePage() {
   return (
     <section>
       <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           <PageHeader
-            title="Branding & Creative Design Services"
-            description="Third Bracket cprovides branding solutions, including brand strategy, graphic design, print materials, social media, and website creative."
+            title="Branding & Creative Design"
+            description="Distinctive brand identities and creative design for Manchester businesses ready to stand out."
           />
 
           <Category {...uiUxDesignCategory} index={0} />
 
           <CTASection
             cover={{
-              src: '/designcto.svg',
-              alt: 'Bracket UI Cover',
+              src: '/uiuxcto.svg',
+              alt: 'Branding & Creative Cover',
               width: 500,
               height: 500,
             }}
-            title="Ready to Transform Your Design?"
-            description="Let's create beautiful, user-centered designs that enhance your brand and drive engagement."
+            title="Ready to Build a Brand That Stands Out?"
+            description="Let's craft a distinctive identity and creative direction that makes your business unforgettable."
             primary={{
               label: 'Contact Us',
               href: '/contact',
