@@ -4,7 +4,8 @@ import configPromise from '@payload-config'
 import { Metadata } from 'next'
 import { Bracket, Card } from '@thirdbracket/bracketui'
 import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
-import { FormBlockCompact } from '@/blocks/Form/FormBlockCompact'
+import { FormBlock } from '@/blocks/Form/Component'
+import Script from 'next/script'
 import PageHeader from '@/components/PageHeader'
 import CTASection from '@/components/CTASection'
 import { FaTachometerAlt, FaStar, FaPhoneAlt, FaSearch, FaCheckCircle } from 'react-icons/fa'
@@ -13,11 +14,11 @@ import { IoCheckmark } from 'react-icons/io5'
 import { RiLayout5Line } from 'react-icons/ri'
 
 export const metadata: Metadata = {
-  title: 'ফ্রি কলব্যাক বুক করুন',
+  title: 'ফ্রি কলব্যাক বুক করুন | Third Bracket',
   description:
     'আপনার ব্যবসার জন্য প্রফেশনাল ওয়েবসাইট ও ব্র্যান্ডিং সলিউশন। DesignRush-এ ম্যানচেস্টারের #১ ওয়েব ডিজাইন এজেন্সি। আজই ফ্রি কলব্যাক বুক করুন।',
   openGraph: {
-    title: 'ফ্রি কলব্যাক বুক করুন',
+    title: 'ফ্রি কলব্যাক বুক করুন | Third Bracket',
     description:
       'আপনার ওয়েবসাইট ও ডিজিটাল ব্র্যান্ডিং নিয়ে বিশেষজ্ঞ পরামর্শ পান। সম্পূর্ণ বিনামূল্যে।',
   },
@@ -152,6 +153,11 @@ export default async function BdCampaignPage() {
 
   return (
     <section>
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+        strategy="beforeInteractive"
+      />
+
       {/* ── PAGE HEADER ── */}
       <PageHeader
         title="আপনার ব্যবসার জন্য একটি প্রফেশনাল ডিজিটাল পরিচয় তৈরি করুন"
@@ -224,7 +230,11 @@ export default async function BdCampaignPage() {
                   <p className="text-sm text-primary-500 dark:text-primary-400 mb-6">
                     আপনার ফোন নম্বর দিন, আমরা কল করব। কোনো চাপ নেই, কোনো খরচ নেই।
                   </p>
-                  <FormBlockCompact form={form} enableIntro={false} />
+                  <FormBlock
+                    form={form}
+                    enableIntro={false}
+                    recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                  />
                   <p className="text-xs text-primary-400 dark:text-primary-500 mt-4 text-center">
                     আপনার তথ্য সম্পূর্ণ নিরাপদ। কোনো স্প্যাম নেই।
                   </p>
@@ -365,7 +375,11 @@ export default async function BdCampaignPage() {
                   <p className="text-sm text-primary-500 dark:text-primary-400 mb-6">
                     শুধু ফোন নম্বর দিন, বাকিটা আমাদের উপর ছেড়ে দিন।
                   </p>
-                  <FormBlockCompact form={form} enableIntro={false} />
+                  <FormBlock
+                    form={form}
+                    enableIntro={false}
+                    recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                  />
                   <p className="text-xs text-primary-400 dark:text-primary-500 mt-4 text-center">
                     আপনার তথ্য সম্পূর্ণ নিরাপদ।
                   </p>
