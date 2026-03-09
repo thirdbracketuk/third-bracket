@@ -1,11 +1,8 @@
 import React from 'react'
-import { getPayload } from 'payload'
-import configPromise from '@payload-config'
 import { Metadata } from 'next'
 import { Bracket, Card } from '@thirdbracket/bracketui'
-import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
-import { FormBlock } from '@/blocks/Form/Component'
 import Script from 'next/script'
+import CallbackForm from '@/components/CallbackForm'
 import PageHeader from '@/components/PageHeader'
 import CTASection from '@/components/CTASection'
 import { FaTachometerAlt, FaStar, FaPhoneAlt, FaSearch, FaCheckCircle } from 'react-icons/fa'
@@ -14,84 +11,16 @@ import { IoCheckmark } from 'react-icons/io5'
 import { RiLayout5Line } from 'react-icons/ri'
 
 export const metadata: Metadata = {
-  title: 'ফ্রি কলব্যাক বুক করুন | Third Bracket',
+  title: 'ফ্রি কলব্যাক রিকুয়েস্ট করুন',
   description:
     'আপনার ব্যবসার জন্য প্রফেশনাল ওয়েবসাইট ও ব্র্যান্ডিং সলিউশন। DesignRush-এ ম্যানচেস্টারের #১ ওয়েব ডিজাইন এজেন্সি। আজই ফ্রি কলব্যাক বুক করুন।',
   openGraph: {
-    title: 'ফ্রি কলব্যাক বুক করুন | Third Bracket',
+    title: 'ফ্রি কলব্যাক রিকুয়েস্ট করুন',
     description:
       'আপনার ওয়েবসাইট ও ডিজিটাল ব্র্যান্ডিং নিয়ে বিশেষজ্ঞ পরামর্শ পান। সম্পূর্ণ বিনামূল্যে।',
   },
   robots: { index: false, follow: false },
 }
-
-async function getFormData() {
-  try {
-    const payload = await getPayload({ config: configPromise })
-    const form = await payload.findByID({
-      collection: 'forms',
-      id: '2',
-    })
-    return form
-  } catch (error) {
-    console.error('Error fetching form data:', error)
-    return null
-  }
-}
-
-const fallbackForm = {
-  id: '2',
-  title: 'Request Bangladesh',
-  fields: [
-    {
-      id: '69a1e289b8a0b284a790cbd8',
-      name: 'phone',
-      label: 'Contact Number',
-      placeholder: 'Type without initial 0 (1765692886)',
-      defaultCountry: 'BD',
-      required: true,
-      width: 50,
-      blockName: 'phone',
-      blockType: 'phone',
-    },
-  ],
-  submitButtonLabel: 'Request a Call',
-  confirmationType: 'message',
-  confirmationMessage: {
-    root: {
-      type: 'root',
-      format: '',
-      indent: 0,
-      version: 1,
-      children: [
-        {
-          tag: 'h2',
-          type: 'heading',
-          format: '',
-          indent: 0,
-          version: 1,
-          children: [
-            {
-              mode: 'normal',
-              text: 'Got it! We will call you soon.',
-              type: 'text',
-              style: '',
-              detail: 0,
-              format: 0,
-              version: 1,
-            },
-          ],
-          direction: 'ltr',
-        },
-      ],
-      direction: 'ltr',
-    },
-  },
-  redirect: { type: 'reference' as const, url: null },
-  emails: [],
-  updatedAt: '',
-  createdAt: '',
-} as unknown as FormType
 
 const painPoints = [
   {
@@ -102,7 +31,7 @@ const painPoints = [
   {
     Icon: MdBrush,
     title: 'ব্র্যান্ড কনসিস্টেন্ট না',
-    desc: 'ফেসবুকে এক লোগো, ওয়েবসাইটে আরেক রং — এই অসামঞ্জস্য কাস্টমারের মনে অজান্তে অবিশ্বাস তৈরি করে।',
+    desc: 'ফেসবুকে এক লোগো, ওয়েবসাইটে আরেক রং - এই অসামঞ্জস্য কাস্টমারের মনে অজান্তে অবিশ্বাস তৈরি করে।',
   },
   {
     Icon: FaSearch,
@@ -117,7 +46,7 @@ const painPoints = [
   {
     Icon: FaStar,
     title: 'ভেরিফাইড রিভিউ নেই',
-    desc: 'আপনি নিজে বললে কাস্টমার বিশ্বাস করে না। Clutch, Google-এ ভেরিফাইড রিভিউ বিশ্বাসযোগ্যতা তৈরি করে।',
+    desc: 'আপনার রিভিউগুলো এখন ছড়িয়ে আছে - কেউ ফেসবুকে দিয়েছে, কেউ গুগলে, কেউ হয়তো অন্য কোথাও',
   },
   {
     Icon: RiLayout5Line,
@@ -130,8 +59,8 @@ const processSteps = [
   {
     Icon: FaPhoneAlt,
     num: '০১',
-    title: 'আমরা কল করি',
-    desc: 'রিকোয়েস্ট করার ২৪ ঘণ্টার মধ্যে আমাদের টিম আপনাকে কল করবে। বাংলায় কথা বলব।',
+    title: 'আমরা কল করবো',
+    desc: 'রিকোয়েস্ট করার ৭২ ঘণ্টার মধ্যে আমাদের টিম আপনাকে কল করবে।',
   },
   {
     Icon: FaSearch,
@@ -143,14 +72,11 @@ const processSteps = [
     Icon: MdRocketLaunch,
     num: '০৩',
     title: 'কাস্টম প্ল্যান',
-    desc: 'আপনার বাজেট ও ব্যবসার সাইজ অনুযায়ী পূর্ণাঙ্গ প্ল্যান দেব। কোনো চাপ নেই।',
+    desc: 'আপনার বাজেট ও ব্যবসার সাইজ অনুযায়ী পূর্ণাঙ্গ প্ল্যান দেব।',
   },
 ]
 
 export default async function BdCampaignPage() {
-  const formData = await getFormData()
-  const form = formData ? (formData as unknown as FormType) : fallbackForm
-
   return (
     <section>
       <Script
@@ -160,8 +86,8 @@ export default async function BdCampaignPage() {
 
       {/* ── PAGE HEADER ── */}
       <PageHeader
-        title="আপনার ব্যবসার জন্য একটি প্রফেশনাল ডিজিটাল পরিচয় তৈরি করুন"
-        description="DesignRush-এ ম্যানচেস্টারের #১ ওয়েব ডিজাইন এজেন্সি। লোগো থেকে ওয়েবসাইট, সব এক সুতোয়। আজই ফ্রি কলব্যাক বুক করুন।"
+        title="আপনার ব্যবসার জন্য একটি ডিজিটাল পরিচয় তৈরি করুন"
+        description="DesignRush-এ ম্যানচেস্টারের #১ ওয়েব ডিজাইন এজেন্সি। আপনার ব্যবসাকে ব্র্যান্ড এ রূপান্তর করতে এখনই কলবেক রিকোয়েস্ট করুন"
       />
 
       {/* ── HERO FORM + TRUST ── */}
@@ -179,10 +105,10 @@ export default async function BdCampaignPage() {
                 {/* Stats row */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {[
-                    { num: '৫৩%', label: 'ভিজিটর চলে যান ৩ সেকেন্ডের বেশি লোড হলে' },
-                    { num: '#১', label: 'DesignRush-এ ম্যানচেস্টার ওয়েব ডিজাইন' },
+                    { num: '১০০+', label: 'ইন্টারনেশনাল প্রজেক্টের অভিজ্ঞতা' },
+                    { num: '#১', label: 'DesignRush-এ ম্যানচেস্টার ভিত্তিক রেঙ্কিং' },
                     { num: '১০০%', label: 'বিনামূল্যে প্রথম পরামর্শ ও অডিট' },
-                    { num: '২৪ঘ', label: 'এর মধ্যে কলব্যাকের প্রতিশ্রুতি' },
+                    { num: '৭২', label: 'ঘন্টার মধ্যে কলব্যাকের প্রতিশ্রুতি' },
                   ].map(({ num, label }) => (
                     <div
                       key={num}
@@ -204,7 +130,7 @@ export default async function BdCampaignPage() {
                     'DesignRush-এ ম্যানচেস্টার #১',
                     'ইন্টারন্যাশনাল ক্লায়েন্ট অভিজ্ঞতা',
                     'সম্পূর্ণ বিনামূল্যে পরামর্শ',
-                    'বাংলায় কথা বলার সুযোগ',
+                    'বাজেট অনুযায়ী প্ল্যান',
                   ].map((item) => (
                     <li
                       key={item}
@@ -221,7 +147,7 @@ export default async function BdCampaignPage() {
               <div className="relative overflow-hidden rounded-3xl p-8 sm:p-10 bg-gradient-to-br from-accent-50/50 via-white to-accent-50/30 dark:from-accent-950/10 dark:via-black dark:to-accent-950/5 border border-accent-200 dark:border-accent-800/30 shadow-[0_0_0_1px_rgba(188,58,91,0.06),0_8px_32px_-8px_rgba(188,58,91,0.12)] dark:shadow-[0_0_0_1px_rgba(215,93,130,0.08),0_8px_40px_-8px_rgba(215,93,130,0.16)]">
                 <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-accent-100/60 dark:bg-accent-900/10 blur-3xl pointer-events-none" />
                 <div className="relative z-10">
-                  <span className="inline-block text-xs font-bold uppercase tracking-wider text-accent-600 dark:text-accent-400 border border-accent-200 dark:border-accent-800 bg-accent-50 dark:bg-accent-950 px-3 py-1 rounded-full mb-4">
+                  <span className="inline-block text-xs font-bold uppercase tracking-wider text-accent-500 dark:text-accent-400 border border-accent-200 dark:border-accent-800 bg-accent-50 dark:bg-accent-950 px-3 py-1 rounded-full mb-4">
                     ফ্রি কলব্যাক অফার
                   </span>
                   <h2 className="text-[clamp(1.4rem,2.5vw,1.8rem)] font-bold tracking-tight text-primary-950 dark:text-primary-50 mb-2">
@@ -230,11 +156,7 @@ export default async function BdCampaignPage() {
                   <p className="text-sm text-primary-500 dark:text-primary-400 mb-6">
                     আপনার ফোন নম্বর দিন, আমরা কল করব। কোনো চাপ নেই, কোনো খরচ নেই।
                   </p>
-                  <FormBlock
-                    form={form}
-                    enableIntro={false}
-                    recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                  />
+                  <CallbackForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
                   <p className="text-xs text-primary-400 dark:text-primary-500 mt-4 text-center">
                     আপনার তথ্য সম্পূর্ণ নিরাপদ। কোনো স্প্যাম নেই।
                   </p>
@@ -251,10 +173,11 @@ export default async function BdCampaignPage() {
           <div className="mx-auto md:max-w-screen-xl">
             <div className="mb-8 md:mb-10 lg:mb-12 grid gap-3 lg:gap-4 lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
               <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-bold tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
-                আপনার ব্যবসা কি এই সমস্যায় আছে?
+                আপনার বিজনেস এর কি একটি ওয়েবসাইট আছে?
               </h2>
               <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 text-left sm:text-center lg:text-left">
-                বাংলাদেশের বেশিরভাগ ব্যবসা এই কারণগুলোর জন্য প্রতিদিন কাস্টমার হারাচ্ছে।
+                হয়তো আছে কিন্তু নিচের সমস্যাগুলোর সমাধান কি আছে? আমাদের কাছে এর সমাধান আছে শুধু একটা
+                কলবেক রিকোয়েস্ট করে যান আমরাই যোগাযোগ করবো আপনাকে।
               </p>
             </div>
 
@@ -375,11 +298,7 @@ export default async function BdCampaignPage() {
                   <p className="text-sm text-primary-500 dark:text-primary-400 mb-6">
                     শুধু ফোন নম্বর দিন, বাকিটা আমাদের উপর ছেড়ে দিন।
                   </p>
-                  <FormBlock
-                    form={form}
-                    enableIntro={false}
-                    recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                  />
+                  <CallbackForm recaptchaSiteKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} />
                   <p className="text-xs text-primary-400 dark:text-primary-500 mt-4 text-center">
                     আপনার তথ্য সম্পূর্ণ নিরাপদ।
                   </p>
