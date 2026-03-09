@@ -52,6 +52,13 @@ export default function CallbackForm({ recaptchaSiteKey }: CallbackFormProps) {
       }
 
       setHasSubmitted(true)
+      if (typeof window !== 'undefined' && typeof (window as any).fbq === 'function') {
+        ;(window as any).fbq('track', 'Lead', {
+          content_name: 'BD Campaign Callback',
+          currency: 'BDT',
+          value: 0,
+        })
+      }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'কিছু একটা সমস্যা হয়েছে। আবার চেষ্টা করুন।')
     } finally {
