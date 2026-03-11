@@ -161,9 +161,17 @@ const config = {
 
         // Heading text gradient — linear works far better than conic for bg-clip-text
         // Light: rich near-black → dark charcoal (crisp, high contrast)
-        'gradient-text': 'linear-gradient(135deg, #1a1a1a 0%, #3b3b3b 60%, #4a4a4a 100%)',
+        // 'gradient-text': 'linear-gradient(135deg, #1a1a1a 0%, #3b3b3b 60%, #4a4a4a 100%)',
         // Dark: pure white → light gray (crisp, no muddy middle tones)
-        'gradient-text-dark': 'linear-gradient(135deg, #ffffff 0%, #e0e0e0 60%, #c4c4c4 100%)',
+        // 'gradient-text-dark': 'linear-gradient(135deg, #ffffff 0%, #e0e0e0 60%, #c4c4c4 100%)',
+
+        'gradient-text':
+          'radial-gradient(ellipse at 30% 0%, #0d0d0d 0%, #2e2e2e 55%, #141414 100%)',
+        'gradient-text-dark':
+          'radial-gradient(ellipse at 30% 0%, #ffffff 0%, #e2e2e2 55%, #f0f0f0 100%)',
+
+        'gradient-accent': 'linear-gradient(120deg, #bc3a5b 0%, #e30b5c 55%, #8e1040 100%)',
+        'gradient-accent-dark': 'linear-gradient(120deg, #ee538f 0%, #f589b3 55%, #ee538f 100%)',
 
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',

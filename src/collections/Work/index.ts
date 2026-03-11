@@ -70,9 +70,30 @@ export const Work: CollectionConfig = {
       required: true,
     },
     {
+      name: 'tagline',
+      type: 'text',
+      label: 'Tagline',
+      admin: {
+        description: 'One-line summary shown under the title on the case study page.',
+        placeholder: 'e.g. Food discovery, reimagined for the UK market.',
+      },
+    },
+    {
       name: 'heroImage',
       type: 'upload',
       relationTo: 'media',
+      admin: {
+        description: 'Shown in the browser mockup. Use a desktop-width screenshot.',
+      },
+    },
+    {
+      name: 'mobileImage',
+      type: 'upload',
+      relationTo: 'media',
+      admin: {
+        description:
+          'Shown in the mobile mockup. Use a portrait/mobile screenshot. Falls back to heroImage if empty.',
+      },
     },
     {
       type: 'tabs',
@@ -103,6 +124,42 @@ export const Work: CollectionConfig = {
         {
           label: 'Project Details',
           fields: [
+            {
+              name: 'accentColor',
+              type: 'text',
+              label: 'Accent Colour',
+              defaultValue: '#bc3a5b',
+              admin: {
+                description:
+                  "Hex colour for this project's highlight (e.g. #E8441A). Defaults to brand rose-red.",
+                placeholder: '#bc3a5b',
+              },
+            },
+            {
+              name: 'outcomes',
+              type: 'array',
+              label: 'Outcome Stats',
+              maxRows: 4,
+              admin: {
+                description: 'Key results shown as large numbers on the case study page.',
+              },
+              fields: [
+                {
+                  name: 'stat',
+                  type: 'text',
+                  label: 'Stat',
+                  admin: { placeholder: 'e.g. 98, 3x, £40k, #1' },
+                  required: true,
+                },
+                {
+                  name: 'label',
+                  type: 'text',
+                  label: 'Label',
+                  admin: { placeholder: 'e.g. Lighthouse Score' },
+                  required: true,
+                },
+              ],
+            },
             {
               name: 'completedAt',
               type: 'date',
@@ -241,7 +298,7 @@ export const Work: CollectionConfig = {
   versions: {
     drafts: {
       autosave: {
-        interval: 100, // We set this interval for optimal live preview
+        interval: 100,
       },
     },
     maxPerDoc: 50,

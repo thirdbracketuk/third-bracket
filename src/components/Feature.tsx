@@ -6,7 +6,7 @@ const cards = [
     name: 'speed',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           Cloud First
         </span>
       ),
@@ -21,7 +21,7 @@ const cards = [
     name: 'cost',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           Infrastructure Engineering
         </span>
       ),
@@ -36,7 +36,7 @@ const cards = [
     name: 'minimal',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           Delivery & Distribution
         </span>
       ),
@@ -50,7 +50,7 @@ const cards = [
     name: 'design',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           Performance Optimization
         </span>
       ),
@@ -63,7 +63,7 @@ const cards = [
     name: 'seo',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           Modern Design
         </span>
       ),
@@ -77,7 +77,7 @@ const cards = [
     name: 'devops',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           SEO Foundation
         </span>
       ),
@@ -90,7 +90,7 @@ const cards = [
     name: 'bracketui',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           Transparency & Security
         </span>
       ),
@@ -104,7 +104,7 @@ const cards = [
     name: 'whitelabel',
     props: {
       header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
           Launch Ready
         </span>
       ),
@@ -122,7 +122,7 @@ export default function CardGrid() {
         <div className="mx-auto md:max-w-screen-xl">
           {/* Header */}
           <div className="mb-8 md:mb-10 lg:mb-12 grid gap-3 lg:gap-4 lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
-            <h2 className=" text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-bold  tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
+            <h2 className=" text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold  tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
               What Makes Third Bracket Ltd Different?
             </h2>
             <p className=" text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 text-left sm:text-center lg:text-left">

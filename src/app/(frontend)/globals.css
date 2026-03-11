@@ -49,11 +49,11 @@ body::before {
 }
 
 .rich-text-content h1 {
-  @apply text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-6;
+  @apply text-[clamp(2.6rem,5.5vw,4.2rem)] font-extrabold leading-[1.15] tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-6;
 }
 
 .rich-text-content h2 {
-  @apply text-2xl lg:text-3xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-5;
+  @apply text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold  tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-5;
 }
 
 .rich-text-content h3 {
@@ -85,6 +85,38 @@ body::before {
 
 .rich-text-content a {
   @apply text-accent-600 dark:text-accent-300 hover:underline;
+}
+
+/* Headings — space above when following content */
+.rich-text-content h2,
+.rich-text-content h3,
+.rich-text-content h4 {
+  @apply mt-10 first:mt-0;
+}
+
+/* Strong / bold */
+.rich-text-content strong {
+  @apply font-semibold text-primary-900 dark:text-primary-100;
+}
+
+/* Inline code */
+.rich-text-content :not(pre) > code {
+  @apply text-sm font-mono px-1.5 py-0.5 rounded bg-primary-100 dark:bg-primary-800/60 text-accent-600 dark:text-accent-300;
+}
+
+/* Blockquote */
+.rich-text-content blockquote {
+  @apply border-l-2 border-accent-400 dark:border-accent-500 pl-5 my-6 italic text-primary-500 dark:text-primary-400;
+}
+
+/* Horizontal rule */
+.rich-text-content hr {
+  @apply border-none h-px bg-primary-100 dark:bg-primary-800 my-10;
+}
+
+/* List item spacing */
+.rich-text-content li {
+  @apply leading-[1.75];
 }
 
 /* Prevents iOS Safari from zooming on input focus.

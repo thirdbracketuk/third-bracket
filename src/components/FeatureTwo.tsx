@@ -627,7 +627,7 @@ export function WhyChooseUsSection() {
         <div className="mx-auto md:max-w-screen-xl">
           {/* Heading & Description */}
           <div className="mb-10 lg:mb-12">
-            <h2 className="mb-4  font-bold  text-[clamp(1.5rem,3vw,2.25rem)] leading-tight tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <h2 className="mb-4    text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               What We Build & Deliver
             </h2>
 
@@ -643,7 +643,7 @@ export function WhyChooseUsSection() {
                       key={group}
                       className={`text-[clamp(0.72rem,1.2vw,0.78rem)] leading-none font-medium px-3 py-1 rounded-full transition-colors duration-300 ${
                         isGroupActive
-                          ? 'text-primary-700 dark:text-primary-300 bg-accent-200 dark:bg-accent-800'
+                          ? 'text-primary-800 dark:text-secondary-100 bg-gradient-accent-dark dark:bg-gradient-accent  '
                           : 'text-primary-400 dark:text-primary-600'
                       }`}
                     >
@@ -673,7 +673,7 @@ export function WhyChooseUsSection() {
                           focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2
                           ${
                             isActive
-                              ? 'bg-primary-950 dark:bg-primary-50 text-white dark:text-primary-950 shadow-sm'
+                              ? 'bg-gradient-text dark:bg-gradient-text-dark text-white dark:text-primary-950 shadow-sm'
                               : 'text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950 border border-primary-200 dark:border-primary-800 [@media(hover:hover)]:hover:border-primary-400 dark:[@media(hover:hover)]:hover:border-primary-600 [@media(hover:hover)]:hover:text-primary-900 dark:[@media(hover:hover)]:hover:text-primary-100'
                           }
                         `}
@@ -706,7 +706,7 @@ export function WhyChooseUsSection() {
                 href={href}
                 isIcon
                 theme={{
-                  background: 'bg-white dark:bg-secondary-950',
+                  background: 'bg-white dark:bg-black',
                   border:
                     'border-opacity-30 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
                   text: 'text-primary-500 dark:text-primary-600 leading-[1.45] font-normal last:max-w-3xl',
@@ -719,7 +719,7 @@ export function WhyChooseUsSection() {
                   </div>
                 }
                 header={
-                  <span className="font-semibold bg-gradient-text tracking-tight text-[clamp(1.2rem,2vw,1.4rem)] dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2">
+                  <span className="font-bold bg-gradient-text dark:bg-gradient-text-dark   text-transparent bg-clip-text mb-2">
                     {header}
                   </span>
                 }

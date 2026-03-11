@@ -222,11 +222,13 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               </svg>
             </Link>
 
-            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-bold leading-[1.15] tracking-tight text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
+            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-extrabold leading-[1.15] tracking-tight text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
               Build Brands That
               <br className="hidden md:inline-flex" />
               &nbsp;
-              <em className="not-italic text-accent-600 dark:text-accent-500  ">Earn Attention</em>
+              <em className="not-italic bg-gradient-accent dark:bg-gradient-accent-dark text-transparent bg-clip-text ">
+                Earn Attention
+              </em>
             </h1>
 
             <p className="text-[clamp(1rem,1.8vw,1.1875rem)] text-primary-500 dark:text-primary-400 leading-[1.75] max-w-[560px] text-left sm:text-center mx-auto mb-0">
@@ -239,7 +241,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                 size="md"
                 onClick={() => setIsFormOpen(true)}
                 theme={{
-                  background: 'bg-primary-950 dark:bg-primary-50',
+                  background: 'bg-gradient-text dark:bg-gradient-text-dark',
                   hoverBackground:
                     '[@media(hover:hover)]:hover:bg-primary-800 dark:[@media(hover:hover)]:hover:bg-primary-200 [@media(hover:hover)]:hover:-translate-y-[1px]',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',

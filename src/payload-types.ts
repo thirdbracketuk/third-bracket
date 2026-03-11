@@ -461,7 +461,18 @@ export interface Blog {
 export interface Work {
   id: number;
   title: string;
+  /**
+   * One-line summary shown under the title on the case study page.
+   */
+  tagline?: string | null;
+  /**
+   * Shown in the browser mockup. Use a desktop-width screenshot.
+   */
   heroImage?: (number | null) | Media;
+  /**
+   * Shown in the mobile mockup. Use a portrait/mobile screenshot. Falls back to heroImage if empty.
+   */
+  mobileImage?: (number | null) | Media;
   content: {
     root: {
       type: string;
@@ -477,6 +488,20 @@ export interface Work {
     };
     [k: string]: unknown;
   };
+  /**
+   * Hex colour for this project's highlight (e.g. #E8441A). Defaults to brand rose-red.
+   */
+  accentColor?: string | null;
+  /**
+   * Key results shown as large numbers on the case study page.
+   */
+  outcomes?:
+    | {
+        stat: string;
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
   completedAt?: string | null;
   agency?: (number | User)[] | null;
   categories?: (number | Category)[] | null;
@@ -1437,8 +1462,18 @@ export interface BlogSelect<T extends boolean = true> {
  */
 export interface WorkSelect<T extends boolean = true> {
   title?: T;
+  tagline?: T;
   heroImage?: T;
+  mobileImage?: T;
   content?: T;
+  accentColor?: T;
+  outcomes?:
+    | T
+    | {
+        stat?: T;
+        label?: T;
+        id?: T;
+      };
   completedAt?: T;
   agency?: T;
   categories?: T;
@@ -2045,7 +2080,7 @@ export interface TaskSchedulePublish {
  * via the `definition` "BannerBlock".
  */
 export interface BannerBlock {
-  style: 'info' | 'warning' | 'error' | 'success';
+  style: 'note' | 'tip' | 'quote' | 'highlight';
   content: {
     root: {
       type: string;
