@@ -222,7 +222,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               </svg>
             </Link>
 
-            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-extrabold leading-[1.15] tracking-tight text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
+            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-extrabold leading-[1.15]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
               Build Brands That
               <br className="hidden md:inline-flex" />
               &nbsp;

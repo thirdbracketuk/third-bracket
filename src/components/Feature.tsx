@@ -122,7 +122,7 @@ export default function CardGrid() {
         <div className="mx-auto md:max-w-screen-xl">
           {/* Header */}
           <div className="mb-8 md:mb-10 lg:mb-12 grid gap-3 lg:gap-4 lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
-            <h2 className=" text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold  tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
+            <h2 className=" text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold   bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right">
               What Makes Third Bracket Ltd Different?
             </h2>
             <p className=" text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 text-left sm:text-center lg:text-left">

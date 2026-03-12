@@ -627,7 +627,7 @@ export function WhyChooseUsSection() {
         <div className="mx-auto md:max-w-screen-xl">
           {/* Heading & Description */}
           <div className="mb-10 lg:mb-12">
-            <h2 className="mb-4    text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold tracking-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <h2 className="mb-4    text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold  bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               What We Build & Deliver
             </h2>
 
@@ -714,7 +714,10 @@ export function WhyChooseUsSection() {
                     '[@media(hover:hover)]:hover:border-opacity-50 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
                 }}
                 cover={
-                  <div className="size-14 mb-4 flex items-center justify-center border border-primary-100 dark:border-primary-900 rounded-lg bg-gradient-secondary-dark dark:bg-gradient-secondary">
+                  <div
+                    // className="size-14 mb-4 flex items-center justify-center border border-primary-100 dark:border-primary-900 rounded-lg bg-gradient-secondary-dark dark:bg-gradient-secondary"
+                    className="size-14  flex items-center justify-center border border-primary-100 dark:border-primary-900 rounded-lg "
+                  >
                     <Icon size={24} className="text-secondary-700 dark:text-secondary-300" />
                   </div>
                 }
