@@ -50,11 +50,20 @@ export default function CallbackForm({ recaptchaSiteKey }: CallbackFormProps) {
         const data = await res.json()
         throw new Error(data?.errors?.[0]?.message || 'Something went wrong.')
       }
-
+      //FB Pixel
       setHasSubmitted(true)
       if (typeof window !== 'undefined' && typeof (window as any).fbq === 'function') {
         ;(window as any).fbq('track', 'Lead', {
           content_name: 'BD Campaign Callback',
+          currency: 'BDT',
+          value: 0,
+        })
+      }
+      //GA4
+      if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+        ;(window as any).gtag('event', 'generate_lead', {
+          event_category: 'BD Campaign',
+          event_label: 'Callback Form',
           currency: 'BDT',
           value: 0,
         })
