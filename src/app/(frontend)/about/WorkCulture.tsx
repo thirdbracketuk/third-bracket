@@ -37,7 +37,7 @@ export default function WorkCulture() {
             Our Work Culture
           </h2>
           <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-400 mb-6">
-            At Third Bracket, we foster a culture of creativity, collaboration, and continuous
+            At thirdbracket, we foster a culture of creativity, collaboration, and continuous
             learning. We believe that happy team members create better products and deliver better
             service.
           </p>
@@ -49,7 +49,7 @@ export default function WorkCulture() {
         <div className="flex justify-center">
           <Image
             src="/webdev.svg"
-            alt="Third Bracket Work Culture"
+            alt="thirdbracket Work Culture"
             width={500}
             height={400}
             className="max-w-full h-auto"

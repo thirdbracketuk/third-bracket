@@ -13,7 +13,7 @@ const projects = [
   },
   {
     name: 'MyStoreo',
-    description: 'A modern ordering application developed by Third Bracket Ltd',
+    description: 'A modern ordering application developed by thirdbracket',
     stars: 85,
     url: 'https://github.com/thirdbracketuk/MyStoreo',
   },

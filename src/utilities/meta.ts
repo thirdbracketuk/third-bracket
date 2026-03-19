@@ -39,7 +39,7 @@ export const Settings = {
   },
   twitter: {
     card: 'summary_large_image' as const,
-    title: 'Trusted Web Design & Development Services in the UK | Third Bracket Ltd',
+    title: 'Trusted Web Design & Development Services in the UK | thirdbracket',
     description: description,
     site: twitterhandle,
     images: [

@@ -14,7 +14,7 @@
 //   {
 //     client: 'Ifty Warid',
 //     role: 'Founder',
-//     quote: 'Third Bracket Ltd delivered a blazing-fast site that exceeded expectations.',
+//     quote: 'thirdbracket delivered a blazing-fast site that exceeded expectations.',
 //     logo: '/jhungry.svg',
 //   },
 //   {

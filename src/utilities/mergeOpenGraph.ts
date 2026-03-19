@@ -9,8 +9,8 @@ const defaultOpenGraph: Metadata['openGraph'] = {
       url: `${getServerSideURL()}/og.webp`,
     },
   ],
-  siteName: 'Next.js Agency - Third Bracket Ltd',
-  title: 'Next.js Agency - Third Bracket Ltd',
+  siteName: 'Next.js Agency - thirdbracket',
+  title: 'Next.js Agency - thirdbracket',
 }
 
 export const mergeOpenGraph = (og?: Metadata['openGraph']): Metadata['openGraph'] => {

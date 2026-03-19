@@ -11,13 +11,13 @@ import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
 
 export const metadata: Metadata = {
   // metadataBase: new URL(Settings.metadataBase),
-  title: 'Contact Third Bracket Ltd, Start Your Project Today',
+  title: 'Contact thirdbracket, Start Your Project Today',
   description:
-    'Get in touch with Third Bracket Ltd to discuss your website, ecommerce or digital project.',
+    'Get in touch with thirdbracket to discuss your website, ecommerce or digital project.',
   openGraph: {
     title: 'Contact Us, Start Your Project or Ask a Question',
     description:
-      'Send a message to Third Bracket Ltd and tell us about your project, idea or challenge. A simple form to start clear, honest conversations.',
+      'Send a message to thirdbracket and tell us about your project, idea or challenge. A simple form to start clear, honest conversations.',
   },
 }
 
@@ -89,7 +89,7 @@ export default async function ContactPage() {
         <div className="md:max-w-screen-xl mx-auto">
           {/* Structured data now in layout.tsx */}
           <PageHeader
-            title="Contact Third Bracket Ltd"
+            title="Contact thirdbracket"
             description="Use the form below to tell us what you need help with."
           />
           <div className="">

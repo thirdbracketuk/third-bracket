@@ -11,9 +11,9 @@ import { IconType } from 'react-icons'
 export const metadata: Metadata = {
   title: 'Design Solutions for Modern Websites, UI Kits & Open Resources',
   description:
-    'Open source design resources from Third Bracket, including UI kits, templates, icons and component libraries to build bespoke websites faster and cleaner.',
+    'Open source design resources from thirdbracket, including UI kits, templates, icons and component libraries to build bespoke websites faster and cleaner.',
   openGraph: {
-    title: 'Design Solutions, UI Kits & Open Source Templates by Third Bracket',
+    title: 'Design Solutions, UI Kits & Open Source Templates by thirdbracket',
     description:
       'Free and open source UI kits, templates, SVG icons and component libraries to speed up bespoke web design and modern website builds.',
   },

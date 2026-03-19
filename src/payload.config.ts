@@ -44,8 +44,8 @@ export default buildConfig({
     },
     meta: {
       titleSuffix: '- Admin Panel', // Adds a suffix to the default title
-      title: 'Third Bracket Ltd', // Overrides the entire title
-      description: 'This is the administration panel for my application.',
+      title: 'thirdbracket', // Overrides the entire title
+      description: 'Admin panel for thirdbracket',
 
       icons: [
         {
@@ -70,7 +70,7 @@ export default buildConfig({
       // beforeDashboard: ['@/components/BeforeDashboard'],
       graphics: {
         Icon: '/components/payload/Icon/index.tsx#Icon',
-        Logo: '/components/payload/Logo/index.tsx#Logo',
+        Logo: '/components/payload/Logo/AdminLogo.tsx#Logo',
       },
     },
 

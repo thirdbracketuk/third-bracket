@@ -5,7 +5,7 @@ const roadmapItems = [
   {
     year: '2019',
     title: 'Foundation',
-    description: 'Third Bracket was founded with a focus on modern web development.',
+    description: 'thirdbracket was founded with a focus on modern web development.',
   },
   {
     year: '2020',
@@ -43,7 +43,7 @@ export default function Roadmap() {
           Our Journey
         </h2>
         <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light text-primary-600 dark:text-primary-400 max-w-2xl mx-auto">
-          The evolution of Third Bracket from inception to present day
+          The evolution of thirdbracket from inception to present day
         </p>
       </div>
 

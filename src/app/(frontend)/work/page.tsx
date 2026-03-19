@@ -14,7 +14,7 @@
 // export const metadata: Metadata = {
 //   title: 'Work and Case Studies, Real Projects and Results',
 //   description:
-//     'Explore real client projects by Third Bracket, including web design, ecommerce, SEO, branding and platform builds, showing real business results.',
+//     'Explore real client projects by thirdbracket, including web design, ecommerce, SEO, branding and platform builds, showing real business results.',
 //   openGraph: {
 //     title: 'Real Work, Case Studies and Proven Results',
 //     description:
@@ -105,7 +105,7 @@ import WorkCapabilities from './WorkCapabilities'
 export const metadata: Metadata = {
   title: 'Work and Case Studies, Real Projects and Results',
   description:
-    'Explore real client projects by Third Bracket, including web design, ecommerce, SEO, branding and platform builds, showing real business results.',
+    'Explore real client projects by thirdbracket, including web design, ecommerce, SEO, branding and platform builds, showing real business results.',
   openGraph: {
     title: 'Real Work, Case Studies and Proven Results',
     description:

@@ -8,7 +8,7 @@ const team = [
   {
     name: 'Abdul Malik',
     role: 'Founder & Director',
-    bio: 'Founder of Third Bracket & Habiganj Properties Ltd',
+    bio: 'Founder of thirdbracket',
     image: '/malik.svg',
     social: {
       linkedin: 'https://linkedin.com/',
@@ -28,7 +28,7 @@ const team = [
   {
     name: 'Musabbir Sagar',
     role: 'Chief Executive Officer',
-    bio: 'Founder of Third Bracket, NomadGang, ProductsofBangladesh and biggest contributor to open source with things like Bracket UI. ',
+    bio: 'Founder of thirdbracket, NomadGang, ProductsofBangladesh and biggest contributor to open source with things like Bracket UI. ',
     image: '/sagar.svg',
     social: {
       linkedin: 'https://my.linkedin.com/in/musabbirsagar',
@@ -45,7 +45,7 @@ export default function Team() {
           Our Team
         </h2>
         <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light text-primary-600 dark:text-primary-400 max-w-2xl mx-auto">
-          Meet the talented individuals behind Third Bracket&apos;s success
+          Meet the talented individuals behind thirdbracket&apos;s success
         </p>
       </div>
 

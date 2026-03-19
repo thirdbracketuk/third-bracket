@@ -20,11 +20,11 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'SEO and Digital Marketing Services Manchester',
   description:
-    'Third Bracket offers SEO and digital marketing services in Manchester, including local SEO, content marketing, email campaigns, social media, and PPC for business growth.',
+    'thirdbracket offers SEO and digital marketing services in Manchester, including local SEO, content marketing, email campaigns, social media, and PPC for business growth.',
   openGraph: {
     title: 'SEO & Digital Marketing Services for Manchester Businesses',
     description:
-      "Boost your business online with Third Bracket's SEO, local SEO, content marketing, email campaigns, social media, and PPC services tailored for Manchester.",
+      "Boost your business online with thirdbracket's SEO, local SEO, content marketing, email campaigns, social media, and PPC services tailored for Manchester.",
   },
 }
 
@@ -67,7 +67,9 @@ function getServiceDescription(title: string): string {
     'Social Media Marketing':
       'Grow your brand on the right platforms with consistent content, community management, and performance tracking.',
   }
-  return descriptions[title] || 'Professional digital marketing service to grow your online presence.'
+  return (
+    descriptions[title] || 'Professional digital marketing service to grow your online presence.'
+  )
 }
 
 function getServiceFeatures(title: string): string[] {

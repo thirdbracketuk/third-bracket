@@ -20,11 +20,11 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Branding & Creative Design Services Manchester',
   description:
-    'Third Bracket delivers bespoke brand strategy, logo and graphic design, print, social media, and website creative for Manchester businesses seeking standout identity.',
+    'thirdbracket delivers bespoke brand strategy, logo and graphic design, print, social media, and website creative for Manchester businesses seeking standout identity.',
   openGraph: {
     title: 'Branding & Creative Design Services for Manchester Businesses',
     description:
-      "Boost your brand with Third Bracket's bespoke logo, graphic, print, social media, and website creative services. Tailored strategies for Manchester businesses.",
+      "Boost your brand with thirdbracket's bespoke logo, graphic, print, social media, and website creative services. Tailored strategies for Manchester businesses.",
   },
 }
 
@@ -72,7 +72,12 @@ function getServiceDescription(title: string): string {
 
 function getServiceFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
-    'Brand Strategy': ['Positioning Framework', 'Audience Research', 'Competitor Analysis', 'Brand Voice'],
+    'Brand Strategy': [
+      'Positioning Framework',
+      'Audience Research',
+      'Competitor Analysis',
+      'Brand Voice',
+    ],
     'Brand Identity': ['Logo Design', 'Colour Palette', 'Typography System', 'Icon Set'],
     'Graphic Design': ['Digital Assets', 'Campaign Visuals', 'Infographics', 'Illustrations'],
     'Print Design': ['Business Cards', 'Brochures', 'Flyers', 'Signage'],

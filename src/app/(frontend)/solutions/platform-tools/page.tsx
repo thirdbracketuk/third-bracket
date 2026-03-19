@@ -18,7 +18,7 @@ import { IconType } from 'react-icons'
 export const metadata: Metadata = {
   title: 'Platforms and Tools for Custom Web Development and Portals',
   description:
-    'Free web platforms and open source tools by Third Bracket, including custom admin panels, CMS integrations, Next.js starters and VPS deployments.',
+    'Free web platforms and open source tools by thirdbracket, including custom admin panels, CMS integrations, Next.js starters and VPS deployments.',
   openGraph: {
     title: 'Open Source Platforms and Web Tools for Custom Development',
     description:
@@ -58,11 +58,31 @@ function getSolutionDescription(title: string): string {
 
 function getSolutionFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
-    'Next.js Starter': ['App Router setup', 'TypeScript configured', 'Tailwind CSS', 'ESLint & Prettier'],
-    'PayloadCMS Starter': ['PayloadCMS 3.x', 'MongoDB or Postgres', 'REST & GraphQL API', 'Admin UI included'],
+    'Next.js Starter': [
+      'App Router setup',
+      'TypeScript configured',
+      'Tailwind CSS',
+      'ESLint & Prettier',
+    ],
+    'PayloadCMS Starter': [
+      'PayloadCMS 3.x',
+      'MongoDB or Postgres',
+      'REST & GraphQL API',
+      'Admin UI included',
+    ],
     'Notion Blog': ['Notion as CMS', 'Static generation', 'ISR support', 'MDX rendering'],
-    'CMS Integration': ['Headless CMS setup', 'API endpoints', 'Content modelling', 'Webhook support'],
-    'Geo Redirect': ['IP geolocation', 'Country-based routing', 'Edge-ready', 'No latency overhead'],
+    'CMS Integration': [
+      'Headless CMS setup',
+      'API endpoints',
+      'Content modelling',
+      'Webhook support',
+    ],
+    'Geo Redirect': [
+      'IP geolocation',
+      'Country-based routing',
+      'Edge-ready',
+      'No latency overhead',
+    ],
     'Admin Panel': ['Role-based access', 'Custom dashboard', 'Data tables', 'Form builders'],
     'VPS Deployment': ['Nginx config', 'SSL setup', 'PM2 process manager', 'Zero-downtime deploys'],
     'API Boilerplate': ['Express / Hono', 'Auth middleware', 'Rate limiting', 'OpenAPI docs'],
@@ -73,15 +93,51 @@ function getSolutionFeatures(title: string): string[] {
 
 function getSolutionTechnologies(title: string) {
   const tech: Record<string, { title: string; cto: string }[]> = {
-    'Next.js Starter': [{ title: 'Framework', cto: 'Next.js' }, { title: 'Styles', cto: 'Tailwind' }, { title: 'Deploy', cto: 'Vercel' }],
-    'PayloadCMS Starter': [{ title: 'CMS', cto: 'PayloadCMS' }, { title: 'DB', cto: 'Postgres' }, { title: 'API', cto: 'REST/GraphQL' }],
-    'Notion Blog': [{ title: 'CMS', cto: 'Notion' }, { title: 'Framework', cto: 'Next.js' }, { title: 'Cache', cto: 'ISR' }],
-    'CMS Integration': [{ title: 'CMS', cto: 'Headless' }, { title: 'API', cto: 'REST' }, { title: 'Auth', cto: 'JWT' }],
-    'Geo Redirect': [{ title: 'Runtime', cto: 'Edge' }, { title: 'Data', cto: 'MaxMind' }, { title: 'Platform', cto: 'Vercel/CF' }],
-    'Admin Panel': [{ title: 'Framework', cto: 'Next.js' }, { title: 'UI', cto: 'shadcn/ui' }, { title: 'DB', cto: 'Prisma' }],
-    'VPS Deployment': [{ title: 'Server', cto: 'Ubuntu VPS' }, { title: 'Web', cto: 'Nginx' }, { title: 'Process', cto: 'PM2' }],
-    'API Boilerplate': [{ title: 'Runtime', cto: 'Node.js' }, { title: 'Framework', cto: 'Express' }, { title: 'Docs', cto: 'Swagger' }],
-    'Auth Starter': [{ title: 'Auth', cto: 'NextAuth' }, { title: 'DB', cto: 'Prisma' }, { title: 'Types', cto: 'TypeScript' }],
+    'Next.js Starter': [
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'Styles', cto: 'Tailwind' },
+      { title: 'Deploy', cto: 'Vercel' },
+    ],
+    'PayloadCMS Starter': [
+      { title: 'CMS', cto: 'PayloadCMS' },
+      { title: 'DB', cto: 'Postgres' },
+      { title: 'API', cto: 'REST/GraphQL' },
+    ],
+    'Notion Blog': [
+      { title: 'CMS', cto: 'Notion' },
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'Cache', cto: 'ISR' },
+    ],
+    'CMS Integration': [
+      { title: 'CMS', cto: 'Headless' },
+      { title: 'API', cto: 'REST' },
+      { title: 'Auth', cto: 'JWT' },
+    ],
+    'Geo Redirect': [
+      { title: 'Runtime', cto: 'Edge' },
+      { title: 'Data', cto: 'MaxMind' },
+      { title: 'Platform', cto: 'Vercel/CF' },
+    ],
+    'Admin Panel': [
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'UI', cto: 'shadcn/ui' },
+      { title: 'DB', cto: 'Prisma' },
+    ],
+    'VPS Deployment': [
+      { title: 'Server', cto: 'Ubuntu VPS' },
+      { title: 'Web', cto: 'Nginx' },
+      { title: 'Process', cto: 'PM2' },
+    ],
+    'API Boilerplate': [
+      { title: 'Runtime', cto: 'Node.js' },
+      { title: 'Framework', cto: 'Express' },
+      { title: 'Docs', cto: 'Swagger' },
+    ],
+    'Auth Starter': [
+      { title: 'Auth', cto: 'NextAuth' },
+      { title: 'DB', cto: 'Prisma' },
+      { title: 'Types', cto: 'TypeScript' },
+    ],
   }
   return tech[title] || []
 }

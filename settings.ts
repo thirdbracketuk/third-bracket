@@ -4,9 +4,9 @@ export const url = 'https://www.thirdbracket.co.uk'
 export const gtm = 'GTM-5LLRMTFW'
 export const gtmconnected = true
 
-export const sitename = 'Third Bracket Ltd'
+export const sitename = 'thirdbracket'
 export const description =
-  'Third Bracket Ltd, a Manchester-based digital agency, helps businesses build strong brands and grow their digital presence.'
+  'thirdbracket, a Manchester-based digital agency, helps businesses build strong brands and grow their digital presence.'
 export const keywords = [
   'email marketing agency',
   'seo marketing agency manchester',
@@ -77,10 +77,10 @@ export const keywords = [
   'website design for solicitors',
 ]
 export const urlimage = '/og.webp'
-export const imagealt = 'Bespoke Web Design, SEO & Branding in Manchester | Third Bracket'
+export const imagealt = 'Bespoke Web Design, SEO & Branding in Manchester | thirdbracket'
 export const twitterhandle = '@thirdbracketltd'
 
-export const companyname = 'Third Bracket Ltd'
+export const companyname = 'thirdbracket'
 export const companylink = 'https://www.thirdbracket.co.uk'
 
 export const socialLinks = {
@@ -111,7 +111,7 @@ export const faqData: FAQItem[] = [
       'Yes. For clients who prefer easy content editing, we build fast and modern websites using WordPress and Elementor — fully responsive and SEO-optimized.',
   },
   {
-    question: 'Why choose a Next.js web development agency like Third Bracket?',
+    question: 'Why choose a Next.js web development agency like thirdbracket?',
     answer:
       'Next.js is perfect for businesses that need speed, scalability, and SEO. As a UK-based agency, we specialize in building modern websites that perform well and rank high.',
   },

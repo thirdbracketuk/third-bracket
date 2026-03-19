@@ -5,7 +5,7 @@ import { Bracket } from '@thirdbracket/bracketui'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'Read our Privacy Policy to understand how Third Bracket Ltd collects, uses, and protects your personal data.',
+    'Read our Privacy Policy to understand how thirdbracket collects, uses, and protects your personal data.',
 }
 
 export default function PrivacyPolicy() {
@@ -21,10 +21,10 @@ export default function PrivacyPolicy() {
           {/* Intro */}
           <div className="space-y-4">
             <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light">
-              This Privacy Notice for <strong>Third Bracket Ltd</strong> (&apos;we&apos;,
-              &apos;us&apos;, or &apos;our&apos;), describes how and why we might access, collect,
-              store, use, and/or share (&apos;process&apos;) your personal information when you use
-              our services (&apos;Services&apos;), including when you:
+              This Privacy Notice for <strong>thirdbracket</strong> (&apos;we&apos;, &apos;us&apos;,
+              or &apos;our&apos;), describes how and why we might access, collect, store, use,
+              and/or share (&apos;process&apos;) your personal information when you use our services
+              (&apos;Services&apos;), including when you:
             </p>
             <ul className="list-disc pl-5 space-y-2 text-base/[1.6] md:text-lg/[1.75rem] font-light">
               <li>
@@ -436,7 +436,7 @@ export default function PrivacyPolicy() {
               or contact us by post at:
             </p>
             <address className="not-italic text-base/[1.6] md:text-lg/[1.75rem] font-light mt-2">
-              <strong>Third Bracket Ltd</strong>
+              <strong>thirdbracket</strong>
               <br />
               Nowab Manjil, Town Hall Road
               <br />

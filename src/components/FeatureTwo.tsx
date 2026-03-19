@@ -27,7 +27,7 @@
 //     header: 'Custom Web Development',
 //     href: '/services',
 //     description:
-//       'Third Bracket Ltd offers custom web development with Next.js - built for speed and advanced functionalities.',
+//       'thirdbracket offers custom web development with Next.js - built for speed and advanced functionalities.',
 //   },
 //   {
 //     icon: RiWordpressLine,
@@ -42,7 +42,7 @@
 //     header: 'Tailwind UI Design',
 //     href: '/services',
 //     description:
-//       'At Third Bracket Ltd, we craft clean, responsive UI designs with Tailwind CSS — focused on speed, clarity and modern patterns.',
+//       'At thirdbracket, we craft clean, responsive UI designs with Tailwind CSS — focused on speed, clarity and modern patterns.',
 //   },
 
 //   {
@@ -85,7 +85,7 @@
 //               What We Build & Deliver
 //             </h2>
 //             <p className=" text-primary-500  text-base/7  lg:text-[1.15rem]/8  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
-//               From modern websites to tailored systems, Third Bracket Ltd help UK businesses thrive
+//               From modern websites to tailored systems, thirdbracket help UK businesses thrive
 //               with reliable, high-performance web development.
 //             </p>
 //           </div>
@@ -689,8 +689,8 @@ export function WhyChooseUsSection() {
 
             {/* Cards Grid */}
             <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 text-left sm:mx-auto md:text-center max-w-lg md:max-w-2xl lg:max-w-5xl">
-              From modern websites to tailored systems, Third Bracket Ltd help UK businesses thrive
-              with reliable, high-performance web development.
+              From modern websites to tailored systems, thirdbracket help UK businesses thrive with
+              reliable, high-performance web development.
             </p>
           </div>
           <div

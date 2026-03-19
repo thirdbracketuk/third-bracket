@@ -33,7 +33,7 @@ const SiteFooter = () => {
           logo={<Logo height={24} className="text-secondary-900 dark:text-secondary-100 " />}
         >
           <p className="text-primary-600 dark:text-primary-500 text-[clamp(0.81rem,1vw,0.9rem)] leading-relaxed">
-            Making the web a better place with Third Bracket Ltd.
+            Making the web a better place with thirdbracket.
           </p>
           <p className="text-primary-600 dark:text-primary-500 text-[clamp(0.81rem,1vw,0.9rem)] leading-relaxed ">
             hello@thirdbracket.co.uk
@@ -225,10 +225,7 @@ const SiteFooter = () => {
       </FooterSection> */}
 
       <FooterBottom>
-        <FooterText>
-          {' '}
-          © {new Date().getFullYear()} Third Bracket Ltd. All rights reserved.
-        </FooterText>
+        <FooterText> © {new Date().getFullYear()} thirdbracket. All rights reserved.</FooterText>
 
         <ThemeToggle />
         {/* <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">

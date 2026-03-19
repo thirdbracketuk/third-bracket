@@ -20,7 +20,7 @@ import { IconType } from 'react-icons'
 export const metadata: Metadata = {
   title: 'Industry Specific Website Solutions for Growing Businesses',
   description:
-    'Industry focused website solutions by Third Bracket for restaurants, real estate, bookings, LMS, directories and membership platforms in the UK.',
+    'Industry focused website solutions by thirdbracket for restaurants, real estate, bookings, LMS, directories and membership platforms in the UK.',
   openGraph: {
     title: 'Industry Website Solutions for Real Businesses',
     description:
@@ -60,30 +60,114 @@ function getSolutionDescription(title: string): string {
 
 function getSolutionFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
-    Restaurent: ['Online menu', 'Table reservations', 'Order management', 'Google Maps embed', 'SEO for local search'],
-    'Real Estate': ['Property listings', 'Advanced filters', 'Enquiry forms', 'Map integration', 'Agent profiles'],
-    Blog: ['CMS-powered', 'SEO-optimised posts', 'Category & tagging', 'Newsletter signup', 'Comment system'],
-    'Landing Page': ['Conversion-focused layout', 'A/B testing ready', 'Fast load time', 'Lead capture form', 'Analytics integration'],
-    Portfolio: ['Case study pages', 'Gallery layouts', 'Testimonials', 'Contact integration', 'Minimal & clean design'],
-    LMS: ['Course builder', 'Student enrolment', 'Progress tracking', 'Certificate generation', 'Payment integration'],
-    'Directory Listing': ['User submissions', 'Advanced search & filter', 'Review system', 'Map view', 'Premium listings'],
-    'Booking & Reservation': ['Real-time availability', 'Calendar integration', 'Automated reminders', 'Payment on booking', 'Staff management'],
-    Membership: ['Gated content', 'Subscription plans', 'Member dashboard', 'Stripe billing', 'Role management'],
+    Restaurent: [
+      'Online menu',
+      'Table reservations',
+      'Order management',
+      'Google Maps embed',
+      'SEO for local search',
+    ],
+    'Real Estate': [
+      'Property listings',
+      'Advanced filters',
+      'Enquiry forms',
+      'Map integration',
+      'Agent profiles',
+    ],
+    Blog: [
+      'CMS-powered',
+      'SEO-optimised posts',
+      'Category & tagging',
+      'Newsletter signup',
+      'Comment system',
+    ],
+    'Landing Page': [
+      'Conversion-focused layout',
+      'A/B testing ready',
+      'Fast load time',
+      'Lead capture form',
+      'Analytics integration',
+    ],
+    Portfolio: [
+      'Case study pages',
+      'Gallery layouts',
+      'Testimonials',
+      'Contact integration',
+      'Minimal & clean design',
+    ],
+    LMS: [
+      'Course builder',
+      'Student enrolment',
+      'Progress tracking',
+      'Certificate generation',
+      'Payment integration',
+    ],
+    'Directory Listing': [
+      'User submissions',
+      'Advanced search & filter',
+      'Review system',
+      'Map view',
+      'Premium listings',
+    ],
+    'Booking & Reservation': [
+      'Real-time availability',
+      'Calendar integration',
+      'Automated reminders',
+      'Payment on booking',
+      'Staff management',
+    ],
+    Membership: [
+      'Gated content',
+      'Subscription plans',
+      'Member dashboard',
+      'Stripe billing',
+      'Role management',
+    ],
   }
   return features[title] || ['Custom development', 'Mobile responsive', 'SEO ready']
 }
 
 function getSolutionTechnologies(title: string) {
   const tech: Record<string, { title: string; cto: string }[]> = {
-    Restaurent: [{ title: 'CMS', cto: 'WordPress' }, { title: 'Booking', cto: 'OpenTable API' }],
-    'Real Estate': [{ title: 'Framework', cto: 'Next.js' }, { title: 'Maps', cto: 'Google Maps' }],
-    Blog: [{ title: 'CMS', cto: 'PayloadCMS' }, { title: 'Rendering', cto: 'ISR' }],
-    'Landing Page': [{ title: 'Framework', cto: 'Next.js' }, { title: 'Analytics', cto: 'GA4' }],
-    Portfolio: [{ title: 'Framework', cto: 'Next.js' }, { title: 'Animation', cto: 'Framer Motion' }],
-    LMS: [{ title: 'LMS', cto: 'LearnDash' }, { title: 'CMS', cto: 'WordPress' }, { title: 'Payment', cto: 'Stripe' }],
-    'Directory Listing': [{ title: 'Framework', cto: 'Next.js' }, { title: 'DB', cto: 'Postgres' }, { title: 'Maps', cto: 'Mapbox' }],
-    'Booking & Reservation': [{ title: 'Booking', cto: 'Cal.com / Custom' }, { title: 'Payment', cto: 'Stripe' }],
-    Membership: [{ title: 'Auth', cto: 'NextAuth' }, { title: 'Billing', cto: 'Stripe' }, { title: 'DB', cto: 'Prisma' }],
+    Restaurent: [
+      { title: 'CMS', cto: 'WordPress' },
+      { title: 'Booking', cto: 'OpenTable API' },
+    ],
+    'Real Estate': [
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'Maps', cto: 'Google Maps' },
+    ],
+    Blog: [
+      { title: 'CMS', cto: 'PayloadCMS' },
+      { title: 'Rendering', cto: 'ISR' },
+    ],
+    'Landing Page': [
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'Analytics', cto: 'GA4' },
+    ],
+    Portfolio: [
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'Animation', cto: 'Framer Motion' },
+    ],
+    LMS: [
+      { title: 'LMS', cto: 'LearnDash' },
+      { title: 'CMS', cto: 'WordPress' },
+      { title: 'Payment', cto: 'Stripe' },
+    ],
+    'Directory Listing': [
+      { title: 'Framework', cto: 'Next.js' },
+      { title: 'DB', cto: 'Postgres' },
+      { title: 'Maps', cto: 'Mapbox' },
+    ],
+    'Booking & Reservation': [
+      { title: 'Booking', cto: 'Cal.com / Custom' },
+      { title: 'Payment', cto: 'Stripe' },
+    ],
+    Membership: [
+      { title: 'Auth', cto: 'NextAuth' },
+      { title: 'Billing', cto: 'Stripe' },
+      { title: 'DB', cto: 'Prisma' },
+    ],
   }
   return tech[title] || []
 }

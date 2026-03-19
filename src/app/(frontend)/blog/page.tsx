@@ -17,7 +17,7 @@ export const revalidate = false
 export const metadata: Metadata = {
   title: 'Web Design, Development and Marketing Blog',
   description:
-    'Read practical articles from Third Bracket covering web design, development, SEO and digital marketing insights for growing businesses in the UK.',
+    'Read practical articles from thirdbracket covering web design, development, SEO and digital marketing insights for growing businesses in the UK.',
   openGraph: {
     title: 'Insights, Tips and Articles on Web and Marketing',
     description:

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Custom Web Solutions for Modern Businesses',
     description:
-      'Third Bracket provides tailored website solutions using modern technologies like WordPress, Elementor, and Next.js.',
+      'thirdbracket provides tailored website solutions using modern technologies like WordPress, Elementor, and Next.js.',
   },
 }
 

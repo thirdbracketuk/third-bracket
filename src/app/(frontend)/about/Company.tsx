@@ -12,7 +12,7 @@ export default function Company() {
             Our Company
           </h2>
           <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-400 mb-6">
-            Third Bracket is a modern web development studio based in the UK. We specialize in
+            thirdbracket is a modern web development studio based in the UK. We specialize in
             building fast, SEO-optimized websites with clean, minimal design — powered by Next.js
             and tailored for businesses of all sizes.
           </p>
@@ -24,7 +24,7 @@ export default function Company() {
         <div className="flex justify-center">
           <Image
             src="/website.svg"
-            alt="Third Bracket Company"
+            alt="thirdbracket Company"
             width={500}
             height={400}
             className="max-w-full h-auto"

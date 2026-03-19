@@ -21,11 +21,11 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Website Design, Development & Ecommerce Services',
   description:
-    "Third Bracket's website development services cover bespoke website design, WordPress, Next.js, ecommerce builds, website redesign services and performance optimisation.",
+    "thirdbracket's website development services cover bespoke website design, WordPress, Next.js, ecommerce builds, website redesign services and performance optimisation.",
   openGraph: {
     title: 'Manchester Web Design & Ecommerce Services',
     description:
-      "Discover Third Bracket's website development services, including bespoke website design, WordPress, Next.js, ecommerce builds, website redesigns, and optimisation for fast, reliable websites.",
+      "Discover thirdbracket's website development services, including bespoke website design, WordPress, Next.js, ecommerce builds, website redesigns, and optimisation for fast, reliable websites.",
   },
 }
 
@@ -35,7 +35,7 @@ const webDevelopmentCategory = {
     'Modern web development solutions using cutting-edge technologies for scalable and maintainable applications.',
   illustration: {
     src: '/services/web.svg',
-    alt: 'Website & Ecommerce by Third Bracket',
+    alt: 'Website & Ecommerce by thirdbracket',
   },
   stackIcons: TechStack(['SiNextdotjs', 'SiReact', 'SiTypescript', 'SiNodedotjs', 'SiVercel']),
   services: webDevelopmentItems.map((item) => ({
@@ -74,14 +74,44 @@ function getServiceDescription(title: string): string {
 function getServiceFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
     'Next.js Development': ['App Router', 'Server Components', 'Edge Runtime', 'ISR & SSG'],
-    'WordPress Development': ['Custom Themes', 'Plugin Development', 'ACF Integration', 'Performance Tuning'],
-    'E-commerce Development': ['Payment Integration', 'Inventory Management', 'WooCommerce', 'Checkout Optimisation'],
-    'Bespoke Web Design': ['Custom UI', 'Tailwind Components', 'Figma Handoff', 'Responsive Design'],
+    'WordPress Development': [
+      'Custom Themes',
+      'Plugin Development',
+      'ACF Integration',
+      'Performance Tuning',
+    ],
+    'E-commerce Development': [
+      'Payment Integration',
+      'Inventory Management',
+      'WooCommerce',
+      'Checkout Optimisation',
+    ],
+    'Bespoke Web Design': [
+      'Custom UI',
+      'Tailwind Components',
+      'Figma Handoff',
+      'Responsive Design',
+    ],
     'Bespoke Web Development': ['Admin Panel', 'Web Portal', 'CMS Integration', 'REST API'],
-    'Website Optimisation': ['Core Web Vitals', 'Caching Strategy', 'Asset Optimisation', 'Lighthouse Scores'],
+    'Website Optimisation': [
+      'Core Web Vitals',
+      'Caching Strategy',
+      'Asset Optimisation',
+      'Lighthouse Scores',
+    ],
     'Website Redesign': ['Clean Code', 'Code-First Approach', 'CI/CD Setup', 'Design System'],
-    'Website Migration': ['Platform Migration', 'Code Refactoring', 'Tech Stack Upgrade', 'Zero Downtime'],
-    'Website Repair': ['WordPress Errors', 'Deployment Fixes', 'Plugin Conflicts', 'Full Documentation'],
+    'Website Migration': [
+      'Platform Migration',
+      'Code Refactoring',
+      'Tech Stack Upgrade',
+      'Zero Downtime',
+    ],
+    'Website Repair': [
+      'WordPress Errors',
+      'Deployment Fixes',
+      'Plugin Conflicts',
+      'Full Documentation',
+    ],
   }
   return features[title] || ['Custom Development', 'Best Practices', 'Quality Assurance']
 }

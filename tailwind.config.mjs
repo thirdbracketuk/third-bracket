@@ -170,8 +170,8 @@ const config = {
         'gradient-text-dark':
           'radial-gradient(ellipse at 30% 0%, #ffffff 0%, #e2e2e2 55%, #f0f0f0 100%)',
 
-        'gradient-accent': 'linear-gradient(120deg, #bc3a5b 0%, #e30b5c 55%, #8e1040 100%)',
-        'gradient-accent-dark': 'linear-gradient(120deg, #ee538f 0%, #f589b3 55%, #ee538f 100%)',
+        'gradient-accent': 'linear-gradient(120deg, #b71050 0%, #e30b5c 55%, #b71050 100%)',
+        'gradient-accent-dark': 'linear-gradient(120deg, #e30b5c 0%, #ee538f 55%, #e30b5c 100%)',
 
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',
