@@ -21,6 +21,9 @@ import {
   seoGrowthItems,
   brandingCreativeItems,
   resourcesItems,
+  blogItems,
+  workItems,
+  openSourceItems,
   // Legacy aliases kept to avoid TS errors from old commented code
   uiUxDesignItems,
   digitalMarketingItems,
@@ -38,6 +41,48 @@ import { HeaderCTAIllustration } from './Feature'
 import { FaArrowRight } from 'react-icons/fa'
 import { RiArrowRightLine } from 'react-icons/ri'
 import { Logo } from '@/components/Logo'
+
+// Inline BracketUI illustration for the Resources megamenu CTO panel
+const BracketUINavIllustration = () => (
+  <div className="relative w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+    <svg viewBox="0 0 64 64" className="absolute inset-0 w-full h-full" aria-hidden>
+      {/* Outer ring */}
+      <circle
+        cx="32"
+        cy="32"
+        r="28"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.75"
+        strokeDasharray="3 4"
+        className="text-primary-400/20 dark:text-primary-500/20"
+      />
+      {/* Inner ring */}
+      <circle
+        cx="32"
+        cy="32"
+        r="18"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.5"
+        className="text-accent-400/20 dark:text-accent-500/20"
+      />
+    </svg>
+    {/* Cube icon box */}
+    <div className="relative z-10 w-10 h-10 rounded-xl bg-white dark:bg-black border border-primary-200 dark:border-primary-700 shadow-sm flex items-center justify-center">
+      <svg
+        viewBox="0 0 20 20"
+        className="w-5 h-5 text-accent-500 dark:text-accent-400"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.5"
+      >
+        <path d="M10 2L2 6v8l8 4 8-4V6L10 2z" />
+        <path d="M10 2v12M2 6l8 4 8-4" />
+      </svg>
+    </div>
+  </div>
+)
 
 interface MyMegamenuProp extends Omit<MegamenuProps, 'label'> {
   label: React.ReactNode
@@ -260,8 +305,115 @@ const Header: FC = () => {
               menu: 'bg-white dark:bg-black',
             }}
           >
-            <div className="flex flex-col space-y-[2px] py-1 min-w-[180px]">
-              {resourcesItems.map((item) => renderNavlink(item))}
+            <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[280px_repeat(3,1fr)_220px] grid-cols-[280px_repeat(3,1fr)] pb-1">
+              {/* Left CTO column — 280px, identical to Services */}
+              <div className="flex flex-col h-full mr-3">
+                <div className="flex flex-col space-y-4">
+                  <Link
+                    href="/bracketui"
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
+                  >
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-medium">BracketUI</span>
+                        <BiChevronRight size={16} />
+                      </div>
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
+                        Open source TailwindCSS component library for React &amp; Next.js.
+                      </div>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
+                  >
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-medium">Blog</span>
+                        <BiChevronRight size={16} />
+                      </div>
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
+                        Articles and guides on web, SEO and digital marketing.
+                      </div>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/work"
+                    className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
+                  >
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="font-medium">Case Studies</span>
+                        <BiChevronRight size={16} />
+                      </div>
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
+                        Real projects and results from our client work.
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Middle col 1 — Blog + Case Studies stacked with divider */}
+              <div className="flex flex-col h-full">
+                <div className="mb-4">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
+                    Blog
+                  </h3>
+                </div>
+                <div className="flex flex-col space-y-[2px]">
+                  {blogItems.map((item) => renderNavlink(item))}
+                </div>
+              </div>
+
+              <div className="flex flex-col h-full">
+                <div className="mb-4">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
+                    Case Studies
+                  </h3>
+                </div>
+                <div className="flex flex-col space-y-[2px]">
+                  {workItems.map((item) => renderNavlink(item))}
+                </div>
+              </div>
+
+              {/* Middle col 2 — Open Source */}
+              <div className="flex flex-col h-full">
+                <div className="mb-4">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
+                    Open Source
+                  </h3>
+                </div>
+                <div className="flex flex-col space-y-[2px]">
+                  {openSourceItems.map((item) => renderNavlink(item))}
+                </div>
+              </div>
+
+              {/* Right CTO banner — hidden below lg, same as Services */}
+              <div className="hidden lg:flex flex-col justify-center h-full">
+                <div className="p-6 bg-gradient-primary-dark dark:bg-gradient-primary border border-primary-500/30 rounded-2xl overflow-hidden relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 via-transparent to-accent-500/3 pointer-events-none" />
+                  <div className="relative z-10 text-center">
+                    <BracketUINavIllustration />
+                    <h3 className="text-base font-semibold text-primary-900 dark:text-primary-50 mb-1.5">
+                      BracketUI
+                    </h3>
+                    <p className="text-xs text-primary-600 dark:text-primary-400 mb-4 leading-relaxed">
+                      Free, open source TailwindCSS components from thirdbracket.
+                    </p>
+                    <Navlink
+                      theme={{
+                        text: 'text-primary-50 dark:text-primary-950 bg-gradient-text dark:bg-gradient-text-dark px-4 py-2 rounded-lg text-sm font-medium',
+                        states: '[@media(hover:hover)]:hover:opacity-90 transition-opacity',
+                      }}
+                      as={Link}
+                      href="/bracketui"
+                    >
+                      Explore
+                    </Navlink>
+                  </div>
+                </div>
+              </div>
             </div>
           </Megamenu>
 
@@ -353,7 +505,44 @@ const Header: FC = () => {
               }}
             >
               <div className="space-y-2 py-1.5">
-                {resourcesItems.map((item) => renderNavlink(item, true))}
+                <Megamenu
+                  label="Blog"
+                  theme={{
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-white dark:bg-black',
+                  }}
+                >
+                  <div className="space-y-2 py-1.5">
+                    {blogItems.map((item) => renderNavlink(item, true))}
+                  </div>
+                </Megamenu>
+
+                <Megamenu
+                  label="Case Studies"
+                  theme={{
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-white dark:bg-black',
+                  }}
+                >
+                  <div className="space-y-2 py-1.5">
+                    {workItems.map((item) => renderNavlink(item, true))}
+                  </div>
+                </Megamenu>
+
+                <Megamenu
+                  label="Open Source"
+                  theme={{
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-white dark:bg-black',
+                  }}
+                >
+                  <div className="space-y-2 py-1.5">
+                    {openSourceItems.map((item) => renderNavlink(item, true))}
+                  </div>
+                </Megamenu>
               </div>
             </Megamenu>
 

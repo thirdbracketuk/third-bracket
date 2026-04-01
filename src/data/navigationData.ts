@@ -753,11 +753,55 @@ export const brandingCreativeItems: NavlinkItem[] = [
   },
 ]
 
-// Resources dropdown
+// Resources — Blog by category
+export const blogItems: NavlinkItem[] = [
+  { label: 'Web Development', href: '/blog?category=web-development', isDropdownItem: true },
+  { label: 'UI/UX Design', href: '/blog?category=ui-ux-design', isDropdownItem: true },
+  { label: 'Digital Marketing', href: '/blog?category=digital-marketing', isDropdownItem: true },
+  { label: 'SEO & Growth', href: '/blog?category=seo-growth', isDropdownItem: true },
+  { label: 'WordPress Tips', href: '/blog?category=wordpress', isDropdownItem: true },
+  { label: 'Next.js Guides', href: '/blog?category=nextjs', isDropdownItem: true },
+  { label: 'All Articles', href: '/blog', isDropdownItem: true },
+]
+
+// Resources — Work / Case Studies by category
+export const workItems: NavlinkItem[] = [
+  { label: 'Web Projects', href: '/work?category=web', isDropdownItem: true },
+  { label: 'Branding & Design', href: '/work?category=branding', isDropdownItem: true },
+  { label: 'SEO & Marketing', href: '/work?category=seo', isDropdownItem: true },
+  { label: 'E-commerce', href: '/work?category=ecommerce', isDropdownItem: true },
+  { label: 'WordPress Builds', href: '/work?category=wordpress', isDropdownItem: true },
+  { label: 'All Case Studies', href: '/work', isDropdownItem: true },
+]
+
+// Resources — Open Source
+export const openSourceItems: NavlinkItem[] = [
+  { label: 'BracketUI', href: '/bracketui', isDropdownItem: true, cto: true },
+  {
+    label: 'Next.js Starter',
+    href: 'https://github.com/sagarmusabbir/bracketui',
+    isDropdownItem: true,
+  },
+  {
+    label: 'BracketUI App Template',
+    href: 'https://github.com/sagarmusabbir/bracketui',
+    isDropdownItem: true,
+  },
+  { label: 'Hugo Theme', href: 'https://github.com/sagarmusabbir/bracketui', isDropdownItem: true },
+  {
+    label: 'Starter Templates',
+    href: 'https://github.com/sagarmusabbir/bracketui',
+    isDropdownItem: true,
+  },
+  { label: 'All Repositories', href: 'https://github.com/sagarmusabbir', isDropdownItem: true },
+]
+
+// Legacy flat list kept for mobile fallback
 export const resourcesItems: NavlinkItem[] = [
-  { label: 'Case Studies', href: '/work', isDropdownItem: true },
-  { label: 'Open Source', href: '/open-source', isDropdownItem: true },
   { label: 'Blog', href: '/blog', isDropdownItem: true },
+  { label: 'Case Studies', href: '/work', isDropdownItem: true },
+  { label: 'BracketUI', href: '/bracketui', isDropdownItem: true },
+  { label: 'Open Source', href: 'https://github.com/sagarmusabbir', isDropdownItem: true },
 ]
 
 // Standalone nav items
