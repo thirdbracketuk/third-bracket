@@ -159,12 +159,6 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Modal from './Modal'
-
-// import SubscriptionForm from '@/blocks/Form/SubscriptionFormBlock' // Not used in this component
-// import CallbackForm from '@/blocks/Form/CallBackForm' // Commented out - using FormBlockCompact instead
-// import FormContact from '@/blocks/Form/FormContact' // Commented out - using FormBlockCompact instead
-// import { FormBlock } from '@/blocks/Form/Component' // Using compact version for modal
-
 import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
 import { FormBlockMultiStep } from '@/blocks/Form/FormBlockMultiStep'
 import Script from 'next/script'
@@ -177,7 +171,6 @@ const featuredLogos = [
     height: 210,
     href: 'https://be.elementor.com/visit/?bta=229022&brand=elementor',
   },
-
   {
     src: '/IMG_7978.png',
     alt: 'DesignRush',
@@ -202,13 +195,15 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
       <Bracket fluid centered padding="small">
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center space-y-7 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[820px] px-2 sm:px-0">
-            {/* Hero Badge */}
+            {/* Announcement bar — DesignRush ranking */}
             <Link
-              href="https://www.thirdbracket.co.uk/blog/why-indian-exporters-getting-more-success-than-bangladeshi-exporters"
+              href="https://www.thirdbracket.co.uk/blog/thirdbracket-ranked-1-web-design-agency-manchester-designrush"
               className="inline-flex items-center gap-2 bg-accent-50 dark:bg-secondary-950 border border-accent-100 dark:border-accent-900/20 text-secondary-700 dark:text-secondary-200 text-[clamp(0.72rem,1.5vw,0.8rem)] leading-none font-medium px-3 py-1.5 rounded-full mb-0 overflow-hidden line-clamp-1"
             >
               <span className="w-[6px] h-[6px] bg-accent-500 rounded-full animate-pulse"></span>
-              <span className="truncate"> Bangladeshi Exporters Branding Guides</span>
+              <span className="truncate">
+                #1 Web Design Agency in Manchester — DesignRush 2024/25
+              </span>
               <svg
                 viewBox="0 0 8 12"
                 fill="none"
@@ -222,20 +217,23 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               </svg>
             </Link>
 
-            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-extrabold leading-[1.15]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
-              Build Brands That
+            {/* H1 */}
+            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-extrabold leading-[1.15] text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
+              Your Website Should Be
               <br className="hidden md:inline-flex" />
               &nbsp;
-              <em className="not-italic bg-gradient-accent dark:bg-gradient-accent-dark text-transparent bg-clip-text ">
-                Earn Attention
+              <em className="not-italic bg-gradient-accent dark:bg-gradient-accent-dark text-transparent bg-clip-text">
+                Working Harder
               </em>
             </h1>
 
+            {/* Subheadline */}
             <p className="text-[clamp(1rem,1.8vw,1.1875rem)] text-primary-500 dark:text-primary-400 leading-[1.75] max-w-[560px] text-left sm:text-center mx-auto mb-0">
-              We design, develop, and grow digital products — from pixel-perfect websites to
-              complete brand identities and SEO that compounds.
+              We build brands, not just websites. SEO-first, agency-quality work without the agency
+              price tag.
             </p>
 
+            {/* CTAs */}
             <div className="flex flex-wrap sm:justify-center gap-[10px] backdrop-blur-[2px] mb-0">
               <Button
                 size="md"
@@ -278,18 +276,19 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               </Button>
             </div>
 
+            {/* Partners & Recognition */}
             <div className="pt-6 w-full flex flex-col md:items-center gap-[18px]">
               <span className="text-[clamp(0.72rem,1.2vw,0.78rem)] leading-none text-primary-400 dark:text-primary-600 tracking-wider uppercase font-medium">
-                Our Partners
+                Partners &amp; Recognition
               </span>
-              <div className="flex flex-wrap items-center gap-10 md:justify-center ">
+              <div className="flex flex-wrap items-center gap-10 md:justify-center">
                 {featuredLogos.map((logo, idx) => (
                   <a
                     key={idx}
                     href={logo.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-all  duration-300 group"
+                    className="transition-all duration-300 group"
                   >
                     <Image
                       src={logo.src}
@@ -306,13 +305,6 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
         </div>
       </Bracket>
       <Modal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)}>
-        {/* <SubscriptionForm /> */}
-        {/* <CallbackForm /> */} {/* Commented out - using FormBlockCompact instead */}
-        {/* <FormContact form={contactForm} /> */}{' '}
-        {/* Commented out - using FormBlockCompact instead */}
-        {/* <FormBlock form={contactForm} enableIntro={false} /> */}{' '}
-        {/* Using compact version for modal */}
-        {/* <FormBlockCompact form={contactForm} enableIntro={false} /> */}
         <FormBlockMultiStep
           form={contactForm}
           enableIntro={false}
