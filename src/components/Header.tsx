@@ -178,7 +178,7 @@ const Header: FC = () => {
               <div className="flex flex-col h-full mr-3">
                 <div className="flex flex-col space-y-4">
                   <Link
-                    href="/services/website-ecommerce"
+                    href="/services/web-development"
                     className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg ">
@@ -193,7 +193,7 @@ const Header: FC = () => {
                   </Link>
 
                   <Link
-                    href="/services/seo-growth"
+                    href="/services/digital-marketing"
                     className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
@@ -208,7 +208,7 @@ const Header: FC = () => {
                   </Link>
 
                   <Link
-                    href="/services/branding-creative"
+                    href="/services/ui-ux-design"
                     className="opacity-75 focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100 text-primary-900 dark:text-primary-50"
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
