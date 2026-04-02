@@ -47,9 +47,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               className="inline-flex items-center gap-2 bg-accent-50 dark:bg-secondary-950 border border-accent-100 dark:border-accent-900/20 text-secondary-700 dark:text-secondary-200 text-[clamp(0.72rem,1.5vw,0.8rem)] leading-none font-medium px-3 py-1.5 rounded-full mb-0 overflow-hidden line-clamp-1"
             >
               <span className="w-[6px] h-[6px] bg-accent-500 rounded-full animate-pulse"></span>
-              <span className="truncate">
-                #1 Web Design Agency in Manchester — DesignRush 2024/25
-              </span>
+              <span className="truncate">We are ranked #1 — DesignRush 2024/25</span>
               <svg
                 viewBox="0 0 8 12"
                 fill="none"
