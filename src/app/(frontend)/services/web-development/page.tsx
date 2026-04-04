@@ -735,10 +735,13 @@ import { ConcentricRings, GridDots, RadialDashes } from '../ServiceSection'
 
 const HeroIllustration = () => {
   return (
-    <div className="w-full h-full flex items-center justify-center p-6 select-none" aria-hidden>
+    <div
+      className="w-full h-full flex md:p-6 px-4 items-center  justify-center  select-none"
+      aria-hidden
+    >
       <svg viewBox="0 0 340 220" className="w-full h-full" fill="none">
         {/* Grid dots */}
-        <GridDots cols={13} rows={8} gap={28} ox={-6} oy={4} />
+        {/* <GridDots cols={13} rows={8} gap={28} ox={-6} oy={4} /> */}
 
         {/* --- LEFT SECTION (Inputs Aligned to y=90) --- */}
         <rect
@@ -1399,27 +1402,25 @@ export default function WebDevelopmentPage() {
     <div>
       {/* 1 — Page Header */}
       <PageHeader
-        title="Website & Ecommerce Development"
-        description="Bespoke websites and online stores for Manchester businesses. Built on Next.js or WordPress, SEO-ready from day one, delivered without the agency overhead."
+        title="Website & Ecommerce"
+        description="Bespoke websites and ecommerce development for Manchester businesses. "
       />
 
       {/* 2 — Illustration + intro heading */}
-      <Bracket fluid centered padding="none">
+      <Bracket fluid centered padding="small">
         <div className="md:max-w-screen-xl mx-auto">
           {/* Two column: illustration left, heading right */}
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center relative">
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-8  mb-8 items-center relative">
             {/* Illustration */}
-            <div className="w-full h-full flex items-center justify-center">
-              <div className="w-full aspect-square max-w-2xl">
-                <HeroIllustration />
-              </div>
+            <div className="w-full h-full flex items-center justify-center ">
+              <HeroIllustration />
             </div>
             {/* Heading + description */}
-            <div>
-              <h2 className="text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-5">
+            <div className="mb-8 md:mb-10 lg:mb-12 grid gap-3 lg:gap-4   lg:max-w-5xl lg:mx-auto">
+              <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] leading-tight font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  ">
                 Built around two ecosystems, engineered for two different needs
               </h2>
-              <p className="text-[clamp(0.9rem,1.4vw,1.05rem)] text-primary-500 dark:text-primary-400 leading-[1.8] mb-6">
+              <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 ">
                 Two Stacks. Zero Guesswork. We’ve spent years refining our Next.js and WordPress
                 ecosystems so you get enterprise-grade performance right out of the box.
               </p>
@@ -1427,7 +1428,8 @@ export default function WebDevelopmentPage() {
           </div>
 
           {/* Two-column ecosystems — dashed divider, no cards, no backgrounds */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-dashed divide-primary-200 dark:divide-primary-800">
+
+          <div className="grid  lg:grid-cols-2 gap-4 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-dashed divide-primary-200 dark:divide-primary-800">
             {/* Next.js column */}
             <div className="pb-12 lg:pb-0 lg:pr-14">
               {/* Icon + heading */}
@@ -1565,9 +1567,9 @@ export default function WebDevelopmentPage() {
       {/* 3 — Scrollable service cards */}
       <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
         <Bracket fluid centered padding="small">
-          <div className="md:max-w-screen-xl mx-auto">
+          <div className="md:max-w-screen-xl mx-auto pt-8">
             {/* Heading + scroll controls */}
-            <div className="flex items-end justify-between gap-6 mb-8">
+            <div className=" mb-8">
               <div className="max-w-lg">
                 <h2 className="text-[clamp(1.4rem,2.8vw,2rem)] font-extrabold leading-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2">
                   What we build & deliver
@@ -1577,84 +1579,89 @@ export default function WebDevelopmentPage() {
                   migration.
                 </p>
               </div>
-              {/* Chevron scroll controls */}
-              <div className="flex items-center gap-2 flex-shrink-0">
+            </div>
+
+            {/* Scrollable row */}
+
+            <div className="mb-6">
+              <div
+                ref={scrollRef}
+                onScroll={handleScroll}
+                className="flex gap-5 overflow-x-auto scrollbar-hide pb-2 -mx-1 px-1"
+                style={{ scrollSnapType: 'x mandatory' }}
+              >
+                {serviceCards.map((card, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-[272px] sm:w-[288px] flex flex-col bg-white dark:bg-black border border-primary-100 dark:border-primary-800/50 rounded-2xl overflow-hidden"
+                    style={{ scrollSnapAlign: 'start' }}
+                  >
+                    {/* Top: category + title + description + features */}
+                    <div className="p-5 flex-1 flex flex-col">
+                      <span className="text-[10px] font-semibold uppercase tracking-widest text-accent-600 dark:text-accent-400 mb-2.5">
+                        {card.category}
+                      </span>
+                      <h3 className="text-[0.95rem] font-bold text-primary-900 dark:text-primary-50 leading-tight mb-2.5">
+                        {card.title}
+                      </h3>
+                      <p className="text-[0.78rem] text-primary-500 dark:text-primary-400 leading-[1.65] mb-4 flex-1">
+                        {card.description}
+                      </p>
+                      <ul className="space-y-1.5 mb-4">
+                        {card.features.map((f) => (
+                          <li
+                            key={f}
+                            className="flex items-center gap-2 text-[0.74rem] text-primary-600 dark:text-primary-400"
+                          >
+                            <RiCheckLine
+                              size={10}
+                              className="text-accent-500 dark:text-accent-400 flex-shrink-0"
+                            />
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Bottom: illustration (larger) + CTA */}
+                    <div className="mx-4 mb-4 rounded-xl bg-white dark:bg-black border border-primary-100 dark:border-primary-800 overflow-hidden">
+                      {/* Illustration — taller */}
+                      <div className="h-32 w-full">{card.illustration}</div>
+                      {/* CTA below illustration */}
+                      <div className="px-4 py-3 border-t border-primary-100 dark:border-primary-800">
+                        <Link
+                          href="/contact"
+                          className="inline-flex items-center gap-1.5 text-[0.75rem] font-semibold text-primary-600 dark:text-primary-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+                        >
+                          Get started
+                          <RiArrowRightLine size={11} />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Chevron scroll controls */}
+            <div className="flex justify-end">
+              <div className="flex items-center  gap-2 flex-shrink-0">
                 <button
                   onClick={() => scrollCards('left')}
                   disabled={!canScrollLeft}
-                  className="w-9 h-9 rounded-full border border-primary-200 dark:border-primary-700 flex items-center justify-center text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
+                  className="w-16 h-16 rounded-full border border-primary-200 dark:border-primary-700 flex items-center justify-center text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
                   aria-label="Scroll left"
                 >
-                  <RiArrowLeftSLine size={18} />
+                  <RiArrowLeftSLine size={24} />
                 </button>
                 <button
                   onClick={() => scrollCards('right')}
                   disabled={!canScrollRight}
-                  className="w-9 h-9 rounded-full border border-primary-200 dark:border-primary-700 flex items-center justify-center text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
+                  className="w-16 h-16 rounded-full border border-primary-200 dark:border-primary-700 flex items-center justify-center text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
                   aria-label="Scroll right"
                 >
-                  <RiArrowRightSLine size={18} />
+                  <RiArrowRightSLine size={24} />
                 </button>
               </div>
-            </div>
-
-            {/* Scrollable row */}
-            <div
-              ref={scrollRef}
-              onScroll={handleScroll}
-              className="flex gap-5 overflow-x-auto scrollbar-hide pb-2 -mx-1 px-1"
-              style={{ scrollSnapType: 'x mandatory' }}
-            >
-              {serviceCards.map((card, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[272px] sm:w-[288px] flex flex-col bg-primary-50/50 dark:bg-primary-950/30 border border-primary-100 dark:border-primary-800/50 rounded-2xl overflow-hidden"
-                  style={{ scrollSnapAlign: 'start' }}
-                >
-                  {/* Top: category + title + description + features */}
-                  <div className="p-5 flex-1 flex flex-col">
-                    <span className="text-[10px] font-semibold uppercase tracking-widest text-accent-600 dark:text-accent-400 mb-2.5">
-                      {card.category}
-                    </span>
-                    <h3 className="text-[0.95rem] font-bold text-primary-900 dark:text-primary-50 leading-tight mb-2.5">
-                      {card.title}
-                    </h3>
-                    <p className="text-[0.78rem] text-primary-500 dark:text-primary-400 leading-[1.65] mb-4 flex-1">
-                      {card.description}
-                    </p>
-                    <ul className="space-y-1.5 mb-4">
-                      {card.features.map((f) => (
-                        <li
-                          key={f}
-                          className="flex items-center gap-2 text-[0.74rem] text-primary-600 dark:text-primary-400"
-                        >
-                          <RiCheckLine
-                            size={10}
-                            className="text-accent-500 dark:text-accent-400 flex-shrink-0"
-                          />
-                          {f}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Bottom: illustration (larger) + CTA */}
-                  <div className="mx-4 mb-4 rounded-xl bg-white dark:bg-black border border-primary-100 dark:border-primary-800 overflow-hidden">
-                    {/* Illustration — taller */}
-                    <div className="h-32 w-full">{card.illustration}</div>
-                    {/* CTA below illustration */}
-                    <div className="px-4 py-3 border-t border-primary-100 dark:border-primary-800">
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-1.5 text-[0.75rem] font-semibold text-primary-600 dark:text-primary-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
-                      >
-                        Get started
-                        <RiArrowRightLine size={11} />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </Bracket>
