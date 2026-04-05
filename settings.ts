@@ -149,7 +149,7 @@ export const gtmconnected = true
 
 export const sitename = 'thirdbracket'
 export const description =
-  'thirdbracket is a Manchester web design agency building fast, SEO-first websites and brand identities for SMEs and startups across the UK.'
+  'thirdbracket is a Manchester based web design agency building fast, SEO-first websites and brand identities for SMEs and startups across the UK.'
 export const keywords = [
   'web design agency manchester',
   'manchester web design',
