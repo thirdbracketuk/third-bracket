@@ -1867,7 +1867,7 @@ export default function WebDevelopmentPage() {
                   Built around two ecosystems, engineered for two different needs
                 </h2>
                 <p className="text-[clamp(0.9rem,1.4vw,1.05rem)] text-primary-500 dark:text-primary-400 leading-[1.8] mb-5">
-                  We don't build everything for everyone. We go deep in Next.js and WordPress , two
+                  We don&apos;t build everything for everyone. We go deep in Next.js and WordPress , two
                   stacks we know inside out , so every project benefits from years of refinement in
                   that specific ecosystem.
                 </p>
