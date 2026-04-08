@@ -1157,7 +1157,7 @@ import {
   SiRedis,
   SiEslint,
 } from 'react-icons/si'
-import { ConcentricRings, GridDots, RadialDashes } from '../ServiceSection'
+import { ConcentricRings, GridDots, RadialDashes, ServiceSection } from '../ServiceSection'
 import { LuLayers } from 'react-icons/lu'
 import { PiHandshakeLight } from 'react-icons/pi'
 
@@ -1666,11 +1666,12 @@ const wordpressFeatures = [
   { icon: LuLayers, text: 'Easy to manage , your team can update content without a developer' },
 ]
 
-// ─── Service cards ────────────────────────────────────────────────────────────
+// ─── Services ─────────────────────────────────────────────────────────────────
 
-const serviceCards = [
+const services = [
   {
-    category: 'Design',
+    id: 'bespoke-web-design',
+    badge: 'Design',
     title: 'Bespoke Web Design',
     description:
       'Designed from scratch around your brand. No templates, no shortcuts. Every layout crafted to guide visitors toward the actions that matter.',
@@ -1681,17 +1682,21 @@ const serviceCards = [
       'BracketUI components',
     ],
     illustration: <DesignCardIllustration />,
+    flip: false,
   },
   {
-    category: 'Development',
+    id: 'bespoke-web-development',
+    badge: 'Development',
     title: 'Bespoke Web Development',
     description:
       'Custom portals, admin dashboards, booking systems. Whatever your business logic requires, built on Next.js or WordPress.',
     features: ['Next.js or WordPress', 'Custom business logic', 'CMS integration', 'TypeScript'],
     illustration: <NextJsCardIllustration />,
+    flip: true,
   },
   {
-    category: 'Ecommerce',
+    id: 'ecommerce-development',
+    badge: 'Ecommerce',
     title: 'E-commerce Development',
     description:
       'Online stores that convert. WooCommerce or custom Next.js storefronts, built with fast load times and conversion-focused design.',
@@ -1702,46 +1707,57 @@ const serviceCards = [
       'Inventory management',
     ],
     illustration: <EcommerceCardIllustration />,
+    flip: false,
   },
   {
-    category: 'Redesign',
+    id: 'website-redesign',
+    badge: 'Redesign',
     title: 'Website Redesign',
     description:
       'Outdated site? We audit what you have, keep what works, and rebuild the rest properly. Code-first, improved UX, faster performance.',
     features: ['Full audit first', 'Code-first rebuild', 'UX improvements', 'SEO preservation'],
     illustration: <RedesignCardIllustration />,
+    flip: true,
   },
   {
-    category: 'WordPress',
+    id: 'wordpress-development',
+    badge: 'WordPress',
     title: 'WordPress Development',
     description:
       'Clean, fast WordPress sites your team can actually manage. No bloated themes. Built on our custom server stack.',
     features: ['Custom themes', 'ACF integration', 'WooCommerce ready', 'Performance tuned'],
     illustration: <WordPressCardIllustration />,
+    flip: false,
   },
   {
-    category: 'Performance',
+    id: 'website-optimisation',
+    badge: 'Performance',
     title: 'Website Optimisation',
     description:
       'We audit against Core Web Vitals and fix every layer , images, caching, server config, code splitting. Lighthouse 90+ minimum.',
     features: ['Core Web Vitals', 'Lighthouse audit', 'Image optimisation', 'Caching strategy'],
     illustration: <OptimisationCardIllustration />,
+    flip: true,
   },
   {
-    category: 'Migration',
+    id: 'website-migration',
+    badge: 'Migration',
     title: 'Website Migration',
     description:
       'Moving platforms without the pain. Zero data loss, redirects mapped, SEO equity preserved, minimal downtime.',
     features: ['Zero data loss', 'Redirect mapping', 'SEO preserved', 'Zero downtime'],
     illustration: <MigrationCardIllustration />,
+    flip: false,
   },
   {
-    category: 'Support',
+    id: 'website-repair',
+    badge: 'Support',
     title: 'Website Repair',
     description:
       'Broken builds, plugin conflicts, security issues , we diagnose fast, document everything, leave the site better than we found it.',
     features: ['Next.js & WordPress', 'Security fixes', 'Plugin conflicts', 'Documentation'],
     illustration: <RepairCardIllustration />,
+    flip: true,
   },
 ]
 
@@ -1815,35 +1831,10 @@ const webFaqData = [
   },
 ]
 
-// ─── Card theme (matches Feature.tsx / FeatureTwo.tsx) ───────────────────────
-const cardTheme = {
-  background: 'bg-white dark:bg-black',
-  border:
-    'border-opacity-30 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
-  hover:
-    '[@media(hover:hover)]:hover:border-opacity-50 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
-  text: 'text-primary-400 dark:text-primary-600 leading-[1.45] font-normal',
-}
-
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function WebDevelopmentPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
-  const scrollRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
-
-  const handleScroll = () => {
-    if (!scrollRef.current) return
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
-    setCanScrollLeft(scrollLeft > 8)
-    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 8)
-  }
-
-  const scrollCards = (dir: 'left' | 'right') => {
-    if (!scrollRef.current) return
-    scrollRef.current.scrollBy({ left: dir === 'right' ? 310 : -310, behavior: 'smooth' })
-  }
 
   return (
     <div>
@@ -1867,9 +1858,9 @@ export default function WebDevelopmentPage() {
                   Built around two ecosystems, engineered for two different needs
                 </h2>
                 <p className="text-[clamp(0.9rem,1.4vw,1.05rem)] text-primary-500 dark:text-primary-400 leading-[1.8] mb-5">
-                  We don&apos;t build everything for everyone. We go deep in Next.js and WordPress , two
-                  stacks we know inside out , so every project benefits from years of refinement in
-                  that specific ecosystem.
+                  We don&apos;t build everything for everyone. We go deep in Next.js and WordPress ,
+                  two stacks we know inside out , so every project benefits from years of refinement
+                  in that specific ecosystem.
                 </p>
                 <p className="text-[clamp(0.88rem,1.3vw,1rem)] text-primary-500 dark:text-primary-400 leading-[1.75]">
                   Need a blazing-fast custom platform? Next.js. Need a site your team can manage
@@ -2001,113 +1992,13 @@ export default function WebDevelopmentPage() {
         </Bracket>
       </section>
 
-      {/* 3 , Scrollable service cards */}
-      <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem] ">
+      {/* Service sections */}
+      <section className="border-t border-primary-100 dark:border-primary-900/50">
         <Bracket fluid centered padding="small">
-          <div className="mx-auto">
-            <div className="flex items-end justify-between gap-6 mb-8">
-              <div className=" ">
-                <h2 className="text-[clamp(1.5rem,3vw,2.25rem)] font-extrabold leading-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2">
-                  What we build & deliver
-                </h2>
-                <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] text-primary-500 dark:text-primary-400 leading-relaxed">
-                  Every service in our two-ecosystem stack , from first website to full platform
-                  migration.
-                </p>
-              </div>
-              <div className="flex items-center gap-2 flex-shrink-0">
-                <button
-                  onClick={() => scrollCards('left')}
-                  disabled={!canScrollLeft}
-                  className="w-12 h-12 rounded-full border border-primary-200 dark:border-primary-700 flex items-center justify-center text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
-                  aria-label="Scroll left"
-                >
-                  <RiArrowLeftSLine size={18} />
-                </button>
-                <button
-                  onClick={() => scrollCards('right')}
-                  disabled={!canScrollRight}
-                  className="w-12 h-12 rounded-full border border-primary-200 dark:border-primary-700 flex items-center justify-center text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-primary-900 transition-colors disabled:opacity-25 disabled:cursor-not-allowed"
-                  aria-label="Scroll right"
-                >
-                  <RiArrowRightSLine size={18} />
-                </button>
-              </div>
-            </div>
-
-            {/* Scrollable row of BracketUI Cards */}
-            <div
-              ref={scrollRef}
-              onScroll={handleScroll}
-              className="flex gap-5 overflow-x-auto scrollbar-hide pb-2 -mx-1 px-1"
-              style={{ scrollSnapType: 'x mandatory' }}
-            >
-              {serviceCards.map((card, i) => (
-                <div
-                  key={i}
-                  className="flex-shrink-0 w-[300px] sm:w-[330px]"
-                  style={{ scrollSnapAlign: 'start' }}
-                >
-                  <Card
-                    size="lg"
-                    theme={cardTheme}
-                    className="h-full "
-                    header={
-                      <div className=" flex-1 flex flex-col">
-                        {/* <span className="text-[10px] font-semibold uppercase tracking-widest text-accent-600 dark:text-accent-400 mb-3">
-                          {card.category}
-                        </span> */}
-                        {card.title}
-                      </div>
-                    }
-                    cover={
-                      <div className=" rounded-e-xl overflow-hidden  border border-primary-100 border-dashed dark:border-primary-800/50 h-44">
-                        {card.illustration}
-                      </div>
-                    }
-                  >
-                    {/* Top content area */}
-                    <div>
-                      {/* Description */}
-
-                      {card.description}
-
-                      {/* Feature list */}
-                      <ul className="space-y-2 my-6">
-                        {card.features.map((f) => (
-                          <li
-                            key={f}
-                            className="flex items-center gap-2 text-primary-900 dark:text-primary-100"
-                          >
-                            <RiCheckLine
-                              size={10}
-                              className="text-accent-500 dark:text-accent-400 flex-shrink-0"
-                            />
-                            {f}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Illustration , larger, full width inside card */}
-
-                    {/* CTA , clearly separate below illustration */}
-                    <div className="px-5 py-4 mt-1">
-                      <Link
-                        href="/contact"
-                        className="inline-flex items-center gap-1.5 text-[0.78rem] font-semibold text-primary-600 dark:text-primary-400 hover:text-accent-600 dark:hover:text-accent-400 transition-colors group"
-                      >
-                        Get started
-                        <RiArrowRightLine
-                          size={11}
-                          className="group-hover:translate-x-0.5 transition-transform"
-                        />
-                      </Link>
-                    </div>
-                  </Card>
-                </div>
-              ))}
-            </div>
+          <div className="md:max-w-screen-xl mx-auto">
+            {services.map((service, i) => (
+              <ServiceSection key={service.id} {...service} flip={i % 2 !== 0} />
+            ))}
           </div>
         </Bracket>
       </section>

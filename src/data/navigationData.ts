@@ -55,6 +55,11 @@ export const webDevelopmentItems: NavlinkItem[] = [
     isDropdownItem: true,
   },
   {
+    label: 'WordPress Development',
+    href: '/services/web-development#wordpress-development',
+    isDropdownItem: true,
+  },
+  {
     label: 'Website Redesign',
     href: '/services/web-development#website-redesign',
     isDropdownItem: true,
