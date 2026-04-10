@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-[clamp(1rem,1.8vw,1.1875rem)] text-primary-500 dark:text-primary-400 leading-[1.75] max-w-[560px] text-left sm:text-center mx-auto mb-0">
+            <p className="text-[clamp(1rem,1.8vw,1.1875rem)] text-secondary-800 dark:text-secondary-300 leading-[1.75] max-w-[560px] text-left sm:text-center mx-auto mb-0">
               We build brands, not just websites. SEO-first, agency-quality work without the agency
               price tag.
             </p>
@@ -83,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                 size="md"
                 onClick={() => setIsFormOpen(true)}
                 theme={{
-                  background: 'bg-gradient-text dark:bg-gradient-text-dark',
+                  background: 'bg-gradient-text dark:bg-gradient-text-dark ',
                   hoverBackground:
                     '[@media(hover:hover)]:hover:bg-primary-800 dark:[@media(hover:hover)]:hover:bg-primary-200 [@media(hover:hover)]:hover:-translate-y-[1px]',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',

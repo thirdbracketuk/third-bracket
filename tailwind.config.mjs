@@ -165,13 +165,28 @@ const config = {
         // Dark: pure white → light gray (crisp, no muddy middle tones)
         // 'gradient-text-dark': 'linear-gradient(135deg, #ffffff 0%, #e0e0e0 60%, #c4c4c4 100%)',
 
-        'gradient-text':
-          'radial-gradient(ellipse at 30% 0%, #0d0d0d 0%, #2e2e2e 55%, #141414 100%)',
-        'gradient-text-dark':
-          'radial-gradient(ellipse at 30% 0%, #ffffff 0%, #e2e2e2 55%, #f0f0f0 100%)',
+        // 'gradient-text':
+        //   'radial-gradient(ellipse at 30% 0%, #0d0d0d 0%, #2e2e2e 55%, #141414 100%)',
+        // 'gradient-text-dark':
+        //   'radial-gradient(ellipse at 30% 0%, #ffffff 0%, #e2e2e2 55%, #f0f0f0 100%)',
+        // Light Mode: Polished Slate - Rich charcoal depth that looks solid/tactile
 
-        'gradient-accent': 'linear-gradient(120deg, #b71050 0%, #e30b5c 55%, #b71050 100%)',
-        'gradient-accent-dark': 'linear-gradient(120deg, #e30b5c 0%, #ee538f 55%, #e30b5c 100%)',
+        // Optional Secondary: Subtler version for "ghost-style" or less heavy buttons
+        'btn-secondary':
+          'radial-gradient(ellipse at 30% 0%, #969696 0%, #3b3b3b 65%, #080808 100%)',
+        'gradient-text':
+          'radial-gradient(ellipse at 30% 0%, #333b48 0%, #222830 50%, #050708 100%)',
+        'gradient-text-dark':
+          'radial-gradient(ellipse at 30% 0%, #ffffff 0%, #c4c9cf 60%, #8c95a1 100%)',
+        // Light Mode: Vibrant Raspberry hit at the top-left, deep Ruby at the bottom-right
+        'gradient-accent':
+          'radial-gradient(ellipse at 30% 0%, #f46a8e 0%, #e30b5c 50%, #8e1040 100%)',
+
+        // Dark Mode: Glowing Pink-Red hit at top-left, rich Raspberry at the bottom
+        'gradient-accent-dark':
+          'radial-gradient(ellipse at 30% 0%, #ff8fab 0%, #e30b5c 60%, #b71050 100%)',
+        // 'gradient-accent': 'linear-gradient(120deg, #b71050 0%, #e30b5c 55%, #b71050 100%)',
+        // 'gradient-accent-dark': 'linear-gradient(120deg, #e30b5c 0%, #ee538f 55%, #e30b5c 100%)',
 
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',
@@ -204,18 +219,36 @@ const config = {
         //   950: '#47101c',
         // },
 
+        // accent: {
+        //   50: '#fff0f6', // hsl(337, 100%, 97%)
+        //   100: '#fedce9', // hsl(337,  95%, 93%)
+        //   200: '#fbbbd4', // hsl(337,  90%, 86%)
+        //   300: '#f589b3', // hsl(337,  85%, 75%)
+        //   400: '#ee538f', // hsl(337,  82%, 63%)
+        //   500: '#e30b5c', // hsl(337,  91%, 47%) ← anchor
+        //   600: '#b71050', // hsl(337,  84%, 39%)
+        //   700: '#8e1040', // hsl(337,  80%, 31%)
+        //   800: '#700f34', // hsl(337,  76%, 25%)
+        //   900: '#530e28', // hsl(337,  72%, 19%)
+        //   950: '#340416', // hsl(337,  86%, 11%)
+        // },
         accent: {
-          50: '#fff0f6', // hsl(337, 100%, 97%)
-          100: '#fedce9', // hsl(337,  95%, 93%)
-          200: '#fbbbd4', // hsl(337,  90%, 86%)
-          300: '#f589b3', // hsl(337,  85%, 75%)
-          400: '#ee538f', // hsl(337,  82%, 63%)
-          500: '#e30b5c', // hsl(337,  91%, 47%) ← anchor
-          600: '#b71050', // hsl(337,  84%, 39%)
-          700: '#8e1040', // hsl(337,  80%, 31%)
-          800: '#700f34', // hsl(337,  76%, 25%)
-          900: '#530e28', // hsl(337,  72%, 19%)
-          950: '#340416', // hsl(337,  86%, 11%)
+          // Muted & Professional (Hue: 348 - Ruby Tint)
+          50: '#fff1f4', // Very clean, no "baby pink" vibration
+          100: '#ffe4e9', // Soft petal
+          200: '#fecdd6', // Clean highlight
+          300: '#fb9fb0', // Muted transition
+
+          // The Bridge (Stepping up the saturation)
+          400: '#f46a8e',
+
+          // Your "Good" Dark Shades (Hue: 345-348 - Deep Raspberry)
+          500: '#e30b5c', // The Anchor
+          600: '#b71050',
+          700: '#8e1040',
+          800: '#700f34',
+          900: '#530e28',
+          950: '#340416',
         },
 
         secondary: {

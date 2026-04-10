@@ -163,7 +163,7 @@ const Header: FC = () => {
           logo={
             <Logo
               height={20}
-              className="text-primary-800 dark:text-secondary-200 contrast-[1.1] brightness-[0.95]"
+              className="text-secondary-800 dark:text-secondary-300 contrast-[1.1] brightness-[0.95]"
             />
           }
           href="/"
