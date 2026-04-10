@@ -1,3 +1,51 @@
+// import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from 'payload'
+
+// import { revalidatePath, revalidateTag } from 'next/cache'
+
+// import type { Blog } from '../../../payload-types'
+
+// export const revalidateBlog: CollectionAfterChangeHook<Blog> = ({
+//   doc,
+//   previousDoc,
+//   req: { payload, context },
+// }) => {
+//   if (!context.disableRevalidate) {
+//     if (doc._status === 'published') {
+//       const path = `/blog/${doc.slug}`
+
+//       payload.logger.info(`Revalidating blog at path: ${path}`)
+
+//       revalidatePath(path)
+//       revalidatePath('/blog') // Revalidate blog listing
+//       revalidateTag('blog-sitemap')
+//     }
+
+//     // If the blog was previously published, we need to revalidate the old path
+//     if (previousDoc._status === 'published' && doc._status !== 'published') {
+//       const oldPath = `/blog/${previousDoc.slug}`
+
+//       payload.logger.info(`Revalidating old blog at path: ${oldPath}`)
+
+//       revalidatePath(oldPath)
+//       revalidatePath('/blog') // Revalidate blog listing
+//       revalidateTag('blog-sitemap')
+//     }
+//   }
+//   return doc
+// }
+
+// export const revalidateDelete: CollectionAfterDeleteHook<Blog> = ({ doc, req: { context } }) => {
+//   if (!context.disableRevalidate) {
+//     const path = `/blog/${doc?.slug}`
+
+//     revalidatePath(path)
+//     revalidatePath('/blog') // Revalidate blog listing
+//     revalidateTag('blog-sitemap')
+//   }
+
+//   return doc
+// }
+
 import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from 'payload'
 
 import { revalidatePath, revalidateTag } from 'next/cache'
@@ -15,20 +63,23 @@ export const revalidateBlog: CollectionAfterChangeHook<Blog> = ({
 
       payload.logger.info(`Revalidating blog at path: ${path}`)
 
-      revalidatePath(path)
-      revalidatePath('/blog') // Revalidate blog listing
-      revalidateTag('blog-sitemap')
+      void Promise.resolve().then(() => {
+        revalidatePath(path)
+        revalidatePath('/blog')
+        revalidateTag('blog-sitemap')
+      })
     }
 
-    // If the blog was previously published, we need to revalidate the old path
     if (previousDoc._status === 'published' && doc._status !== 'published') {
       const oldPath = `/blog/${previousDoc.slug}`
 
       payload.logger.info(`Revalidating old blog at path: ${oldPath}`)
 
-      revalidatePath(oldPath)
-      revalidatePath('/blog') // Revalidate blog listing
-      revalidateTag('blog-sitemap')
+      void Promise.resolve().then(() => {
+        revalidatePath(oldPath)
+        revalidatePath('/blog')
+        revalidateTag('blog-sitemap')
+      })
     }
   }
   return doc
@@ -38,9 +89,11 @@ export const revalidateDelete: CollectionAfterDeleteHook<Blog> = ({ doc, req: { 
   if (!context.disableRevalidate) {
     const path = `/blog/${doc?.slug}`
 
-    revalidatePath(path)
-    revalidatePath('/blog') // Revalidate blog listing
-    revalidateTag('blog-sitemap')
+    void Promise.resolve().then(() => {
+      revalidatePath(path)
+      revalidatePath('/blog')
+      revalidateTag('blog-sitemap')
+    })
   }
 
   return doc
