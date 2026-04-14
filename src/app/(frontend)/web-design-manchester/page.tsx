@@ -560,7 +560,7 @@ export default function WebDesignManchesterPage() {
             {/* DesignRush screenshot */}
             <div className="relative rounded-2xl overflow-hidden border border-primary-100 dark:border-primary-800/50 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.4)]">
               <Image
-                src="/designrush-ranking.jpg"
+                src="/designrush-ranking.webp"
                 alt="Third Bracket ranked #1 web design agency Manchester on DesignRush"
                 width={760}
                 height={420}
