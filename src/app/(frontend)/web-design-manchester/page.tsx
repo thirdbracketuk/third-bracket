@@ -494,7 +494,7 @@ export default function WebDesignManchesterPage() {
               {/* Location pill */}
               <div className="inline-flex items-center gap-2 bg-accent-50 dark:bg-accent-950/50 border border-accent-200/60 dark:border-accent-700/40 text-accent-700 dark:text-accent-300 text-[0.75rem] font-semibold px-3 py-1.5 rounded-full mb-6">
                 <RiMapPinLine size={12} />
-                Manchester's #1 Ranked Web Design Agency
+                Manchester&apos;s #1 Ranked Web Design Agency
               </div>
 
               <h1 className="text-[clamp(2.4rem,5vw,3.8rem)] font-extrabold leading-[1.1] bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-6">
@@ -504,7 +504,7 @@ export default function WebDesignManchesterPage() {
               <p className="text-[clamp(1rem,1.8vw,1.2rem)] text-primary-500 dark:text-primary-400 leading-[1.8] mb-4">
                 Most Manchester SMEs have never had the budget for proper branding. A custom
                 website, SEO that actually works, and a brand identity that makes you look the part
-                — that's been out of reach.
+                — that&apos;s been out of reach.
               </p>
 
               <p className="text-[clamp(0.95rem,1.6vw,1.1rem)] text-primary-500 dark:text-primary-400 leading-[1.8] mb-8">
@@ -585,8 +585,8 @@ export default function WebDesignManchesterPage() {
                 feedback, portfolio quality and online reputation. Third Bracket came first.
               </p>
               <p className="text-[clamp(0.88rem,1.3vw,1rem)] text-primary-500 dark:text-primary-400 leading-[1.75] mb-7">
-                We didn't buy that ranking. We earned it by doing the work properly — fast websites,
-                clean code, SEO that compounds, and clients who actually get results.
+                We didn&apos;t buy that ranking. We earned it by doing the work properly — fast
+                websites, clean code, SEO that compounds, and clients who actually get results.
               </p>
               <Link
                 href="/blog/thirdbracket-ranked-1-web-design-agency-manchester-designrush"
@@ -605,13 +605,13 @@ export default function WebDesignManchesterPage() {
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
           <div className="max-w-3xl mx-auto text-center mb-14">
             <h2 className="text-[clamp(1.5rem,3vw,2.2rem)] font-extrabold leading-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-5">
-              Good branding has always been a luxury in Manchester. We're changing that.
+              Good branding has always been a luxury in Manchester. We&apos;re changing that.
             </h2>
             <p className="text-[clamp(0.9rem,1.4vw,1.05rem)] text-primary-500 dark:text-primary-400 leading-[1.8]">
               A roofer in Salford. A hair salon in Didsbury. A paving company in Trafford. These
               businesses deserve a proper website, proper SEO, and a brand that represents them well
-              — not a £99 template and a disappearing freelancer. That's the gap thirdbracket was
-              built to fill.
+              — not a £99 template and a disappearing freelancer. That&apos;s the gap thirdbracket
+              was built to fill.
             </p>
           </div>
 
@@ -722,8 +722,9 @@ export default function WebDesignManchesterPage() {
                 Why Manchester businesses choose thirdbracket
               </h2>
               <p className="text-[clamp(0.9rem,1.4vw,1.05rem)] text-primary-500 dark:text-primary-400 leading-[1.8]">
-                We've worked inside agencies. We've worked as freelancers. We know exactly what both
-                get wrong — and we built thirdbracket specifically to avoid those mistakes.
+                We&apos;ve worked inside agencies. We&apos;ve worked as freelancers. We know exactly
+                what both get wrong — and we built thirdbracket specifically to avoid those
+                mistakes.
               </p>
             </div>
             <div className="space-y-8">
@@ -826,8 +827,8 @@ export default function WebDesignManchesterPage() {
                   Ready to make your Manchester business look the part?
                 </h2>
                 <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 max-w-[480px]">
-                  Tell us what you're trying to achieve. We'll tell you honestly what it will take
-                  and what it will cost. No jargon, no obligation.
+                  Tell us what you&apos;re trying to achieve. We&apos;ll tell you honestly what it
+                  will take and what it will cost. No jargon, no obligation.
                 </p>
               </div>
               <div className="flex flex-col gap-3 flex-shrink-0">
