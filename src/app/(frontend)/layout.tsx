@@ -79,7 +79,7 @@ const websiteJsonLd = {
 
   url: 'https://www.thirdbracket.co.uk',
 
-  name: 'Third Bracket Ltd',
+  name: 'ThirdBracket',
 
   publisher: {
     '@type': 'Organization',
@@ -125,7 +125,7 @@ const websiteJsonLd = {
     },
 
     description:
-      'Third Bracket delivers custom website design, development, SEO, branding, and creative solutions for UK businesses.',
+      'ThirdBracket delivers custom website design, development, SEO, branding, and creative solutions for UK businesses.',
     email: 'hello@thirdbracket.co.uk',
     telephone: '+44-7425-694261',
   },

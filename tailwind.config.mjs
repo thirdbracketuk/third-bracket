@@ -232,6 +232,8 @@ const config = {
         //   900: '#530e28', // hsl(337,  72%, 19%)
         //   950: '#340416', // hsl(337,  86%, 11%)
         // },
+        
+        razzmatazz: '#e30b5c',
         accent: {
           // Muted & Professional (Hue: 348 - Ruby Tint)
           50: '#fff1f4', // Very clean, no "baby pink" vibration

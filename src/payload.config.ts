@@ -44,7 +44,7 @@ export default buildConfig({
     },
     meta: {
       titleSuffix: '- Admin Panel', // Adds a suffix to the default title
-      title: 'thirdbracket', // Overrides the entire title
+      title: 'ThirdBracket', // Overrides the entire title
       description: 'Admin panel for thirdbracket',
 
       icons: [

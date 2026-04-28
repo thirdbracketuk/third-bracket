@@ -1,12 +1,12 @@
-// export const url = 'https://www.thirdbracket.co.uk'
+// export const url = 'https://www.ThirdBracket.co.uk'
 // // export const siteicon = "/icon.png";
 
 // export const gtm = 'GTM-5LLRMTFW'
 // export const gtmconnected = true
 
-// export const sitename = 'thirdbracket'
+// export const sitename = 'ThirdBracket'
 // export const description =
-//   'thirdbracket, a Manchester-based digital agency, helps businesses build strong brands and grow their digital presence.'
+//   'ThirdBracket, a Manchester-based digital agency, helps businesses build strong brands and grow their digital presence.'
 // export const keywords = [
 //   'email marketing agency',
 //   'seo marketing agency manchester',
@@ -77,15 +77,15 @@
 //   'website design for solicitors',
 // ]
 // export const urlimage = '/og.webp'
-// export const imagealt = 'Bespoke Web Design, SEO & Branding in Manchester | thirdbracket'
-// export const twitterhandle = '@thirdbracketltd'
+// export const imagealt = 'Bespoke Web Design, SEO & Branding in Manchester | ThirdBracket'
+// export const twitterhandle = '@ThirdBracketltd'
 
-// export const companyname = 'thirdbracket'
-// export const companylink = 'https://www.thirdbracket.co.uk'
+// export const companyname = 'ThirdBracket'
+// export const companylink = 'https://www.ThirdBracket.co.uk'
 
 // export const socialLinks = {
-//   facebook: 'https://www.facebook.com/thirdbracketltd',
-//   twitter: 'https://x.com/thirdbracketltd',
+//   facebook: 'https://www.facebook.com/ThirdBracketltd',
+//   twitter: 'https://x.com/ThirdBracketltd',
 //   linkedin: 'https://www.linkedin.com/company/thirdbracketltd',
 //   github: 'https://github.com/thirdbracketuk',
 //   googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
@@ -147,9 +147,9 @@ export const url = 'https://www.thirdbracket.co.uk'
 export const gtm = 'GTM-5LLRMTFW'
 export const gtmconnected = true
 
-export const sitename = 'thirdbracket'
+export const sitename = 'ThirdBracket'
 export const description =
-  'thirdbracket is a Manchester based web design agency building fast, SEO-first websites and brand identities for SMEs and startups across the UK.'
+  'ThirdBracket is a Manchester based web design agency building fast, SEO-first websites and brand identities for SMEs and startups across the UK.'
 export const keywords = [
   'web design agency manchester',
   'manchester web design',
@@ -181,11 +181,11 @@ export const keywords = [
   'uk web design agency',
 ]
 export const urlimage = '/og.webp'
-export const imagealt = 'Web Design Agency Manchester | thirdbracket'
-export const twitterhandle = '@thirdbracketltd'
+export const imagealt = 'Web Design Agency Manchester | ThirdBracket'
+export const twitterhandle = '@ThirdBracketltd'
 
-export const companyname = 'thirdbracket'
-export const companylink = 'https://www.thirdbracket.co.uk'
+export const companyname = 'ThirdBracket'
+export const companylink = 'https://www.ThirdBracket.co.uk'
 
 export const socialLinks = {
   facebook: 'https://www.facebook.com/thirdbracketltd',
@@ -210,7 +210,7 @@ export const faqData: FAQItem[] = [
       "We're a fully remote agency operating across the UK, with a focus on Manchester businesses. We're ranked #1 in Manchester by DesignRush and work with SMEs and startups across Greater Manchester and beyond.",
   },
   {
-    question: 'What makes thirdbracket different from other Manchester web design agencies?',
+    question: 'What makes ThirdBracket different from other Manchester web design agencies?',
     answer:
       'We build brands, not just websites. Every project is SEO-first and strategy-led from day one. As a fully remote team, we have no office overhead — which means agency-quality work at a leaner cost than traditional agencies.',
   },
