@@ -1,9 +1,8 @@
-<svg version="1.2" baseProfile="tiny-ps" width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
-    <title>ThirdBracket logo</title>
-    <desc>ThirdBracket Razzmatazz bracket logo on a solid white background</desc>
-    <!-- Solid background as required by BIMI -->
-    <rect width="1024" height="1024" fill="#ffffff" />
-    <!-- Razzmatazz Bracket Logo centered at roughly 55% scale -->
-    <path fill="#e30b5c" d="M267.14,227c-22.28,0.21-40.14,18.21-40.14,40.53v488.93c0,22.33,17.89,40.34,40.18,40.53h410.59L438.85,682.48V341.51l238.92-114.51H267.14z M796.97,267.22l-258.92,130.55l0.95,229.54l258,129.48v-488.57c-0.01-0.33,0-0.66,0-0.99H796.97z" />
+<svg version="1.2" baseProfile="tiny-ps" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" xml:space="preserve"><title>ThirdBracket logo</title>
+    
+    
+    
+    <rect width="1024" height="1024" fill="#ffffff"/>
+    
+    <path fill="#e30b5c" d="M267.14,227c-22.28,0.21-40.14,18.21-40.14,40.53v488.93c0,22.33,17.89,40.34,40.18,40.53h410.59L438.85,682.48V341.51l238.92-114.51H267.14z M796.97,267.22l-258.92,130.55l0.95,229.54l258,129.48v-488.57c-0.01-0.33,0-0.66,0-0.99H796.97z"/>
 </svg>
-
