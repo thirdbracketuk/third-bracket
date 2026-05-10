@@ -43,11 +43,11 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
           <div className="flex flex-col items-start sm:items-center space-y-7 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[820px] px-2 sm:px-0">
             {/* Announcement bar — DesignRush ranking */}
             <Link
-              href="https://www.thirdbracket.co.uk/blog/third-bracket-recognized-as-a-top-web-design-agency-in-manchester-by-designrush"
+              href="https://www.thirdbracket.co.uk/blog/introducing-bracketui--a-tailwindcss-based-component-library"
               className="inline-flex items-center gap-2 bg-accent-50 dark:bg-secondary-950 border border-accent-100 dark:border-accent-900/20 text-secondary-700 dark:text-secondary-200 text-[clamp(0.72rem,1.5vw,0.8rem)] leading-none font-medium px-3 py-1.5 rounded-full mb-0 overflow-hidden line-clamp-1"
             >
               <span className="w-[6px] h-[6px] bg-accent-500 rounded-full animate-pulse"></span>
-              <span className="truncate">We are ranked #1 — DesignRush 2024/25</span>
+              <span className="truncate">BracketUI v4 Out Now!!!</span>
               <svg
                 viewBox="0 0 8 12"
                 fill="none"
@@ -62,19 +62,15 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
             </Link>
 
             {/* H1 */}
-            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-extrabold leading-[1.15] text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
-              Your Website Should Be
-              <br className="hidden md:inline-flex" />
-              &nbsp;
-              <em className="not-italic bg-gradient-accent dark:bg-gradient-accent-dark text-transparent bg-clip-text">
-                Working Harder
-              </em>
+            <h1 className="text-[clamp(2.6rem,5.5vw,4.2rem)] font-bold leading-[1.15] text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-0">
+              High-Performance Web Design & SEO for SMEs
             </h1>
 
             {/* Subheadline */}
-            <p className="text-[clamp(1rem,1.8vw,1.1875rem)] text-secondary-800 dark:text-secondary-300 leading-[1.75] max-w-[560px] text-left sm:text-center mx-auto mb-0">
-              We build brands, not just websites. SEO-first, agency-quality work without the agency
-              price tag.
+            <p className="text-[clamp(1rem,1.8vw,1.1875rem)] text-secondary-800 dark:text-secondary-300 leading-[1.75]  text-left sm:text-center mx-auto mb-0">
+              ThirdBracket is a web design and SEO agency built to give small businesses access to
+              the quality normally reserved for large corporations. We design high-performance
+              websites and deliver SEO that drives real growth without traditional agency overhead.
             </p>
 
             {/* CTAs */}

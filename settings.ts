@@ -149,7 +149,7 @@ export const gtmconnected = true
 
 export const sitename = 'ThirdBracket'
 export const description =
-  'ThirdBracket is a Manchester based web design agency building fast, SEO-first websites and brand identities for SMEs and startups across the UK.'
+  'ThirdBracket helps SMEs grow with high-performance web design and SEO delivered by a remote team model that removes agency overhead and keeps quality affordable.'
 export const keywords = [
   'web design agency manchester',
   'manchester web design',
@@ -205,43 +205,43 @@ export type FAQItem = {
 
 export const faqData: FAQItem[] = [
   {
-    question: 'Are you based in Manchester?',
+    question: 'Are you a UK-based web design and SEO agency?',
     answer:
-      "We're a fully remote agency operating across the UK, with a focus on Manchester businesses. We're ranked #1 in Manchester by DesignRush and work with SMEs and startups across Greater Manchester and beyond.",
+      'We are a fully remote web design and SEO agency serving SMEs across the UK and globally. Our remote specialist model allows us to deliver agency-quality work without the traditional overhead.',
   },
   {
-    question: 'What makes ThirdBracket different from other Manchester web design agencies?',
+    question: 'What makes ThirdBracket different from other web design agencies?',
     answer:
-      'We build brands, not just websites. Every project is SEO-first and strategy-led from day one. As a fully remote team, we have no office overhead — which means agency-quality work at a leaner cost than traditional agencies.',
+      'Most agencies sell websites. We build high-performance digital assets designed to drive growth. Every project is strategy-led, SEO-built, and delivered without unnecessary layers or overhead.',
   },
   {
-    question: 'Do you build websites using WordPress and Elementor?',
+    question: 'Do you build websites using WordPress and Next.js?',
     answer:
-      'Yes. We work exclusively within the WordPress and Next.js ecosystems. For clients who need easy content management, we build fast, modern WordPress and WooCommerce sites. For performance-first builds, we use Next.js.',
+      'Yes. We work within the WordPress and Next.js ecosystems. For clients who need easy content management, we build fast, modern WordPress and WooCommerce sites. For performance-first builds, we use Next.js.',
   },
   {
     question: 'How do you ensure websites rank on Google?',
     answer:
-      'Every site we build ships with clean architecture, proper meta structure, schema markup, XML sitemaps, and Core Web Vitals optimisation. SEO is not an afterthought — it is built into the foundation of every project.',
+      'SEO is built into every project from the start. We implement clean architecture, meta structure, schema markup, XML sitemaps, and Core Web Vitals optimisation as part of the foundation.',
   },
   {
-    question: 'Do you offer affordable web design for Manchester startups?',
+    question: 'Is your web design suitable for small businesses and startups?',
     answer:
-      "Yes. Our remote-first model means we can deliver agency-quality work without agency pricing. We're transparent about costs and work with early-stage businesses and founders who need professional results on a sensible budget.",
+      'Yes. ThirdBracket was built specifically to give small businesses access to the quality normally reserved for large corporations, delivered through a lean and efficient model.',
   },
   {
     question: 'Can you redesign my existing website?',
     answer:
-      'Absolutely. We handle full redesigns for WordPress, WooCommerce, and custom-built sites — improving UX, page speed, and SEO as part of the process. We also handle migrations to modern frameworks if needed.',
+      'Absolutely. We handle full redesigns for WordPress, WooCommerce, and custom-built sites, improving UX, performance, and SEO as part of the process.',
   },
   {
     question: 'How long does a typical project take?',
     answer:
-      'Small sites typically launch in 2 to 3 weeks. Larger builds with custom features usually take 4 to 6 weeks. We give you a clear timeline before we start and keep you updated throughout.',
+      'Smaller websites typically launch within 2–3 weeks. Larger builds with custom functionality usually take 4–6 weeks. Clear timelines are provided before every project.',
   },
   {
     question: 'Do you provide support after launch?',
     answer:
-      'Yes. We offer flexible maintenance and support packages covering content updates, plugin management for WordPress sites, performance monitoring, and ongoing SEO work. You own everything we build — no lock-in.',
+      'Yes. We offer flexible support and maintenance covering content updates, performance monitoring, and ongoing SEO. You retain full ownership with no lock-in.',
   },
 ]

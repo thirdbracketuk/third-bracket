@@ -530,7 +530,7 @@ const cards = [
     props: {
       header: (
         <span className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
-          Brand-First Approach
+          Strategy Before Design
         </span>
       ),
       cover: <BrandIllustration />,
@@ -560,7 +560,7 @@ const cards = [
       ),
       cover: <DesignIllustration />,
       children:
-        'We build with our own component library BracketUI — consistent, fast and visually sharp interfaces every time.',
+        'We build with our own component library BracketUI - consistent, fast and visually sharp interfaces every time.',
     },
   },
   {
@@ -572,7 +572,7 @@ const cards = [
         </span>
       ),
       children:
-        'Every site ships complete. Features configured, tested and ready to go live. No half-finished handovers.',
+        'Your site goes live fully configured, tested, and ready to perform. No unfinished handovers.',
     },
   },
   {
@@ -585,7 +585,7 @@ const cards = [
       ),
       cover: <OwnershipIllustration />,
       children:
-        'Full admin, domain, hosting and licence access from day one. No vendor lock-in, no dependency on us to make changes.',
+        'Full admin, domain, hosting and licence access from day one. No lock-in, no dependency',
     },
   },
   {
@@ -593,11 +593,11 @@ const cards = [
     props: {
       header: (
         <span className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-bold">
-          Agency Quality, Leaner Cost
+          Agency Quality Without Agency Overhead
         </span>
       ),
       children:
-        "We're a fully remote team. No office overhead, no middlemen. That saving goes directly into the quality of your project.",
+        'As a remote specialist team, we remove unnecessary overhead and put that value directly into the quality of your project.',
     },
   },
 ]
@@ -612,8 +612,7 @@ export default function CardGrid() {
               The Third Bracket Difference
             </h2>
             <p className="text-[clamp(0.95rem,1.5vw,1.1rem)] leading-relaxed text-primary-500 dark:text-primary-400 text-left sm:text-center lg:text-left">
-              Most agencies sell you a website. We build you a brand presence that works long after
-              the invoice is paid.
+              We build a digital presence designed to perform long after launch.
             </p>
           </div>
 
