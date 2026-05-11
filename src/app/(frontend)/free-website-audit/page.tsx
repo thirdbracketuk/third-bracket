@@ -31,28 +31,28 @@ const issues = [
     title: 'Poor Mobile Score',
     badge: 'Below 50/100',
     description:
-      "Google suppresses low-scoring sites in local search. Most of your customers search on mobile — if your score is below 50, you're invisible to them.",
+      "Google suppresses low-scoring sites in local search. Most of your customers search on mobile , if your score is below 50, you're invisible to them.",
   },
   {
     icon: MdSpeed,
     title: 'Slow Load Speed',
     badge: 'LCP over 2.5s',
     description:
-      "Visitors leave before your phone number loads. You never know they were there. Google's threshold is 2.5 seconds — anything slower hurts your ranking.",
+      "Visitors leave before your phone number loads. You never know they were there. Google's threshold is 2.5 seconds , anything slower hurts your ranking.",
   },
   {
     icon: FaShieldAlt,
     title: 'SSL / Security Error',
     badge: 'Not Secure',
     description:
-      'Chrome shows "Your connection is not private." Most people hit back immediately without reading another word — and Google de-ranks you for it.',
+      'Chrome shows "Your connection is not private." Most people hit back immediately without reading another word , and Google de-ranks you for it.',
   },
   {
     icon: FaBug,
     title: 'Broken Pages',
     badge: '404 Errors',
     description:
-      "Customers click to contact you and hit a dead end. They don't try again — they just call the next person on the list.",
+      "Customers click to contact you and hit a dead end. They don't try again , they just call the next person on the list.",
   },
   {
     icon: FaTachometerAlt,
@@ -77,7 +77,7 @@ const included = [
   '404 broken page scan across key URLs',
   'Desktop performance score',
   'Redirect chain analysis',
-  'Plain-English summary — what to fix first and why',
+  'Plain-English summary , what to fix first and why',
 ]
 
 const beforeMetrics = [
@@ -114,7 +114,7 @@ function BeforeAfter() {
                 : 'bg-primary-50 dark:bg-primary-950 text-primary-400 dark:text-primary-500 hover:text-primary-700 dark:hover:text-primary-300'
             }`}
           >
-            {tab === 'before' ? '❌  Before the fix' : '✅  After the fix'}
+            {tab === 'before' ? '  Before the fix' : '  After the fix'}
           </button>
         ))}
       </div>
@@ -190,57 +190,36 @@ export default function FreeAuditPage() {
           {/* ── Page Header ───────────────────────────────────────── */}
           <PageHeader
             title="Free Website Audit"
-            description="We audited hundreds of trades websites across Manchester. Most had at least one critical issue costing them enquiries every day. Find out exactly what's holding yours back — no obligation, no jargon."
+            description="We audited thousands of trades websites across Manchester. Most had at least one critical issue costing them enquiries every day. Find out exactly what is holding yours back."
+            actions={
+              <>
+                <Button
+                  as={Link}
+                  href={WHATSAPP_URL}
+                  size="md"
+                  theme={{
+                    background: 'bg-accent-600 dark:bg-accent-500',
+                    hoverBackground:
+                      '[@media(hover:hover)]:hover:bg-accent-700 dark:[@media(hover:hover)]:hover:bg-accent-400 [@media(hover:hover)]:hover:-translate-y-[1px]',
+                    focusRing: 'focus:ring-accent-500 dark:focus:ring-accent-400',
+                    text: 'text-white',
+                  }}
+                  className="px-[22px] py-[11px] text-[0.9rem]"
+                >
+                  <FaWhatsapp className="mr-2 w-[15px] h-[15px]" />
+                  Claim Your Free Audit
+                </Button>
+              </>
+            }
           />
-
-          {/* ── Hero CTA strip ────────────────────────────────────── */}
-          <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem] ">
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <Button
-                as={Link}
-                href={WHATSAPP_URL}
-                size="md"
-                theme={{
-                  background: 'bg-accent-600 dark:bg-accent-500',
-                  hoverBackground:
-                    '[@media(hover:hover)]:hover:bg-accent-700 dark:[@media(hover:hover)]:hover:bg-accent-400 [@media(hover:hover)]:hover:-translate-y-[1px]',
-                  focusRing: 'focus:ring-accent-500 dark:focus:ring-accent-400',
-                  text: 'text-white',
-                }}
-                className="px-[18px] py-[10px] text-[0.875rem]"
-              >
-                <FaWhatsapp className="mr-2" size={16} />
-                Claim Your Free Audit on WhatsApp
-              </Button>
-              <Button
-                as={Link}
-                href="/contact"
-                outline
-                size="md"
-                theme={{
-                  border: 'border-primary-200 dark:border-primary-700',
-                  hoverBackground:
-                    'hover:bg-primary-50 dark:hover:bg-primary-900 [@media(hover:hover)]:hover:-translate-y-[1px]',
-                  focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
-                  text: 'text-primary-700 dark:text-primary-300',
-                }}
-                className="px-[18px] py-[10px] text-[0.875rem]"
-              >
-                Or contact us by email
-              </Button>
-            </div>
-            <p className="mt-4 text-sm text-center  text-primary-400 dark:text-primary-500">
-              Free for Manchester trades businesses. Results within 24–48 hours. No hard sell.
-            </p>
-          </section>
 
           {/* ── Issues we check ───────────────────────────────────── */}
           <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]" id="what-we-check">
             <div className="mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
+              <h2 className="text-3xl lg:text-4xl text-center font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
                 6 issues that cost trades businesses work every day
               </h2>
-              <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light text-primary-600 dark:text-primary-400 max-w-2xl">
+              <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light text-primary-600 dark:text-primary-400 max-w-2xl text-center mx-auto">
                 These are the most common problems we find when auditing Manchester trades websites.
                 Every single one directly affects how many enquiries your site generates.
               </p>
@@ -290,27 +269,27 @@ export default function FreeAuditPage() {
                 </h2>
                 <p className="text-base/[1.6] md:text-lg/[1.75rem] text-primary-500 dark:text-primary-400 mb-8">
                   We&apos;ve fixed websites for electricians, roofers, plumbers, and builders across
-                  Greater Manchester. The issues are almost always the same — and they&apos;re
+                  Greater Manchester. The issues are almost always the same , and they&apos;re
                   fixable. The audit tells you exactly where to start.
                 </p>
 
-                {/* Score display — same visual language as the email score cards */}
+                {/* Score display , same visual language as the email score cards */}
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   <ScoreCard
                     label="Mobile Score"
                     value="31"
-                    sub="Before — bottom tier"
+                    sub="Before , bottom tier"
                     bad={true}
                   />
-                  <ScoreCard label="Mobile Score" value="91" sub="After — top tier" bad={false} />
-                  <ScoreCard label="Load Speed" value="6.2s" sub="Before — failing" bad={true} />
-                  <ScoreCard label="Load Speed" value="1.3s" sub="After — passing" bad={false} />
+                  <ScoreCard label="Mobile Score" value="91" sub="After , top tier" bad={false} />
+                  <ScoreCard label="Load Speed" value="6.2s" sub="Before , failing" bad={true} />
+                  <ScoreCard label="Load Speed" value="1.3s" sub="After , passing" bad={false} />
                 </div>
 
                 <ul className="space-y-3">
                   {[
                     'Plain-English breakdown, no jargon',
-                    'Prioritised — fix the most important thing first',
+                    'Prioritised , fix the most important thing first',
                     'We can fix it for you, or you can take it to anyone',
                   ].map((point) => (
                     <li key={point} className="flex items-start gap-3">
@@ -343,7 +322,7 @@ export default function FreeAuditPage() {
                 </h2>
                 <p className="text-base/[1.6] md:text-lg/[1.75rem] text-primary-500 dark:text-primary-400 mb-8">
                   We run your site through a full technical check and send you the results with a
-                  plain-English breakdown — no spreadsheet dumps, no upsell deck.
+                  plain-English breakdown , no spreadsheet dumps, no upsell deck.
                 </p>
                 <ul className="space-y-4">
                   {included.map((item) => (
@@ -360,14 +339,14 @@ export default function FreeAuditPage() {
                 </ul>
               </div>
 
-              {/* Right: accent CTA card — mirrors CTASection interior styling */}
+              {/* Right: accent CTA card , mirrors CTASection interior styling */}
               <div className="relative overflow-hidden rounded-3xl p-10 sm:p-12 bg-gradient-to-br from-accent-50/50 via-white to-accent-50/30 dark:from-accent-950/10 dark:via-black dark:to-accent-950/5 border border-accent-200 dark:border-accent-800/30 shadow-[0_0_0_1px_rgba(188,58,91,0.06),0_8px_32px_-8px_rgba(188,58,91,0.12)] dark:shadow-[0_0_0_1px_rgba(215,93,130,0.08),0_8px_40px_-8px_rgba(215,93,130,0.16)]">
                 <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-accent-100/60 dark:bg-accent-900/10 blur-3xl pointer-events-none" />
                 <div className="relative z-10">
                   <div className="flex items-center gap-2 mb-4">
                     <RiAlertLine size={18} className="text-accent-500 dark:text-accent-400" />
                     <span className="text-xs font-semibold uppercase tracking-widest text-accent-600 dark:text-accent-400">
-                      100% Free — No Strings
+                      100% Free , No Strings
                     </span>
                   </div>
                   <h3 className="text-[clamp(1.25rem,2.5vw,1.75rem)] font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-3 leading-tight">
@@ -375,7 +354,7 @@ export default function FreeAuditPage() {
                   </h3>
                   <p className="text-sm leading-relaxed text-primary-500 dark:text-primary-400 mb-8">
                     Message us on WhatsApp with your website URL. We run the audit and send you the
-                    full breakdown — usually within 24 hours. We can fix it for you or you can take
+                    full breakdown , usually within 24 hours. We can fix it for you or you can take
                     it to anyone.
                   </p>
                   <div className="flex flex-col gap-3">
