@@ -12,9 +12,10 @@ export default function Company() {
             Our Company
           </h2>
           <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-400 mb-6">
-            thirdbracket is a remote-first web development studio based in Bangladesh, serving clients worldwide with a strong focus on the UK market. We specialize in
-            building fast, SEO-optimized websites with clean, minimal design — powered by Next.js
-            and tailored for businesses of all sizes.
+            thirdbracket is a remote-first web development studio based in Bangladesh, serving
+            clients worldwide with a strong focus on the UK market. We specialize in building fast,
+            SEO-optimized websites with clean, minimal design - powered by Next.js and tailored for
+            businesses of all sizes.
           </p>
           <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-400">
             Founded in 2019, we&apos;ve grown from a small freelance operation to a specialized team
