@@ -205,11 +205,11 @@ const categories = [
 export const metadata: Metadata = {
   title: 'Web Design & Development Services',
   description:
-    'Explore our modern web development and digital marketing services crafted for UK agencies and small businesses. We deliver speed, SEO, and clean design.',
+    'Explore our modern web development and digital marketing services for agencies and small businesses worldwide. We deliver speed, SEO, and clean design.',
   openGraph: {
     title: 'Professional Web Development & Design Services',
     description:
-      'We privide services in WordPress development, UI/Ux design, and digital marketing',
+      'We provide services in WordPress development, UI/UX design, and digital marketing',
   },
 }
 
@@ -221,7 +221,7 @@ export default function ServicesPage() {
           {/* Structured data now in layout.tsx */}
           <PageHeader
             title="Services"
-            description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
+            description="Full-service modern web development & marketing for small businesses, agencies, and startups worldwide."
           />
 
           {categories.map((cat, index) => (

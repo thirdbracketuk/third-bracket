@@ -1023,7 +1023,7 @@ export default function BrandingCreativePage() {
     <div>
       <PageHeader
         title="Branding & Creative Design"
-        description="Identity systems that mean something. From brand strategy to every visual touchpoint, built for consistency and recognition across Manchester and beyond."
+        description="Identity systems that mean something. From brand strategy to every visual touchpoint, built for consistency and recognition worldwide."
       />
 
       {/* Hero illustration + two-column */}

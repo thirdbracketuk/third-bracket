@@ -76,17 +76,17 @@ const websiteJsonLd = {
   publisher: {
     '@type': 'Organization',
 
-    name: 'Third Bracket Ltd',
+    name: 'Third Bracket Limited',
 
     url: 'https://www.thirdbracket.co.uk',
 
     sameAs: [
-      'https://www.linkedin.com/company/thirdbracket/',
-      'https://www.youtube.com/@thirdbracketuk',
+      'https://www.linkedin.com/company/thirdbracketltd',
+      'https://www.youtube.com/@thirdbracketltd',
 
       'https://github.com/thirdbracketuk',
-      'https://www.facebook.com/thirdbracketuk/',
-      'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
+      'https://www.facebook.com/thirdbracketltd',
+      'https://www.facebook.com/thirdbracketltd',
       'https://www.instagram.com/thirdbracketuk',
     ],
 
@@ -104,22 +104,22 @@ const websiteJsonLd = {
     },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '340 Dickenson Rd',
-      addressLocality: 'Longsight',
-      addressCountry: 'GB',
-      addressRegion: 'North-west',
-      postalCode: 'M130NG',
+      streetAddress: 'Nowab Manjil, Town Hall Road, Habiganj Sadar',
+      addressLocality: 'Habiganj',
+      addressCountry: 'BD',
+      addressRegion: 'Sylhet',
+      postalCode: '3300',
     },
 
     areaServed: {
       '@type': 'AdministrativeArea',
-      name: 'Manchester',
+      name: 'Habiganj',
     },
 
     description:
-      'ThirdBracket delivers custom website design, development, SEO, branding, and creative solutions for UK businesses.',
+      'ThirdBracket is a web design and SEO agency built to give small businesses access to the quality normally reserved for large corporations. We design high-performance websites and deliver SEO that drives real growth without traditional agency overhead.',
     email: 'hello@thirdbracket.co.uk',
-    telephone: '+44-7425-694261',
+    telephone: '+8801765692886',
   },
 }
 

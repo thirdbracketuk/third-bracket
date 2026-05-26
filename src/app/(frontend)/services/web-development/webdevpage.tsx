@@ -743,9 +743,9 @@ const webFaqData = [
       'Yes. Flexible maintenance packages covering content updates, plugin management for WordPress, performance monitoring, and ongoing development.',
   },
   {
-    question: 'We are in Manchester , do you work with local businesses in person?',
+    question: 'Do you work remotely or in-person?',
     answer:
-      "We're fully remote but focused on the Manchester market. Everything happens over Zoom and async. Our Manchester clients get the same quality as if we had an office on Deansgate, without the overhead on their invoice.",
+      "We're a remote-first agency based in Bangladesh, serving clients worldwide with a strong focus on the UK market. Everything happens over Zoom and async communication. Our clients get high-quality work without the overhead of a traditional agency office.",
   },
 ]
 

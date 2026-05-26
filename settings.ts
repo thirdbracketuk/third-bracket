@@ -192,9 +192,9 @@ export const socialLinks = {
   twitter: 'https://x.com/thirdbracketltd',
   linkedin: 'https://www.linkedin.com/company/thirdbracketltd',
   github: 'https://github.com/thirdbracketuk',
-  googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
+  googleBusiness: 'c',
   instagram: 'https://www.instagram.com/thirdbracketuk',
-  youtube: 'https://www.youtube.com/@thirdbracketuk',
+  youtube: 'https://www.youtube.com/@thirdbracketltd',
   dribble: 'https://dribbble.com/thirdbracket',
 }
 

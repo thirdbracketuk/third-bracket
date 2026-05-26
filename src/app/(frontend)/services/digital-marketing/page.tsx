@@ -816,7 +816,7 @@ const approachSteps = [
     icon: RiFileChartLine,
     number: '02',
     title: 'Campaign strategy',
-    body: 'We define the target keywords, content gaps, and quick wins specific to your market. Manchester businesses get local strategy, not a generic template.',
+    body: 'We define the target keywords, content gaps, and quick wins specific to your market. Local businesses get location-specific strategy, not a generic template.',
   },
   {
     icon: RiCodeLine,
@@ -876,7 +876,7 @@ const seoFaqData = [
 // ─── SEO ecosystem data ───────────────────────────────────────────────────────
 
 const organicFeatures = [
-  { icon: RiSearchLine, text: 'Keyword research specific to Manchester and UK markets' },
+  { icon: RiSearchLine, text: 'Keyword research specific to your target markets' },
   { icon: RiCodeLine, text: 'Technical SEO built into every WordPress and Next.js build' },
   {
     icon: RiMapPinLine,
@@ -965,7 +965,7 @@ const services = [
     badge: 'Local',
     title: 'Local SEO',
     description:
-      'For Manchester businesses, showing up in local search is often the highest-value SEO investment you can make. We optimise your Google Business profile, build consistent local citations, create location-specific landing pages, and target the exact keywords your local customers are typing.',
+      'For local businesses, showing up in local search is often the highest-value SEO investment you can make. We optimise your Google Business profile, build consistent local citations, create location-specific landing pages, and target the exact keywords your local customers are typing.',
     features: [
       'Google Business',
       'Local citations',
@@ -1043,7 +1043,7 @@ export default function DigitalMarketingPage() {
     <div>
       <PageHeader
         title="SEO & Growth Services"
-        description="Organic growth that compounds. We build the technical and content foundation that gets Manchester businesses found on Google."
+        description="Organic growth that compounds. We build the technical and content foundation that gets businesses found on Google."
       />
 
       {/* Hero illustration + two-column ecosystem */}

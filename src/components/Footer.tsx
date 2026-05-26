@@ -30,10 +30,10 @@ const SiteFooter = () => {
     >
       <FooterSection className="col-span-2 !py-4 md:py-0">
         <FooterBrand logo={<Logo className="text-secondary-900 dark:text-secondary-100 h-6" />}>
-          <p className="text-primary-600 dark:text-primary-500 text-[clamp(0.95rem,1.5vw,1.1rem)]  leading-relaxed ">
+          <p className="text-primary-600 dark:text-primary-500   leading-relaxed ">
             High-performance web design and SEO built for SMEs.
           </p>
-          <p className="text-primary-600 dark:text-primary-500 text-[clamp(0.95rem,1.5vw,1.1rem)]  leading-relaxed ">
+          <p className="text-primary-600 dark:text-primary-500 text-  leading-relaxed ">
             hello@thirdbracket.co.uk
           </p>
         </FooterBrand>
@@ -147,6 +147,17 @@ const SiteFooter = () => {
           href="https://www.designrush.com/agency/website-design-development/uk/manchester"
         >
           DesignRush
+        </FooterLink>
+        <FooterLink
+          target="_blank"
+          theme={{
+            text: 'text-primary-900 dark:text-primary-50',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="https://www.bayxbengal.com/"
+        >
+          BayofBengal
         </FooterLink>
       </FooterSection>
 

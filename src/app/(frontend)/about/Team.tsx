@@ -3,36 +3,18 @@
 
 import Image from 'next/image'
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
+import { twitterhandle } from 'settings'
 
 const team = [
   {
-    name: 'Abdul Malik',
-    role: 'Founder & Director',
-    bio: 'Founder of thirdbracket',
-    image: '/malik.svg',
-    social: {
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/',
-    },
-  },
-  {
-    name: 'Zakir Hussain',
-    role: 'Co-Founder & Director of Operations',
-    bio: 'Founder of Nicky Limited and 10+ other businessses in Manchester which includes Retail and Real Estate',
-    image: '/zakir.svg',
-    social: {
-      linkedin: 'https://linkedin.com/',
-      twitter: 'https://twitter.com/',
-    },
-  },
-  {
-    name: 'Musabbir Sagar',
+    name: 'S M A Musabbir Sagar',
     role: 'Chief Executive Officer',
     bio: 'Founder of thirdbracket, NomadGang, ProductsofBangladesh and biggest contributor to open source with things like Bracket UI. ',
     image: '/sagar.svg',
     social: {
       linkedin: 'https://my.linkedin.com/in/musabbirsagar',
       github: 'https://github.com/sagarmusabbir',
+      twitter: 'https://x.com/sagarmusabbir',
     },
   },
 ]
