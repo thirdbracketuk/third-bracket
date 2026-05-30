@@ -9,18 +9,9 @@ export async function GET(request: NextRequest) {
     const works = await payload.find({
       collection: 'work',
       where: {
-        and: [
-          {
-            _status: {
-              equals: 'published'
-            }
-          },
-          {
-            'agency': {
-              in: [3]
-            }
-          }
-        ]
+        _status: {
+          equals: 'published'
+        }
       },
       sort: '-completedAt',
       limit: 100
@@ -41,21 +32,15 @@ export async function GET(request: NextRequest) {
       github: work.github || '',
       behance: work.behance || '',
       liveWebsite: work.liveWebsite || '',
-      agency: {
-        name: 'Musabbir Sagar'
-      }
     }))
 
     const response = NextResponse.json({
       docs: formattedDocs
     })
 
-    // CORS headers
     response.headers.set('Access-Control-Allow-Origin', '*')
     response.headers.set('Access-Control-Allow-Methods', 'GET')
     response.headers.set('Access-Control-Allow-Headers', 'Content-Type')
-    
-    // Cache headers (5 minutes)
     response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
 
     return response
