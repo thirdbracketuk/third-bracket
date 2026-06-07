@@ -49,10 +49,88 @@ export default async function Page() {
         />
 
         {/* ── Stats bar ──────────────────────────────────────────────── */}
+
         <WorkStats />
 
         {/* ── NDA notice ─────────────────────────────────────────────── */}
         <NDANotice />
+
+        <div
+          className="bg-transparent mx-auto border border-primary-200 dark:border-primary-800"
+          style={{
+            fontFamily:
+              '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+
+            borderRadius: 12,
+            padding: 20,
+            maxWidth: 500,
+
+            boxShadow: 'rgba(0, 0, 0, 0.05) 0px 2px 8px',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
+            <img
+              alt="Bay of Bengal"
+              src="https://ph-files.imgix.net/87807ad6-ff90-4297-a62f-d2c962ff9fcc.png?auto=format&fit=crop&w=80&h=80"
+              width={64}
+              height={64}
+              style={{ borderRadius: 8, objectFit: 'cover', flexShrink: 0 }}
+            />
+            <div style={{ flex: '1 1 0%', minWidth: 0 }}>
+              <h3
+                className="text-primary-900 dark:text-primary-100"
+                style={{
+                  margin: 0,
+                  fontSize: 18,
+                  fontWeight: 600,
+
+                  lineHeight: 1.3,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Bay of Bengal
+              </h3>
+              <p
+                style={{
+                  margin: '4px 0 0',
+                  fontSize: 14,
+                  color: 'rgb(102, 102, 102)',
+                  lineHeight: 1.4,
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical',
+                }}
+              >
+                Discover verified Bangladesh exporters, the smarter way
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="https://www.producthunt.com/products/bay-of-bengal?embed=true&utm_source=embed&utm_medium=post_embed"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 4,
+              marginTop: 12,
+              padding: '8px 16px',
+              background: 'rgb(255, 97, 84)',
+              color: 'rgb(255, 255, 255)',
+              textDecoration: 'none',
+              borderRadius: 8,
+              fontSize: 14,
+              fontWeight: 600,
+            }}
+          >
+            Check it out on Product Hunt →
+          </a>
+        </div>
 
         {/* ── Project listing with filtering ─────────────────────────── */}
         <WorkArchive works={works.docs} />

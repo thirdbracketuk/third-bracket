@@ -394,6 +394,7 @@ const Header: FC = () => {
               <div className="hidden lg:flex flex-col justify-center h-full">
                 <div className="p-6 bg-gradient-primary-dark dark:bg-gradient-primary border border-primary-500/30 rounded-2xl overflow-hidden relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-accent-500/5 via-transparent to-accent-500/3 pointer-events-none" />
+
                   <div className="relative z-10 text-center">
                     <BracketUINavIllustration />
                     <h3 className="text-base font-semibold text-primary-900 dark:text-primary-50 mb-1.5">

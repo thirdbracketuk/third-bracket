@@ -217,6 +217,27 @@ const SiteFooter = () => {
         >
           Showcase
         </FooterLink>
+        <a
+          href="https://www.producthunt.com/products/bracketui-v4?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-bracketui-v4"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block mt-3"
+        >
+          <img
+            alt="BracketUI v4 - Open source TailwindCSS component library for Next.js | Product Hunt"
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1163801&theme=light&t=1780859273126"
+            width={250}
+            height={54}
+            className="block dark:hidden"
+          />
+          <img
+            alt="BracketUI v4 - Open source TailwindCSS component library for Next.js | Product Hunt"
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1163801&theme=dark&t=1780859273126"
+            width={250}
+            height={54}
+            className="hidden dark:block"
+          />
+        </a>
       </FooterSection>
       {/* <FooterSection title="Useful Links">
         <FooterLink

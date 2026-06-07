@@ -13,6 +13,7 @@ import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import Script from 'next/script'
 import { faqData } from 'settings'
+import { Bracket } from '@thirdbracket/bracketui'
 
 const faqJsonLd = {
   '@context': 'https://schema.org',

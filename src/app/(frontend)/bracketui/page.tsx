@@ -132,8 +132,92 @@ export default function BracketUIPage() {
           {/* ── Page Header ─────────────────────────────────────────── */}
           <PageHeader
             title="BracketUI"
-            description="Open source TailwindCSS component library for React and Next.js — dark mode, theming, and full customisation out of the box."
+            description="Open source TailwindCSS component library for React and Next.js - dark mode, theming, and full customisation out of the box."
           />
+
+          <div
+            className="mx-auto"
+            style={{
+              fontFamily:
+                '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
+              border: '1px solid rgb(224, 224, 224)',
+              borderRadius: 12,
+              padding: 20,
+              maxWidth: 500,
+              background: 'transparent',
+              boxShadow: 'rgba(0, 0, 0, 0.05) 0px 2px 8px',
+            }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+
+                gap: 12,
+                marginBottom: 12,
+              }}
+            >
+              <img
+                alt="BracketUI v4"
+                src="https://ph-files.imgix.net/b4520075-d355-486a-bf0a-f4326afbc1b2.png?auto=format&fit=crop&w=80&h=80"
+                width={64}
+                height={64}
+                style={{ borderRadius: 8, objectFit: 'cover', flexShrink: 0 }}
+              />
+              <div style={{ flex: '1 1 0%', minWidth: 0 }}>
+                <h3
+                  className="text-primary-800 dark:text-primary-100"
+                  style={{
+                    margin: 0,
+                    fontSize: 18,
+                    fontWeight: 600,
+
+                    lineHeight: 1.3,
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  BracketUI v4
+                </h3>
+                <p
+                  style={{
+                    margin: '4px 0 0',
+                    fontSize: 14,
+                    color: 'rgb(102, 102, 102)',
+                    lineHeight: 1.4,
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical',
+                  }}
+                >
+                  Open source TailwindCSS component library for Next.js
+                </p>
+              </div>
+            </div>
+            <a
+              href="https://www.producthunt.com/products/bracketui-v4?embed=true&utm_source=embed&utm_medium=post_embed"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 4,
+                marginTop: 12,
+                padding: '8px 16px',
+                background: 'rgb(255, 97, 84)',
+                color: 'rgb(255, 255, 255)',
+                textDecoration: 'none',
+                borderRadius: 8,
+                fontSize: 14,
+                fontWeight: 600,
+              }}
+            >
+              Check it out on Product Hunt →
+            </a>
+          </div>
 
           {/* ── Hero install strip ───────────────────────────────────── */}
           <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
