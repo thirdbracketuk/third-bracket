@@ -1,8 +1,4 @@
 import type { Metadata } from 'next/types'
-
-import { CollectionArchive } from '@/components/CollectionArchive'
-import { PageRange } from '@/components/PageRange'
-import { Pagination } from '@/components/Pagination'
 import configPromise from '@payload-config'
 import { getPayload } from 'payload'
 import React from 'react'
@@ -10,6 +6,7 @@ import PageClient from './page.client'
 import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
 import CTASection from '@/components/CTASection'
+import { BlogArchive } from '@/components/BlogArchive'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -31,7 +28,7 @@ export default async function Page() {
   const blogs = await payload.find({
     collection: 'blog',
     depth: 2,
-    limit: 12,
+    limit: 100,
     overrideAccess: false,
     sort: '-publishedAt',
     page: 1,
@@ -45,43 +42,25 @@ export default async function Page() {
           title="Insights, Articles and Practical Guides"
           description="Explore articles, tips and practical guides on web development, SEO and digital marketing."
         />
-        <div className="py-8 sm:py-12 md:py-16">
-          <div className="container mb-8">
-            <PageRange
-              collection="blog"
-              currentPage={blogs.page}
-              limit={12}
-              totalDocs={blogs.totalDocs}
-            />
-          </div>
-
-          <CollectionArchive posts={blogs.docs} relationTo="blog" />
-
-          <CTASection
-            cover={{
-              src: '/blogcto.svg',
-              alt: 'Bracket UI Cover',
-              width: 900,
-              height: 600,
-            }}
-            title="Discover Our Projects"
-            description="Real results, real impact crafted with design, code and strategy."
-            primary={{
-              label: 'Our Work',
-              href: '/work',
-            }}
-            secondary={{
-              label: 'Our Services',
-              href: '/services',
-            }}
-          />
-
-          <div className="container">
-            {blogs.totalPages > 1 && blogs.page && (
-              <Pagination page={blogs.page} totalPages={blogs.totalPages} />
-            )}
-          </div>
-        </div>
+        <BlogArchive posts={blogs.docs} />
+        <CTASection
+          cover={{
+            src: '/blogcto.svg',
+            alt: 'Bracket UI Cover',
+            width: 900,
+            height: 600,
+          }}
+          title="Discover Our Projects"
+          description="Real results, real impact crafted with design, code and strategy."
+          primary={{
+            label: 'Our Work',
+            href: '/work',
+          }}
+          secondary={{
+            label: 'Our Services',
+            href: '/services',
+          }}
+        />
       </div>
     </Bracket>
   )

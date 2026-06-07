@@ -277,6 +277,30 @@ function SlideVisual({ cat, visible }: { cat: (typeof categories)[0]; visible: b
   )
 }
 
+// ── NDA Notice — exported for use in page.tsx ────────────────────────────────
+
+export function NDANotice() {
+  return (
+    <div className="flex items-start gap-2.5 py-4">
+      <FaLock
+        size={10}
+        className="mt-[4px] flex-shrink-0 text-secondary-300 dark:text-secondary-700"
+      />
+      <p className="text-[12.5px] text-secondary-400 dark:text-secondary-600 font-light leading-relaxed">
+        Nearly all our work is protected by NDA — what you see here is a curated sample of our own
+        platforms and the few client builds we have permission to share.{' '}
+        <Link
+          href="/contact"
+          className="text-secondary-500 dark:text-secondary-500 underline underline-offset-2 hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
+        >
+          Talk to us directly
+        </Link>{' '}
+        for deeper proof of any specific capability.
+      </p>
+    </div>
+  )
+}
+
 // ── Main ────────────────────────────────────────────────────────────────────
 
 export default function WorkCapabilities() {
@@ -287,25 +311,6 @@ export default function WorkCapabilities() {
 
   return (
     <>
-      {/* NDA notice */}
-      <div className="flex items-start gap-2.5 py-4">
-        <FaLock
-          size={10}
-          className="mt-[4px] flex-shrink-0 text-secondary-300 dark:text-secondary-700"
-        />
-        <p className="text-[12.5px] text-secondary-400 dark:text-secondary-600 font-light leading-relaxed">
-          Nearly all our work is protected by NDA — what you see here is a curated sample of our own
-          platforms and the few client builds we have permission to share.{' '}
-          <Link
-            href="/contact"
-            className="text-secondary-500 dark:text-secondary-500 underline underline-offset-2 hover:text-accent-500 dark:hover:text-accent-400 transition-colors"
-          >
-            Talk to us directly
-          </Link>{' '}
-          for deeper proof of any specific capability.
-        </p>
-      </div>
-
       {/* Delivery showcase */}
       <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
         <div className="flex flex-wrap gap-2 mb-8">

@@ -343,18 +343,18 @@ const Header: FC = () => {
                   >
                     <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
-                        <span className="font-medium">Case Studies</span>
+                        <span className="font-medium">Portfolio</span>
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
-                        Real projects and results from our client work.
+                        Websites, UI components and dev tools we have built.
                       </div>
                     </div>
                   </Link>
                 </div>
               </div>
 
-              {/* Middle col 1 — Blog + Case Studies stacked with divider */}
+              {/* Middle col 1 — Blog */}
               <div className="flex flex-col h-full">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
@@ -366,10 +366,11 @@ const Header: FC = () => {
                 </div>
               </div>
 
+              {/* Middle col 2 — Portfolio */}
               <div className="flex flex-col h-full">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
-                    Case Studies
+                    Portfolio
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-[2px]">
@@ -377,7 +378,7 @@ const Header: FC = () => {
                 </div>
               </div>
 
-              {/* Middle col 2 — Open Source */}
+              {/* Middle col 3 — Open Source */}
               <div className="flex flex-col h-full">
                 <div className="mb-4">
                   <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
@@ -458,7 +459,7 @@ const Header: FC = () => {
                 </Megamenu>
 
                 <Megamenu
-                  label="Seo & Growth"
+                  label="SEO & Growth"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
@@ -466,7 +467,7 @@ const Header: FC = () => {
                   }}
                 >
                   <div className="space-y-2 py-1.5">
-                    {brandingCreativeItems.map((item) => renderNavlink(item, true))}
+                    {seoGrowthItems.map((item) => renderNavlink(item, true))}
                   </div>
                 </Megamenu>
 
@@ -479,7 +480,7 @@ const Header: FC = () => {
                   }}
                 >
                   <div className="space-y-2 py-1.5">
-                    {seoGrowthItems.map((item) => renderNavlink(item, true))}
+                    {brandingCreativeItems.map((item) => renderNavlink(item, true))}
                   </div>
                 </Megamenu>
               </div>
@@ -519,7 +520,7 @@ const Header: FC = () => {
                 </Megamenu>
 
                 <Megamenu
-                  label="Case Studies"
+                  label="Portfolio"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
