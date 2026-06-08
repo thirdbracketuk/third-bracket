@@ -160,7 +160,7 @@ const Header: FC = () => {
         }}
       >
         <Navbrand
-          logo={<Logo className="text-secondary-900 dark:text-secondary-100 h-[21px]" />}
+          logo={<Logo className="text-secondary-950 dark:text-secondary-50 h-[21px]" />}
           href="/"
         ></Navbrand>
 

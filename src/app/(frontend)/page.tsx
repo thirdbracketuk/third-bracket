@@ -59,22 +59,6 @@ export default async function Home() {
 
   const contactForm = await getContactFormData()
 
-  // Fetch latest blogs and works
-  const [latestBlogs, latestWorks] = await Promise.all([
-    payload.find({
-      collection: 'blog',
-      depth: 2,
-      limit: 4,
-      sort: '-publishedAt',
-    }),
-    payload.find({
-      collection: 'work',
-      depth: 2,
-      limit: 4,
-      sort: '-completedAt',
-    }),
-  ])
-
   // Provide fallback contact form structure if API call fails
   const fallbackContactForm = contactForm || {
     id: '4',
@@ -87,10 +71,10 @@ export default async function Home() {
 
   return (
     <>
-      <Script
+      {/* <Script
         src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
-        strategy="beforeInteractive"
-      />
+        strategy="afterInteractive"
+      /> */}
       <Script
         id="faq-jsonld"
         type="application/ld+json"

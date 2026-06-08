@@ -25,7 +25,7 @@ export const Settings = {
   keywords: keywords,
   openGraph: {
     type: 'website' as const,
-    title: 'ThirdBracket - Trusted Web Design & Development Services in affordable price',
+    title: 'Web Design & Development for SMEs Worldwide | ThirdBracket',
     description: description,
     siteName: sitename,
     images: [

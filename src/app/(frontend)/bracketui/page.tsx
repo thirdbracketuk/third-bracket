@@ -23,7 +23,7 @@ import { SiTailwindcss, SiNextdotjs, SiTypescript, SiNpm, SiGithub } from 'react
 import { RiLayoutGridLine, RiPaintBrushLine, RiShieldCheckLine } from 'react-icons/ri'
 
 export const metadata: Metadata = {
-  title: 'BracketUI — Open Source TailwindCSS Component Library',
+  title: 'BracketUI - Open Source TailwindCSS Component Library',
   description:
     'BracketUI is a free, open source React and Next.js component library built with TailwindCSS v3. Dark mode, theme support, accessible, and highly customisable.',
   openGraph: {

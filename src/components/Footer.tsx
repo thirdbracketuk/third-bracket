@@ -29,7 +29,7 @@ const SiteFooter = () => {
       }}
     >
       <FooterSection className="col-span-2 !py-4 md:py-0">
-        <FooterBrand logo={<Logo className="text-secondary-900 dark:text-secondary-100 h-6" />}>
+        <FooterBrand logo={<Logo className="text-secondary-950 dark:text-secondary-50 h-6" />}>
           <p className="text-primary-600 dark:text-primary-500   leading-relaxed ">
             High-performance web design and SEO built for SMEs.
           </p>

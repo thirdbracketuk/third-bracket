@@ -3,6 +3,10 @@ import PageHeader from '@/components/PageHeader'
 import { Bracket } from '@thirdbracket/bracketui'
 
 export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
   title: 'Privacy Policy',
   description:
     'Read our Privacy Policy to understand how thirdbracket collects, uses, and protects your personal data.',

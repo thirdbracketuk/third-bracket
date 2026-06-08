@@ -7,7 +7,7 @@ const getPagesSitemap = unstable_cache(
     const SITE_URL =
       process.env.NEXT_PUBLIC_SERVER_URL ||
       process.env.VERCEL_PROJECT_PRODUCTION_URL ||
-      'https://thirdbracket.co.uk'
+      'https://www.thirdbracket.co.uk'
 
     const dateFallback = new Date().toISOString()
 
