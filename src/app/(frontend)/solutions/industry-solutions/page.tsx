@@ -198,12 +198,7 @@ export default function IndustrySolutionsPage() {
           <CategorySection {...industrySolutionsCategory} />
 
           <CTASection
-            cover={{
-              src: '/wordpresscto.svg',
-              alt: 'Industry Solutions Cover',
-              width: 500,
-              height: 500,
-            }}
+            
             title="Have a Specific Industry Need?"
             description="Tell us about your business and we'll propose a solution that fits your industry, budget, and timeline."
             primary={{
