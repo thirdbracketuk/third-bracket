@@ -169,12 +169,7 @@ export default function DesignSolutionsPage() {
           <CategorySection {...designSolutionsCategory} />
 
           <CTASection
-            cover={{
-              src: '/webdevcto.svg',
-              alt: 'Design Solutions Cover',
-              width: 500,
-              height: 500,
-            }}
+            
             title="Need a Custom Design System?"
             description="Let's build a cohesive design foundation tailored to your brand, so your team ships consistent, beautiful interfaces faster."
             primary={{
