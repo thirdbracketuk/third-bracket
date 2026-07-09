@@ -219,12 +219,7 @@ export default function NextjsSolutionsPage() {
           <CategorySection {...nextjsSolutionsCategory} />
 
           <CTASection
-            cover={{
-              src: '/nextjscto.svg',
-              alt: 'Bracket UI Cover',
-              width: 500,
-              height: 500,
-            }}
+            
             title="Ready to Build with Next.js?"
             description="Let's create a modern, high-performance Next.js solution that scales with your business."
             primary={{
