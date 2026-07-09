@@ -168,12 +168,7 @@ export default function PlatformToolsPage() {
           <CategorySection {...platformToolsCategory} />
 
           <CTASection
-            cover={{
-              src: '/webdevcto.svg',
-              alt: 'Platform Tools Cover',
-              width: 500,
-              height: 500,
-            }}
+            
             title="Need a Custom Platform Built?"
             description="Let's architect and build a performant, scalable platform tailored to your workflow and business requirements."
             primary={{
