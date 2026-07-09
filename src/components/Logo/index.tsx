@@ -100,12 +100,15 @@ export const Logo: FC<LogoProps> = ({ className = '', height, label = 'ThirdBrac
           }
         `}
       </style>
-
-      {/* Bracket Icon */}
+      <defs>
+        <linearGradient id="bracket-accent-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#e30b5c" />
+          <stop offset="100%" stopColor="#b71050" />
+        </linearGradient>
+      </defs>
       <path
         d="M 1.9551,4.3804e-8 C 0.8699,0.01006504 0,0.88690004 0,1.9744 v 23.817 c 0,1.0879 0.87158,1.965 1.9571,1.9745 h 20.001 L 10.3191,22.1877 V 5.5787 L 21.9581,5.000438e-4 Z M 27.7651,1.959 l -12.613,6.3594 0.04636,11.181 12.568,6.3071 v -23.8 c -5.49e-4,-0.016099 0,-0.032209 0,-0.048207 z"
-        fill="currentColor"
-        fillOpacity="0.80"
+        fill="url(#bracket-accent-gradient)"
       />
 
       {/* Main Wordmark (ThirdBracket) — updated Geist font path */}

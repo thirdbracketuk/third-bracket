@@ -188,6 +188,18 @@ const config = {
         // 'gradient-accent': 'linear-gradient(120deg, #b71050 0%, #e30b5c 55%, #b71050 100%)',
         // 'gradient-accent-dark': 'linear-gradient(120deg, #e30b5c 0%, #ee538f 55%, #e30b5c 100%)',
 
+        // Primary button — subtler transition, darker overall (light mode)
+        'gradient-btn-accent':
+          'radial-gradient(ellipse at 30% 0%, #e30b5c 0%, #b71050 55%, #8e1040 100%)',
+        'gradient-btn-accent-hover':
+          'radial-gradient(ellipse at 30% 0%, #b71050 0%, #8e1040 55%, #700f34 100%)',
+
+        // Dark mode — darker overall, still subtle transition, enough lift to read on dark bg
+        'gradient-btn-accent-dark':
+          'radial-gradient(ellipse at 30% 0%, #e30b5c 0%, #b71050 55%, #8e1040 100%)',
+        'gradient-btn-accent-dark-hover':
+          'radial-gradient(ellipse at 30% 0%, #b71050 0%, #8e1040 55%, #700f34 100%)',
+
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',
         'overlayDot-testimonial': 'radial-gradient(   #c4c9cf60 1px, transparent 1px)',
@@ -232,7 +244,7 @@ const config = {
         //   900: '#530e28', // hsl(337,  72%, 19%)
         //   950: '#340416', // hsl(337,  86%, 11%)
         // },
-        
+
         razzmatazz: '#e30b5c',
         accent: {
           // Muted & Professional (Hue: 348 - Ruby Tint)

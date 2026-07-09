@@ -659,12 +659,6 @@ export default function RootLayout({ children }) {
 
           {/* ── CTA ───────────────────────────────────────────────────── */}
           <CTASection
-            cover={{
-              src: '/buicover.svg',
-              alt: 'BracketUI illustration',
-              width: 500,
-              height: 500,
-            }}
             title="Build your next project with BracketUI"
             description="Free, open source, and built by the same team behind thirdbracket. Start a new project or add it to an existing one today."
             primary={{

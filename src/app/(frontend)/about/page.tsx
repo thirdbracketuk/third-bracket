@@ -25,37 +25,29 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section>
+      {/* Structured data now in layout.tsx */}
+      <PageHeader
+        title="About ThirdBracket"
+        description="Get to know the people, values and thinking behind thirdbracket."
+      />
       <Bracket fluid centered padding="small">
-        <div className="md:max-w-screen-xl mx-auto">
-          {/* Structured data now in layout.tsx */}
-          <PageHeader
-            title="About ThirdBracket"
-            description="Get to know the people, values and thinking behind thirdbracket."
-          />
-          <Company />
-          <Team />
-          <Roadmap />
-          <OpenSource />
-          <WorkCulture />
-          <CTASection
-            cover={{
-              src: '/aboutcto.svg',
-              alt: 'Bracket UI Cover',
-              width: 500,
-              height: 500,
-            }}
-            title="Ready to Work With Us?"
-            description="Let's discuss how we can help bring your digital vision to life"
-            primary={{
-              label: 'Contact Us',
-              href: '/contact',
-            }}
-            secondary={{
-              label: 'View Services',
-              href: '/services',
-            }}
-          />
-        </div>
+        <Company />
+        <Team />
+        <Roadmap />
+        <OpenSource />
+        <WorkCulture />
+        <CTASection
+          title="Ready to Work With Us?"
+          description="Let's discuss how we can help bring your digital vision to life"
+          primary={{
+            label: 'Contact Us',
+            href: '/contact',
+          }}
+          secondary={{
+            label: 'View Services',
+            href: '/services',
+          }}
+        />
       </Bracket>
     </section>
   )
