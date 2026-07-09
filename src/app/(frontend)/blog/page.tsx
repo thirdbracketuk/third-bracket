@@ -44,12 +44,7 @@ export default async function Page() {
         />
         <BlogArchive posts={blogs.docs} />
         <CTASection
-          cover={{
-            src: '/blogcto.svg',
-            alt: 'Bracket UI Cover',
-            width: 900,
-            height: 600,
-          }}
+
           title="Discover Our Projects"
           description="Real results, real impact crafted with design, code and strategy."
           primary={{
