@@ -140,12 +140,7 @@ export default async function Page() {
 
         {/* ── CTA ────────────────────────────────────────────────────── */}
         <CTASection
-          cover={{
-            src: '/workcto.svg',
-            alt: 'Bracket UI Cover',
-            width: 500,
-            height: 500,
-          }}
+          
           title="Behind the Build"
           description="Learn the strategies, tools, and thinking that power our projects."
           primary={{
