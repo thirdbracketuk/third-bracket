@@ -217,7 +217,7 @@ function MobileMockup({ accent, image }: { accent: string; image?: MediaType | n
       style={{
         width: 168,
         flexShrink: 0,
-        borderRadius: 34,
+        borderRadius: 12,
         overflow: 'hidden',
         boxShadow: '0 40px 80px -16px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04)',
         alignSelf: 'center',
@@ -227,7 +227,7 @@ function MobileMockup({ accent, image }: { accent: string; image?: MediaType | n
       <div
         style={{
           position: 'relative',
-          aspectRatio: '1179/2556',
+          aspectRatio: '9/19.5',
           background: '#0d0d0d',
         }}
       >
