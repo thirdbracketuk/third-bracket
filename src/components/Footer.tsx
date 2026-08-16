@@ -159,7 +159,7 @@ const SiteFooter = () => {
           }}
           href="https://www.bayxbengal.com/"
         >
-          BayofBengal
+          BayXBengal
         </FooterLink>
       </FooterSection>
 

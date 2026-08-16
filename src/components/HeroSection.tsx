@@ -180,16 +180,16 @@ const featuredLogos = [
     alt: 'Elementor',
 
     href: 'https://be.elementor.com/visit/?bta=229022&brand=elementor',
-    caption: 'Proud Partner',
+    caption: 'Elementor Partner',
     // no caption — renders as plain logo
   },
   {
     src: '/bob.svg',
-    alt: 'BayofBengal',
+    alt: 'BayXBengal - B2B Marketplace for Bangladeshi Exporters',
     width: 250,
     height: 233,
     href: 'https://www.bayxbengal.com/',
-    caption: 'Proud Partner',
+    caption: 'BayXBengal',
     // no caption — renders as plain logo
   },
   {
@@ -198,7 +198,7 @@ const featuredLogos = [
     width: 36,
     height: 36,
     href: 'https://www.blackpoolbrew.com/',
-    caption: 'Proud Partner',
+    caption: 'Blackpool Brew',
     // no caption — renders as plain logo
   },
 
