@@ -152,6 +152,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           target="_blank"
+          label="BayXBengal"
           theme={{
             text: 'text-primary-900 dark:text-primary-50',
             states:
