@@ -152,7 +152,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           target="_blank"
-          label="BayXBengal"
+          label="Bay X bengal"
           theme={{
             text: 'text-primary-900 dark:text-primary-50',
             states:
@@ -160,7 +160,7 @@ const SiteFooter = () => {
           }}
           href="https://www.bayxbengal.com/"
         >
-          BayXBengal
+          Bay X Bengal
         </FooterLink>
       </FooterSection>
 

@@ -185,11 +185,11 @@ const featuredLogos = [
   },
   {
     src: '/bob.svg',
-    alt: 'BayXBengal - B2B Marketplace for Bangladeshi Exporters',
+    alt: 'Bay X Bengal - B2B Marketplace for Bangladeshi Exporters',
     width: 250,
     height: 233,
     href: 'https://www.bayxbengal.com/',
-    caption: 'BayXBengal',
+    caption: 'Bay X Bengal',
     // no caption — renders as plain logo
   },
   {
