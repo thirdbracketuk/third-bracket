@@ -61,11 +61,9 @@ export const revalidateWork: CollectionAfterChangeHook<Work> = ({
 
       payload.logger.info(`Revalidating work at path: ${path}`)
 
-      void Promise.resolve().then(() => {
-        revalidatePath(path)
-        revalidatePath('/work')
-        revalidateTag('work-sitemap')
-      })
+      revalidatePath(path)
+      revalidatePath('/work')
+      revalidateTag('work-sitemap')
     }
 
     if (previousDoc._status === 'published' && doc._status !== 'published') {
@@ -87,11 +85,9 @@ export const revalidateDelete: CollectionAfterDeleteHook<Work> = ({ doc, req: { 
   if (!context.disableRevalidate) {
     const path = `/work/${doc?.slug}`
 
-    void Promise.resolve().then(() => {
-      revalidatePath(path)
-      revalidatePath('/work')
-      revalidateTag('work-sitemap')
-    })
+    revalidatePath(path)
+    revalidatePath('/work')
+    revalidateTag('work-sitemap')
   }
 
   return doc
