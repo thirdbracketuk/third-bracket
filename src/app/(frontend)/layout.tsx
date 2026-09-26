@@ -114,7 +114,7 @@ const graphJsonLd = {
           { '@id': 'https://www.bayxbengal.com/#organization' },
         ],
         alternateName: ['S M A Musabbir Sagar', 'sagarmusabbir', 'Musabbir'],
-        knowsabout: [
+        knowsAbout: [
           'Full-Stack Web Development',
           'Next.js',
           'Payload CMS',
