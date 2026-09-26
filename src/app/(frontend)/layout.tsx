@@ -64,63 +64,102 @@ export const metadata: Metadata = {
   },
 }
 
-const websiteJsonLd = {
+const graphJsonLd = {
   '@context': 'https://schema.org',
-
-  '@type': 'WebSite',
-
-  url: 'https://www.thirdbracket.co.uk',
-
-  name: 'ThirdBracket',
-
-  publisher: {
-    '@type': 'Organization',
-
-    name: 'Third Bracket Limited',
-
-    url: 'https://www.thirdbracket.co.uk',
-
-    sameAs: [
-      'https://www.linkedin.com/company/thirdbracketltd',
-      'https://www.youtube.com/@thirdbracketltd',
-
-      'https://github.com/thirdbracketuk',
-      'https://www.facebook.com/thirdbracketltd',
-      'https://www.facebook.com/thirdbracketltd',
-      'https://www.instagram.com/thirdbracketuk',
-    ],
-
-    image: [
-      'https://www.thirdbracket.co.uk/logo.svg',
-      'https://www.thirdbracket.co.uk/og-image.png',
-      'https://www.thirdbracket.co.uk/services/web.svg',
-      'https://www.thirdbracket.co.uk/services/ui.svg',
-      'https://www.thirdbracket.co.uk/services/digital.svg',
-    ],
-
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://www.thirdbracket.co.uk/logo.svg',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://www.thirdbracket.co.uk/#organization',
+      name: 'Third Bracket',
+      legalName: 'Third Bracket Limited',
+      url: 'https://www.thirdbracket.co.uk',
+      email: 'hello@thirdbracket.co.uk',
+      telephone: '+8801765692886',
+      description:
+        'ThirdBracket is a web design and SEO agency built to give small businesses access to the quality normally reserved for large corporations. We design high-performance websites and deliver SEO that drives real growth without traditional agency overhead.',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.thirdbracket.co.uk/logo-v2.svg',
+      },
+      image: [
+        'https://www.thirdbracket.co.uk/logo-v2.svg',
+        'https://www.thirdbracket.co.uk/og-image.png',
+      ],
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Nowab Manjil, Town Hall Road, Habiganj Sadar',
+        addressLocality: 'Habiganj',
+        addressRegion: 'Sylhet',
+        postalCode: '3300',
+        addressCountry: 'BD',
+      },
+      areaServed: {
+        '@type': 'AdministrativeArea',
+        name: 'Habiganj',
+      },
+      sameAs: [
+        'https://www.linkedin.com/company/thirdbracketltd',
+        'https://www.youtube.com/@thirdbracketltd',
+        'https://github.com/thirdbracketuk',
+        'https://www.facebook.com/thirdbracketltd',
+        'https://www.instagram.com/thirdbracketuk',
+      ],
+      founder: {
+        '@type': 'Person',
+        '@id': 'https://www.thirdbracket.co.uk/#founder',
+        name: 'Musabbir Sagar',
+        jobTitle: 'Founder & CEO',
+        worksFor: [
+          { '@id': 'https://www.thirdbracket.co.uk/#organization' },
+          { '@id': 'https://www.bayxbengal.com/#organization' },
+        ],
+        alternateName: ['S M A Musabbir Sagar', 'sagarmusabbir', 'Musabbir'],
+        knowsabout: [
+          'Full-Stack Web Development',
+          'Next.js',
+          'Payload CMS',
+          'WordPress Development',
+          'JavaScript',
+          'TypeScript',
+          'React',
+          'Product Development',
+          'Product Management',
+          'SaaS Architecture',
+          'B2B Marketplace Development',
+          'E-commerce Platforms',
+          'Business Development',
+          'Startup Founding',
+          'Digital Agency Management',
+          'Web Application Architecture',
+          'DevOps',
+          'Server Infrastructure',
+          'CI/CD Pipelines',
+          'UI/UX Design Systems',
+          'International Trade Technology',
+          'Export-Import Business Operations',
+        ],
+        sameAs: [
+          'https://www.linkedin.com/in/sagarmusabbir/',
+          'https://github.com/sagarmusabbir/',
+          'https://www.facebook.com/wwolverinee',
+          'https://www.musabbirsagar.me/',
+          'https://x.com/sagarmusabbir',
+          'https://peerlist.io/sagarmusabbir',
+          'https://www.indiehackers.com/sagarmusabbir',
+        ],
+      },
+      subOrganization: {
+        '@id': 'https://www.bayxbengal.com/#organization',
+      },
     },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Nowab Manjil, Town Hall Road, Habiganj Sadar',
-      addressLocality: 'Habiganj',
-      addressCountry: 'BD',
-      addressRegion: 'Sylhet',
-      postalCode: '3300',
+    {
+      '@type': 'WebSite',
+      '@id': 'https://www.thirdbracket.co.uk/#website',
+      url: 'https://www.thirdbracket.co.uk',
+      name: 'ThirdBracket',
+      publisher: { '@id': 'https://www.thirdbracket.co.uk/#organization' },
     },
-
-    areaServed: {
-      '@type': 'AdministrativeArea',
-      name: 'Habiganj',
-    },
-
-    description:
-      'ThirdBracket is a web design and SEO agency built to give small businesses access to the quality normally reserved for large corporations. We design high-performance websites and deliver SEO that drives real growth without traditional agency overhead.',
-    email: 'hello@thirdbracket.co.uk',
-    telephone: '+8801765692886',
-  },
+  ],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -137,7 +176,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([websiteJsonLd]),
+            __html: JSON.stringify([graphJsonLd]),
           }}
         />
 
